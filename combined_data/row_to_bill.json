@@ -1,0 +1,3944 @@
+{
+    "0": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 1
+    },
+    "1": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 2
+    },
+    "2": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 3
+    },
+    "3": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 4
+    },
+    "4": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 5
+    },
+    "5": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 6
+    },
+    "6": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 7
+    },
+    "7": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 8
+    },
+    "8": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 9
+    },
+    "9": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 10
+    },
+    "10": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 11
+    },
+    "11": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 12
+    },
+    "12": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 13
+    },
+    "13": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 14
+    },
+    "14": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 15
+    },
+    "15": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 16
+    },
+    "16": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 17
+    },
+    "17": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 18
+    },
+    "18": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 19
+    },
+    "19": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 20
+    },
+    "20": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 21
+    },
+    "21": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 22
+    },
+    "22": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 23
+    },
+    "23": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 24
+    },
+    "24": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 25
+    },
+    "25": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 26
+    },
+    "26": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 27
+    },
+    "27": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 28
+    },
+    "28": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 29
+    },
+    "29": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 30
+    },
+    "30": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 31
+    },
+    "31": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 32
+    },
+    "32": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 33
+    },
+    "33": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 34
+    },
+    "34": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 35
+    },
+    "35": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 36
+    },
+    "36": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 37
+    },
+    "37": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 38
+    },
+    "38": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 39
+    },
+    "39": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 40
+    },
+    "40": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 41
+    },
+    "41": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 42
+    },
+    "42": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 43
+    },
+    "43": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 44
+    },
+    "44": {
+        "category": "recommit",
+        "chamber": "s",
+        "congress": 113,
+        "number": 45
+    },
+    "45": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 46
+    },
+    "46": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 47
+    },
+    "47": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 48
+    },
+    "48": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 49
+    },
+    "49": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 50
+    },
+    "50": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 51
+    },
+    "51": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 52
+    },
+    "52": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 53
+    },
+    "53": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 54
+    },
+    "54": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 55
+    },
+    "55": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 56
+    },
+    "56": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 57
+    },
+    "57": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 58
+    },
+    "58": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 59
+    },
+    "59": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 60
+    },
+    "60": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 61
+    },
+    "61": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 62
+    },
+    "62": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 63
+    },
+    "63": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 64
+    },
+    "64": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 65
+    },
+    "65": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 66
+    },
+    "66": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 67
+    },
+    "67": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 68
+    },
+    "68": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 69
+    },
+    "69": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 70
+    },
+    "70": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 71
+    },
+    "71": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 72
+    },
+    "72": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 73
+    },
+    "73": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 74
+    },
+    "74": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 75
+    },
+    "75": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 76
+    },
+    "76": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 77
+    },
+    "77": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 78
+    },
+    "78": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 79
+    },
+    "79": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 80
+    },
+    "80": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 81
+    },
+    "81": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 82
+    },
+    "82": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 83
+    },
+    "83": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 84
+    },
+    "84": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 85
+    },
+    "85": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 86
+    },
+    "86": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 87
+    },
+    "87": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 88
+    },
+    "88": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 89
+    },
+    "89": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 90
+    },
+    "90": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 91
+    },
+    "91": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 92
+    },
+    "92": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 93
+    },
+    "93": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 94
+    },
+    "94": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 95
+    },
+    "95": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 96
+    },
+    "96": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 97
+    },
+    "97": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 98
+    },
+    "98": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 99
+    },
+    "99": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 100
+    },
+    "100": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 101
+    },
+    "101": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 102
+    },
+    "102": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 103
+    },
+    "103": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 104
+    },
+    "104": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 105
+    },
+    "105": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 106
+    },
+    "106": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 107
+    },
+    "107": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 108
+    },
+    "108": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 109
+    },
+    "109": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 110
+    },
+    "110": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 111
+    },
+    "111": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 112
+    },
+    "112": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 113
+    },
+    "113": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 114
+    },
+    "114": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 115
+    },
+    "115": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 116
+    },
+    "116": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 117
+    },
+    "117": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 118
+    },
+    "118": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 119
+    },
+    "119": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 120
+    },
+    "120": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 121
+    },
+    "121": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 122
+    },
+    "122": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 123
+    },
+    "123": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 124
+    },
+    "124": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 125
+    },
+    "125": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 126
+    },
+    "126": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 127
+    },
+    "127": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 128
+    },
+    "128": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 129
+    },
+    "129": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 130
+    },
+    "130": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 131
+    },
+    "131": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 132
+    },
+    "132": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 133
+    },
+    "133": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 134
+    },
+    "134": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 135
+    },
+    "135": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 136
+    },
+    "136": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 137
+    },
+    "137": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 138
+    },
+    "138": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 139
+    },
+    "139": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 140
+    },
+    "140": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 141
+    },
+    "141": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 142
+    },
+    "142": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 143
+    },
+    "143": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 144
+    },
+    "144": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 145
+    },
+    "145": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 146
+    },
+    "146": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 147
+    },
+    "147": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 148
+    },
+    "148": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 149
+    },
+    "149": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 150
+    },
+    "150": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 151
+    },
+    "151": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 152
+    },
+    "152": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 153
+    },
+    "153": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 154
+    },
+    "154": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 155
+    },
+    "155": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 156
+    },
+    "156": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 157
+    },
+    "157": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 158
+    },
+    "158": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 159
+    },
+    "159": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 160
+    },
+    "160": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 161
+    },
+    "161": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 162
+    },
+    "162": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 163
+    },
+    "163": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 164
+    },
+    "164": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 165
+    },
+    "165": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 166
+    },
+    "166": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 167
+    },
+    "167": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 168
+    },
+    "168": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 169
+    },
+    "169": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 170
+    },
+    "170": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 171
+    },
+    "171": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 172
+    },
+    "172": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 173
+    },
+    "173": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 174
+    },
+    "174": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 175
+    },
+    "175": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 176
+    },
+    "176": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 177
+    },
+    "177": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 178
+    },
+    "178": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 179
+    },
+    "179": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 180
+    },
+    "180": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 181
+    },
+    "181": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 182
+    },
+    "182": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 183
+    },
+    "183": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 184
+    },
+    "184": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 185
+    },
+    "185": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 186
+    },
+    "186": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 187
+    },
+    "187": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 188
+    },
+    "188": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 189
+    },
+    "189": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 190
+    },
+    "190": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 191
+    },
+    "191": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 192
+    },
+    "192": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 193
+    },
+    "193": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 194
+    },
+    "194": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 195
+    },
+    "195": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 196
+    },
+    "196": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 197
+    },
+    "197": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 198
+    },
+    "198": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 199
+    },
+    "199": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 200
+    },
+    "200": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 201
+    },
+    "201": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 202
+    },
+    "202": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 203
+    },
+    "203": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 204
+    },
+    "204": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 205
+    },
+    "205": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 206
+    },
+    "206": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 207
+    },
+    "207": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 208
+    },
+    "208": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 209
+    },
+    "209": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 210
+    },
+    "210": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 211
+    },
+    "211": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 212
+    },
+    "212": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 213
+    },
+    "213": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 214
+    },
+    "214": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 215
+    },
+    "215": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 216
+    },
+    "216": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 217
+    },
+    "217": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 218
+    },
+    "218": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 219
+    },
+    "219": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 220
+    },
+    "220": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 221
+    },
+    "221": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 222
+    },
+    "222": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 223
+    },
+    "223": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 224
+    },
+    "224": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 225
+    },
+    "225": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 226
+    },
+    "226": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 227
+    },
+    "227": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 228
+    },
+    "228": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 229
+    },
+    "229": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 230
+    },
+    "230": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 231
+    },
+    "231": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 232
+    },
+    "232": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 233
+    },
+    "233": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 234
+    },
+    "234": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 235
+    },
+    "235": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 236
+    },
+    "236": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 237
+    },
+    "237": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 238
+    },
+    "238": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 239
+    },
+    "239": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 240
+    },
+    "240": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 241
+    },
+    "241": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 242
+    },
+    "242": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 243
+    },
+    "243": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 244
+    },
+    "244": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 245
+    },
+    "245": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 246
+    },
+    "246": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 247
+    },
+    "247": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 248
+    },
+    "248": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 249
+    },
+    "249": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 250
+    },
+    "250": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 251
+    },
+    "251": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 252
+    },
+    "252": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 253
+    },
+    "253": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 254
+    },
+    "254": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 255
+    },
+    "255": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 256
+    },
+    "256": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 257
+    },
+    "257": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 258
+    },
+    "258": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 259
+    },
+    "259": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 260
+    },
+    "260": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 261
+    },
+    "261": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 262
+    },
+    "262": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 263
+    },
+    "263": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 264
+    },
+    "264": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 265
+    },
+    "265": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 266
+    },
+    "266": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 267
+    },
+    "267": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 268
+    },
+    "268": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 269
+    },
+    "269": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 270
+    },
+    "270": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 271
+    },
+    "271": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 272
+    },
+    "272": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 273
+    },
+    "273": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 274
+    },
+    "274": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 275
+    },
+    "275": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 276
+    },
+    "276": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 277
+    },
+    "277": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 278
+    },
+    "278": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 279
+    },
+    "279": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 280
+    },
+    "280": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 281
+    },
+    "281": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 282
+    },
+    "282": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 283
+    },
+    "283": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 284
+    },
+    "284": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 285
+    },
+    "285": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 286
+    },
+    "286": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 287
+    },
+    "287": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 288
+    },
+    "288": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 289
+    },
+    "289": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 290
+    },
+    "290": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 291
+    },
+    "291": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 1
+    },
+    "292": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 2
+    },
+    "293": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 3
+    },
+    "294": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 4
+    },
+    "295": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 5
+    },
+    "296": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 6
+    },
+    "297": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 7
+    },
+    "298": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 8
+    },
+    "299": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 9
+    },
+    "300": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 10
+    },
+    "301": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 11
+    },
+    "302": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 12
+    },
+    "303": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 13
+    },
+    "304": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 14
+    },
+    "305": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 15
+    },
+    "306": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 16
+    },
+    "307": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 17
+    },
+    "308": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 18
+    },
+    "309": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 19
+    },
+    "310": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 20
+    },
+    "311": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 21
+    },
+    "312": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 22
+    },
+    "313": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 23
+    },
+    "314": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 24
+    },
+    "315": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 25
+    },
+    "316": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 26
+    },
+    "317": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 27
+    },
+    "318": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 28
+    },
+    "319": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 29
+    },
+    "320": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 30
+    },
+    "321": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 31
+    },
+    "322": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 32
+    },
+    "323": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 33
+    },
+    "324": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 34
+    },
+    "325": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 35
+    },
+    "326": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 36
+    },
+    "327": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 37
+    },
+    "328": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 38
+    },
+    "329": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 39
+    },
+    "330": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 40
+    },
+    "331": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 41
+    },
+    "332": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 42
+    },
+    "333": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 43
+    },
+    "334": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 44
+    },
+    "335": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 45
+    },
+    "336": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 46
+    },
+    "337": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 47
+    },
+    "338": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 48
+    },
+    "339": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 49
+    },
+    "340": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 50
+    },
+    "341": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 51
+    },
+    "342": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 52
+    },
+    "343": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 53
+    },
+    "344": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 54
+    },
+    "345": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 55
+    },
+    "346": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 56
+    },
+    "347": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 57
+    },
+    "348": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 58
+    },
+    "349": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 59
+    },
+    "350": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 60
+    },
+    "351": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 61
+    },
+    "352": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 62
+    },
+    "353": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 63
+    },
+    "354": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 64
+    },
+    "355": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 65
+    },
+    "356": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 66
+    },
+    "357": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 67
+    },
+    "358": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 68
+    },
+    "359": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 69
+    },
+    "360": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 70
+    },
+    "361": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 71
+    },
+    "362": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 72
+    },
+    "363": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 73
+    },
+    "364": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 74
+    },
+    "365": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 75
+    },
+    "366": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 76
+    },
+    "367": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 77
+    },
+    "368": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 78
+    },
+    "369": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 79
+    },
+    "370": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 80
+    },
+    "371": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 81
+    },
+    "372": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 82
+    },
+    "373": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 83
+    },
+    "374": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 84
+    },
+    "375": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 85
+    },
+    "376": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 86
+    },
+    "377": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 87
+    },
+    "378": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 88
+    },
+    "379": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 89
+    },
+    "380": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 90
+    },
+    "381": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 91
+    },
+    "382": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 92
+    },
+    "383": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 93
+    },
+    "384": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 94
+    },
+    "385": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 95
+    },
+    "386": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 96
+    },
+    "387": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 97
+    },
+    "388": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 98
+    },
+    "389": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 99
+    },
+    "390": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 100
+    },
+    "391": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 101
+    },
+    "392": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 102
+    },
+    "393": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 103
+    },
+    "394": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 104
+    },
+    "395": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 105
+    },
+    "396": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 106
+    },
+    "397": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 107
+    },
+    "398": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 108
+    },
+    "399": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 109
+    },
+    "400": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 110
+    },
+    "401": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 111
+    },
+    "402": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 112
+    },
+    "403": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 113
+    },
+    "404": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 114
+    },
+    "405": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 115
+    },
+    "406": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 116
+    },
+    "407": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 117
+    },
+    "408": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 118
+    },
+    "409": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 119
+    },
+    "410": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 120
+    },
+    "411": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 121
+    },
+    "412": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 122
+    },
+    "413": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 123
+    },
+    "414": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 124
+    },
+    "415": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 125
+    },
+    "416": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 126
+    },
+    "417": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 127
+    },
+    "418": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 128
+    },
+    "419": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 129
+    },
+    "420": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 130
+    },
+    "421": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 131
+    },
+    "422": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 132
+    },
+    "423": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 133
+    },
+    "424": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 134
+    },
+    "425": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 135
+    },
+    "426": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 136
+    },
+    "427": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 137
+    },
+    "428": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 138
+    },
+    "429": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 139
+    },
+    "430": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 140
+    },
+    "431": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 141
+    },
+    "432": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 142
+    },
+    "433": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 143
+    },
+    "434": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 144
+    },
+    "435": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 145
+    },
+    "436": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 146
+    },
+    "437": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 147
+    },
+    "438": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 148
+    },
+    "439": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 149
+    },
+    "440": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 150
+    },
+    "441": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 151
+    },
+    "442": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 152
+    },
+    "443": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 153
+    },
+    "444": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 154
+    },
+    "445": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 155
+    },
+    "446": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 156
+    },
+    "447": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 157
+    },
+    "448": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 158
+    },
+    "449": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 159
+    },
+    "450": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 160
+    },
+    "451": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 161
+    },
+    "452": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 162
+    },
+    "453": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 163
+    },
+    "454": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 164
+    },
+    "455": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 165
+    },
+    "456": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 166
+    },
+    "457": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 167
+    },
+    "458": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 168
+    },
+    "459": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 169
+    },
+    "460": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 170
+    },
+    "461": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 171
+    },
+    "462": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 172
+    },
+    "463": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 173
+    },
+    "464": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 174
+    },
+    "465": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 175
+    },
+    "466": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 176
+    },
+    "467": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 177
+    },
+    "468": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 178
+    },
+    "469": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 179
+    },
+    "470": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 180
+    },
+    "471": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 181
+    },
+    "472": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 182
+    },
+    "473": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 183
+    },
+    "474": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 184
+    },
+    "475": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 185
+    },
+    "476": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 186
+    },
+    "477": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 187
+    },
+    "478": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 188
+    },
+    "479": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 189
+    },
+    "480": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 190
+    },
+    "481": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 191
+    },
+    "482": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 192
+    },
+    "483": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 193
+    },
+    "484": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 194
+    },
+    "485": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 195
+    },
+    "486": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 196
+    },
+    "487": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 197
+    },
+    "488": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 198
+    },
+    "489": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 199
+    },
+    "490": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 200
+    },
+    "491": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 201
+    },
+    "492": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 202
+    },
+    "493": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 203
+    },
+    "494": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 204
+    },
+    "495": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 205
+    },
+    "496": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 206
+    },
+    "497": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 207
+    },
+    "498": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 208
+    },
+    "499": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 209
+    },
+    "500": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 210
+    },
+    "501": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 211
+    },
+    "502": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 212
+    },
+    "503": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 213
+    },
+    "504": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 214
+    },
+    "505": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 215
+    },
+    "506": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 216
+    },
+    "507": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 217
+    },
+    "508": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 218
+    },
+    "509": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 219
+    },
+    "510": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 220
+    },
+    "511": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 221
+    },
+    "512": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 222
+    },
+    "513": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 223
+    },
+    "514": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 224
+    },
+    "515": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 225
+    },
+    "516": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 226
+    },
+    "517": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 227
+    },
+    "518": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 228
+    },
+    "519": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 229
+    },
+    "520": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 230
+    },
+    "521": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 231
+    },
+    "522": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 232
+    },
+    "523": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 233
+    },
+    "524": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 234
+    },
+    "525": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 235
+    },
+    "526": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 236
+    },
+    "527": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 237
+    },
+    "528": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 238
+    },
+    "529": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 239
+    },
+    "530": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 240
+    },
+    "531": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 241
+    },
+    "532": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 242
+    },
+    "533": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 243
+    },
+    "534": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 244
+    },
+    "535": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 245
+    },
+    "536": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 246
+    },
+    "537": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 113,
+        "number": 247
+    },
+    "538": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 248
+    },
+    "539": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 249
+    },
+    "540": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 250
+    },
+    "541": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 251
+    },
+    "542": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 252
+    },
+    "543": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 253
+    },
+    "544": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 254
+    },
+    "545": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 255
+    },
+    "546": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 256
+    },
+    "547": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 257
+    },
+    "548": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 258
+    },
+    "549": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 259
+    },
+    "550": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 260
+    },
+    "551": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 261
+    },
+    "552": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 262
+    },
+    "553": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 263
+    },
+    "554": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 264
+    },
+    "555": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 265
+    },
+    "556": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 266
+    },
+    "557": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 267
+    },
+    "558": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 268
+    },
+    "559": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 269
+    },
+    "560": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 270
+    },
+    "561": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 271
+    },
+    "562": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 272
+    },
+    "563": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 273
+    },
+    "564": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 274
+    },
+    "565": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 275
+    },
+    "566": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 276
+    },
+    "567": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 277
+    },
+    "568": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 278
+    },
+    "569": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 279
+    },
+    "570": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 280
+    },
+    "571": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 281
+    },
+    "572": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 282
+    },
+    "573": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 283
+    },
+    "574": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 284
+    },
+    "575": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 285
+    },
+    "576": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 286
+    },
+    "577": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 287
+    },
+    "578": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 288
+    },
+    "579": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 289
+    },
+    "580": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 290
+    },
+    "581": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 291
+    },
+    "582": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 292
+    },
+    "583": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 293
+    },
+    "584": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 294
+    },
+    "585": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 295
+    },
+    "586": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 296
+    },
+    "587": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 297
+    },
+    "588": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 298
+    },
+    "589": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 299
+    },
+    "590": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 300
+    },
+    "591": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 301
+    },
+    "592": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 302
+    },
+    "593": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 303
+    },
+    "594": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 304
+    },
+    "595": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 305
+    },
+    "596": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 306
+    },
+    "597": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 307
+    },
+    "598": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 308
+    },
+    "599": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 309
+    },
+    "600": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 310
+    },
+    "601": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 311
+    },
+    "602": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 312
+    },
+    "603": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 313
+    },
+    "604": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 314
+    },
+    "605": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 315
+    },
+    "606": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 316
+    },
+    "607": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 317
+    },
+    "608": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 318
+    },
+    "609": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 319
+    },
+    "610": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 320
+    },
+    "611": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 321
+    },
+    "612": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 322
+    },
+    "613": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 323
+    },
+    "614": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 324
+    },
+    "615": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 325
+    },
+    "616": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 326
+    },
+    "617": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 327
+    },
+    "618": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 328
+    },
+    "619": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 329
+    },
+    "620": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 330
+    },
+    "621": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 331
+    },
+    "622": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 332
+    },
+    "623": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 333
+    },
+    "624": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 334
+    },
+    "625": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 335
+    },
+    "626": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 336
+    },
+    "627": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 337
+    },
+    "628": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 338
+    },
+    "629": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 339
+    },
+    "630": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 340
+    },
+    "631": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 341
+    },
+    "632": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 342
+    },
+    "633": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 343
+    },
+    "634": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 344
+    },
+    "635": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 345
+    },
+    "636": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 346
+    },
+    "637": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 347
+    },
+    "638": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 348
+    },
+    "639": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 349
+    },
+    "640": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 350
+    },
+    "641": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 351
+    },
+    "642": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 352
+    },
+    "643": {
+        "category": "procedural",
+        "chamber": "s",
+        "congress": 113,
+        "number": 353
+    },
+    "644": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 354
+    },
+    "645": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 355
+    },
+    "646": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 356
+    },
+    "647": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 357
+    },
+    "648": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 358
+    },
+    "649": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 359
+    },
+    "650": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 360
+    },
+    "651": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 361
+    },
+    "652": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 362
+    },
+    "653": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 363
+    },
+    "654": {
+        "category": "passage",
+        "chamber": "s",
+        "congress": 113,
+        "number": 364
+    },
+    "655": {
+        "category": "cloture",
+        "chamber": "s",
+        "congress": 113,
+        "number": 365
+    },
+    "656": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 113,
+        "number": 366
+    }
+}
