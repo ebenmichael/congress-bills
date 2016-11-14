@@ -23,5 +23,3 @@ This will create a directory `combined_data/` with the following files
 - `id_to_position.json`: a mapping from senator id to column in `votes.dat`
 - `row_to_bill.json`: a mapping from row in `votes.dat` to bill congress, chamber, category, and number
 - `senator_metadata.json`: a mapping from senator id to name and party
-
-This is a change to the README.
