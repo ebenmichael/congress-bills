@@ -1,0 +1,108 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-12-19", 
+      "committees": [
+        "HSJU"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the House Committee on the Judiciary.", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2008-01-14", 
+      "in_committee": null, 
+      "references": [], 
+      "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hjres74-110", 
+  "bill_type": "hjres", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Judiciary", 
+      "committee_id": "HSJU"
+    }, 
+    {
+      "activity": [
+        "referral"
+      ], 
+      "committee": "House Judiciary", 
+      "committee_id": "HSJU", 
+      "subcommittee": "Subcommittee on Constitution, Civil Rights, and Civil Liberties", 
+      "subcommittee_id": "10"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-12-19", 
+  "number": "74", 
+  "official_title": "Proposing an amendment to the Constitution of the United States relating to marriage.", 
+  "popular_title": null, 
+  "related_bills": [
+    {
+      "bill_id": "hjres22-110", 
+      "reason": "related", 
+      "type": "bill"
+    }, 
+    {
+      "bill_id": "hjres89-110", 
+      "reason": "related", 
+      "type": "bill"
+    }, 
+    {
+      "bill_id": "sjres43-110", 
+      "reason": "related", 
+      "type": "bill"
+    }
+  ], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "1", 
+    "name": "Gohmert, Louie", 
+    "state": "TX", 
+    "thomas_id": "01801", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-12-19", 
+  "subjects": [
+    "Constitutional amendments", 
+    "Families", 
+    "Law", 
+    "Marriage", 
+    "Same-sex marriage"
+  ], 
+  "subjects_top_term": "Families", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-12-19", 
+    "text": "Constitutional Amendment - Defines marriage in the United States as consisting only of a legal union of one man and one woman."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "Proposing an amendment to the Constitution of the United States relating to marriage.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:32:04-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HJ74:@@@L&summ2=m&"
+}

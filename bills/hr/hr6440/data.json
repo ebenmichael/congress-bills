@@ -1,0 +1,93 @@
+{
+  "actions": [
+    {
+      "acted_at": "2008-07-08", 
+      "committees": [
+        "HSPW"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the House Committee on Transportation and Infrastructure.", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2008-07-09", 
+      "in_committee": null, 
+      "references": [], 
+      "text": "Referred to the Subcommittee on Economic Development, Public Buildings and Emergency Management.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hr6440-110", 
+  "bill_type": "hr", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Transportation and Infrastructure", 
+      "committee_id": "HSPW"
+    }, 
+    {
+      "activity": [
+        "referral"
+      ], 
+      "committee": "House Transportation and Infrastructure", 
+      "committee_id": "HSPW", 
+      "subcommittee": "Subcommittee on Economic Development, Public Buildings and Emergency Management", 
+      "subcommittee_id": "13"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2008-07-08", 
+  "number": "6440", 
+  "official_title": "To provide for the transfer of certain Federal Property to the Galveston Historical Foundation.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "14", 
+    "name": "Paul, Ron", 
+    "state": "TX", 
+    "thomas_id": "00900", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2008-07-08", 
+  "subjects": [
+    "Foundations", 
+    "Government operations and politics", 
+    "Land transfers", 
+    "Public lands and natural resources", 
+    "Social welfare", 
+    "Texas"
+  ], 
+  "subjects_top_term": "Public lands and natural resources", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2008-07-08", 
+    "text": "Directs the Administrator of General Services to offer to convey to the Galveston Historical Foundation the federal real property located at 502 20th Street in Galveston, Texas, including all buildings and improvements on that property.\n\nRequires such conveyance to be in accordance with a fair market value appraisal that is acceptable to the Administrator.\n\nMakes the Galveston Historical Foundation responsible for all real estate transaction costs associated with the conveyance."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "To provide for the transfer of certain Federal Property to the Galveston Historical Foundation.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:31:44-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HR6440:@@@L&summ2=m&"
+}

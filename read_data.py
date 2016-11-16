@@ -28,9 +28,13 @@ def get_senator_data(votes_dir):
         metadata = {}
         for vote_type in vote_data["votes"].keys():
             for senator in vote_data["votes"][vote_type]:
-                ids.add(senator["id"])
-                metadata[senator["id"]] = {k: v for k, v in senator.items()
-                                           if k != "id"}
+                # skip the case that the VP breaks the tie
+                if not type(senator) == dict:
+                    continue
+                if not senator["id"] in ids:
+                    ids.add(senator["id"])
+                    metadata[senator["id"]] = {k: v for k, v in senator.items()
+                                               if k != "id"}
         return(ids, metadata)
     # get all of the senate files
     years = [os.path.join(votes_dir, f) for f in os.listdir(votes_dir)]
@@ -62,8 +66,8 @@ def get_vote(vote_file, id_to_pos):
         id_to_pos: dict, mapping from id to column in data matrix
     Output:
         vote_vec: ndarray, length n_senators, votes as a vector
-        bill_info: dict, mapping from {congress, number, category, chamber}
-                   to their values
+        bill_info: dict, mapping from {congress,number,category,chamber,type,
+                   file_name} to their values
     """
 
     # open json file
@@ -77,13 +81,28 @@ def get_vote(vote_file, id_to_pos):
 
     for vote_type in vote_data["votes"]:
         for senator in vote_data["votes"][vote_type]:
+            # skip the case where the VP breaks the tie
+            if not type(senator) == dict:
+                continue
             pos = id_to_pos[senator["id"]]
             vote_vec[pos] = vote_map[vote_type]
 
     bill_info = {"chamber": vote_data["chamber"],
-                 "category": vote_data["category"],
-                 "number": vote_data["number"],
-                 "congress": vote_data["congress"]}
+                 "congress": vote_data["congress"],
+                 "file_name": vote_file}
+    if "amendment" in vote_data.keys():
+        bill_info["type"] = vote_data["bill"]["type"]
+        bill_info["category"] = "amendment"
+        bill_info["number"] = vote_data["bill"]["number"]
+    elif "bill" in vote_data.keys():
+        bill_info["type"] = vote_data["bill"]["type"]
+        bill_info["category"] = "bill"
+        bill_info["number"] = vote_data["bill"]["number"]
+        print(bill_info)
+    elif "nomination" in vote_data.keys():
+        bill_info["type"] = "nomination"
+        bill_info["category"] = "nomination"
+        bill_info["number"] = vote_data["nomination"]["number"]
     return(vote_vec, bill_info)
 
 
@@ -116,6 +135,7 @@ def get_senate_votes(votes_dir, id_to_pos):
                               int(os.path.split(x)[1][1:])))
     # iterate through the bills
     for i, bill in enumerate(sorted_sub_dirs):
+        print(bill)
         vote_file = os.path.join(bill, "data.json")
         vote_vec, bill_info = get_vote(vote_file, id_to_pos)
         vote_mat[i, :] = vote_vec
@@ -150,7 +170,9 @@ if __name__ == "__main__":
         output = get_votes_and_data(votes_dir)
         id_to_pos, metadata, vote_mat, row_to_bill = output
         # create a new directory for the data
+        votes_dir = os.path.abspath(votes_dir)
         new_dir = os.path.join(os.path.split(votes_dir)[0], "combined_data")
+        new_dir = os.path.relpath(new_dir)
         if not os.path.exists(new_dir):
             os.mkdir(new_dir)
             print("Creating new directory " + new_dir)

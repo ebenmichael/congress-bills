@@ -1,0 +1,46 @@
+{
+  "actions": [], 
+  "amendments": [], 
+  "bill_id": "hr8-110", 
+  "bill_type": "hr", 
+  "by_request": false, 
+  "committees": [], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-01-04", 
+  "number": "8", 
+  "official_title": "Reserved for Speaker.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "8", 
+    "name": "Pelosi, Nancy", 
+    "state": "CA", 
+    "thomas_id": "00905", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "INTRODUCED", 
+  "status_at": "2007-01-04", 
+  "subjects": [], 
+  "subjects_top_term": null, 
+  "summary": null, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "Reserved for Speaker.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:29:00-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HR8:@@@L&summ2=m&"
+}

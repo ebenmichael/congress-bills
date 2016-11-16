@@ -1,0 +1,92 @@
+<bill session="110" type="s" number="2816" updated="2016-06-29T09:33:48-04:00">
+  <state datetime="2008-10-10">ENACTED:SIGNED</state>
+  <status>
+    <unknown datetime="2008-10-10"/>
+  </status>
+  <introduced datetime="2008-04-03"/>
+  <titles>
+    <title type="official" as="introduced">A bill to provide for the appointment of the Chief Human Capital Officer of the Department of Homeland Security by the Secretary of Homeland Security.</title>
+  </titles>
+  <sponsor id="300098"/>
+  <cosponsors>
+    <cosponsor id="300001" joined="2008-04-03"/>
+    <cosponsor id="300036" joined="2008-06-18"/>
+  </cosponsors>
+  <actions>
+    <action datetime="2008-04-03">
+      <text>Sponsor introductory remarks on measure.</text>
+      <reference ref="CR S2443-2444"/>
+    </action>
+    <action datetime="2008-04-03" state="REFERRED">
+      <text>Read twice and referred to the Committee on Homeland Security and Governmental Affairs.</text>
+    </action>
+    <calendar datetime="2008-06-25" state="REPORTED">
+      <text>Committee on Homeland Security and Governmental Affairs. Ordered to be reported without amendment favorably.</text>
+    </calendar>
+    <action datetime="2008-09-16">
+      <text>Committee on Homeland Security and Governmental Affairs. Reported by Senator Lieberman without amendment. With written report No. 110-466.</text>
+    </action>
+    <calendar datetime="2008-09-16" calendar="Senate Legislative" under="General Orders" number="971">
+      <text>Placed on Senate Legislative Calendar under General Orders. Calendar No. 971.</text>
+    </calendar>
+    <vote how="by Unanimous Consent" type="vote" datetime="2008-09-23" where="s" result="pass" state="PASS_OVER:SENATE">
+      <text>Passed Senate without amendment by Unanimous Consent.</text>
+      <reference ref="CR S9340" label="consideration"/>
+      <reference ref="CR S9340" label="text as passed Senate"/>
+    </vote>
+    <action datetime="2008-09-24T10:03:00-04:00">
+      <text>Received in the House.</text>
+    </action>
+    <action datetime="2008-09-24">
+      <text>Message on Senate action sent to the House.</text>
+    </action>
+    <action datetime="2008-09-24">
+      <text>Referred to the House Committee on Homeland Security.</text>
+    </action>
+    <action datetime="2008-09-27T19:28:00-04:00">
+      <text>Mr. Etheridge moved to suspend the rules and pass the bill.</text>
+    </action>
+    <action datetime="2008-09-27T19:28:00-04:00">
+      <text>Considered under suspension of the rules.</text>
+      <reference ref="CR H10273-10274" label="consideration"/>
+    </action>
+    <action datetime="2008-09-27T19:28:00-04:00">
+      <text>DEBATE - The House proceeded with forty minutes of debate on S. 2816.</text>
+    </action>
+    <vote how="by voice vote" type="vote2" datetime="2008-09-27T19:37:00-04:00" where="h" result="pass" state="PASSED:BILL">
+      <text>On motion to suspend the rules and pass the bill Agreed to by voice vote.</text>
+      <reference ref="CR H10273" label="text"/>
+    </vote>
+    <action datetime="2008-09-27T19:37:00-04:00">
+      <text>Motion to reconsider laid on the table Agreed to without objection.</text>
+    </action>
+    <topresident datetime="2008-09-27">
+      <text>Cleared for White House.</text>
+    </topresident>
+    <topresident datetime="2008-10-02">
+      <text>Presented to President.</text>
+    </topresident>
+    <signed datetime="2008-10-10" state="ENACTED:SIGNED">
+      <text>Signed by President.</text>
+    </signed>
+    <enacted number="110-388" type="public" datetime="2008-10-10">
+      <text>Became Public Law No: 110-388.</text>
+    </enacted>
+  </actions>
+  <committees>
+    <committee code="SSGA" name="Senate Homeland Security and Governmental Affairs" activity="Referral, Markup, Reporting"/>
+    <committee code="HSHM" name="House Homeland Security" activity="Referral"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Government operations and politics"/>
+    <term name="Advice and consent of the Senate"/>
+    <term name="Congress"/>
+    <term name="Department of Homeland Security"/>
+    <term name="Federal officials"/>
+    <term name="Presidential appointments"/>
+  </subjects>
+  <amendments/>
+  <summary>9/27/2008--Public Law.
+Amends the Homeland Security Act of 2002 to repeal a provision that includes the Chief Human Capital Officer among the officials of the Department of Homeland Security (DHS) to be appointed by the President.</summary>
+</bill>

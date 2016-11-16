@@ -1,0 +1,73 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-12-12", 
+      "committees": [
+        "HSWM"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the House Committee on Ways and Means.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hr4479-110", 
+  "bill_type": "hr", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Ways and Means", 
+      "committee_id": "HSWM"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-12-12", 
+  "number": "4479", 
+  "official_title": "To extend the temporary suspension of duty on waste of camel hair.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "2", 
+    "name": "Courtney, Joe", 
+    "state": "CT", 
+    "thomas_id": "01836", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-12-12", 
+  "subjects": [
+    "Foreign trade and international finance", 
+    "Tariff"
+  ], 
+  "subjects_top_term": "Foreign trade and international finance", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-12-12", 
+    "text": "Amends the Harmonized Tariff Schedule of the United States to extend the temporary suspension of duty on waste of camel hair."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "To extend the temporary suspension of duty on waste of camel hair.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:31:05-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HR4479:@@@L&summ2=m&"
+}

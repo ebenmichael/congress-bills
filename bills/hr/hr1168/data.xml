@@ -1,0 +1,43 @@
+<bill session="110" type="h" number="1168" updated="2016-06-29T09:29:39-04:00">
+  <state datetime="2007-02-16">REFERRED</state>
+  <status>
+    <introduced datetime="2007-02-16"/>
+  </status>
+  <introduced datetime="2007-02-16"/>
+  <titles>
+    <title type="short" as="introduced">Foreign Felon Gun Prohibition Act of 2007</title>
+    <title type="official" as="introduced">To amend chapter 44 of title 18, United States Code, to extend the firearm and ammunition prohibitions applicable to convicted felons to those convicted in a foreign court.</title>
+  </titles>
+  <sponsor id="400257"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2007-02-16">
+      <text>Sponsor introductory remarks on measure.</text>
+      <reference ref="CR S4759-4764"/>
+    </action>
+    <action datetime="2007-02-16" state="REFERRED">
+      <text>Referred to the House Committee on the Judiciary.</text>
+    </action>
+    <action datetime="2007-03-19">
+      <text>Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSJU" name="House Judiciary" activity="Referral, In Committee"/>
+    <committee activity="Referral" code="HSJU08" subcommittee="Crime, Terrorism, and Homeland Security" name="House Judiciary"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Crime and law enforcement"/>
+    <term name="Ammunition"/>
+    <term name="Criminal courts"/>
+    <term name="Ex-offenders"/>
+    <term name="Fines (Penalties)"/>
+    <term name="Firearms control"/>
+    <term name="International affairs"/>
+    <term name="Law"/>
+  </subjects>
+  <amendments/>
+  <summary>2/16/2007--Introduced.
+Foreign Felon Gun Prohibition Act of 2007 - Amends the federal criminal code to extend prohibitions against the sale, disposition, shipment, possession, transfer, or receipt of a firearm or ammunition by convicted felons to felons convicted in a foreign court.</summary>
+</bill>

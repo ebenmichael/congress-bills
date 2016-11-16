@@ -1,0 +1,96 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-09-27", 
+      "committees": [
+        "HSFA"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the House Committee on Foreign Affairs.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hconres220-110", 
+  "bill_type": "hconres", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Foreign Affairs", 
+      "committee_id": "HSFA"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [
+    {
+      "district": "11", 
+      "name": "McCotter, Thaddeus G.", 
+      "sponsored_at": "2007-10-17", 
+      "state": "MI", 
+      "thomas_id": "01732", 
+      "title": "Rep", 
+      "withdrawn_at": null
+    }
+  ], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-09-27", 
+  "number": "220", 
+  "official_title": "Concerning the response of the United States to forced abortion and the coercive one-child policy in the People's Republic of China, and the resulting \"gendercide\" of girls in that country.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "4", 
+    "name": "Smith, Christopher H.", 
+    "state": "NJ", 
+    "thomas_id": "01071", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-09-27", 
+  "subjects": [
+    "Abortion", 
+    "Children's rights", 
+    "China", 
+    "Civil rights and liberties, minority issues", 
+    "Discrimination", 
+    "East Asia", 
+    "Families", 
+    "Family planning and birth control", 
+    "Human rights", 
+    "International affairs", 
+    "Sterilization (Birth control)", 
+    "United Nations", 
+    "United Nations finances", 
+    "Women", 
+    "Women's rights"
+  ], 
+  "subjects_top_term": "International affairs", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-09-27", 
+    "text": "Declares that Congress strongly condemns the continued violations of human rights by the government of the People's Republic of China (PRC), including regarding birth limitations and related forced abortions and sterilization.\n\n Urges the PRC government to cease these policies and urges the United Nations Population Fund (UNFPA) to cease all its activities in the PRC and withdraw from that country.\n\n Affirms certain internationally recognized human rights, including the right of women to bear children unconstrained by government policies limiting the number of children they bear and the right of children not to be discriminated against by a government because they were born contrary to a government plan.\n\nAsks that the President and the Secretary of State raise these concerns with the PRC government, call upon the PRC government to cease immediately these policies, and continue to withhold funds from UNFPA due to UNFPA's continued involvement in supporting coercive abortion and sterilization, which violates the \"Kemp-Kasten\" provision of U.S. law."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "Concerning the response of the United States to forced abortion and the coercive one-child policy in the People's Republic of China, and the resulting \"gendercide\" of girls in that country.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:32:12-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HC220:@@@L&summ2=m&"
+}

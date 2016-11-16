@@ -1,0 +1,73 @@
+{
+  "actions": [
+    {
+      "acted_at": "2008-12-09", 
+      "committees": [
+        "HSJU"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the House Committee on the Judiciary.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hr7320-110", 
+  "bill_type": "hr", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Judiciary", 
+      "committee_id": "HSJU"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2008-12-09", 
+  "number": "7320", 
+  "official_title": "For the relief of Rebeca Rojas de Guzman.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "4", 
+    "name": "Gutierrez, Luis V.", 
+    "state": "IL", 
+    "thomas_id": "00478", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2008-12-09", 
+  "subjects": [
+    "Immigration", 
+    "Private legislation"
+  ], 
+  "subjects_top_term": "Private legislation", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2008-12-09", 
+    "text": "Provides for the relief of Rebeca Rojas de Guzman."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "For the relief of Rebeca Rojas de Guzman.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:32:00-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HR7320:@@@L&summ2=m&"
+}

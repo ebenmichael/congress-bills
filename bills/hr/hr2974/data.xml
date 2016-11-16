@@ -1,0 +1,34 @@
+<bill session="110" type="h" number="2974" updated="2016-06-29T09:30:31-04:00">
+  <state datetime="2007-07-10">REFERRED</state>
+  <status>
+    <introduced datetime="2007-07-10"/>
+  </status>
+  <introduced datetime="2007-07-10"/>
+  <titles>
+    <title type="short" as="introduced">Innocent Check Depositor Protection Act</title>
+    <title type="official" as="introduced">To protect innocent parties from certain fees imposed by depository institutions for dishonored checks, and for other purposes.</title>
+  </titles>
+  <sponsor id="400426"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2007-07-10" state="REFERRED">
+      <text>Referred to the House Committee on Financial Services.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSBA" name="House Financial Services" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Finance and financial sector"/>
+    <term name="Bank accounts"/>
+    <term name="Bank deposits"/>
+    <term name="Checks"/>
+    <term name="Fees"/>
+  </subjects>
+  <amendments/>
+  <summary>7/10/2007--Introduced.
+Innocent Check Depositor Protection Act - Amends the Expedited Funds Availability Act to prohibit a receiving depository institution from imposing check dishonorment fees upon a depositor if the check is drawn on an account at an originating institution which subsequently dishonors it for lack of sufficient funds.
+
+States that this Act shall not be construed as affecting any intervening depository institution or the costs of services it provides.</summary>
+</bill>

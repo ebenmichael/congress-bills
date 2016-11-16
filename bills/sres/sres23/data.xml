@@ -1,0 +1,42 @@
+<bill session="110" type="sr" number="23" updated="2016-06-29T09:32:25-04:00">
+  <state datetime="2007-02-01">PASSED:SIMPLERES</state>
+  <status>
+    <unknown datetime="2007-02-01"/>
+  </status>
+  <introduced datetime="2007-01-11"/>
+  <titles>
+    <title type="official" as="introduced">A resolution designating the week of February 5 through February 9, 2007, as "National School Counseling Week".</title>
+  </titles>
+  <sponsor id="300076"/>
+  <cosponsors>
+    <cosponsor id="300090" joined="2007-02-01"/>
+  </cosponsors>
+  <actions>
+    <action datetime="2007-01-11" state="REFERRED">
+      <text>Referred to the Committee on the Judiciary.</text>
+      <reference ref="CR S464" label="text of measure as introduced"/>
+    </action>
+    <action datetime="2007-02-01">
+      <text>Senate Committee on the Judiciary discharged by Unanimous Consent.</text>
+      <reference ref="CR S1542" label="consideration"/>
+    </action>
+    <vote how="by Unanimous Consent" type="vote" datetime="2007-02-01" where="s" result="pass" state="PASSED:SIMPLERES">
+      <text>Resolution agreed to in Senate without amendment and with a preamble by Unanimous Consent.</text>
+      <reference ref="CR S1542" label="text"/>
+    </vote>
+  </actions>
+  <committees>
+    <committee code="SSJU" name="Senate Judiciary" activity="Referral, Discharged"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Commemorations"/>
+    <term name="Education"/>
+    <term name="Educational counseling"/>
+    <term name="Elementary and secondary education"/>
+    <term name="Special weeks"/>
+  </subjects>
+  <amendments/>
+  <summary>2/1/2007--Passed Senate without amendment.
+Designates the week of February 5-February 9, 2007, as National School Counseling Week.</summary>
+</bill>

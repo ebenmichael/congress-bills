@@ -1,0 +1,38 @@
+<bill session="110" type="s" number="811" updated="2016-06-29T09:33:06-04:00">
+  <state datetime="2007-03-08">REFERRED</state>
+  <status>
+    <introduced datetime="2007-03-08"/>
+  </status>
+  <introduced datetime="2007-03-08"/>
+  <titles>
+    <title type="short" as="introduced">Sacramento River National Recreation Area Act of 2007</title>
+    <title type="official" as="introduced">A bill to establish the Sacramento River National Recreation Area in the State of California.</title>
+  </titles>
+  <sponsor id="300011"/>
+  <cosponsors>
+    <cosponsor id="300043" joined="2007-03-08"/>
+  </cosponsors>
+  <actions>
+    <action datetime="2007-03-08" state="REFERRED">
+      <text>Read twice and referred to the Committee on Energy and Natural Resources.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills>
+    <bill relation="unknown" session="110" type="h" number="1241"/>
+  </relatedbills>
+  <subjects>
+    <term name="Public lands and natural resources"/>
+    <term name="Agriculture and food"/>
+    <term name="California"/>
+    <term name="Grazing"/>
+    <term name="National recreation areas"/>
+    <term name="Rivers"/>
+    <term name="Water resources development"/>
+  </subjects>
+  <amendments/>
+  <summary>3/8/2007--Introduced.
+Sacramento River National Recreation Area Act of 2007 - Establishes the Sacramento River National Recreation Area in California, consisting of specified public land in Tehama and Shasta Counties. Requires the development of a comprehensive plan for the long-range protection and management of such Area.</summary>
+</bill>

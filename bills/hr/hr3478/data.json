@@ -1,0 +1,77 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-09-05", 
+      "committees": [
+        "HSAG"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the House Committee on Agriculture.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hr3478-110", 
+  "bill_type": "hr", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Agriculture", 
+      "committee_id": "HSAG"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-09-05", 
+  "number": "3478", 
+  "official_title": "To prohibit the closure or relocation of the field office of the Farm Service Agency in Clark County, Indiana.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "9", 
+    "name": "Hill, Baron P.", 
+    "state": "IN", 
+    "thomas_id": "01578", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-09-05", 
+  "subjects": [
+    "Agriculture and food", 
+    "Department of Agriculture", 
+    "Executive reorganization", 
+    "Government operations and politics", 
+    "Indiana", 
+    "Relocation"
+  ], 
+  "subjects_top_term": "Agriculture and food", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-09-05", 
+    "text": "Prohibits the Secretary of Agriculture from closing or relocating the Farm Service Agency field office in Clark County, Indiana, until at least two years after the date of enactment of this Act."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "To prohibit the closure or relocation of the field office of the Farm Service Agency in Clark County, Indiana.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:30:45-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HR3478:@@@L&summ2=m&"
+}

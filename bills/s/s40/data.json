@@ -1,0 +1,125 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-05-24", 
+      "references": [
+        {
+          "reference": "CR S6849", 
+          "type": null
+        }
+      ], 
+      "text": "Sponsor introductory remarks on measure.", 
+      "type": "action"
+    }, 
+    {
+      "acted_at": "2007-05-24", 
+      "committees": [
+        "SSBK"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "s40-110", 
+  "bill_type": "s", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "Senate Banking, Housing, and Urban Affairs", 
+      "committee_id": "SSBK"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [
+    {
+      "district": null, 
+      "name": "Johnson, Tim", 
+      "sponsored_at": "2007-05-24", 
+      "state": "SD", 
+      "thomas_id": "00604", 
+      "title": "Sen", 
+      "withdrawn_at": null
+    }
+  ], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-05-24", 
+  "number": "40", 
+  "official_title": "A bill to authorize the issuance of Federal charters and licenses for carrying on the sale, solicitation, negotiation, and underwriting of insurance or any other insurance operations, to provide a comprehensive system for the Federal regulation and supervision of national insurers and national agencies, to provide for policyholder protections in the event of an insolvency or the impairment of a national insurer, and for other purposes.", 
+  "popular_title": null, 
+  "related_bills": [
+    {
+      "bill_id": "hr3200-110", 
+      "reason": "related", 
+      "type": "bill"
+    }
+  ], 
+  "short_title": "National Insurance Act of 2007", 
+  "sponsor": {
+    "district": null, 
+    "name": "Sununu, John E.", 
+    "state": "NH", 
+    "thomas_id": "01532", 
+    "title": "Sen", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-05-24", 
+  "subjects": [
+    "Antitrust law", 
+    "Bankruptcy", 
+    "Casualty insurance", 
+    "Commerce", 
+    "Corporate mergers", 
+    "Corporate reorganizations", 
+    "Department of the Treasury", 
+    "Executive reorganization", 
+    "Federal preemption", 
+    "Finance and financial sector", 
+    "Government operations and politics", 
+    "Holding companies", 
+    "Insurance agents", 
+    "Insurance companies", 
+    "Insurance law", 
+    "Law", 
+    "Licenses", 
+    "Life insurance", 
+    "Ombudsman", 
+    "Property insurance", 
+    "State laws"
+  ], 
+  "subjects_top_term": "Finance and financial sector", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-05-24", 
+    "text": "National Insurance Act of 2007 - Establishes in the Department of the Treasury an Office of National Insurance (ONI), headed by a Commissioner of National Insurance, with Divisions of Insurance Fraud and of Consumer Affairs, and an Office of the Ombudsman.\n\nAuthorizes the Commissioner to supervise, regulate, and provide for registration of insurance self-regulatory organizations.\n\nRequires the Commissioner to supervise national insurers and national agencies, including chartering and licensing. Removes them, as well as federally licensed insurance producers, from state oversight of insurance business practices.\n\nAuthorizes the Commissioner to provide for the organization, operation, and regulation of National Insurance Companies and National Insurance Agencies, including U.S. branches of non-U.S. Insurers.\n\nRequires national insurers to obtain a federal license.\n\nProvides for conversion of state insurers to national insurers or state insurance agencies to national agencies, and vice versa.\n\nPrescribes requirements for national life insurer product regulation, including mandatory election for either national or state participating policy procedures governing a national life insurer in mutual form.\n\nSets forth requirements governing prompt corrective action.\n\nAuthorizes the Commissioner to: (1) license insurers that are not national insurers to provide reinsurance; and (2) issue federal insurance producer licenses.\n\nRestricts specified state actions.\n\nProvides for: (1) mergers, consolidations, and acquisitions of national insurers and national agencies; and (2) conversion of stock life insurers to national life insurer in mutual form, and vice versa.\n\nSubjects national insurers and national agencies to state taxation.\n\nProhibits states from preventing or restricting national insurers from engaging in specified insurance business practices.\n\nRequires registration with the Commissioner of national insurers that belong to an insurance holding company system.\n\nAuthorizes the Commissioner to appoint the ONI as receiver for a national insurer for rehabilitation or liquidation.\n\nRequires national insurers to join guaranty associations in each state, which may levy assessments on them for purposes of insolvency protection.\n\nEstablishes a National Insurance Guaranty Corporation to provide benefits to policyholders of a national life insurer under federal receivership.\n\nSets forth requirements governing claims covered for policy holders of national property/casualty insurers.\n\nApplies federal antitrust laws to national insurers, national agencies, and federally licensed insurance producers.\n\nExempts national insurers, national agencies, and federally licensed insurance producers from state regulation, except as expressly provided in this Act."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "National Insurance Act of 2007", 
+      "type": "short"
+    }, 
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "A bill to authorize the issuance of Federal charters and licenses for carrying on the sale, solicitation, negotiation, and underwriting of insurance or any other insurance operations, to provide a comprehensive system for the Federal regulation and supervision of national insurers and national agencies, to provide for policyholder protections in the event of an insolvency or the impairment of a national insurer, and for other purposes.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:32:46-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:SN40:@@@L&summ2=m&"
+}

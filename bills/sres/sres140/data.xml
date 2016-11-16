@@ -1,0 +1,37 @@
+<bill session="110" type="sr" number="140" updated="2016-06-29T09:32:28-04:00">
+  <state datetime="2007-04-10">PASSED:SIMPLERES</state>
+  <status>
+    <unknown datetime="2007-04-10"/>
+  </status>
+  <introduced datetime="2007-04-10"/>
+  <titles>
+    <title type="official" as="introduced">A resolution to authorize legal representation in In the Matter of the Application of Committee on Finance.</title>
+  </titles>
+  <sponsor id="300082"/>
+  <cosponsors>
+    <cosponsor id="300072" joined="2007-04-10"/>
+  </cosponsors>
+  <actions>
+    <vote how="by Unanimous Consent" type="vote" datetime="2007-04-10" where="s" result="pass" state="PASSED:SIMPLERES">
+      <text>Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent.</text>
+      <reference ref="CR S4236" label="consideration"/>
+      <reference ref="CR S4236" label="text as passed Senate"/>
+      <reference ref="CR S4311" label="text of measure as introduced"/>
+    </vote>
+  </actions>
+  <committees/>
+  <relatedbills/>
+  <subjects>
+    <term name="Congress"/>
+    <term name="Civil actions and liability"/>
+    <term name="Congressional committees (Senate)"/>
+    <term name="Congressional legal counsel"/>
+    <term name="Crime and law enforcement"/>
+    <term name="Habeas corpus"/>
+    <term name="Law"/>
+    <term name="Senate Finance"/>
+  </subjects>
+  <amendments/>
+  <summary>4/10/2007--Passed Senate without amendment.
+Authorizes the Senate Legal Counsel to represent the Committee on Finance in the proceeding styled In the Matter of the Application of Committee on Finance for a Writ of Habeas Corpus Ad Testificandum, Misc. No. 07-134 (D.D.C.).</summary>
+</bill>

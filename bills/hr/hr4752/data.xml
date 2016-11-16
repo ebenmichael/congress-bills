@@ -1,0 +1,35 @@
+<bill session="110" type="h" number="4752" updated="2016-06-29T09:31:10-04:00">
+  <state datetime="2007-12-17">REFERRED</state>
+  <status>
+    <introduced datetime="2007-12-17"/>
+  </status>
+  <introduced datetime="2007-12-17"/>
+  <titles>
+    <title type="short" as="introduced">Working American Competitiveness Act</title>
+    <title type="official" as="introduced">To amend the Internal Revenue Code of 1986 to eliminate the limitation on the foreign earned income exclusion, and for other purposes.</title>
+  </titles>
+  <sponsor id="400271"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2007-12-17" state="REFERRED">
+      <text>Referred to the House Committee on Ways and Means.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills>
+    <bill relation="identical" session="110" type="s" number="1140"/>
+  </relatedbills>
+  <subjects>
+    <term name="Taxation"/>
+    <term name="Earnings"/>
+    <term name="Income tax"/>
+    <term name="Labor and employment"/>
+    <term name="Tax exclusion"/>
+    <term name="Taxation of foreign income"/>
+  </subjects>
+  <amendments/>
+  <summary>12/17/2007--Introduced.
+Working American Competitiveness Act - Amends the Internal Revenue Code to allow a taxpayers to elect to exclude from gross income, without limitation, earned income (i.e., income for services performed) from sources within a foreign country.</summary>
+</bill>

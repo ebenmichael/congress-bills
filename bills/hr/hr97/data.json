@@ -1,0 +1,254 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-01-04", 
+      "committees": [
+        "HSJU"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the Committee on the Judiciary, and in addition to the Committees on House Administration, Rules, and Standards of Official Conduct, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2007-01-04", 
+      "committees": [
+        "HSJU"
+      ], 
+      "references": [], 
+      "text": "Referred to House Judiciary", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2007-01-04", 
+      "committees": [
+        "HSHA"
+      ], 
+      "references": [], 
+      "text": "Referred to House House Administration", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2007-01-04", 
+      "committees": [
+        "HSRU"
+      ], 
+      "references": [], 
+      "text": "Referred to House Rules", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2007-01-04", 
+      "committees": [
+        "HSSO"
+      ], 
+      "references": [], 
+      "text": "Referred to House Standards of Official Conduct", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2007-02-02", 
+      "committees": [
+        "HSHM"
+      ], 
+      "in_committee": null, 
+      "references": [], 
+      "text": "Referred to the Subcommittee on Crime, Terrorism, and Homeland Security.", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2007-02-02", 
+      "in_committee": null, 
+      "references": [], 
+      "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hr97-110", 
+  "bill_type": "hr", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Judiciary", 
+      "committee_id": "HSJU"
+    }, 
+    {
+      "activity": [
+        "referral"
+      ], 
+      "committee": "House Judiciary", 
+      "committee_id": "HSJU", 
+      "subcommittee": "Subcommittee on Crime, Terrorism, and Homeland Security", 
+      "subcommittee_id": "08"
+    }, 
+    {
+      "activity": [
+        "referral"
+      ], 
+      "committee": "House Judiciary", 
+      "committee_id": "HSJU", 
+      "subcommittee": "Subcommittee on Constitution, Civil Rights, and Civil Liberties", 
+      "subcommittee_id": "10"
+    }, 
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Administration", 
+      "committee_id": "HSHA"
+    }, 
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Rules", 
+      "committee_id": "HSRU"
+    }, 
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Standards of Official Conduct", 
+      "committee_id": "HSSO"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [
+    {
+      "district": "19", 
+      "name": "Platts, Todd Russell", 
+      "sponsored_at": "2007-01-04", 
+      "state": "PA", 
+      "thomas_id": "01667", 
+      "title": "Rep", 
+      "withdrawn_at": null
+    }
+  ], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-01-04", 
+  "number": "97", 
+  "official_title": "To amend the Rules of the House of Representatives to reform the ethics process, and for other purposes.", 
+  "popular_title": null, 
+  "related_bills": [
+    {
+      "bill_id": "hres895-110", 
+      "reason": "related", 
+      "type": "bill"
+    }, 
+    {
+      "bill_id": "hres1018-110", 
+      "reason": "related", 
+      "type": "bill"
+    }, 
+    {
+      "bill_id": "hr1754-110", 
+      "reason": "related", 
+      "type": "bill"
+    }
+  ], 
+  "short_title": "Accountability and Transparency in Ethics Act", 
+  "sponsor": {
+    "district": null, 
+    "name": "Castle, Michael N.", 
+    "state": "DE", 
+    "thomas_id": "00183", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-01-04", 
+  "subjects": [
+    "Administrative fees", 
+    "Bribery", 
+    "Campaign funds", 
+    "Charter airlines", 
+    "Conflict of interests", 
+    "Congress", 
+    "Congressional Record", 
+    "Congressional agencies", 
+    "Congressional committee membership", 
+    "Congressional committees (House)", 
+    "Congressional elections", 
+    "Congressional employees", 
+    "Congressional ethics", 
+    "Congressional investigations", 
+    "Congressional officers", 
+    "Congressional publicity", 
+    "Congressional reorganization", 
+    "Congressional reporting requirements", 
+    "Congressional travel", 
+    "Crime and law enforcement", 
+    "Criminal justice information", 
+    "Data banks", 
+    "Economics and public finance", 
+    "Election candidates", 
+    "Electronic data interchange", 
+    "Electronic government information", 
+    "Employee training", 
+    "Evidence (Law)", 
+    "Ex-Members of Congress", 
+    "Families", 
+    "Financial disclosure", 
+    "Fines (Penalties)", 
+    "Gifts", 
+    "Government operations and politics", 
+    "Government paperwork", 
+    "House Standards of Official Conduct", 
+    "House of Representatives", 
+    "House rules and procedure", 
+    "Judges", 
+    "Labor and employment", 
+    "Law", 
+    "Licenses", 
+    "Lobbying", 
+    "Married people", 
+    "Members of Congress", 
+    "Misconduct in office", 
+    "Political action committees", 
+    "Political conventions", 
+    "Presidential elections", 
+    "Private aviation", 
+    "Public corruption", 
+    "Science, technology, communications", 
+    "Senate rules and procedure", 
+    "Transportation and public works", 
+    "Travel costs", 
+    "Valuation"
+  ], 
+  "subjects_top_term": "Congress", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-01-04", 
+    "text": "Accountability and Transparency in Ethics Act - Establishes an independent Investigations Commission within the legislative branch.\n\nRequires annual ethics training for Members and employees of the House of Representatives and for registered lobbyists.\n\nAmends Rule XXV (Limitations on Outside Earned Income and Acceptance of Gifts) of the Rules of the House to require advance authorization by the Committee on Standards of Official Conduct of any privately-funded trip by any Member, officer, or employee of the House.\n\nAmends such Rule and Rule XXXV (Gifts) of the Standing Rules of the Senate with respect to: (1) the market value of a flight on an airplane not licensed by the Federal Aviation Administration (FAA) to operate for compensation or hire; (2) a ban on gifts worth less than $50; and (3) disbursements for a national party convention event in honor of a Member, officer, or employee.\n\nAmends the Lobbying Disclosure Act of 1995 (LDA) to: (1) transfer certain functions of the Clerk of the House to the Committee with respect to registration of lobbyists; (2) revise certain registration and disclosure requirements; and (3) prescribe civil fines for lobbyists offering certain gifts to Members, officers, or employees.\n\n\n\n\n\n\n\n\n\nAmends the federal criminal code to revise the one-year ban on lobbying contacts by former Members, officers, or employees of either chamber of Congress.\n\nAmends the Federal Election Campaign Act of 1971 to prohibit conversion of leadership PAC funds to personal use.\n\n\n\nProhibits payment of campaign funds, except nominal reimbursements, to immediate family members of candidates.\n\nProhibits involvement of a registered lobbyist in administration of certain campaign committees unless a candidate for federal office.\n\nAmends Rule XXIII (Code of Official Conduct) of the Rules of the House and Rule XXXVII (Conflict of Interest) of the Standing Rules of the Senate to require a Member of Congress or Senator to prohibit all of his or her staff from having any official contact with the Member's or Senator's spouse or immediate family member if such individual is a registered lobbyist or is employed or retained by one to influence legislation.\n\nExpresses the sense of Congress that the use of a family relationship by a lobbyist who is an immediate family member of a Member of Congress to gain special advantages over other lobbyists is inappropriate."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "Accountability and Transparency in Ethics Act", 
+      "type": "short"
+    }, 
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "To amend the Rules of the House of Representatives to reform the ethics process, and for other purposes.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:29:05-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HR97:@@@L&summ2=m&"
+}

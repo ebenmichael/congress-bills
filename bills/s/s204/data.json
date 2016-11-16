@@ -1,0 +1,73 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-01-08", 
+      "committees": [
+        "SSJU"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Read twice and referred to the Committee on the Judiciary.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "s204-110", 
+  "bill_type": "s", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "Senate Judiciary", 
+      "committee_id": "SSJU"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-01-08", 
+  "number": "204", 
+  "official_title": "A bill for the relief of Ziad Mohamed Shaban Khweis, Heyam Ziad Khweis, and Juman Ziad Khweis.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": null, 
+    "name": "Bingaman, Jeff", 
+    "state": "NM", 
+    "thomas_id": "01285", 
+    "title": "Sen", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-01-08", 
+  "subjects": [
+    "Immigration", 
+    "Private legislation"
+  ], 
+  "subjects_top_term": "Private legislation", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-01-08", 
+    "text": "Provides for the relief of Ziad Mohamed Shaban Khweis, Heyam Ziad Khweis, and Juman Ziad Khweis."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "A bill for the relief of Ziad Mohamed Shaban Khweis, Heyam Ziad Khweis, and Juman Ziad Khweis.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:32:48-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:SN204:@@@L&summ2=m&"
+}

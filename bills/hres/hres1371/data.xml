@@ -1,0 +1,31 @@
+<bill session="110" type="hr" number="1371" updated="2016-06-29T09:28:56-04:00">
+  <state datetime="2008-07-23">REFERRED</state>
+  <status>
+    <introduced datetime="2008-07-23"/>
+  </status>
+  <introduced datetime="2008-07-23"/>
+  <titles>
+    <title type="official" as="introduced">Congratulating the Saratoga Race Course as it celebrates its 140th season.</title>
+  </titles>
+  <sponsor id="412223"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2008-07-23" state="REFERRED">
+      <text>Referred to the House Committee on Oversight and Government Reform.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Sports and recreation"/>
+    <term name="Commemorative events and holidays"/>
+    <term name="Congressional tributes"/>
+    <term name="New York State"/>
+    <term name="Professional sports"/>
+  </subjects>
+  <amendments/>
+  <summary>7/23/2008--Introduced.
+Congratulates the Saratoga Race Course as it celebrates its 140th season and recognizes its important place in horseracing history.</summary>
+</bill>

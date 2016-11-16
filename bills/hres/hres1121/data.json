@@ -1,0 +1,78 @@
+{
+  "actions": [
+    {
+      "acted_at": "2008-04-17", 
+      "committees": [
+        "HSFA"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the House Committee on Foreign Affairs.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hres1121-110", 
+  "bill_type": "hres", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Foreign Affairs", 
+      "committee_id": "HSFA"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2008-04-17", 
+  "number": "1121", 
+  "official_title": "Commending Miller Motorsports Park, the county of Tooele, and the State of Utah for hosting the Federation Internationale de Motocyclisme (FIM) Superbike World Championship May 29 through June 1, 2008.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "1", 
+    "name": "Bishop, Rob", 
+    "state": "UT", 
+    "thomas_id": "01753", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2008-04-17", 
+  "subjects": [
+    "Athletes", 
+    "Congressional tributes", 
+    "International affairs", 
+    "Motorcycles", 
+    "Sports and recreation", 
+    "Transportation and public works", 
+    "Utah"
+  ], 
+  "subjects_top_term": "International affairs", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2008-04-17", 
+    "text": "Salutes the riders and teams that compete at a professional, world-class level in the Federation Internationale de Motocyclisme (FIM) Superbike World Championship.\n\nCongratulates Miller Motorsports Park, Tooele county, and the state of Utah for hosting the Championship."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "Commending Miller Motorsports Park, the county of Tooele, and the State of Utah for hosting the Federation Internationale de Motocyclisme (FIM) Superbike World Championship May 29 through June 1, 2008.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:28:46-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HE1121:@@@L&summ2=m&"
+}

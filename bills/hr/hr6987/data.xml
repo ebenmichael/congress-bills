@@ -1,0 +1,41 @@
+<bill session="110" type="h" number="6987" updated="2016-06-29T09:31:55-04:00">
+  <state datetime="2008-09-22">REFERRED</state>
+  <status>
+    <introduced datetime="2008-09-22"/>
+  </status>
+  <introduced datetime="2008-09-22"/>
+  <titles>
+    <title type="short" as="introduced">Taxpayer Bailout Protection Act of 2008</title>
+    <title type="official" as="introduced">To amend the Sarbanes-Oxley Act of 2002 to require officers to repay bonus amounts received during a year in which their company is subject to a taxpayer bailout, as well as the two previous years.</title>
+  </titles>
+  <sponsor id="400131"/>
+  <cosponsors>
+    <cosponsor id="412216" joined="2008-09-27"/>
+    <cosponsor id="400145" joined="2008-09-22"/>
+    <cosponsor id="400313" joined="2008-09-27"/>
+    <cosponsor id="412202" joined="2008-09-22"/>
+  </cosponsors>
+  <actions>
+    <action datetime="2008-09-22" state="REFERRED">
+      <text>Referred to the House Committee on Financial Services.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSBA" name="House Financial Services" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Finance and financial sector"/>
+    <term name="Bankruptcy"/>
+    <term name="Business investment and capital"/>
+    <term name="Corporate finance and management"/>
+    <term name="Government lending and loan guarantees"/>
+    <term name="Securities"/>
+    <term name="Wages and earnings"/>
+  </subjects>
+  <amendments/>
+  <summary>9/22/2008--Introduced.
+Taxpayer Bailout Protection Act of 2008 - Amends the Sarbanes-Oxley Act of 2002 to require an officer of an issuer of registered securities to pay to the Department of the Treasury any bonus or other incentive-based or equity-based compensation received from the issuer during a year in which the issuer is subject to a taxpayer bailout and the two prior years.
+
+Defines "taxpayer bailout" as: (1) placement of the issuer under conservatorship, receivership, or other assumption of the management, governance, and control of the issuer by the Treasury or by the Board of Governors of the Federal Reserve; or (2) an emergency loan of public funds made to the issuer by the Treasury or the Board, if the Board Chairman determines that such a loan is necessary to prevent the issuer's imminent failure.</summary>
+</bill>

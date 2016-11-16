@@ -1,0 +1,41 @@
+<bill session="110" type="h" number="2282" updated="2016-06-29T09:30:13-04:00">
+  <state datetime="2007-05-10">REFERRED</state>
+  <status>
+    <introduced datetime="2007-05-10"/>
+  </status>
+  <introduced datetime="2007-05-10"/>
+  <titles>
+    <title type="short" as="introduced">Nuclear Waste Storage Prohibition Act</title>
+    <title type="official" as="introduced">To prohibit the use of Global Nuclear Energy Partnership funds for certain nuclear waste storage.</title>
+  </titles>
+  <sponsor id="412010"/>
+  <cosponsors>
+    <cosponsor id="412229" joined="2007-05-10"/>
+    <cosponsor id="412227" joined="2007-05-10"/>
+  </cosponsors>
+  <actions>
+    <action datetime="2007-05-10" state="REFERRED">
+      <text>Referred to the House Committee on Energy and Commerce.</text>
+    </action>
+    <action datetime="2007-05-10">
+      <text>Referred to the Subcommittee on Energy and Air Quality.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee"/>
+    <committee activity="Referral" code="HSIF03" subcommittee="Energy and Air Quality" name="House Energy and Commerce"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Energy"/>
+    <term name="Environmental protection"/>
+    <term name="Nuclear fuels"/>
+    <term name="Radioactive wastes"/>
+    <term name="Storage"/>
+  </subjects>
+  <amendments/>
+  <summary>5/10/2007--Introduced.
+Nuclear Waste Storage Prohibition Act - Prohibits the Secretary of Energy from using any funds made available for the Global Nuclear Energy Partnership initiative for the transfer or storage of spent nuclear fuel or high-level radioactive waste to any site that is not a site where facilities for reprocessing of that fuel or waste have been constructed or are under construction.
+
+Prohibits spent nuclear fuel or high-level radioactive waste from being retained for long-term storage at such a site where facilities for reprocessing of fuel or waste have been constructed or are under construction.</summary>
+</bill>

@@ -1,0 +1,111 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-09-27", 
+      "committees": [
+        "HSAS"
+      ], 
+      "references": [], 
+      "status": "REFERRED", 
+      "text": "Referred to the House Committee on Armed Services.", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2007-10-19", 
+      "in_committee": null, 
+      "references": [], 
+      "text": "Referred to the Subcommittee on Military Personnel.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "hres686-110", 
+  "bill_type": "hres", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "House Armed Services", 
+      "committee_id": "HSAS"
+    }, 
+    {
+      "activity": [
+        "referral"
+      ], 
+      "committee": "House Armed Services", 
+      "committee_id": "HSAS", 
+      "subcommittee": "Subcommittee on Military Personnel", 
+      "subcommittee_id": "02"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [
+    {
+      "district": "2", 
+      "name": "Jefferson, William J.", 
+      "sponsored_at": "2007-12-04", 
+      "state": "LA", 
+      "thomas_id": "00592", 
+      "title": "Rep", 
+      "withdrawn_at": null
+    }, 
+    {
+      "district": "10", 
+      "name": "Towns, Edolphus", 
+      "sponsored_at": "2007-12-04", 
+      "state": "NY", 
+      "thomas_id": "01165", 
+      "title": "Rep", 
+      "withdrawn_at": null
+    }
+  ], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-09-27", 
+  "number": "686", 
+  "official_title": "Condemning personal attacks on the honor, integrity and patriotism of those with distinguished military service to our Nation.", 
+  "popular_title": null, 
+  "related_bills": [], 
+  "short_title": null, 
+  "sponsor": {
+    "district": "1", 
+    "name": "Shea-Porter, Carol", 
+    "state": "NH", 
+    "thomas_id": "01861", 
+    "title": "Rep", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-09-27", 
+  "subjects": [
+    "Armed forces and national security", 
+    "Congressional tributes", 
+    "Government operations and politics", 
+    "Military personnel", 
+    "Patriotism"
+  ], 
+  "subjects_top_term": "Armed forces and national security", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-09-27", 
+    "text": "Reaffirms strong support for all men and women of the U.S. Armed Forces.\n\nCondemns all personal attacks on the honor, integrity, and patriotism of those with distinguished military service to the United States.\n\nEncourages all individuals and organizations to refrain from such personal attacks and to conduct public discourse with civility and the highest respect for those who have served our country honorably."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "Condemning personal attacks on the honor, integrity and patriotism of those with distinguished military service to our Nation.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:28:35-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:HE686:@@@L&summ2=m&"
+}

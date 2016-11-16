@@ -1,0 +1,104 @@
+{
+  "actions": [
+    {
+      "acted_at": "2007-07-30", 
+      "committees": [
+        "SSGA"
+      ], 
+      "references": [
+        {
+          "reference": "CR S10318-10319", 
+          "type": "text of measure as introduced"
+        }
+      ], 
+      "status": "REFERRED", 
+      "text": "Referred to the Committee on Homeland Security and Governmental Affairs.", 
+      "type": "referral"
+    }, 
+    {
+      "acted_at": "2007-08-22", 
+      "committees": [
+        "SSGA"
+      ], 
+      "in_committee": null, 
+      "references": [], 
+      "text": "Committee on Homeland Security and Governmental Affairs referred to Subcommittee on Federal Financial Management, Government Information, Federal Services, and International Security.", 
+      "type": "referral"
+    }
+  ], 
+  "amendments": [], 
+  "bill_id": "sres283-110", 
+  "bill_type": "sres", 
+  "by_request": false, 
+  "committees": [
+    {
+      "activity": [
+        "referral", 
+        "in committee"
+      ], 
+      "committee": "Senate Homeland Security and Governmental Affairs", 
+      "committee_id": "SSGA"
+    }, 
+    {
+      "activity": [
+        "referral"
+      ], 
+      "committee": "Senate Homeland Security and Governmental Affairs", 
+      "committee_id": "SSGA", 
+      "subcommittee": "Subcommittee on Federal Financial Management, Government Information, Federal Services, and International Security", 
+      "subcommittee_id": "09"
+    }
+  ], 
+  "congress": "110", 
+  "cosponsors": [], 
+  "enacted_as": null, 
+  "history": {
+    "active": false, 
+    "awaiting_signature": false, 
+    "enacted": false, 
+    "vetoed": false
+  }, 
+  "introduced_at": "2007-07-30", 
+  "number": "283", 
+  "official_title": "A resolution expressing the sense of the Senate that the United States Postal Service should discontinue the practice of contracting out mail delivery services.", 
+  "popular_title": null, 
+  "related_bills": [
+    {
+      "bill_id": "hres282-110", 
+      "reason": "identical", 
+      "type": "bill"
+    }
+  ], 
+  "short_title": null, 
+  "sponsor": {
+    "district": null, 
+    "name": "Casey, Robert P., Jr.", 
+    "state": "PA", 
+    "thomas_id": "01828", 
+    "title": "Sen", 
+    "type": "person"
+  }, 
+  "status": "REFERRED", 
+  "status_at": "2007-07-30", 
+  "subjects": [
+    "Government operations and politics", 
+    "Government service contracts", 
+    "Postal service"
+  ], 
+  "subjects_top_term": "Government operations and politics", 
+  "summary": {
+    "as": "Introduced", 
+    "date": "2007-07-30", 
+    "text": "Declares that the United States Postal Service (USPS) should discontinue the practice of contracting out mail delivery services."
+  }, 
+  "titles": [
+    {
+      "as": "introduced", 
+      "is_for_portion": false, 
+      "title": "A resolution expressing the sense of the Senate that the United States Postal Service should discontinue the practice of contracting out mail delivery services.", 
+      "type": "official"
+    }
+  ], 
+  "updated_at": "2016-06-29T09:32:32-04:00", 
+  "url": "http://thomas.loc.gov/cgi-bin/bdquery/z?d110:SE283:@@@L&summ2=m&"
+}

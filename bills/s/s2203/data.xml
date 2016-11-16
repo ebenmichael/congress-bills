@@ -1,0 +1,41 @@
+<bill session="110" type="s" number="2203" updated="2016-06-29T09:33:36-04:00">
+  <state datetime="2007-10-18">REFERRED</state>
+  <status>
+    <introduced datetime="2007-10-18"/>
+  </status>
+  <introduced datetime="2007-10-18"/>
+  <titles>
+    <title type="short" as="introduced">Uranium Enrichment Decontamination and Decommissioning Fund Reauthorization Act of 2007</title>
+    <title type="official" as="introduced">A bill to reauthorize the Uranium Enrichment Decontamination and Decommissioning Fund, and for other purposes.</title>
+  </titles>
+  <sponsor id="400050"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2007-10-18" state="REFERRED">
+      <text>Read twice and referred to the Committee on Energy and Natural Resources.</text>
+    </action>
+    <action datetime="2007-11-15">
+      <text>Committee on Energy and Natural Resources. Hearings held. Hearings printed: S.Hrg. 110-307.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="SSEG" name="Senate Energy and Natural Resources" activity="Referral, Hearings, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Energy"/>
+    <term name="Appropriations"/>
+    <term name="Congress"/>
+    <term name="Congressional reporting requirements"/>
+    <term name="Economics and public finance"/>
+    <term name="Government trust funds"/>
+    <term name="Governmental investigations"/>
+    <term name="Nuclear facilities"/>
+    <term name="Uranium enrichment"/>
+  </subjects>
+  <amendments/>
+  <summary>10/18/2007--Introduced.
+Uranium Enrichment Decontamination and Decommissioning Fund Reauthorization Act of 2007 - Amends the Atomic Energy Act of 1954 to reauthorize, and increase the maximum mandatory amounts in, the Uranium Enrichment Decontamination and Decommissioning Fund.
+
+Directs the Secretary of Energy to study and report to the appropriate congressional committees on the manner in which proceeds from the sale of the product of the enrichment of uranium tailings may be used to reduce or supplement the amount of appropriations necessary to: (1) fund the Fund; and (2) provide assistance to local governments and community reuse organizations at sites eligible for assistance from the Fund.</summary>
+</bill>

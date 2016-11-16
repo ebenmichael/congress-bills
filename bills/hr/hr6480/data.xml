@@ -1,0 +1,36 @@
+<bill session="110" type="h" number="6480" updated="2016-06-29T09:31:45-04:00">
+  <state datetime="2008-07-10">REFERRED</state>
+  <status>
+    <introduced datetime="2008-07-10"/>
+  </status>
+  <introduced datetime="2008-07-10"/>
+  <titles>
+    <title type="short" as="introduced">International Documentary Exchange Act of 2008</title>
+    <title type="official" as="introduced">To authorize grants for nongovernmental organizations that use independently produced documentary films to promote better understanding of the United States abroad and better understanding of global perspectives and other countries in the United States.</title>
+  </titles>
+  <sponsor id="400423"/>
+  <cosponsors>
+    <cosponsor id="400025" joined="2008-07-10"/>
+  </cosponsors>
+  <actions>
+    <action datetime="2008-07-10" state="REFERRED">
+      <text>Referred to the House Committee on Foreign Affairs.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSFA" name="House Foreign Affairs" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="International affairs"/>
+    <term name="Arts, culture, religion"/>
+    <term name="Cultural relations"/>
+    <term name="Economics and public finance"/>
+    <term name="Federal aid to the arts and humanities"/>
+    <term name="Motion pictures"/>
+    <term name="Nongovernmental organizations"/>
+  </subjects>
+  <amendments/>
+  <summary>7/10/2008--Introduced.
+International Documentary Exchange Act of 2008 - Authorizes the Secretary of State to make grants to U.S. nongovernmental organizations that use independently produced documentary films to promote better understanding of the United States abroad and better understanding of global perspectives and other countries in the United States.</summary>
+</bill>

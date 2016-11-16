@@ -1,0 +1,32 @@
+<bill session="110" type="h" number="1529" updated="2016-06-29T09:29:52-04:00">
+  <state datetime="2007-03-14">REFERRED</state>
+  <status>
+    <introduced datetime="2007-03-14"/>
+  </status>
+  <introduced datetime="2007-03-14"/>
+  <titles>
+    <title type="official" as="introduced">For the relief of Griselda Lopez Negrete.</title>
+  </titles>
+  <sponsor id="400433"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2007-03-14" state="REFERRED">
+      <text>Referred to the House Committee on the Judiciary.</text>
+    </action>
+    <action datetime="2007-03-23">
+      <text>Referred to the Subcommittee on Immigration, Citizenship, Refugees, Border Security, and International Law.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSJU" name="House Judiciary" activity="Referral, In Committee"/>
+    <committee activity="Referral" code="HSJU01" subcommittee="Immigration, Citizenship, Refugees, Border Security, and International Law" name="House Judiciary"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Private legislation"/>
+    <term name="Immigration"/>
+  </subjects>
+  <amendments/>
+  <summary>3/14/2007--Introduced.
+Provides for the relief of Griselda Lopez Negrete.</summary>
+</bill>

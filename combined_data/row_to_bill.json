@@ -1,3944 +1,5258 @@
 {
     "0": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 1
+        "congress": 110,
+        "file_name": "votes/2007/s1/data.json",
+        "number": 19,
+        "type": "sres"
     },
     "1": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 2
+        "congress": 110,
+        "file_name": "votes/2007/s2/data.json",
+        "number": 1,
+        "type": "s"
     },
     "2": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 3
+        "congress": 110,
+        "file_name": "votes/2007/s3/data.json",
+        "number": 1,
+        "type": "s"
     },
     "3": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 4
+        "congress": 110,
+        "file_name": "votes/2007/s4/data.json",
+        "number": 1,
+        "type": "s"
     },
     "4": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 5
+        "congress": 110,
+        "file_name": "votes/2007/s5/data.json",
+        "number": 1,
+        "type": "s"
     },
     "5": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 6
+        "congress": 110,
+        "file_name": "votes/2007/s6/data.json",
+        "number": 1,
+        "type": "s"
     },
     "6": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 7
+        "congress": 110,
+        "file_name": "votes/2007/s7/data.json",
+        "number": 1,
+        "type": "s"
     },
     "7": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 8
+        "congress": 110,
+        "file_name": "votes/2007/s8/data.json",
+        "number": 1,
+        "type": "s"
     },
     "8": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 9
+        "congress": 110,
+        "file_name": "votes/2007/s9/data.json",
+        "number": 1,
+        "type": "s"
     },
     "9": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 10
+        "congress": 110,
+        "file_name": "votes/2007/s10/data.json",
+        "number": 1,
+        "type": "s"
     },
     "10": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 11
+        "congress": 110,
+        "file_name": "votes/2007/s11/data.json",
+        "number": 1,
+        "type": "s"
     },
     "11": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 12
+        "congress": 110,
+        "file_name": "votes/2007/s12/data.json",
+        "number": 1,
+        "type": "s"
     },
     "12": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 13
+        "congress": 110,
+        "file_name": "votes/2007/s13/data.json",
+        "number": 1,
+        "type": "s"
     },
     "13": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 14
+        "congress": 110,
+        "file_name": "votes/2007/s14/data.json",
+        "number": 1,
+        "type": "s"
     },
     "14": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 15
+        "congress": 110,
+        "file_name": "votes/2007/s15/data.json",
+        "number": 1,
+        "type": "s"
     },
     "15": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 16
+        "congress": 110,
+        "file_name": "votes/2007/s16/data.json",
+        "number": 1,
+        "type": "s"
     },
     "16": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 17
+        "congress": 110,
+        "file_name": "votes/2007/s17/data.json",
+        "number": 1,
+        "type": "s"
     },
     "17": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 18
+        "congress": 110,
+        "file_name": "votes/2007/s18/data.json",
+        "number": 1,
+        "type": "s"
     },
     "18": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 19
+        "congress": 110,
+        "file_name": "votes/2007/s19/data.json",
+        "number": 1,
+        "type": "s"
     },
     "19": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 20
+        "congress": 110,
+        "file_name": "votes/2007/s20/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "20": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 21
+        "congress": 110,
+        "file_name": "votes/2007/s21/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "21": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 22
+        "congress": 110,
+        "file_name": "votes/2007/s22/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "22": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 23
+        "congress": 110,
+        "file_name": "votes/2007/s23/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "23": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 24
+        "congress": 110,
+        "file_name": "votes/2007/s24/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "24": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 25
+        "congress": 110,
+        "file_name": "votes/2007/s25/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "25": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 26
+        "congress": 110,
+        "file_name": "votes/2007/s26/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "26": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 27
+        "congress": 110,
+        "file_name": "votes/2007/s27/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "27": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 28
+        "congress": 110,
+        "file_name": "votes/2007/s28/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "28": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 29
+        "congress": 110,
+        "file_name": "votes/2007/s29/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "29": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 30
+        "congress": 110,
+        "file_name": "votes/2007/s30/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "30": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 31
+        "congress": 110,
+        "file_name": "votes/2007/s31/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "31": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 32
+        "congress": 110,
+        "file_name": "votes/2007/s32/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "32": {
         "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 33
+        "congress": 110,
+        "file_name": "votes/2007/s33/data.json",
+        "number": "178",
+        "type": "nomination"
     },
     "33": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 34
+        "congress": 110,
+        "file_name": "votes/2007/s34/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "34": {
-        "category": "procedural",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 35
+        "congress": 110,
+        "file_name": "votes/2007/s35/data.json",
+        "number": "31",
+        "type": "nomination"
     },
     "35": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 36
+        "congress": 110,
+        "file_name": "votes/2007/s36/data.json",
+        "number": "17",
+        "type": "nomination"
     },
     "36": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 37
+        "congress": 110,
+        "file_name": "votes/2007/s37/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "37": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 38
+        "congress": 110,
+        "file_name": "votes/2007/s38/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "38": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 39
+        "congress": 110,
+        "file_name": "votes/2007/s39/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "39": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 40
+        "congress": 110,
+        "file_name": "votes/2007/s40/data.json",
+        "number": "24",
+        "type": "nomination"
     },
     "40": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 41
+        "congress": 110,
+        "file_name": "votes/2007/s41/data.json",
+        "number": "16",
+        "type": "nomination"
     },
     "41": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 42
+        "congress": 110,
+        "file_name": "votes/2007/s42/data.json",
+        "number": 2,
+        "type": "hr"
     },
     "42": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 43
+        "congress": 110,
+        "file_name": "votes/2007/s43/data.json",
+        "number": 2,
+        "type": "sconres"
     },
     "43": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 44
+        "congress": 110,
+        "file_name": "votes/2007/s44/data.json",
+        "number": 470,
+        "type": "s"
     },
     "44": {
-        "category": "recommit",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 45
+        "congress": 110,
+        "file_name": "votes/2007/s45/data.json",
+        "number": "177",
+        "type": "nomination"
     },
     "45": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 46
+        "congress": 110,
+        "file_name": "votes/2007/s46/data.json",
+        "number": 20,
+        "type": "hjres"
     },
     "46": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 47
+        "congress": 110,
+        "file_name": "votes/2007/s47/data.json",
+        "number": "15",
+        "type": "nomination"
     },
     "47": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 48
+        "congress": 110,
+        "file_name": "votes/2007/s48/data.json",
+        "number": 20,
+        "type": "hjres"
     },
     "48": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 49
+        "congress": 110,
+        "file_name": "votes/2007/s49/data.json",
+        "number": "183",
+        "type": "nomination"
     },
     "49": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 50
+        "congress": 110,
+        "file_name": "votes/2007/s50/data.json",
+        "number": "18",
+        "type": "nomination"
     },
     "50": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 51
+        "congress": 110,
+        "file_name": "votes/2007/s51/data.json",
+        "number": 574,
+        "type": "s"
     },
     "51": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 52
+        "congress": 110,
+        "file_name": "votes/2007/s52/data.json",
+        "number": 67,
+        "type": "hconres"
     },
     "52": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 53
+        "congress": 110,
+        "file_name": "votes/2007/s53/data.json",
+        "number": 4,
+        "type": "s"
     },
     "53": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 54
+        "congress": 110,
+        "file_name": "votes/2007/s54/data.json",
+        "number": 4,
+        "type": "s"
     },
     "54": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 55
+        "congress": 110,
+        "file_name": "votes/2007/s55/data.json",
+        "number": 4,
+        "type": "s"
     },
     "55": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 56
+        "congress": 110,
+        "file_name": "votes/2007/s56/data.json",
+        "number": 4,
+        "type": "s"
     },
     "56": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 57
+        "congress": 110,
+        "file_name": "votes/2007/s57/data.json",
+        "number": 4,
+        "type": "s"
     },
     "57": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 58
+        "congress": 110,
+        "file_name": "votes/2007/s58/data.json",
+        "number": 4,
+        "type": "s"
     },
     "58": {
-        "category": "procedural",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 59
+        "congress": 110,
+        "file_name": "votes/2007/s59/data.json",
+        "number": "104",
+        "type": "nomination"
     },
     "59": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 60
+        "congress": 110,
+        "file_name": "votes/2007/s60/data.json",
+        "number": 4,
+        "type": "s"
     },
     "60": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 61
+        "congress": 110,
+        "file_name": "votes/2007/s61/data.json",
+        "number": 4,
+        "type": "s"
     },
     "61": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 62
+        "congress": 110,
+        "file_name": "votes/2007/s62/data.json",
+        "number": 4,
+        "type": "s"
     },
     "62": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 63
+        "congress": 110,
+        "file_name": "votes/2007/s63/data.json",
+        "number": 4,
+        "type": "s"
     },
     "63": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 64
+        "congress": 110,
+        "file_name": "votes/2007/s64/data.json",
+        "number": 4,
+        "type": "s"
     },
     "64": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 65
+        "congress": 110,
+        "file_name": "votes/2007/s65/data.json",
+        "number": 4,
+        "type": "s"
     },
     "65": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 66
+        "congress": 110,
+        "file_name": "votes/2007/s66/data.json",
+        "number": 4,
+        "type": "s"
     },
     "66": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 67
+        "congress": 110,
+        "file_name": "votes/2007/s67/data.json",
+        "number": "19",
+        "type": "nomination"
     },
     "67": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 68
+        "congress": 110,
+        "file_name": "votes/2007/s68/data.json",
+        "number": 4,
+        "type": "s"
     },
     "68": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 69
+        "congress": 110,
+        "file_name": "votes/2007/s69/data.json",
+        "number": 4,
+        "type": "s"
     },
     "69": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 70
+        "congress": 110,
+        "file_name": "votes/2007/s70/data.json",
+        "number": 4,
+        "type": "s"
     },
     "70": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 71
+        "congress": 110,
+        "file_name": "votes/2007/s71/data.json",
+        "number": 4,
+        "type": "s"
     },
     "71": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 72
+        "congress": 110,
+        "file_name": "votes/2007/s72/data.json",
+        "number": 4,
+        "type": "s"
     },
     "72": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 73
+        "congress": 110,
+        "file_name": "votes/2007/s73/data.json",
+        "number": 4,
+        "type": "s"
     },
     "73": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 74
+        "congress": 110,
+        "file_name": "votes/2007/s74/data.json",
+        "number": 9,
+        "type": "sjres"
     },
     "74": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 75
+        "congress": 110,
+        "file_name": "votes/2007/s75/data.json",
+        "number": 9,
+        "type": "sjres"
     },
     "75": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 76
+        "congress": 110,
+        "file_name": "votes/2007/s76/data.json",
+        "number": 107,
+        "type": "sres"
     },
     "76": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 77
+        "congress": 110,
+        "file_name": "votes/2007/s77/data.json",
+        "number": 20,
+        "type": "sconres"
     },
     "77": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 78
+        "congress": 110,
+        "file_name": "votes/2007/s78/data.json",
+        "number": "8",
+        "type": "nomination"
     },
     "78": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 79
+        "congress": 110,
+        "file_name": "votes/2007/s79/data.json",
+        "number": 214,
+        "type": "s"
     },
     "79": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 80
+        "congress": 110,
+        "file_name": "votes/2007/s80/data.json",
+        "number": 214,
+        "type": "s"
     },
     "80": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 81
+        "congress": 110,
+        "file_name": "votes/2007/s81/data.json",
+        "number": 214,
+        "type": "s"
     },
     "81": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 82
+        "congress": 110,
+        "file_name": "votes/2007/s82/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "82": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 83
+        "congress": 110,
+        "file_name": "votes/2007/s83/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "83": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 84
+        "congress": 110,
+        "file_name": "votes/2007/s84/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "84": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 85
+        "congress": 110,
+        "file_name": "votes/2007/s85/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "85": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 86
+        "congress": 110,
+        "file_name": "votes/2007/s86/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "86": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 87
+        "congress": 110,
+        "file_name": "votes/2007/s87/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "87": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 88
+        "congress": 110,
+        "file_name": "votes/2007/s88/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "88": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 89
+        "congress": 110,
+        "file_name": "votes/2007/s89/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "89": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 90
+        "congress": 110,
+        "file_name": "votes/2007/s90/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "90": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 91
+        "congress": 110,
+        "file_name": "votes/2007/s91/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "91": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 92
+        "congress": 110,
+        "file_name": "votes/2007/s92/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "92": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 93
+        "congress": 110,
+        "file_name": "votes/2007/s93/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "93": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 94
+        "congress": 110,
+        "file_name": "votes/2007/s94/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "94": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 95
+        "congress": 110,
+        "file_name": "votes/2007/s95/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "95": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 96
+        "congress": 110,
+        "file_name": "votes/2007/s96/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "96": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 97
+        "congress": 110,
+        "file_name": "votes/2007/s97/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "97": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 98
+        "congress": 110,
+        "file_name": "votes/2007/s98/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "98": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 99
+        "congress": 110,
+        "file_name": "votes/2007/s99/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "99": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 100
+        "congress": 110,
+        "file_name": "votes/2007/s100/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "100": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 101
+        "congress": 110,
+        "file_name": "votes/2007/s101/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "101": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 102
+        "congress": 110,
+        "file_name": "votes/2007/s102/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "102": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 103
+        "congress": 110,
+        "file_name": "votes/2007/s103/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "103": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 104
+        "congress": 110,
+        "file_name": "votes/2007/s104/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "104": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 105
+        "congress": 110,
+        "file_name": "votes/2007/s105/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "105": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 106
+        "congress": 110,
+        "file_name": "votes/2007/s106/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "106": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 107
+        "congress": 110,
+        "file_name": "votes/2007/s107/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "107": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 108
+        "congress": 110,
+        "file_name": "votes/2007/s108/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "108": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 109
+        "congress": 110,
+        "file_name": "votes/2007/s109/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "109": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 110
+        "congress": 110,
+        "file_name": "votes/2007/s110/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "110": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 111
+        "congress": 110,
+        "file_name": "votes/2007/s111/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "111": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 112
+        "congress": 110,
+        "file_name": "votes/2007/s112/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "112": {
-        "category": "passage",
-        "chamber": "s",
-        "congress": 113,
-        "number": 113
-    },
-    "113": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 114
-    },
-    "114": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 115
+        "congress": 110,
+        "file_name": "votes/2007/s113/data.json",
+        "number": 21,
+        "type": "sconres"
+    },
+    "113": {
+        "category": "bill",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s114/data.json",
+        "number": 21,
+        "type": "sconres"
+    },
+    "114": {
+        "category": "nomination",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s115/data.json",
+        "number": "33",
+        "type": "nomination"
     },
     "115": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 116
+        "congress": 110,
+        "file_name": "votes/2007/s116/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "116": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 117
+        "congress": 110,
+        "file_name": "votes/2007/s117/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "117": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 118
+        "congress": 110,
+        "file_name": "votes/2007/s118/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "118": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 119
+        "congress": 110,
+        "file_name": "votes/2007/s119/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "119": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 120
+        "congress": 110,
+        "file_name": "votes/2007/s120/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "120": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 121
+        "congress": 110,
+        "file_name": "votes/2007/s121/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "121": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 122
+        "congress": 110,
+        "file_name": "votes/2007/s122/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "122": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 123
+        "congress": 110,
+        "file_name": "votes/2007/s123/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "123": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 124
+        "congress": 110,
+        "file_name": "votes/2007/s124/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "124": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 125
+        "congress": 110,
+        "file_name": "votes/2007/s125/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "125": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 126
+        "congress": 110,
+        "file_name": "votes/2007/s126/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "126": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 127
+        "congress": 110,
+        "file_name": "votes/2007/s127/data.json",
+        "number": 5,
+        "type": "s"
     },
     "127": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 128
+        "congress": 110,
+        "file_name": "votes/2007/s128/data.json",
+        "number": 30,
+        "type": "s"
     },
     "128": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 129
+        "congress": 110,
+        "file_name": "votes/2007/s129/data.json",
+        "number": 372,
+        "type": "s"
     },
     "129": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 130
+        "congress": 110,
+        "file_name": "votes/2007/s130/data.json",
+        "number": 372,
+        "type": "s"
     },
     "130": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 131
+        "congress": 110,
+        "file_name": "votes/2007/s131/data.json",
+        "number": 372,
+        "type": "s"
     },
     "131": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 132
+        "congress": 110,
+        "file_name": "votes/2007/s132/data.json",
+        "number": 3,
+        "type": "s"
     },
     "132": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 133
+        "congress": 110,
+        "file_name": "votes/2007/s133/data.json",
+        "number": 378,
+        "type": "s"
     },
     "133": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 134
+        "congress": 110,
+        "file_name": "votes/2007/s134/data.json",
+        "number": 378,
+        "type": "s"
     },
     "134": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 135
+        "congress": 110,
+        "file_name": "votes/2007/s135/data.json",
+        "number": 378,
+        "type": "s"
     },
     "135": {
         "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 136
+        "congress": 110,
+        "file_name": "votes/2007/s136/data.json",
+        "number": "26",
+        "type": "nomination"
     },
     "136": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 137
+        "congress": 110,
+        "file_name": "votes/2007/s137/data.json",
+        "number": 761,
+        "type": "s"
     },
     "137": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 138
+        "congress": 110,
+        "file_name": "votes/2007/s138/data.json",
+        "number": 761,
+        "type": "s"
     },
     "138": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 139
+        "congress": 110,
+        "file_name": "votes/2007/s139/data.json",
+        "number": 761,
+        "type": "s"
     },
     "139": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 140
+        "congress": 110,
+        "file_name": "votes/2007/s140/data.json",
+        "number": 761,
+        "type": "s"
     },
     "140": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 141
+        "congress": 110,
+        "file_name": "votes/2007/s141/data.json",
+        "number": 761,
+        "type": "s"
     },
     "141": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 142
+        "congress": 110,
+        "file_name": "votes/2007/s142/data.json",
+        "number": 761,
+        "type": "s"
     },
     "142": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 143
+        "congress": 110,
+        "file_name": "votes/2007/s143/data.json",
+        "number": 761,
+        "type": "s"
     },
     "143": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 144
+        "congress": 110,
+        "file_name": "votes/2007/s144/data.json",
+        "number": 761,
+        "type": "s"
     },
     "144": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 145
+        "congress": 110,
+        "file_name": "votes/2007/s145/data.json",
+        "number": 761,
+        "type": "s"
     },
     "145": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 146
+        "congress": 110,
+        "file_name": "votes/2007/s146/data.json",
+        "number": 761,
+        "type": "s"
     },
     "146": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 147
+        "congress": 110,
+        "file_name": "votes/2007/s147/data.json",
+        "number": 1591,
+        "type": "hr"
     },
     "147": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 148
+        "congress": 110,
+        "file_name": "votes/2007/s148/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "148": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 149
+        "congress": 110,
+        "file_name": "votes/2007/s149/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "149": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 150
+        "congress": 110,
+        "file_name": "votes/2007/s150/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "150": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 151
+        "congress": 110,
+        "file_name": "votes/2007/s151/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "151": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 152
+        "congress": 110,
+        "file_name": "votes/2007/s152/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "152": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 153
+        "congress": 110,
+        "file_name": "votes/2007/s153/data.json",
+        "number": "20",
+        "type": "nomination"
     },
     "153": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 154
+        "congress": 110,
+        "file_name": "votes/2007/s154/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "154": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 155
+        "congress": 110,
+        "file_name": "votes/2007/s155/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "155": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 156
+        "congress": 110,
+        "file_name": "votes/2007/s156/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "156": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 157
+        "congress": 110,
+        "file_name": "votes/2007/s157/data.json",
+        "number": 1082,
+        "type": "s"
     },
     "157": {
         "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 158
+        "congress": 110,
+        "file_name": "votes/2007/s158/data.json",
+        "number": "11",
+        "type": "nomination"
     },
     "158": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 159
+        "congress": 110,
+        "file_name": "votes/2007/s159/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "159": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 160
+        "congress": 110,
+        "file_name": "votes/2007/s160/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "160": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 161
+        "congress": 110,
+        "file_name": "votes/2007/s161/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "161": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 162
+        "congress": 110,
+        "file_name": "votes/2007/s162/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "162": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 163
+        "congress": 110,
+        "file_name": "votes/2007/s163/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "163": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 164
+        "congress": 110,
+        "file_name": "votes/2007/s164/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "164": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 165
+        "congress": 110,
+        "file_name": "votes/2007/s165/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "165": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 166
+        "congress": 110,
+        "file_name": "votes/2007/s166/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "166": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 167
+        "congress": 110,
+        "file_name": "votes/2007/s167/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "167": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 168
+        "congress": 110,
+        "file_name": "votes/2007/s168/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "168": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 169
+        "congress": 110,
+        "file_name": "votes/2007/s169/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "169": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 170
+        "congress": 110,
+        "file_name": "votes/2007/s170/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "170": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 171
+        "congress": 110,
+        "file_name": "votes/2007/s171/data.json",
+        "number": 2206,
+        "type": "hr"
     },
     "171": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 172
+        "congress": 110,
+        "file_name": "votes/2007/s172/data.json",
+        "number": 21,
+        "type": "sconres"
     },
     "172": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 173
+        "congress": 110,
+        "file_name": "votes/2007/s173/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "173": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 174
+        "congress": 110,
+        "file_name": "votes/2007/s174/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "174": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 175
+        "congress": 110,
+        "file_name": "votes/2007/s175/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "175": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 176
+        "congress": 110,
+        "file_name": "votes/2007/s176/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "176": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 177
+        "congress": 110,
+        "file_name": "votes/2007/s177/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "177": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 178
+        "congress": 110,
+        "file_name": "votes/2007/s178/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "178": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 179
+        "congress": 110,
+        "file_name": "votes/2007/s179/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "179": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 180
+        "congress": 110,
+        "file_name": "votes/2007/s180/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "180": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 181
+        "congress": 110,
+        "file_name": "votes/2007/s181/data.json",
+        "number": 2206,
+        "type": "hr"
     },
     "181": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 182
+        "congress": 110,
+        "file_name": "votes/2007/s182/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "182": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 183
+        "congress": 110,
+        "file_name": "votes/2007/s183/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "183": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 184
+        "congress": 110,
+        "file_name": "votes/2007/s184/data.json",
+        "number": 1348,
+        "type": "s"
     },
     "184": {
-        "category": "passage",
-        "chamber": "s",
-        "congress": 113,
-        "number": 185
-    },
-    "185": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 186
-    },
-    "186": {
-        "category": "procedural",
-        "chamber": "s",
-        "congress": 113,
-        "number": 187
-    },
-    "187": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 188
-    },
-    "188": {
-        "category": "cloture",
-        "chamber": "s",
-        "congress": 113,
-        "number": 189
-    },
-    "189": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 190
-    },
-    "190": {
-        "category": "cloture",
-        "chamber": "s",
-        "congress": 113,
-        "number": 191
-    },
-    "191": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 192
-    },
-    "192": {
-        "category": "cloture",
-        "chamber": "s",
-        "congress": 113,
-        "number": 193
-    },
-    "193": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 194
-    },
-    "194": {
-        "category": "procedural",
-        "chamber": "s",
-        "congress": 113,
-        "number": 195
-    },
-    "195": {
-        "category": "cloture",
-        "chamber": "s",
-        "congress": 113,
-        "number": 196
-    },
-    "196": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 197
-    },
-    "197": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 198
-    },
-    "198": {
-        "category": "cloture",
-        "chamber": "s",
-        "congress": 113,
-        "number": 199
-    },
-    "199": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 200
-    },
-    "200": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 201
-    },
-    "201": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 202
-    },
-    "202": {
-        "category": "passage",
-        "chamber": "s",
-        "congress": 113,
-        "number": 203
-    },
-    "203": {
-        "category": "nomination",
-        "chamber": "s",
-        "congress": 113,
-        "number": 204
-    },
-    "204": {
-        "category": "cloture",
-        "chamber": "s",
-        "congress": 113,
-        "number": 205
-    },
-    "205": {
-        "category": "cloture",
-        "chamber": "s",
-        "congress": 113,
-        "number": 206
-    },
-    "206": {
-        "category": "procedural",
-        "chamber": "s",
-        "congress": 113,
-        "number": 207
-    },
-    "207": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 208
+        "congress": 110,
+        "file_name": "votes/2007/s185/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "185": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s186/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "186": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s187/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "187": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s188/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "188": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s189/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "189": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s190/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "190": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s191/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "191": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s192/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "192": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s193/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "193": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s194/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "194": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s195/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "195": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s196/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "196": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s197/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "197": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s198/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "198": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s199/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "199": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s200/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "200": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s201/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "201": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s202/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "202": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s203/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "203": {
+        "category": "bill",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s204/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "204": {
+        "category": "bill",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s205/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "205": {
+        "category": "amendment",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s206/data.json",
+        "number": 1348,
+        "type": "s"
+    },
+    "206": {
+        "category": "bill",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s207/data.json",
+        "number": 14,
+        "type": "sjres"
+    },
+    "207": {
+        "category": "bill",
+        "chamber": "s",
+        "congress": 110,
+        "file_name": "votes/2007/s208/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "208": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 209
+        "congress": 110,
+        "file_name": "votes/2007/s209/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "209": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 210
+        "congress": 110,
+        "file_name": "votes/2007/s210/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "210": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 211
+        "congress": 110,
+        "file_name": "votes/2007/s211/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "211": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 212
+        "congress": 110,
+        "file_name": "votes/2007/s212/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "212": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 213
+        "congress": 110,
+        "file_name": "votes/2007/s213/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "213": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 214
+        "congress": 110,
+        "file_name": "votes/2007/s214/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "214": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 215
+        "congress": 110,
+        "file_name": "votes/2007/s215/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "215": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 216
+        "congress": 110,
+        "file_name": "votes/2007/s216/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "216": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 217
+        "congress": 110,
+        "file_name": "votes/2007/s217/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "217": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 218
+        "congress": 110,
+        "file_name": "votes/2007/s218/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "218": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 219
+        "congress": 110,
+        "file_name": "votes/2007/s219/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "219": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 220
+        "congress": 110,
+        "file_name": "votes/2007/s220/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "220": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 221
+        "congress": 110,
+        "file_name": "votes/2007/s221/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "221": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 222
+        "congress": 110,
+        "file_name": "votes/2007/s222/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "222": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 223
+        "congress": 110,
+        "file_name": "votes/2007/s223/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "223": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 224
+        "congress": 110,
+        "file_name": "votes/2007/s224/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "224": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 225
+        "congress": 110,
+        "file_name": "votes/2007/s225/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "225": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 226
+        "congress": 110,
+        "file_name": "votes/2007/s226/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "226": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 227
+        "congress": 110,
+        "file_name": "votes/2007/s227/data.json",
+        "number": 800,
+        "type": "hr"
     },
     "227": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 228
+        "congress": 110,
+        "file_name": "votes/2007/s228/data.json",
+        "number": 1639,
+        "type": "s"
     },
     "228": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 229
+        "congress": 110,
+        "file_name": "votes/2007/s229/data.json",
+        "number": 1639,
+        "type": "s"
     },
     "229": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 230
+        "congress": 110,
+        "file_name": "votes/2007/s230/data.json",
+        "number": 1639,
+        "type": "s"
     },
     "230": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 231
+        "congress": 110,
+        "file_name": "votes/2007/s231/data.json",
+        "number": 1639,
+        "type": "s"
     },
     "231": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 232
+        "congress": 110,
+        "file_name": "votes/2007/s232/data.json",
+        "number": 1639,
+        "type": "s"
     },
     "232": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 233
+        "congress": 110,
+        "file_name": "votes/2007/s233/data.json",
+        "number": 1639,
+        "type": "s"
     },
     "233": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 234
+        "congress": 110,
+        "file_name": "votes/2007/s234/data.json",
+        "number": 1639,
+        "type": "s"
     },
     "234": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 235
+        "congress": 110,
+        "file_name": "votes/2007/s235/data.json",
+        "number": 1639,
+        "type": "s"
     },
     "235": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 236
+        "congress": 110,
+        "file_name": "votes/2007/s236/data.json",
+        "number": "599",
+        "type": "nomination"
     },
     "236": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 237
+        "congress": 110,
+        "file_name": "votes/2007/s237/data.json",
+        "number": "30",
+        "type": "nomination"
     },
     "237": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 238
+        "congress": 110,
+        "file_name": "votes/2007/s238/data.json",
+        "number": "252",
+        "type": "nomination"
     },
     "238": {
-        "category": "procedural",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 239
+        "congress": 110,
+        "file_name": "votes/2007/s239/data.json",
+        "number": "23",
+        "type": "nomination"
     },
     "239": {
-        "category": "procedural",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 240
+        "congress": 110,
+        "file_name": "votes/2007/s240/data.json",
+        "number": "347",
+        "type": "nomination"
     },
     "240": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 241
+        "congress": 110,
+        "file_name": "votes/2007/s241/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "241": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 242
+        "congress": 110,
+        "file_name": "votes/2007/s242/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "242": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 243
+        "congress": 110,
+        "file_name": "votes/2007/s243/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "243": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 244
+        "congress": 110,
+        "file_name": "votes/2007/s244/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "244": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 245
+        "congress": 110,
+        "file_name": "votes/2007/s245/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "245": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 246
+        "congress": 110,
+        "file_name": "votes/2007/s246/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "246": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 247
+        "congress": 110,
+        "file_name": "votes/2007/s247/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "247": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 248
+        "congress": 110,
+        "file_name": "votes/2007/s248/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "248": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 249
+        "congress": 110,
+        "file_name": "votes/2007/s249/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "249": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 250
+        "congress": 110,
+        "file_name": "votes/2007/s250/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "250": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 251
+        "congress": 110,
+        "file_name": "votes/2007/s251/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "251": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 252
+        "congress": 110,
+        "file_name": "votes/2007/s252/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "252": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 253
+        "congress": 110,
+        "file_name": "votes/2007/s253/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "253": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 254
+        "congress": 110,
+        "file_name": "votes/2007/s254/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "254": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 255
+        "congress": 110,
+        "file_name": "votes/2007/s255/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "255": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 256
+        "congress": 110,
+        "file_name": "votes/2007/s256/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "256": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 257
+        "congress": 110,
+        "file_name": "votes/2007/s257/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "257": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 258
+        "congress": 110,
+        "file_name": "votes/2007/s258/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "258": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 259
+        "congress": 110,
+        "file_name": "votes/2007/s259/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "259": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 260
+        "congress": 110,
+        "file_name": "votes/2007/s260/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "260": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 261
+        "congress": 110,
+        "file_name": "votes/2007/s261/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "261": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 262
+        "congress": 110,
+        "file_name": "votes/2007/s262/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "262": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 263
+        "congress": 110,
+        "file_name": "votes/2007/s263/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "263": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 264
+        "congress": 110,
+        "file_name": "votes/2007/s264/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "264": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 265
+        "congress": 110,
+        "file_name": "votes/2007/s265/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "265": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 266
+        "congress": 110,
+        "file_name": "votes/2007/s266/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "266": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 267
+        "congress": 110,
+        "file_name": "votes/2007/s267/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "267": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 268
+        "congress": 110,
+        "file_name": "votes/2007/s268/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "268": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 269
+        "congress": 110,
+        "file_name": "votes/2007/s269/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "269": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 270
+        "congress": 110,
+        "file_name": "votes/2007/s270/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "270": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 271
+        "congress": 110,
+        "file_name": "votes/2007/s271/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "271": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 272
+        "congress": 110,
+        "file_name": "votes/2007/s272/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "272": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 273
+        "congress": 110,
+        "file_name": "votes/2007/s273/data.json",
+        "number": 1642,
+        "type": "s"
     },
     "273": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 274
+        "congress": 110,
+        "file_name": "votes/2007/s274/data.json",
+        "number": 1642,
+        "type": "s"
     },
     "274": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 275
+        "congress": 110,
+        "file_name": "votes/2007/s275/data.json",
+        "number": 1642,
+        "type": "s"
     },
     "275": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 276
+        "congress": 110,
+        "file_name": "votes/2007/s276/data.json",
+        "number": 44,
+        "type": "hjres"
     },
     "276": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 277
+        "congress": 110,
+        "file_name": "votes/2007/s277/data.json",
+        "number": 2638,
+        "type": "hr"
     },
     "277": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 278
+        "congress": 110,
+        "file_name": "votes/2007/s278/data.json",
+        "number": 2638,
+        "type": "hr"
     },
     "278": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 279
+        "congress": 110,
+        "file_name": "votes/2007/s279/data.json",
+        "number": 2638,
+        "type": "hr"
     },
     "279": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 280
+        "congress": 110,
+        "file_name": "votes/2007/s280/data.json",
+        "number": 2638,
+        "type": "hr"
     },
     "280": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 281
+        "congress": 110,
+        "file_name": "votes/2007/s281/data.json",
+        "number": 2638,
+        "type": "hr"
     },
     "281": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 282
+        "congress": 110,
+        "file_name": "votes/2007/s282/data.json",
+        "number": 2638,
+        "type": "hr"
     },
     "282": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 283
+        "congress": 110,
+        "file_name": "votes/2007/s283/data.json",
+        "number": 1,
+        "type": "hr"
     },
     "283": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 284
+        "congress": 110,
+        "file_name": "votes/2007/s284/data.json",
+        "number": 1,
+        "type": "hr"
     },
     "284": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 285
+        "congress": 110,
+        "file_name": "votes/2007/s285/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "285": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 286
+        "congress": 110,
+        "file_name": "votes/2007/s286/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "286": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 287
+        "congress": 110,
+        "file_name": "votes/2007/s287/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "287": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 288
+        "congress": 110,
+        "file_name": "votes/2007/s288/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "288": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 289
+        "congress": 110,
+        "file_name": "votes/2007/s289/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "289": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 290
+        "congress": 110,
+        "file_name": "votes/2007/s290/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "290": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 291
+        "congress": 110,
+        "file_name": "votes/2007/s291/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "291": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 1
+        "congress": 110,
+        "file_name": "votes/2007/s292/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "292": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 2
+        "congress": 110,
+        "file_name": "votes/2007/s293/data.json",
+        "number": 1,
+        "type": "s"
     },
     "293": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 3
+        "congress": 110,
+        "file_name": "votes/2007/s294/data.json",
+        "number": 1,
+        "type": "s"
     },
     "294": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 4
+        "congress": 110,
+        "file_name": "votes/2007/s295/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "295": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 5
+        "congress": 110,
+        "file_name": "votes/2007/s296/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "296": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 6
+        "congress": 110,
+        "file_name": "votes/2007/s297/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "297": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 7
+        "congress": 110,
+        "file_name": "votes/2007/s298/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "298": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 8
+        "congress": 110,
+        "file_name": "votes/2007/s299/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "299": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 9
+        "congress": 110,
+        "file_name": "votes/2007/s300/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "300": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 10
+        "congress": 110,
+        "file_name": "votes/2007/s301/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "301": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 11
+        "congress": 110,
+        "file_name": "votes/2007/s302/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "302": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 12
+        "congress": 110,
+        "file_name": "votes/2007/s303/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "303": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 13
+        "congress": 110,
+        "file_name": "votes/2007/s304/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "304": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 14
+        "congress": 110,
+        "file_name": "votes/2007/s305/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "305": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 15
+        "congress": 110,
+        "file_name": "votes/2007/s306/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "306": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 16
+        "congress": 110,
+        "file_name": "votes/2007/s307/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "307": {
-        "category": "amendment",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 17
+        "congress": 110,
+        "file_name": "votes/2007/s308/data.json",
+        "number": "253",
+        "type": "nomination"
     },
     "308": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 18
+        "congress": 110,
+        "file_name": "votes/2007/s309/data.json",
+        "number": 1927,
+        "type": "s"
     },
     "309": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 19
+        "congress": 110,
+        "file_name": "votes/2007/s310/data.json",
+        "number": 2011,
+        "type": "s"
     },
     "310": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 20
+        "congress": 110,
+        "file_name": "votes/2007/s311/data.json",
+        "number": "688",
+        "type": "nomination"
     },
     "311": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 21
+        "congress": 110,
+        "file_name": "votes/2007/s312/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "312": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 22
+        "congress": 110,
+        "file_name": "votes/2007/s313/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "313": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 23
+        "congress": 110,
+        "file_name": "votes/2007/s314/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "314": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 24
+        "congress": 110,
+        "file_name": "votes/2007/s315/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "315": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 25
+        "congress": 110,
+        "file_name": "votes/2007/s316/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "316": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 26
+        "congress": 110,
+        "file_name": "votes/2007/s317/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "317": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 27
+        "congress": 110,
+        "file_name": "votes/2007/s318/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "318": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 28
+        "congress": 110,
+        "file_name": "votes/2007/s319/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "319": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 29
+        "congress": 110,
+        "file_name": "votes/2007/s320/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "320": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 30
+        "congress": 110,
+        "file_name": "votes/2007/s321/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "321": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 31
+        "congress": 110,
+        "file_name": "votes/2007/s322/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "322": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 32
+        "congress": 110,
+        "file_name": "votes/2007/s323/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "323": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 33
+        "congress": 110,
+        "file_name": "votes/2007/s324/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "324": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 34
+        "congress": 110,
+        "file_name": "votes/2007/s325/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "325": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 35
+        "congress": 110,
+        "file_name": "votes/2007/s326/data.json",
+        "number": 2669,
+        "type": "hr"
     },
     "326": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 36
+        "congress": 110,
+        "file_name": "votes/2007/s327/data.json",
+        "number": "25",
+        "type": "nomination"
     },
     "327": {
         "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 37
+        "congress": 110,
+        "file_name": "votes/2007/s328/data.json",
+        "number": "353",
+        "type": "nomination"
     },
     "328": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 38
+        "congress": 110,
+        "file_name": "votes/2007/s329/data.json",
+        "number": 3074,
+        "type": "hr"
     },
     "329": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 39
+        "congress": 110,
+        "file_name": "votes/2007/s330/data.json",
+        "number": 3074,
+        "type": "hr"
     },
     "330": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 40
+        "congress": 110,
+        "file_name": "votes/2007/s331/data.json",
+        "number": 3074,
+        "type": "hr"
     },
     "331": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 41
+        "congress": 110,
+        "file_name": "votes/2007/s332/data.json",
+        "number": 3074,
+        "type": "hr"
     },
     "332": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 42
+        "congress": 110,
+        "file_name": "votes/2007/s333/data.json",
+        "number": 3074,
+        "type": "hr"
     },
     "333": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 43
+        "congress": 110,
+        "file_name": "votes/2007/s334/data.json",
+        "number": 3074,
+        "type": "hr"
     },
     "334": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 44
+        "congress": 110,
+        "file_name": "votes/2007/s335/data.json",
+        "number": 3074,
+        "type": "hr"
     },
     "335": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 45
+        "congress": 110,
+        "file_name": "votes/2007/s336/data.json",
+        "number": 3074,
+        "type": "hr"
     },
     "336": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 46
+        "congress": 110,
+        "file_name": "votes/2007/s337/data.json",
+        "number": 1124,
+        "type": "hr"
     },
     "337": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 47
+        "congress": 110,
+        "file_name": "votes/2007/s338/data.json",
+        "number": 1124,
+        "type": "hr"
     },
     "338": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 48
+        "congress": 110,
+        "file_name": "votes/2007/s339/data.json",
+        "number": 1257,
+        "type": "s"
     },
     "339": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 49
+        "congress": 110,
+        "file_name": "votes/2007/s340/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "340": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 50
+        "congress": 110,
+        "file_name": "votes/2007/s341/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "341": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 51
+        "congress": 110,
+        "file_name": "votes/2007/s342/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "342": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 52
+        "congress": 110,
+        "file_name": "votes/2007/s343/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "343": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 53
+        "congress": 110,
+        "file_name": "votes/2007/s344/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "344": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 54
+        "congress": 110,
+        "file_name": "votes/2007/s345/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "345": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 55
+        "congress": 110,
+        "file_name": "votes/2007/s346/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "346": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 56
+        "congress": 110,
+        "file_name": "votes/2007/s347/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "347": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 57
+        "congress": 110,
+        "file_name": "votes/2007/s348/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "348": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 58
+        "congress": 110,
+        "file_name": "votes/2007/s349/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "349": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 59
+        "congress": 110,
+        "file_name": "votes/2007/s350/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "350": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 60
+        "congress": 110,
+        "file_name": "votes/2007/s351/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "351": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 61
+        "congress": 110,
+        "file_name": "votes/2007/s352/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "352": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 62
+        "congress": 110,
+        "file_name": "votes/2007/s353/data.json",
+        "number": 976,
+        "type": "hr"
     },
     "353": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 63
+        "congress": 110,
+        "file_name": "votes/2007/s354/data.json",
+        "number": 43,
+        "type": "hjres"
     },
     "354": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 64
+        "congress": 110,
+        "file_name": "votes/2007/s355/data.json",
+        "number": 52,
+        "type": "hjres"
     },
     "355": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 65
+        "congress": 110,
+        "file_name": "votes/2007/s356/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "356": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 66
+        "congress": 110,
+        "file_name": "votes/2007/s357/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "357": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 67
+        "congress": 110,
+        "file_name": "votes/2007/s358/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "358": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 68
+        "congress": 110,
+        "file_name": "votes/2007/s359/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "359": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 69
+        "congress": 110,
+        "file_name": "votes/2007/s360/data.json",
+        "number": 3222,
+        "type": "hr"
     },
     "360": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 70
+        "congress": 110,
+        "file_name": "votes/2007/s361/data.json",
+        "number": 3222,
+        "type": "hr"
     },
     "361": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 71
+        "congress": 110,
+        "file_name": "votes/2007/s362/data.json",
+        "number": 3222,
+        "type": "hr"
     },
     "362": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 72
+        "congress": 110,
+        "file_name": "votes/2007/s363/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "363": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 73
+        "congress": 110,
+        "file_name": "votes/2007/s364/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "364": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 74
+        "congress": 110,
+        "file_name": "votes/2007/s365/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "365": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 75
+        "congress": 110,
+        "file_name": "votes/2007/s366/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "366": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 76
+        "congress": 110,
+        "file_name": "votes/2007/s367/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "367": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 77
+        "congress": 110,
+        "file_name": "votes/2007/s368/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "368": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 78
+        "congress": 110,
+        "file_name": "votes/2007/s369/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "369": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 79
+        "congress": 110,
+        "file_name": "votes/2007/s370/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "370": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 80
+        "congress": 110,
+        "file_name": "votes/2007/s371/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "371": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 81
+        "congress": 110,
+        "file_name": "votes/2007/s372/data.json",
+        "number": 3093,
+        "type": "hr"
     },
     "372": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 82
+        "congress": 110,
+        "file_name": "votes/2007/s373/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "373": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 83
+        "congress": 110,
+        "file_name": "votes/2007/s374/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "374": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 84
+        "congress": 110,
+        "file_name": "votes/2007/s375/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "375": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 85
+        "congress": 110,
+        "file_name": "votes/2007/s376/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "376": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 86
+        "congress": 110,
+        "file_name": "votes/2007/s377/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "377": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 87
+        "congress": 110,
+        "file_name": "votes/2007/s378/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "378": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 88
+        "congress": 110,
+        "file_name": "votes/2007/s379/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "379": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 89
+        "congress": 110,
+        "file_name": "votes/2007/s380/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "380": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 90
+        "congress": 110,
+        "file_name": "votes/2007/s381/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "381": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 91
+        "congress": 110,
+        "file_name": "votes/2007/s382/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "382": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 92
+        "congress": 110,
+        "file_name": "votes/2007/s383/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "383": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 93
+        "congress": 110,
+        "file_name": "votes/2007/s384/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "384": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 94
+        "congress": 110,
+        "file_name": "votes/2007/s385/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "385": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 95
+        "congress": 110,
+        "file_name": "votes/2007/s386/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "386": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 96
+        "congress": 110,
+        "file_name": "votes/2007/s387/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "387": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 97
+        "congress": 110,
+        "file_name": "votes/2007/s388/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "388": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 98
+        "congress": 110,
+        "file_name": "votes/2007/s389/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "389": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 99
+        "congress": 110,
+        "file_name": "votes/2007/s390/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "390": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 100
+        "congress": 110,
+        "file_name": "votes/2007/s391/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "391": {
-        "category": "passage",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 101
+        "congress": 110,
+        "file_name": "votes/2007/s392/data.json",
+        "number": "2",
+        "type": "nomination"
     },
     "392": {
         "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 102
+        "congress": 110,
+        "file_name": "votes/2007/s393/data.json",
+        "number": "2",
+        "type": "nomination"
     },
     "393": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 103
+        "congress": 110,
+        "file_name": "votes/2007/s394/data.json",
+        "number": 2205,
+        "type": "s"
     },
     "394": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 104
+        "congress": 110,
+        "file_name": "votes/2007/s395/data.json",
+        "number": 294,
+        "type": "s"
     },
     "395": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 105
+        "congress": 110,
+        "file_name": "votes/2007/s396/data.json",
+        "number": 294,
+        "type": "s"
     },
     "396": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 106
+        "congress": 110,
+        "file_name": "votes/2007/s397/data.json",
+        "number": 294,
+        "type": "s"
     },
     "397": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 107
+        "congress": 110,
+        "file_name": "votes/2007/s398/data.json",
+        "number": 294,
+        "type": "s"
     },
     "398": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 108
+        "congress": 110,
+        "file_name": "votes/2007/s399/data.json",
+        "number": 294,
+        "type": "s"
     },
     "399": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 109
+        "congress": 110,
+        "file_name": "votes/2007/s400/data.json",
+        "number": 294,
+        "type": "s"
     },
     "400": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 110
+        "congress": 110,
+        "file_name": "votes/2007/s401/data.json",
+        "number": 3963,
+        "type": "hr"
     },
     "401": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 111
+        "congress": 110,
+        "file_name": "votes/2007/s402/data.json",
+        "number": 3963,
+        "type": "hr"
     },
     "402": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 112
+        "congress": 110,
+        "file_name": "votes/2007/s403/data.json",
+        "number": 3963,
+        "type": "hr"
     },
     "403": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 113
+        "congress": 110,
+        "file_name": "votes/2007/s404/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "404": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 114
+        "congress": 110,
+        "file_name": "votes/2007/s405/data.json",
+        "number": 3043,
+        "type": "hr"
     },
     "405": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 115
+        "congress": 110,
+        "file_name": "votes/2007/s406/data.json",
+        "number": 1495,
+        "type": "hr"
     },
     "406": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 116
+        "congress": 110,
+        "file_name": "votes/2007/s407/data.json",
+        "number": "958",
+        "type": "nomination"
     },
     "407": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 117
+        "congress": 110,
+        "file_name": "votes/2007/s408/data.json",
+        "number": "776",
+        "type": "nomination"
     },
     "408": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 118
+        "congress": 110,
+        "file_name": "votes/2007/s409/data.json",
+        "number": 1429,
+        "type": "hr"
     },
     "409": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 119
+        "congress": 110,
+        "file_name": "votes/2007/s410/data.json",
+        "number": 2340,
+        "type": "s"
     },
     "410": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 120
+        "congress": 110,
+        "file_name": "votes/2007/s411/data.json",
+        "number": 4156,
+        "type": "hr"
     },
     "411": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 121
+        "congress": 110,
+        "file_name": "votes/2007/s412/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "412": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 122
+        "congress": 110,
+        "file_name": "votes/2007/s413/data.json",
+        "number": 3688,
+        "type": "hr"
     },
     "413": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 123
+        "congress": 110,
+        "file_name": "votes/2007/s414/data.json",
+        "number": 3996,
+        "type": "hr"
     },
     "414": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 124
+        "congress": 110,
+        "file_name": "votes/2007/s415/data.json",
+        "number": 3996,
+        "type": "hr"
     },
     "415": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 125
+        "congress": 110,
+        "file_name": "votes/2007/s416/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "416": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 126
+        "congress": 110,
+        "file_name": "votes/2007/s417/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "417": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 127
+        "congress": 110,
+        "file_name": "votes/2007/s418/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "418": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 128
+        "congress": 110,
+        "file_name": "votes/2007/s419/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "419": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 129
+        "congress": 110,
+        "file_name": "votes/2007/s420/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "420": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 130
+        "congress": 110,
+        "file_name": "votes/2007/s421/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "421": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 131
+        "congress": 110,
+        "file_name": "votes/2007/s422/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "422": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 132
+        "congress": 110,
+        "file_name": "votes/2007/s423/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "423": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 133
+        "congress": 110,
+        "file_name": "votes/2007/s424/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "424": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 134
+        "congress": 110,
+        "file_name": "votes/2007/s425/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "425": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 135
+        "congress": 110,
+        "file_name": "votes/2007/s426/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "426": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 136
+        "congress": 110,
+        "file_name": "votes/2007/s427/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "427": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 137
+        "congress": 110,
+        "file_name": "votes/2007/s428/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "428": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 138
+        "congress": 110,
+        "file_name": "votes/2007/s429/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "429": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 139
+        "congress": 110,
+        "file_name": "votes/2007/s430/data.json",
+        "number": 6,
+        "type": "hr"
     },
     "430": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 140
+        "congress": 110,
+        "file_name": "votes/2007/s431/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "431": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 141
+        "congress": 110,
+        "file_name": "votes/2007/s432/data.json",
+        "number": 2338,
+        "type": "s"
     },
     "432": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 142
+        "congress": 110,
+        "file_name": "votes/2007/s433/data.json",
+        "number": 1585,
+        "type": "hr"
     },
     "433": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 143
+        "congress": 110,
+        "file_name": "votes/2007/s434/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "434": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 144
+        "congress": 110,
+        "file_name": "votes/2007/s435/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "435": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 145
+        "congress": 110,
+        "file_name": "votes/2007/s436/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "436": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 146
+        "congress": 110,
+        "file_name": "votes/2007/s437/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "437": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 147
+        "congress": 110,
+        "file_name": "votes/2007/s438/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "438": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 148
+        "congress": 110,
+        "file_name": "votes/2007/s439/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "439": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 149
+        "congress": 110,
+        "file_name": "votes/2007/s440/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "440": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 150
+        "congress": 110,
+        "file_name": "votes/2007/s441/data.json",
+        "number": 2764,
+        "type": "hr"
     },
     "441": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 151
+        "congress": 110,
+        "file_name": "votes/2007/s442/data.json",
+        "number": "768",
+        "type": "nomination"
     },
     "442": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 152
+        "congress": 110,
+        "file_name": "votes/2008/s1/data.json",
+        "number": 4986,
+        "type": "hr"
     },
     "443": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 153
+        "congress": 110,
+        "file_name": "votes/2008/s2/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "444": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 154
+        "congress": 110,
+        "file_name": "votes/2008/s3/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "445": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 155
+        "congress": 110,
+        "file_name": "votes/2008/s4/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "446": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 156
+        "congress": 110,
+        "file_name": "votes/2008/s5/data.json",
+        "number": 5140,
+        "type": "hr"
     },
     "447": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 157
+        "congress": 110,
+        "file_name": "votes/2008/s6/data.json",
+        "number": 5140,
+        "type": "hr"
     },
     "448": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 158
+        "congress": 110,
+        "file_name": "votes/2008/s7/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "449": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 159
+        "congress": 110,
+        "file_name": "votes/2008/s8/data.json",
+        "number": 5140,
+        "type": "hr"
     },
     "450": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 160
+        "congress": 110,
+        "file_name": "votes/2008/s9/data.json",
+        "number": 5140,
+        "type": "hr"
     },
     "451": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 161
+        "congress": 110,
+        "file_name": "votes/2008/s10/data.json",
+        "number": 5140,
+        "type": "hr"
     },
     "452": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 162
+        "congress": 110,
+        "file_name": "votes/2008/s11/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "453": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 163
+        "congress": 110,
+        "file_name": "votes/2008/s12/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "454": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 164
+        "congress": 110,
+        "file_name": "votes/2008/s13/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "455": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 165
+        "congress": 110,
+        "file_name": "votes/2008/s14/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "456": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 166
+        "congress": 110,
+        "file_name": "votes/2008/s15/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "457": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 167
+        "congress": 110,
+        "file_name": "votes/2008/s16/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "458": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 168
+        "congress": 110,
+        "file_name": "votes/2008/s17/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "459": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 169
+        "congress": 110,
+        "file_name": "votes/2008/s18/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "460": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 170
+        "congress": 110,
+        "file_name": "votes/2008/s19/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "461": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 171
+        "congress": 110,
+        "file_name": "votes/2008/s20/data.json",
+        "number": 2248,
+        "type": "s"
     },
     "462": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 172
+        "congress": 110,
+        "file_name": "votes/2008/s21/data.json",
+        "number": 2082,
+        "type": "hr"
     },
     "463": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 173
+        "congress": 110,
+        "file_name": "votes/2008/s22/data.json",
+        "number": 2082,
+        "type": "hr"
     },
     "464": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 174
+        "congress": 110,
+        "file_name": "votes/2008/s23/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "465": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 175
+        "congress": 110,
+        "file_name": "votes/2008/s24/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "466": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 176
+        "congress": 110,
+        "file_name": "votes/2008/s25/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "467": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 177
+        "congress": 110,
+        "file_name": "votes/2008/s26/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "468": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 178
+        "congress": 110,
+        "file_name": "votes/2008/s27/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "469": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 179
+        "congress": 110,
+        "file_name": "votes/2008/s28/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "470": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 180
+        "congress": 110,
+        "file_name": "votes/2008/s29/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "471": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 181
+        "congress": 110,
+        "file_name": "votes/2008/s30/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "472": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 182
+        "congress": 110,
+        "file_name": "votes/2008/s31/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "473": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 183
+        "congress": 110,
+        "file_name": "votes/2008/s32/data.json",
+        "number": 1200,
+        "type": "s"
     },
     "474": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 184
+        "congress": 110,
+        "file_name": "votes/2008/s33/data.json",
+        "number": 2633,
+        "type": "s"
     },
     "475": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 185
+        "congress": 110,
+        "file_name": "votes/2008/s34/data.json",
+        "number": 2634,
+        "type": "s"
     },
     "476": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 186
+        "congress": 110,
+        "file_name": "votes/2008/s35/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "477": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 187
+        "congress": 110,
+        "file_name": "votes/2008/s36/data.json",
+        "number": 2663,
+        "type": "s"
     },
     "478": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 188
+        "congress": 110,
+        "file_name": "votes/2008/s37/data.json",
+        "number": 2663,
+        "type": "s"
     },
     "479": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 189
+        "congress": 110,
+        "file_name": "votes/2008/s38/data.json",
+        "number": 2663,
+        "type": "s"
     },
     "480": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 190
+        "congress": 110,
+        "file_name": "votes/2008/s39/data.json",
+        "number": 2663,
+        "type": "s"
     },
     "481": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 191
+        "congress": 110,
+        "file_name": "votes/2008/s40/data.json",
+        "number": 2663,
+        "type": "s"
     },
     "482": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 192
+        "congress": 110,
+        "file_name": "votes/2008/s41/data.json",
+        "number": 4040,
+        "type": "hr"
     },
     "483": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 193
+        "congress": 110,
+        "file_name": "votes/2008/s42/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "484": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 194
+        "congress": 110,
+        "file_name": "votes/2008/s43/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "485": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 195
+        "congress": 110,
+        "file_name": "votes/2008/s44/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "486": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 196
+        "congress": 110,
+        "file_name": "votes/2008/s45/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "487": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 197
+        "congress": 110,
+        "file_name": "votes/2008/s46/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "488": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 198
+        "congress": 110,
+        "file_name": "votes/2008/s47/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "489": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 199
+        "congress": 110,
+        "file_name": "votes/2008/s48/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "490": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 200
+        "congress": 110,
+        "file_name": "votes/2008/s49/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "491": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 201
+        "congress": 110,
+        "file_name": "votes/2008/s50/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "492": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 202
+        "congress": 110,
+        "file_name": "votes/2008/s51/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "493": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 203
+        "congress": 110,
+        "file_name": "votes/2008/s52/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "494": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 204
+        "congress": 110,
+        "file_name": "votes/2008/s53/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "495": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 205
+        "congress": 110,
+        "file_name": "votes/2008/s54/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "496": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 206
+        "congress": 110,
+        "file_name": "votes/2008/s55/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "497": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 207
+        "congress": 110,
+        "file_name": "votes/2008/s56/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "498": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 208
+        "congress": 110,
+        "file_name": "votes/2008/s57/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "499": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 209
+        "congress": 110,
+        "file_name": "votes/2008/s58/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "500": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 210
+        "congress": 110,
+        "file_name": "votes/2008/s59/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "501": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 211
+        "congress": 110,
+        "file_name": "votes/2008/s60/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "502": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 212
+        "congress": 110,
+        "file_name": "votes/2008/s61/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "503": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 213
+        "congress": 110,
+        "file_name": "votes/2008/s62/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "504": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 214
+        "congress": 110,
+        "file_name": "votes/2008/s63/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "505": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 215
+        "congress": 110,
+        "file_name": "votes/2008/s64/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "506": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 216
+        "congress": 110,
+        "file_name": "votes/2008/s65/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "507": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 217
+        "congress": 110,
+        "file_name": "votes/2008/s66/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "508": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 218
+        "congress": 110,
+        "file_name": "votes/2008/s67/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "509": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 219
+        "congress": 110,
+        "file_name": "votes/2008/s68/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "510": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 220
+        "congress": 110,
+        "file_name": "votes/2008/s69/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "511": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 221
+        "congress": 110,
+        "file_name": "votes/2008/s70/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "512": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 222
+        "congress": 110,
+        "file_name": "votes/2008/s71/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "513": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 223
+        "congress": 110,
+        "file_name": "votes/2008/s72/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "514": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 224
+        "congress": 110,
+        "file_name": "votes/2008/s73/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "515": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 225
+        "congress": 110,
+        "file_name": "votes/2008/s74/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "516": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 226
+        "congress": 110,
+        "file_name": "votes/2008/s75/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "517": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 227
+        "congress": 110,
+        "file_name": "votes/2008/s76/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "518": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 228
+        "congress": 110,
+        "file_name": "votes/2008/s77/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "519": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 229
+        "congress": 110,
+        "file_name": "votes/2008/s78/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "520": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 230
+        "congress": 110,
+        "file_name": "votes/2008/s79/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "521": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 231
+        "congress": 110,
+        "file_name": "votes/2008/s80/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "522": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 232
+        "congress": 110,
+        "file_name": "votes/2008/s81/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "523": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 233
+        "congress": 110,
+        "file_name": "votes/2008/s82/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "524": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 234
+        "congress": 110,
+        "file_name": "votes/2008/s83/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "525": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 235
+        "congress": 110,
+        "file_name": "votes/2008/s84/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "526": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 236
+        "congress": 110,
+        "file_name": "votes/2008/s85/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "527": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 237
+        "congress": 110,
+        "file_name": "votes/2008/s86/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "528": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 238
+        "congress": 110,
+        "file_name": "votes/2008/s87/data.json",
+        "number": 501,
+        "type": "sres"
     },
     "529": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 239
+        "congress": 110,
+        "file_name": "votes/2008/s88/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "530": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 240
+        "congress": 110,
+        "file_name": "votes/2008/s89/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "531": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 241
+        "congress": 110,
+        "file_name": "votes/2008/s90/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "532": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 242
+        "congress": 110,
+        "file_name": "votes/2008/s91/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "533": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 243
+        "congress": 110,
+        "file_name": "votes/2008/s92/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "534": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 244
+        "congress": 110,
+        "file_name": "votes/2008/s93/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "535": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 245
+        "congress": 110,
+        "file_name": "votes/2008/s94/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "536": {
         "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 246
+        "congress": 110,
+        "file_name": "votes/2008/s95/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "537": {
-        "category": "amendment",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 247
+        "congress": 110,
+        "file_name": "votes/2008/s96/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "538": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 248
+        "congress": 110,
+        "file_name": "votes/2008/s97/data.json",
+        "number": 2739,
+        "type": "s"
     },
     "539": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 249
+        "congress": 110,
+        "file_name": "votes/2008/s98/data.json",
+        "number": 2739,
+        "type": "s"
     },
     "540": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 250
+        "congress": 110,
+        "file_name": "votes/2008/s99/data.json",
+        "number": 2739,
+        "type": "s"
     },
     "541": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 251
+        "congress": 110,
+        "file_name": "votes/2008/s100/data.json",
+        "number": 2739,
+        "type": "s"
     },
     "542": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 252
+        "congress": 110,
+        "file_name": "votes/2008/s101/data.json",
+        "number": 2739,
+        "type": "s"
     },
     "543": {
-        "category": "procedural",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 253
+        "congress": 110,
+        "file_name": "votes/2008/s102/data.json",
+        "number": "988",
+        "type": "nomination"
     },
     "544": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 254
+        "congress": 110,
+        "file_name": "votes/2008/s103/data.json",
+        "number": 1195,
+        "type": "hr"
     },
     "545": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 255
+        "congress": 110,
+        "file_name": "votes/2008/s104/data.json",
+        "number": 1195,
+        "type": "hr"
     },
     "546": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 256
+        "congress": 110,
+        "file_name": "votes/2008/s105/data.json",
+        "number": 1195,
+        "type": "hr"
     },
     "547": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 257
+        "congress": 110,
+        "file_name": "votes/2008/s106/data.json",
+        "number": 1195,
+        "type": "hr"
     },
     "548": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 258
+        "congress": 110,
+        "file_name": "votes/2008/s107/data.json",
+        "number": 1195,
+        "type": "hr"
     },
     "549": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 259
+        "congress": 110,
+        "file_name": "votes/2008/s108/data.json",
+        "number": 1195,
+        "type": "hr"
     },
     "550": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 260
+        "congress": 110,
+        "file_name": "votes/2008/s109/data.json",
+        "number": 1315,
+        "type": "s"
     },
     "551": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 261
+        "congress": 110,
+        "file_name": "votes/2008/s110/data.json",
+        "number": 2831,
+        "type": "hr"
     },
     "552": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 262
+        "congress": 110,
+        "file_name": "votes/2008/s111/data.json",
+        "number": 1315,
+        "type": "s"
     },
     "553": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 263
+        "congress": 110,
+        "file_name": "votes/2008/s112/data.json",
+        "number": 1315,
+        "type": "s"
     },
     "554": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 264
+        "congress": 110,
+        "file_name": "votes/2008/s113/data.json",
+        "number": 493,
+        "type": "hr"
     },
     "555": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 265
+        "congress": 110,
+        "file_name": "votes/2008/s114/data.json",
+        "number": 2881,
+        "type": "hr"
     },
     "556": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 266
+        "congress": 110,
+        "file_name": "votes/2008/s115/data.json",
+        "number": 2881,
+        "type": "hr"
     },
     "557": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 267
+        "congress": 110,
+        "file_name": "votes/2008/s116/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "558": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 268
+        "congress": 110,
+        "file_name": "votes/2008/s117/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "559": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 269
+        "congress": 110,
+        "file_name": "votes/2008/s118/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "560": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 270
+        "congress": 110,
+        "file_name": "votes/2008/s119/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "561": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 271
+        "congress": 110,
+        "file_name": "votes/2008/s120/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "562": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 272
+        "congress": 110,
+        "file_name": "votes/2008/s121/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "563": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 273
+        "congress": 110,
+        "file_name": "votes/2008/s122/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "564": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 274
+        "congress": 110,
+        "file_name": "votes/2008/s123/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "565": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 275
+        "congress": 110,
+        "file_name": "votes/2008/s124/data.json",
+        "number": 2284,
+        "type": "s"
     },
     "566": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 276
+        "congress": 110,
+        "file_name": "votes/2008/s125/data.json",
+        "number": 3121,
+        "type": "hr"
     },
     "567": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 277
+        "congress": 110,
+        "file_name": "votes/2008/s126/data.json",
+        "number": 980,
+        "type": "hr"
     },
     "568": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 278
+        "congress": 110,
+        "file_name": "votes/2008/s127/data.json",
+        "number": 980,
+        "type": "hr"
     },
     "569": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 279
+        "congress": 110,
+        "file_name": "votes/2008/s128/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "570": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 280
+        "congress": 110,
+        "file_name": "votes/2008/s129/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "571": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 281
+        "congress": 110,
+        "file_name": "votes/2008/s130/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "572": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 282
+        "congress": 110,
+        "file_name": "votes/2008/s131/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "573": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 283
+        "congress": 110,
+        "file_name": "votes/2008/s132/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "574": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 284
+        "congress": 110,
+        "file_name": "votes/2008/s133/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "575": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 285
+        "congress": 110,
+        "file_name": "votes/2008/s134/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "576": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 286
+        "congress": 110,
+        "file_name": "votes/2008/s135/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "577": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 287
+        "congress": 110,
+        "file_name": "votes/2008/s136/data.json",
+        "number": "1484",
+        "type": "nomination"
     },
     "578": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 288
+        "congress": 110,
+        "file_name": "votes/2008/s137/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "579": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 289
+        "congress": 110,
+        "file_name": "votes/2008/s138/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "580": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 290
+        "congress": 110,
+        "file_name": "votes/2008/s139/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "581": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 291
+        "congress": 110,
+        "file_name": "votes/2008/s140/data.json",
+        "number": 2419,
+        "type": "hr"
     },
     "582": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 292
+        "congress": 110,
+        "file_name": "votes/2008/s141/data.json",
+        "number": 3036,
+        "type": "s"
     },
     "583": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 293
+        "congress": 110,
+        "file_name": "votes/2008/s142/data.json",
+        "number": 70,
+        "type": "sconres"
     },
     "584": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 294
+        "congress": 110,
+        "file_name": "votes/2008/s143/data.json",
+        "number": 3036,
+        "type": "s"
     },
     "585": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 295
+        "congress": 110,
+        "file_name": "votes/2008/s144/data.json",
+        "number": 6124,
+        "type": "hr"
     },
     "586": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 296
+        "congress": 110,
+        "file_name": "votes/2008/s145/data.json",
+        "number": 3036,
+        "type": "s"
     },
     "587": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 297
+        "congress": 110,
+        "file_name": "votes/2008/s146/data.json",
+        "number": 3044,
+        "type": "s"
     },
     "588": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 298
+        "congress": 110,
+        "file_name": "votes/2008/s147/data.json",
+        "number": 6049,
+        "type": "hr"
     },
     "589": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 299
+        "congress": 110,
+        "file_name": "votes/2008/s148/data.json",
+        "number": "1065",
+        "type": "nomination"
     },
     "590": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 300
+        "congress": 110,
+        "file_name": "votes/2008/s149/data.json",
+        "number": 3101,
+        "type": "s"
     },
     "591": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 301
+        "congress": 110,
+        "file_name": "votes/2008/s150/data.json",
+        "number": 6049,
+        "type": "hr"
     },
     "592": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 302
+        "congress": 110,
+        "file_name": "votes/2008/s151/data.json",
+        "number": 6124,
+        "type": "hr"
     },
     "593": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 303
+        "congress": 110,
+        "file_name": "votes/2008/s152/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "594": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 304
+        "congress": 110,
+        "file_name": "votes/2008/s153/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "595": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 305
+        "congress": 110,
+        "file_name": "votes/2008/s154/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "596": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 306
+        "congress": 110,
+        "file_name": "votes/2008/s155/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "597": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 307
+        "congress": 110,
+        "file_name": "votes/2008/s156/data.json",
+        "number": "1560",
+        "type": "nomination"
     },
     "598": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 308
+        "congress": 110,
+        "file_name": "votes/2008/s157/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "599": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 309
+        "congress": 110,
+        "file_name": "votes/2008/s158/data.json",
+        "number": 6304,
+        "type": "hr"
     },
     "600": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 310
+        "congress": 110,
+        "file_name": "votes/2008/s159/data.json",
+        "number": "1335",
+        "type": "nomination"
     },
     "601": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 311
+        "congress": 110,
+        "file_name": "votes/2008/s160/data.json",
+        "number": 6331,
+        "type": "hr"
     },
     "602": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 312
+        "congress": 110,
+        "file_name": "votes/2008/s161/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "603": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 313
+        "congress": 110,
+        "file_name": "votes/2008/s162/data.json",
+        "number": 2642,
+        "type": "hr"
     },
     "604": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 314
+        "congress": 110,
+        "file_name": "votes/2008/s163/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "605": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 315
+        "congress": 110,
+        "file_name": "votes/2008/s164/data.json",
+        "number": 6304,
+        "type": "hr"
     },
     "606": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 316
+        "congress": 110,
+        "file_name": "votes/2008/s165/data.json",
+        "number": 6304,
+        "type": "hr"
     },
     "607": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 317
+        "congress": 110,
+        "file_name": "votes/2008/s166/data.json",
+        "number": 6304,
+        "type": "hr"
     },
     "608": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 318
+        "congress": 110,
+        "file_name": "votes/2008/s167/data.json",
+        "number": 6304,
+        "type": "hr"
     },
     "609": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 319
+        "congress": 110,
+        "file_name": "votes/2008/s168/data.json",
+        "number": 6304,
+        "type": "hr"
     },
     "610": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 320
+        "congress": 110,
+        "file_name": "votes/2008/s169/data.json",
+        "number": 6331,
+        "type": "hr"
     },
     "611": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 321
+        "congress": 110,
+        "file_name": "votes/2008/s170/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "612": {
-        "category": "cloture",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 322
+        "congress": 110,
+        "file_name": "votes/2008/s171/data.json",
+        "number": "1641",
+        "type": "nomination"
     },
     "613": {
-        "category": "procedural",
+        "category": "nomination",
         "chamber": "s",
-        "congress": 113,
-        "number": 323
+        "congress": 110,
+        "file_name": "votes/2008/s172/data.json",
+        "number": "1643",
+        "type": "nomination"
     },
     "614": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 324
+        "congress": 110,
+        "file_name": "votes/2008/s173/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "615": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 325
+        "congress": 110,
+        "file_name": "votes/2008/s174/data.json",
+        "number": 2731,
+        "type": "s"
     },
     "616": {
-        "category": "nomination",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 326
+        "congress": 110,
+        "file_name": "votes/2008/s175/data.json",
+        "number": 2731,
+        "type": "s"
     },
     "617": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 327
+        "congress": 110,
+        "file_name": "votes/2008/s176/data.json",
+        "number": 2731,
+        "type": "s"
     },
     "618": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 328
+        "congress": 110,
+        "file_name": "votes/2008/s177/data.json",
+        "number": 6331,
+        "type": "hr"
     },
     "619": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 329
+        "congress": 110,
+        "file_name": "votes/2008/s178/data.json",
+        "number": 2731,
+        "type": "s"
     },
     "620": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 330
+        "congress": 110,
+        "file_name": "votes/2008/s179/data.json",
+        "number": 2731,
+        "type": "s"
     },
     "621": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 331
+        "congress": 110,
+        "file_name": "votes/2008/s180/data.json",
+        "number": 2731,
+        "type": "s"
     },
     "622": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 332
+        "congress": 110,
+        "file_name": "votes/2008/s181/data.json",
+        "number": 2731,
+        "type": "s"
     },
     "623": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 333
+        "congress": 110,
+        "file_name": "votes/2008/s182/data.json",
+        "number": 5501,
+        "type": "hr"
     },
     "624": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 334
+        "congress": 110,
+        "file_name": "votes/2008/s183/data.json",
+        "number": 3268,
+        "type": "s"
     },
     "625": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 335
+        "congress": 110,
+        "file_name": "votes/2008/s184/data.json",
+        "number": 3268,
+        "type": "s"
     },
     "626": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 336
+        "congress": 110,
+        "file_name": "votes/2008/s185/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "627": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 337
+        "congress": 110,
+        "file_name": "votes/2008/s186/data.json",
+        "number": 3221,
+        "type": "hr"
     },
     "628": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 338
+        "congress": 110,
+        "file_name": "votes/2008/s187/data.json",
+        "number": 3186,
+        "type": "s"
     },
     "629": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 339
+        "congress": 110,
+        "file_name": "votes/2008/s188/data.json",
+        "number": 3297,
+        "type": "s"
     },
     "630": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 340
+        "congress": 110,
+        "file_name": "votes/2008/s189/data.json",
+        "number": 3297,
+        "type": "s"
     },
     "631": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 341
+        "congress": 110,
+        "file_name": "votes/2008/s190/data.json",
+        "number": 6049,
+        "type": "hr"
     },
     "632": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 342
+        "congress": 110,
+        "file_name": "votes/2008/s191/data.json",
+        "number": 2035,
+        "type": "s"
     },
     "633": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 343
+        "congress": 110,
+        "file_name": "votes/2008/s192/data.json",
+        "number": 3335,
+        "type": "s"
     },
     "634": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 344
+        "congress": 110,
+        "file_name": "votes/2008/s193/data.json",
+        "number": 4040,
+        "type": "hr"
     },
     "635": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 345
+        "congress": 110,
+        "file_name": "votes/2008/s194/data.json",
+        "number": 4137,
+        "type": "hr"
     },
     "636": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 346
+        "congress": 110,
+        "file_name": "votes/2008/s195/data.json",
+        "number": 3001,
+        "type": "s"
     },
     "637": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 347
+        "congress": 110,
+        "file_name": "votes/2008/s196/data.json",
+        "number": 398,
+        "type": "hconres"
     },
     "638": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 348
+        "congress": 110,
+        "file_name": "votes/2008/s197/data.json",
+        "number": 3001,
+        "type": "s"
     },
     "639": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 349
+        "congress": 110,
+        "file_name": "votes/2008/s198/data.json",
+        "number": 3001,
+        "type": "s"
     },
     "640": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 350
+        "congress": 110,
+        "file_name": "votes/2008/s199/data.json",
+        "number": 3001,
+        "type": "s"
     },
     "641": {
-        "category": "procedural",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 351
+        "congress": 110,
+        "file_name": "votes/2008/s200/data.json",
+        "number": 3001,
+        "type": "s"
     },
     "642": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 352
+        "congress": 110,
+        "file_name": "votes/2008/s201/data.json",
+        "number": 3001,
+        "type": "s"
     },
     "643": {
-        "category": "procedural",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 353
+        "congress": 110,
+        "file_name": "votes/2008/s202/data.json",
+        "number": 6049,
+        "type": "hr"
     },
     "644": {
-        "category": "passage",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 354
+        "congress": 110,
+        "file_name": "votes/2008/s203/data.json",
+        "number": 6049,
+        "type": "hr"
     },
     "645": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 355
+        "congress": 110,
+        "file_name": "votes/2008/s204/data.json",
+        "number": 6049,
+        "type": "hr"
     },
     "646": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 356
+        "congress": 110,
+        "file_name": "votes/2008/s205/data.json",
+        "number": 6049,
+        "type": "hr"
     },
     "647": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 357
+        "congress": 110,
+        "file_name": "votes/2008/s206/data.json",
+        "number": 3604,
+        "type": "s"
     },
     "648": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 358
+        "congress": 110,
+        "file_name": "votes/2008/s207/data.json",
+        "number": 2638,
+        "type": "hr"
     },
     "649": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 359
+        "congress": 110,
+        "file_name": "votes/2008/s208/data.json",
+        "number": 2638,
+        "type": "hr"
     },
     "650": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 360
+        "congress": 110,
+        "file_name": "votes/2008/s209/data.json",
+        "number": 2095,
+        "type": "hr"
     },
     "651": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 361
+        "congress": 110,
+        "file_name": "votes/2008/s210/data.json",
+        "number": 2095,
+        "type": "hr"
     },
     "652": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 362
+        "congress": 110,
+        "file_name": "votes/2008/s211/data.json",
+        "number": 7081,
+        "type": "hr"
     },
     "653": {
-        "category": "cloture",
+        "category": "amendment",
         "chamber": "s",
-        "congress": 113,
-        "number": 363
+        "congress": 110,
+        "file_name": "votes/2008/s212/data.json",
+        "number": 1424,
+        "type": "hr"
     },
     "654": {
-        "category": "passage",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 364
+        "congress": 110,
+        "file_name": "votes/2008/s213/data.json",
+        "number": 1424,
+        "type": "hr"
     },
     "655": {
-        "category": "cloture",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 365
+        "congress": 110,
+        "file_name": "votes/2008/s214/data.json",
+        "number": 6867,
+        "type": "hr"
     },
     "656": {
-        "category": "nomination",
+        "category": "bill",
         "chamber": "s",
-        "congress": 113,
-        "number": 366
+        "congress": 110,
+        "file_name": "votes/2008/s215/data.json",
+        "number": 7005,
+        "type": "hr"
     }
 }

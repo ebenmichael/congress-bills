@@ -1,0 +1,38 @@
+<bill session="110" type="h" number="6557" updated="2016-06-29T09:31:47-04:00">
+  <state datetime="2008-07-21">REFERRED</state>
+  <status>
+    <introduced datetime="2008-07-21"/>
+  </status>
+  <introduced datetime="2008-07-21"/>
+  <titles>
+    <title type="short" as="introduced">Veterans Critical Access Act</title>
+    <title type="official" as="introduced">To amend title XVIII of the Social Security Act to exempt from the critical access hospital inpatient bed limitation the number of beds provided for certain veterans.</title>
+  </titles>
+  <sponsor id="400419"/>
+  <cosponsors>
+    <cosponsor id="400176" joined="2008-07-21"/>
+    <cosponsor id="400274" joined="2008-07-21"/>
+    <cosponsor id="400284" joined="2008-07-21"/>
+    <cosponsor id="400395" joined="2008-07-21"/>
+  </cosponsors>
+  <actions>
+    <action datetime="2008-07-21" state="REFERRED">
+      <text>Referred to the House Committee on Ways and Means.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSWM" name="House Ways and Means" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Health"/>
+    <term name="Health facilities and institutions"/>
+    <term name="Hospital care"/>
+    <term name="Medicare"/>
+    <term name="Rural conditions and development"/>
+    <term name="Veterans' medical care"/>
+  </subjects>
+  <amendments/>
+  <summary>7/21/2008--Introduced.
+Veterans Critical Access Act - Amends title XVIII (Medicare) of the Social Security Act, with respect to the Medicare rural hospital flexibility program, to exempt from the critical access hospital inpatient bed limitation any beds provided for veterans whom the Department of Veterans Affairs referred for care in the hospital or for whom it is coordinating such care with other care being provided by the Department.</summary>
+</bill>

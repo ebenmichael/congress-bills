@@ -1,0 +1,38 @@
+<bill session="110" type="h" number="6325" updated="2016-06-29T09:31:41-04:00">
+  <state datetime="2008-06-19">REFERRED</state>
+  <status>
+    <introduced datetime="2008-06-19"/>
+  </status>
+  <introduced datetime="2008-06-19"/>
+  <titles>
+    <title type="short" as="introduced">Packaging Reduction Act of 2008</title>
+    <title type="official" as="introduced">To require the Administrator of the Environmental Protection Agency to establish a plan to reduce the total amount of packaging used on consumer products in the United States.</title>
+  </titles>
+  <sponsor id="400426"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2008-06-19" state="REFERRED">
+      <text>Referred to the House Committee on Energy and Commerce.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSIF" name="House Energy and Commerce" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Environmental protection"/>
+    <term name="Administrative procedure"/>
+    <term name="Commerce"/>
+    <term name="Consumer goods"/>
+    <term name="Environmental Protection Agency"/>
+    <term name="Government operations and politics"/>
+    <term name="Law"/>
+    <term name="Packaging"/>
+    <term name="Waste reduction"/>
+  </subjects>
+  <amendments/>
+  <summary>6/19/2008--Introduced.
+Packaging Reduction Act of 2008 - Establishes a national consumer product packaging reduction goal to reduce the total amount of packaging used on consumer products in the United States to an amount that is at least 30 percent below the amount used on the date of enactment of this Act.
+
+ Requires the Administrator of the Environmental Protection Agency (EPA) to develop and implement a plan to meet the national packaging reduction goal within 10 years after enactment of this Act that includes methods of meeting the goal and methods of measuring the plan's effectiveness.</summary>
+</bill>

@@ -1,0 +1,31 @@
+<bill session="110" type="hr" number="571" updated="2016-06-29T09:28:33-04:00">
+  <state datetime="2007-07-25">REFERRED</state>
+  <status>
+    <introduced datetime="2007-07-25"/>
+  </status>
+  <introduced datetime="2007-07-25"/>
+  <titles>
+    <title type="official" as="introduced">Supporting the goals and ideals of National Health Center Week in order to raise awareness of health services provided by community, migrant, public housing, and homeless health centers, and for other purposes.</title>
+  </titles>
+  <sponsor id="400093"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2007-07-25" state="REFERRED">
+      <text>Referred to the House Committee on Oversight and Government Reform.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="HSGO" name="House Oversight and Government Reform" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Commemorations"/>
+    <term name="Clinics"/>
+    <term name="Community health services"/>
+    <term name="Health"/>
+    <term name="Special weeks"/>
+  </subjects>
+  <amendments/>
+  <summary>7/25/2007--Introduced.
+Expresses support for the goals and ideals of National Health Center Week.</summary>
+</bill>

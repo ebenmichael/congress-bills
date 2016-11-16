@@ -1,0 +1,48 @@
+<bill session="110" type="s" number="2968" updated="2016-06-29T09:33:51-04:00">
+  <state datetime="2008-05-01">REFERRED</state>
+  <status>
+    <introduced datetime="2008-05-01"/>
+  </status>
+  <introduced datetime="2008-05-01"/>
+  <titles>
+    <title type="short" as="introduced">Low-Income Gasoline Assistance Program Act</title>
+    <title type="official" as="introduced">A bill to provide emergency assistance for families receiving assistance under part A of title IV of the Social Security Act and low-income working families.</title>
+  </titles>
+  <sponsor id="300084"/>
+  <cosponsors/>
+  <actions>
+    <action datetime="2008-05-01" state="REFERRED">
+      <text>Read twice and referred to the Committee on Finance.</text>
+    </action>
+  </actions>
+  <committees>
+    <committee code="SSFI" name="Senate Finance" activity="Referral, In Committee"/>
+  </committees>
+  <relatedbills/>
+  <subjects>
+    <term name="Social welfare"/>
+    <term name="Access to health care"/>
+    <term name="Aid to dependent children"/>
+    <term name="Cash welfare block grants"/>
+    <term name="Commuting"/>
+    <term name="Economics and public finance"/>
+    <term name="Energy"/>
+    <term name="Energy assistance for the poor"/>
+    <term name="Energy prices"/>
+    <term name="Families"/>
+    <term name="Gasoline"/>
+    <term name="Government operations and politics"/>
+    <term name="Grants-in-aid"/>
+    <term name="Health"/>
+    <term name="Labor and employment"/>
+    <term name="Transportation and public works"/>
+    <term name="Vocational and technical education"/>
+    <term name="Welfare eligibility"/>
+    <term name="Welfare recipients"/>
+  </subjects>
+  <amendments/>
+  <summary>5/1/2008--Introduced.
+Low-Income Gasoline Assistance Program Act - Directs the Secretary of Health and Human Services to make grants to enable states to establish emergency assistance programs to make certain payments to eligible low-income households for the purchase of gasoline.
+
+Amends part A (Temporary Assistance for Needy Families) (TANF) of title IV of the Social Security Act to authorize a state to use funds from any TANF grant to carry out such a program.</summary>
+</bill>
