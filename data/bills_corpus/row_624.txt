@@ -1,0 +1,37 @@
+Stop Excessive Energy Speculation Act of 2008 - Amends the Commodity Exchange Act to extend its coverage to energy commodities such as petroleum products and natural gas.
+
+Prohibits the Commodity Futures Trading Commission (CFTC) from permitting a foreign board of trade to provide its members or other participants subject to CFTC jurisdiction direct access to its electronic trading and order matching system unless it meets specified requirements.
+
+Authorizes the CFTC to require recordkeeping by any person either located within the United States or entering trades directly into the trade matching system of a foreign board of trade from the United States.
+
+Subjects such persons to liability for violation of CFTC rules and regulations.
+
+Directs the CFTC to convene a working group of international regulators to develop uniform international reporting and regulatory standards to ensure protection of energy futures markets from nonlegitimate hedge trading, excessive speculation, manipulation, location shopping, and lowest common denominator regulation, each of which poses systemic risks to all energy futures markets, countries, and consumers.
+
+Defines "legitimate hedge trading" as transactions by commercial producers and purchasers of actual physical petroleum and energy commodities for future delivery and the direct counterparties to such trades.
+
+Directs the CFTC to review oversight actions regarding all energy futures market participants or market activity in order to ensure that: (1) legitimate hedge trading is protected and promoted; and (2) excessive speculation is eliminated.
+
+Requires the CFTC to set maximum speculative position limits on nonlegitimate hedge trading.
+
+Instructs the CFTC to convene an advisory group to recommend an appropriate level for position limits designed for traders or entities that are not legitimate hedge traders.
+
+Authorizes the CFTC to exercise oversight over any disturbance in a commodity market that disrupts its liquidity and price discovery function from accurately reflecting a commodity's supply and demand ("major market disturbance").
+
+Requires the CFTC to identify each large over-the-counter transaction or class of such transactions in order to detect and prevent potential price manipulation of, or excessive speculation in, any contract listed for trading on a registered entity.
+
+Instructs the CFTC to: (1) routinely require detailed reporting from index traders and swap dealers in markets under its jurisdiction; and (2) review the trading practices for index traders in markets under its jurisdiction to ensure that index trading is not adversely impacting the price discovery process.
+
+Requires the CFTC to disaggregate and make public monthly: (1) the number of positions and total value of index funds and other passive, long-only positions in energy markets; and (2) data on speculative positions relative to bona fide physical hedgers in energy markets.
+
+Directs the CFTC to appoint additional CFTC employees for enforcement purposes.
+
+Establishes a Working Group on Energy Markets to: (1) identify the factors that affect the pricing of crude oil and refined petroleum products, including market speculation; and (2) assess the roles, missions, and structures of relevant federal agencies, interagency coordination, and the gaps that need to be filled for federal oversight and regulation of markets critical to energy security.
+
+Amends the Department of Energy Organization Act to require each federal agency head to provide information to the Administrator of the Energy Information Administration for identification of each energy-producing company.
+
+Establishes within such Administration a Financial Market Analysis Office responsible for financial analysis of energy markets.
+
+Directs the Federal Energy Regulatory Commission (FERC) to investigate and report to certain congressional committees on the role of financial institutions in natural gas markets.
+
+Directs the Comptroller General of the United States to study and report to certain congressional committees on: (1) the international regime for regulating the trading of energy commodity futures and derivatives; and (2) the effects of noncommercial speculators upon energy futures markets and energy prices.

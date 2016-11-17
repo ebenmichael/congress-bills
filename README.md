@@ -28,3 +28,7 @@ To get metadata and text for all of the bills in the 110th congress (not just th
 ```
 rsync -avz --delete --delete-excluded --exclude **/text-versions/ 	govtrack.us::govtrackdata/congress/110/bills .
 ```
+To extract the text from the bills into a corpus and get a sparse bag of words feature matrix for the corpus run
+```
+python text_to_features.py bills combined_data/row_to_bill.json
+```
