@@ -37,10 +37,11 @@ def get_senator_data(votes_dir):
                                                if k != "id"}
         return(ids, metadata)
     # get all of the senate files
+    # actually HOUSE FILES
     years = [os.path.join(votes_dir, f) for f in os.listdir(votes_dir)]
     sub_dirs = [os.path.join(year, f) for year in years
                 for f in os.listdir(year)
-                if not os.path.isfile(f) and f[0] == "s"]
+                if not os.path.isfile(f) and f[0] == "h"]
     # go through all of these files and get all of the senators
     ids = set()
     metadata = {}
@@ -58,7 +59,7 @@ def get_vote(vote_file, id_to_pos):
        Mapping from vote to number:
         Missing: -1
         Nay: 0
-        Yea: 1
+        Yea/Aye: 1
         Present: 2
         Not Voting: 3
     Input:
@@ -73,11 +74,15 @@ def get_vote(vote_file, id_to_pos):
     # open json file
     with open(vote_file) as f:
         vote_data = json.load(f)
-
+    # only do cetrain kinds of votes
+    black_list = ["leadership", "unknown"]
+    if vote_data["category"] in black_list:
+        return(None)
     # create the vector
     vote_vec = np.ones(len(id_to_pos)) * (-1)
     # mapping of vote type to number
-    vote_map = {"Nay": 0, "Yea": 1, "Present": 2, "Not Voting": 3}
+    vote_map = {"Nay": 0, "No": 0, "Yea": 1, "Aye": 1,
+                "Present": 2, "Not Voting": 3}
 
     for vote_type in vote_data["votes"]:
         for senator in vote_data["votes"][vote_type]:
@@ -93,7 +98,7 @@ def get_vote(vote_file, id_to_pos):
     if "amendment" in vote_data.keys():
         bill_info["type"] = vote_data["bill"]["type"]
         bill_info["category"] = "amendment"
-        bill_info["number"] = vote_data["bill"]["number"]
+        bill_info["number"] = vote_data["amendment"]["number"]
     elif "bill" in vote_data.keys():
         bill_info["type"] = vote_data["bill"]["type"]
         bill_info["category"] = "bill"
@@ -102,6 +107,8 @@ def get_vote(vote_file, id_to_pos):
         bill_info["type"] = "nomination"
         bill_info["category"] = "nomination"
         bill_info["number"] = vote_data["nomination"]["number"]
+    else:
+        return(None)
     return(vote_vec, bill_info)
 
 
@@ -119,7 +126,7 @@ def get_senate_votes(votes_dir, id_to_pos):
     years = [os.path.join(votes_dir, f) for f in os.listdir(votes_dir)]
     sub_dirs = [os.path.join(year, f) for year in years
                 for f in os.listdir(year)
-                if not os.path.isfile(f) and f[0] == "s"]
+                if not os.path.isfile(f) and f[0] == "h"]
     # make the matrix
     n_senators = len(id_to_pos)
     n_bills = len(sub_dirs)
@@ -135,7 +142,11 @@ def get_senate_votes(votes_dir, id_to_pos):
     # iterate through the bills
     for i, bill in enumerate(sorted_sub_dirs):
         vote_file = os.path.join(bill, "data.json")
-        vote_vec, bill_info = get_vote(vote_file, id_to_pos)
+        # if we skipped the bill just get out of here
+        output = get_vote(vote_file, id_to_pos)
+        if output is None:
+            continue
+        vote_vec, bill_info = output
         vote_mat[i, :] = vote_vec
         row_to_bill[i] = bill_info
 

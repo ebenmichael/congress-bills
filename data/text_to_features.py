@@ -7,10 +7,11 @@ from six.moves import cPickle as pickle
 import math
 
 
-def create_bills_corpus(bills_dir, new_dir, row_to_bill):
+def create_bills_corpus(bills_dir, amend_dir, new_dir, row_to_bill):
     """Create a corpus of txt files from the bill informatation
     Input:
         bills_dir: string, path to directory with all the bills
+        amend_dir: string, path to directory with all the amendments
         new_dir: string, path to directory to save corpus in
         row_to_bill: dict, mapping from row to bill info
     """
@@ -24,7 +25,7 @@ def create_bills_corpus(bills_dir, new_dir, row_to_bill):
         if category == "bill":
             txt = bill_text(bills_dir, bill_info)
         elif category == "amendment":
-            txt = amend_text(bill_info["file_name"])
+            txt = amend_text(amend_dir, bill_info)
         elif category == "nomination":
             txt = nom_text(bill_info["file_name"])
         # write the txt file
@@ -54,13 +55,24 @@ def bill_text(bills_dir, bill_info):
     return(bill_json["summary"]["text"])
 
 
-def amend_text(vote_file):
+def amend_text(amend_dir, bill_info):
     """Get ammendment summary from the vote_file"""
-    # load the json
-    with open(vote_file) as f:
-        vote_data = json.load(f)
+    # get the number of the house amendment
+    hamdt_num = bill_info["number"]
+    # load the json for the amendment
+    a_path = os.path.join(amend_dir, "hamdt" + str(hamdt_num))
+    a_path = os.path.join(a_path, "data.json")
+    with open(a_path) as f:
+        amend_file = json.load(f)
     # get the purpose of the ammendment and use that as the text
-    return(vote_data["amendment"]["purpose"])
+    # if no purpose, use the description
+    if amend_file["purpose"] is not None:
+        return(amend_file["purpose"])
+    elif amend_file["description"] is not None:
+        return(amend_file["description"])
+    else:
+        # return a blank document
+        return("")
 
 
 def nom_text(vote_file):
@@ -72,18 +84,19 @@ def nom_text(vote_file):
     return(vote_data["nomination"]["title"])
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python text_to_features.py bills " +
+    if len(sys.argv) != 4:
+        print("Usage: python text_to_features.py bills hamdt " +
               "combined_data/row_to_bill.json")
     else:
         bills_dir = sys.argv[1]
-        with open(sys.argv[2]) as f:
+        amend_dir = sys.argv[2]
+        with open(sys.argv[3]) as f:
             row_to_bill = json.load(f)
         # create a new directory for the corpus
         bills_dir = os.path.abspath(bills_dir)
         new_dir = os.path.join(os.path.split(bills_dir)[0], "bills_corpus")
         new_dir = os.path.relpath(new_dir)
-        create_bills_corpus(bills_dir, new_dir, row_to_bill)
+        create_bills_corpus(bills_dir, amend_dir, new_dir, row_to_bill)
 
         # create a sparse bag of words feature matrix
         gc = GramCorpus(new_dir, 1, stop_words=False, punctuation=False)
@@ -96,6 +109,5 @@ if __name__ == "__main__":
             pickle.dump(sparse, f, protocol=2)
         with open(os.path.join(outdir, "bills_word_to_id.json"), "w") as f:
             # turn the gc.dictionary into a normal dict
-            word_to_id = {w: i for w, i in gc.dictionary.items()}
-            json.dump(word_to_id, f, sort_keys=True, indent=4)
-
+            id_to_word = {i: w for i, w in gc.dictionary.items()}
+            json.dump(id_to_word, f, sort_keys=True, indent=4)
