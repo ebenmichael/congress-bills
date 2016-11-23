@@ -31,6 +31,8 @@ def get_senator_data(votes_dir):
                 # skip the case that the VP breaks the tie
                 if not type(senator) == dict:
                     continue
+                if senator["state"] == "XX":
+                    continue
                 if not senator["id"] in ids:
                     ids.add(senator["id"])
                     metadata[senator["id"]] = {k: v for k, v in senator.items()
@@ -88,6 +90,9 @@ def get_vote(vote_file, id_to_pos):
         for senator in vote_data["votes"][vote_type]:
             # skip the case where the VP breaks the tie
             if not type(senator) == dict:
+                continue
+            # skip house members from a non voting district
+            if senator["state"] == "XX":
                 continue
             pos = id_to_pos[senator["id"]]
             vote_vec[pos] = vote_map[vote_type]
