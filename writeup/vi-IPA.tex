@@ -1,0 +1,115 @@
+\documentclass{article}
+
+\usepackage[a4paper, total={6in, 8.5in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}    
+\usepackage{hyperref} 
+\usepackage{url}   
+\usepackage{booktabs}    
+\usepackage{amssymb,amsfonts,amsmath,graphicx}      
+\usepackage{nicefrac}       
+\usepackage{microtype}    
+\usepackage{breqn}
+\usepackage[usenames, dvipsnames]{color}
+\input{stat-macros}
+
+\DeclareMathOperator*{\argminU}{arg\,min}
+\DeclareMathOperator*{\argmaxU}{arg\,max}
+
+
+\begin{document}
+
+
+\section{Model}
+\label{model}
+
+
+\noindent Stochastic Block Model (SBM)
+\begin{itemize}
+\item Choose the community proportions $\pi \sim \text{Dir}(\gamma)$, where $\pi\in \R^C$ with $C$ latent communities
+\item For each representative $u$
+\begin{enumerate}
+\item Choose a community membership assignment $M_u\simiid \text{Cat}(\pi)$
+\end{enumerate}
+\item For each pair of communities $k, l\in\{1,\dots, C\}$, draw coexpression rate $P_{kl} \simiid \text{Gamma}(\lambda_0,\lambda_1)$%, for $k,l\in \{1,\dots, C\}$
+\item For each pair of representatives $u,v\in\{1,\dots, U\}$, draw $R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl})$
+\end{itemize}
+
+
+\noindent Ideal Point Model (IPM)
+\begin{itemize}
+\item For each document $d$
+\begin{enumerate}
+\item Choose a discrimination $a_d \sim \cn(\eta_{a},\sigma^2_d)$
+\item Choose a difficulty $b_d \sim \cn(\eta_{b},\sigma^2_d)$
+\end{enumerate}
+\item For each representative $u$
+\begin{enumerate}
+\item Choose a position $x_u\mid \nu \sim \cn(\nu,\sigma^2_x)$
+\end{enumerate}
+\item Draw representative $u$'s vote on document $d$ as $V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d)))$%, for $u\in\{1,\dots, U\}, d\in\{1,\dots,D\}$
+\end{itemize}
+
+\noindent Latent Dirichlet Allocation (LDA)
+\begin{itemize}
+\item Draw a topic $\varphi_k \simiid \text{Dir}(\beta), \varphi_k\in \R^V$ as a distribution over words, for each $k\in\{1,\dots,K\}$ 
+\item For each document, draw the topic proportions $\theta_d \simiid \text{Dir}(\alpha)$, where $\theta_d\in \R^K$ %, for $d\in\{1,\dots,D\}$
+\item For each document $d\in\{1,\dots,D\}$ and each word $n\in\{1,\dots,N_d\}$ in the document
+\begin{enumerate}
+\item Choose a topic $z_{dn}\mid \theta_d \simind \text{Mult}(\theta_d)$ %, for $d\in\{1,\dots,D\}$, $n\in\{1,\dots,N_d\}$
+\item Choose a word $W_{dn}\mid z_{dn}=k, \varphi_k\simind \text{Mult}(\varphi_k)$ %, for $d\in\{1,\dots,D\}$, $n\in\{1,\dots,N_d\}$
+\end{enumerate}
+\end{itemize}
+
+
+\newpage
+
+
+\subsection{Frankenstein Model}
+
+The ideal point model (IPM) is useful to us as a baseline model for the roll call voting data $(V_{ud})$ for a couple of reasons. For one, using it alone we can attempt to predict missing votes, a problem of interest in political science. Another problem of more qualitative interest is analyzing and interpreting the factors $a_d, b_d$ specific to a document and those $x_u$ specific to the representative. All are assumed to reside in some latent space $\R^S$ and so depending on how we set up the model, we might be able to interpret quantities like $x_u$ as $u$'s {\sl political stance} or {\sl ideological position} or $x_u - b_d$ as representative $u$'s propensity for the bill/document $d$. There are a number of problems we cannot address in IPM. A major problem is predicting on heldout documents (the `cold start'), which is a potentially useful performance measure. Similarly if we have relatively junior representatives, they may not have had enough votes for the inferred $x_u$ to represent something (1) meaningful / interpretable or (2) reliable. We want to incorporate more information to inform the choices of $a_d, b_d$ and $x_u$. \\
+
+
+\noindent Ideal Point Allocator (IPA)
+\begin{itemize}
+\item Run the generative processes for SBM and LDA as described above. Then,
+\item For each document $d$
+\begin{enumerate}
+\item Calculate the empirical topic proportions $\overline z_d  = \frac{1}{N_d}\sum_{i=1}^{N_d}z_d$ (a $K\times 1$ vector)
+\item Generate $S\times K$ matrices $\eta_a, \eta_b$ with iid normal entries 
+\item Choose a discrimination $a_d \sim \cn(\eta_{a}'\overline z_d,\sigma^2_d)$
+\item Choose a difficulty $b_d \sim \cn(\eta_{b}'\overline z_d,\sigma^2_d)$
+\end{enumerate}
+\item For each representative $u$
+\begin{enumerate}
+\item Generate the community means $\nu_k\sim \cn(\tau, \sigma^2_x)$
+\item Choose a position $x_u\mid M_u = k, \nu \sim \cn(\nu_k,\sigma^2_x)$
+\end{enumerate}
+\item Draw representative $u$'s vote on document $d$ as $V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d)))$
+\end{itemize}
+
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=.4]{model.png}
+  \caption{IPA graphical model}
+\end{figure}
+
+
+
+%\section{Variational Inference}
+%\label{vi}
+
+
+
+
+%\subsection{VI Update Equations.}
+
+
+%\begin{align*}
+%\end{align*}
+
+
+\end{document}
+
