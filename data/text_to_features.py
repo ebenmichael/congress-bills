@@ -5,7 +5,7 @@ import json
 import logging
 from six.moves import cPickle as pickle
 import math
-
+logging.basicConfig(level=logging.INFO, format='%(asctime)s\t%(message)s')
 
 def create_bills_corpus(bills_dir, amend_dir, new_dir, row_to_bill):
     """Create a corpus of txt files from the bill informatation
@@ -96,6 +96,7 @@ if __name__ == "__main__":
         bills_dir = os.path.abspath(bills_dir)
         new_dir = os.path.join(os.path.split(bills_dir)[0], "bills_corpus")
         new_dir = os.path.relpath(new_dir)
+        logging.info("Creating bills corpus at " + new_dir)
         create_bills_corpus(bills_dir, amend_dir, new_dir, row_to_bill)
 
         # create a sparse bag of words feature matrix

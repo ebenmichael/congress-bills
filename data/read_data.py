@@ -7,6 +7,9 @@ import json
 import numpy as np
 import os
 import sys
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s\t%(message)s')
 
 
 def get_senator_data(votes_dir):
@@ -135,7 +138,7 @@ def get_senate_votes(votes_dir, id_to_pos):
     # make the matrix
     n_senators = len(id_to_pos)
     n_bills = len(sub_dirs)
-    vote_mat = np.empty((n_bills, n_senators))
+    vote_mat = []
 
     row_to_bill = {}
 
@@ -145,16 +148,19 @@ def get_senate_votes(votes_dir, id_to_pos):
                              (int(os.path.split(os.path.split(x)[0])[1]),
                               int(os.path.split(x)[1][1:])))
     # iterate through the bills
-    for i, bill in enumerate(sorted_sub_dirs):
+    i = 0
+    for bill in sorted_sub_dirs:
         vote_file = os.path.join(bill, "data.json")
+        # print(vote_file)
         # if we skipped the bill just get out of here
         output = get_vote(vote_file, id_to_pos)
         if output is None:
             continue
         vote_vec, bill_info = output
-        vote_mat[i, :] = vote_vec
+        vote_mat.append(vote_vec)
         row_to_bill[i] = bill_info
-
+        i += 1
+    vote_mat = np.array(vote_mat)
     return(vote_mat, row_to_bill)
 
 
@@ -170,11 +176,31 @@ def get_votes_and_data(votes_dir):
                      chamber, and category
     """
     # get position mappings and metadata
+    logging.info("Finding all legislators")
     id_to_pos, metadata = get_senator_data(votes_dir)
     # get the votes matrix
+    logging.info("Making votes matrix")
     vote_mat, row_to_bill = get_senate_votes(votes_dir, id_to_pos)
 
     return(id_to_pos, metadata, vote_mat, row_to_bill)
+
+
+def to_interactions_mat(vote_mat):
+    """Convert from vote vectors to interactions
+    Input:
+        vote_mat: ndarray, shape (n_bills, n_senators), matrix of votes
+    Output:
+        inter_mat: ndarray, shape (n_interactions, 3), matrix of
+                   (bill, person, vote) triples
+    """
+    inter_mat = []
+    for i in range(vote_mat.shape[0]):
+        for j in range(vote_mat.shape[1]):
+            # only keep yes no interactions
+            if vote_mat[i, j] in [0, 1]:
+                inter_mat.append([i, j, vote_mat[i, j]])
+    inter_mat = np.array(inter_mat, dtype=int)
+    return(inter_mat)
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
@@ -183,13 +209,16 @@ if __name__ == "__main__":
         votes_dir = sys.argv[1]
         output = get_votes_and_data(votes_dir)
         id_to_pos, metadata, vote_mat, row_to_bill = output
+        # get interaction matrix
+        logging.info("Creating interactions matrix")
+        interactions = to_interactions_mat(vote_mat)
         # create a new directory for the data
         votes_dir = os.path.abspath(votes_dir)
         new_dir = os.path.join(os.path.split(votes_dir)[0], "combined_data")
         new_dir = os.path.relpath(new_dir)
         if not os.path.exists(new_dir):
             os.mkdir(new_dir)
-            print("Creating new directory " + new_dir)
+            logging.info("Creating new directory " + new_dir)
         # save everything
         with open(os.path.join(new_dir, "id_to_position.json"), "w") as f:
             json.dump(id_to_pos, f, sort_keys=True, indent=4)
@@ -201,5 +230,6 @@ if __name__ == "__main__":
             json.dump(row_to_bill, f, sort_keys=True, indent=4)
 
         np.savetxt(os.path.join(new_dir, "votes.dat"), vote_mat)
+        np.savetxt(os.path.join(new_dir, "interactions.dat"), interactions)
     else:
         print("Too many arguments")
