@@ -136,8 +136,6 @@ def get_senate_votes(votes_dir, id_to_pos):
                 for f in os.listdir(year)
                 if not os.path.isfile(f) and f[0] == "h"]
     # make the matrix
-    n_senators = len(id_to_pos)
-    n_bills = len(sub_dirs)
     vote_mat = []
 
     row_to_bill = {}
