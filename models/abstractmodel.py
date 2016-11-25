@@ -16,3 +16,7 @@ class AbstractModel(object):
     def init_v_params(self):
         """Initialize variational parameters"""
         raise NotImplementedError
+
+    def get_nodes(self):
+        """Return a dictionary of (node_name, node)"""
+        return(self.nodes)
