@@ -96,16 +96,111 @@ The ideal point model (IPM) is useful to us as a baseline model for the roll cal
   \caption{IPA graphical model}
 \end{figure}
 
+\newpage
+
+\section{Variational Inference}
+\label{vi}
+
+\subsection{For SBM.} After observing the symmetric matrix $R = (R_{uv})$, where $R_{uv}$ is the number of caucuses that representatives $u$ and $v$ have in common, we see to find a distribution $q$ over the latent community assignments $M = (M_u)$, the community coexpression rates $P = (P_{kl})$, and the community proportions $\pi = (\pi_k)$ which is close in relative entropy to the true posterior and lies in the factorized family $q(M)q(P)q(\pi)$. Each factor has free parameters described below and denoted with $\widehat{\text{hats}}$. The approximation $q$ is equivalently scored by the ELBO objective $\cl$, which we break down as:%arrange into component terms:
+\begin{equation}
+\begin{split}
+\cl(q)
+&= \EE_q\left[\log\frac{p(R,M,P,\pi)}{q(M,P,\pi)}\right]  \\
+&= \underbrace{\EE_q\left[\log p(R\mid M,P)+ \log\frac{p(P)}{q(P)}\right]}_{\cl_{\text{data}}}
++ \underbrace{\EE_q\left[-\log q(M)\right]}_{\cl_{\text{ent}}}
++ \underbrace{\EE_q\left[\log p(M\mid \pi)\right]}_{\cl_{\text{local}}}
++ \underbrace{\EE_q\left[\log\frac{p(\pi)}{q(\pi)}\right]}_{\cl_{\text{global}}}
+\end{split}
+\end{equation}
+
+\noindent{\bf Variational Factors.} To each $u$ we associate variational parameters $\widehat r_u = \left(\widehat r_{uk}\right)_{k=1}^C$, so
+\begin{align}
+q(M) = \prod_{u=1}^U q(M_u\mid \widehat r_u) 
+= \prod_{u=1}^U \prod_{k=1}^C \widehat r_{uk}^{\delta_k(M_u)}.
+\end{align}
+We define $q(\pi) \triangleq \text{Dir}(\widehat \gamma_1, \dots, \widehat \gamma_C)$ and $q(P) = \prod_{kl}q(P_{kl}\mid \widehat \lambda_{kl})$ where $q(P_{kl}\mid \widehat \lambda_{kl})\triangleq \text{Gamma}(\widehat \lambda_{0kl},\widehat \lambda_{1kl})$. \\
+
+\noindent{\bf Computing the ELBO.} Now we can write out the component terms of the ELBO more explicitly:
+\begin{equation}
+%\hspace{-12em}
+\begin{split}
+\cl_{\text{data}}
+&= \EE_q\left[\log p(R\mid M,P)+ \log\frac{p(P)}{q(P)}\right]
+= \sum_{kl}\EE_q\left[\sum_{u,v}\delta_{k}(M_u)\delta_l(M_v)\log p(R_{uv}\mid P_{kl})+ \log\frac{p(P_{kl})}{q(P_{kl})}\right] \\
+%&= \sum_{kl}\EE_q\left[\sum_{u,v}\delta_{k}(M_u)\delta_l(M_v)\log \frac{e^{-P_{kl}}}{R_{uv}!}P_{kl}^{R_{uv}}+ \lambda_{0}\log\lambda_1-\widehat\lambda_{0kl}\log\widehat\lambda_{1kl} - \log\frac{\Gamma(\lambda_0)}{\Gamma(\widehat\lambda_{0kl})} + (\lambda_0-\widehat\lambda_{0kl})\log P_{kl} - (\lambda_1-\widehat\lambda_{1kl})P_{kl}\right] \\ %%
+&= -\sum_{u,v}\log R_{uv}! + \sum_{k,l} \left(\lambda_{0}\log\lambda_1-\widehat\lambda_{0kl}\log\widehat\lambda_{1kl} - \log\frac{\Gamma(\lambda_0)}{\Gamma(\widehat\lambda_{0kl})}\right) + \sum_{k,l} \cl_{kl}(R)
+~\\
+\cl_{\text{ent}}
+&= \EE_q\left[-\log q(M)\right]
+= -\sum_{u,k}\EE_q\left[\delta_{k}(M_u)\log \widehat r_{uk}\right]
+= -\sum_{u,k}\widehat r_{uk}\log \widehat r_{uk}
+~\\
+\cl_{\text{local}}
+&= \EE_q\left[\log p(M\mid \pi)\right]
+= \sum_{u,k}\EE_q\left[\delta_{k}(M_u)\log \pi_k\right]
+= \sum_{k}N_k\EE_q\left[\log \pi_k\right]
+~\\
+\cl_{\text{global}}
+&= \EE_q\left[\log\frac{p(\pi)}{q(\pi)}\right]
+= \log \Gamma(C\gamma) - C\log\Gamma(\gamma) -\log \Gamma\left(\sum_k\widehat\gamma_k\right) + \sum_k\left\{\log\Gamma(\widehat\gamma_k)+ (\gamma-\widehat\gamma_k)\EE_q\left[\log \pi_k\right]\right\}
+\end{split}
+\end{equation}
+where $N_k = \sum_{u}\widehat r_{uk}$, $S_{uk} = \sum_{v}\widehat r_{vk}R_{uv}$, $N_{kl} = \sum_{uv}\widehat r_{uk}\widehat r_{vl}$, $S_{kl} = \sum_{uv}\widehat r_{uk}\widehat r_{vl} R_{uv}$, and 
+$$
+\cl_{kl}(R) 
+= (S_{kl} + \lambda_{0} - \widehat\lambda_{0kl}) \EE_q[\log P_{kl}]
+   -(N_{kl} + \lambda_{1} - \widehat\lambda_{1kl}) \EE_q[P_{kl}], 
+$$
+and the posterior expectations can also be computed explicitly as 
+$$
+\EE_q[P_{kl}] =  \frac{\widehat\lambda_{0kl}}{\widehat\lambda_{1kl}}, ~
+\EE_q[\log P_{kl}] = \psi(\widehat\lambda_{0kl}) - \log \widehat\lambda_{1kl}, ~
+\EE_q\left[\log \pi_k\right] = \psi\left(\widehat\gamma_k\right) - \psi\left(\sum_l\widehat\gamma_l\right)
+$$
+
+\newpage
+
+\noindent{\bf CAVI Updates.} The simplest approach to variational inference maximizes the ELBO $\cl$ via coordinate-ascent, i.e. choosing the best value of a variational parameter with all others fixed. Iteratively applying these updates, the variational approximation $q$ improves at every step toward some local optimum. Conditional conjugacy yields closed form updates for the global variational parameters. 
+
+\begin{itemize}
+\item {\bf Global Update to $q(\pi)$.} We have $\widehat \gamma_{k} = \gamma + N_k$.
+\item {\bf Global Update to $q(P)$.} We have $\widehat \lambda_{0kl} = \lambda_0 + S_{kl}$ and $\widehat \lambda_{1kl} = \lambda_1 + N_{kl}$.
+\item {\bf Local Update to $q(M)$.} First note 
+%$$ \pderiv{\cl_{kl}}{\widehat r_{uk}} = \left(\sum_{v}(1+\delta_u^v\delta_k^l)\widehat r_{vl}R_{uv}\right) \EE_q[\log P_{kl}] -N_l \EE_q[P_{kl}]$$
+$$ 
+\pderiv{\cl_{kl}}{\widehat r_{uk}} 
+= \left\{
+                \begin{array}{ll}
+%2\sum_{v}\widehat r_{vk} R_{uv}\EE_q[\log P_{kk}]
+2S_{uk}\EE_q[\log P_{kk}]
+   - 2N_k \EE_q[P_{kk}],
+  ~~~~ k=l \\
+%\sum_{v}\widehat r_{vl} \left(R_{uv} \EE_q[\log P_{kl}] - \EE_q[P_{kl}]\right)
+S_{ul} \EE_q[\log P_{kl}] - N_l\EE_q[P_{kl}]
+  ~~~~ k\neq l
+                \end{array}
+              \right.
+$$
+We want to update $\widehat r_{uk}$ subject to the constraint that $\sum_k \widehat r_{uk} = 1$, so augment $\cl$ with Lagrange multipliers $\widetilde\cl = \cl + \sum_u\kappa_u\left(\sum_k \widehat r_{uk} - 1\right)$.
+\iffalse
+\begin{align*}
+0 
+&= \pderiv{\cl}{\widehat r_{uk}}
+= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \pderiv{\cl_{kk}}{\widehat r_{uk}} + \sum_{l\neq k}\pderiv{\cl_{kl}}{\widehat r_{uk}} + \pderiv{\cl_{lk}}{\widehat r_{uk}} \\
+&= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \left(\sum_{v}(1+\delta_u^v)\widehat r_{vk}R_{uv}\right) \EE_q[\log P_{kl}]
+   -\left(\sum_{v}\widehat r_{vl}\right) \EE_q[P_{kl}]\\
+&~~~+ \sum_{l\neq k}\pderiv{\cl_{kl}}{\widehat r_{uk}} + \pderiv{\cl_{lk}}{\widehat r_{uk}} \\
+\end{align*}
+\fi
+\begin{align*}
+0 
+&= \pderiv{\cl}{\widehat r_{uk}}
+= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \pderiv{\cl_{kk}}{\widehat r_{uk}} + \sum_{l\neq k}\pderiv{\cl_{kl}}{\widehat r_{uk}} + \pderiv{\cl_{lk}}{\widehat r_{uk}} \\
+&= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \sum_{l} S_{ul}\left(\EE_q[\log P_{kl}] + \EE_q[\log P_{lk}]\right) - N_l\left(\EE_q[P_{kl}] + \EE_q[P_{lk}]\right)\\
+\end{align*}
 
 
-%\section{Variational Inference}
-%\label{vi}
-
-
-
-
-%\subsection{VI Update Equations.}
-
+\end{itemize}
 
 %\begin{align*}
 %\end{align*}
