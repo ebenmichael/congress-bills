@@ -204,7 +204,33 @@ We want to update $\widehat r_{uk}$ subject to the constraint that $\sum_k \wide
 
 %\begin{align*}
 %\end{align*}
-
+For a particular document $d$, the posterior distribution for its topic distribution $\theta_d$ and the latent topics $\{z_{dn}\}_{n=1}^{N_d}$ for the $N_d$ words is given by
+\begin{align*}
+p(\theta_d, \{z_{dn}\}_{n=1}^{N_d} | \{w_{dn}\}_{n=1}^{N_d}, \alpha, \beta, a_d, b_d) 
+&=\frac{ p(\theta_d | \alpha) \Big( \prod_{n=1}^{N_d} p(z_{dn} | \theta_d) p(w_{dn} | z_{dn}, \beta) \Big) p(a_d, b_d | \{z_{dn}\}_{n=1}^{N_d} , \eta, \sigma^2)}{\int  p(\theta_d | \alpha) \sum_{z_{\cdot d}}\Big( \prod_{n=1}^{N_d} p(z_{dn} | \theta_d) p(w_{dn} | z_{dn}, \beta) \Big) p(a_d, b_d | \{z_{dn}\}_{n=1}^{N_d} , \eta, \sigma^2) \; d\theta_d}
+\end{align*}
+In particular, the normalizer gives us the likelihood of the observed words $\{w_{dn}\}_{n=1}^{N_d}$ and the response $a_d$ and $b_d$. This is computationally intractable, so we apply a variational method in which we assume a fully factorized posterior distribution for $\theta_d$ and $z_{dn}$ of the form 
+\begin{align*}
+q(\theta_d, \{z_{dn}\}_{n=1}^{N_d} | \gamma, \{\phi_n\}_{n=1}^{N_d}) = q(\theta_d| \gamma) \prod_{n=1}^N q(z_{dn} | \phi_n)
+\end{align*}
+where $\phi_n$ is a vector on the symplex that gives the multinoulli probabilities of $z_{dn}$, and $\gamma$ is the $K$ dimensional Dirichlet parameter for $\theta_d$. With respect to these two variational parameters, we seek to maximize the evidence lower bound (ELBO) given by
+\begin{align*}
+\mathcal L (\gamma, \phi; \alpha, \beta, \eta, \sigma)  = E_q[\log p(\theta_d | \alpha) ] + &\sum_{n=1}^{N_d} E_q [\log p(z_{dn} | \theta)] +\sum_{n=1}^{N_d}  E_q[\log p(w_{dn}|z_{dn}, \beta)]+ ...\\ 
+&+E[\log p(a_d, b_d  | \{z_{dn}\}_{n=1}^{N_d} , \eta, \sigma^2) ]
+- E_q[\log q(\theta_d |\gamma) ] - \sum_{i=1}^{N_d}E([\log q(z_{dn} | \phi_n) ] )
+\end{align*}
+The updates for $\phi_j$ ($j\in \{1, ..., N_d\}$) and $\gamma$ were derived in (Blei \& McAuliffe, 2008) and given by
+\begin{align*}
+\phi^{new}_j \propto \exp\bigg\{ E[\log \theta_d | \gamma] + E[\log p(w_{dn} | \beta)] + \Big(\frac{y}{N_d\sigma^2} \Big) \eta - \frac{[2(\eta^T\phi_{-j})\eta + (\eta \circ \eta)]}{2N_d^2\sigma^2}\bigg\}
+\end{align*}
+where $\phi_{-j} := \sum_{n\not=j} \phi_n$; and $E(\log \theta_i | \gamma] = \Psi(\gamma_i) - \Psi(\sum \gamma_j)$, where $\Psi$ is the digamma function. Now the updates for $\gamma$ is: 
+\begin{align*}
+\gamma^{new} &\rightarrow \alpha + \sum_{n=1}^{N_d} \phi_n 
+\end{align*}
+These give the updates for a single document response pair. Having updated $\gamma_d$ and $\phi_d$ for each document, the updates for $\beta$ are given by examing the entire corpus (Blei et al, 2003): 
+\begin{align*}
+\beta^{new}_{k,w} &\propto \sum_{d=1}^D \sum_{n=1}^{N_d} 1\{(w_{dn} = w)\} \phi^k_{d,n}
+\end{align*}
 
 \end{document}
 
