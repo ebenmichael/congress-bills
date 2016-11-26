@@ -58,7 +58,7 @@ def permute_rows(membership, c_id_to_row):
     # iterate over the data
     for c_id, caucuses in membership.iterrows():
         row = c_id_to_row[str(c_id)]
-        new_m[row - 1, :] = caucuses.values
+        new_m[row, :] = caucuses.values
     return(new_m)
 
 # mapping from state abbrev to number
