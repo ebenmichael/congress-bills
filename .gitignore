@@ -90,3 +90,6 @@ ENV/
 
 # Backups from emacs
 *.*~
+
+# Whatever this is
+.DS_Store
