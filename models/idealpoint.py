@@ -552,5 +552,5 @@ class IdealPointModel(AbstractModel):
             vote: int or ndarray int, predicted vote(s)
         """
 
-        vote = (self.predict_prob > threshold) * 1
+        vote = (self.predict_prob(interaction) > threshold) * 1
         return(vote)
