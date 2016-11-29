@@ -4,6 +4,7 @@ Collection of generic parameter node classes
 import numpy as np
 from scipy import optimize
 from functools import partial
+import joblib
 
 
 class GaussianNode(object):
@@ -51,10 +52,10 @@ class GaussianNode(object):
         self.update_v_means()
         self.update_v_var()
 
-    def update_v_means(self, tol=1e-3, max_iter=100, learning_rate=1):
+    def update_v_means(self):
         """Update the means of the variational distribution"""
-        for bill in self.data.keys():
-            self.update_v_mean(bill)
+        for item in self.data.keys():
+            self.update_v_mean(item)
 
     def update_v_mean(self, item):
         """Update the mean of the variational distribution for bill"""

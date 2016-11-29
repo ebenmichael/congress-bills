@@ -18,10 +18,6 @@ class DiscNode(GaussianNode):
         self.diff_node = diff_node
         self.ip_node = ip_node
 
-    def update_v_means(self):
-        """Fix the number of iterations for this node"""
-        super(DiscNode, self).update_v_means(max_iter=30)
-    
     def var_update_from_item(self, item):
         """Compute the contribution of this interaction to the variance update
         Args:
@@ -173,10 +169,6 @@ class DiffNode(GaussianNode):
         self.disc_node = disc_node
         self.ip_node = ip_node
 
-    def update_v_means(self):
-        """Fix the number of iterations for this node"""
-        super(DiffNode, self).update_v_means(max_iter=30)
-
     def var_update_from_item(self, item):
         """Compute the contribution of this interaction to the variance update
         Args:
@@ -308,10 +300,6 @@ class IdealPointNode(GaussianNode):
         """Point to the discrimination and difficulty nodes"""
         self.disc_node = disc_node
         self.diff_node = diff_node
-
-    def update_v_means(self):
-        """Fix the number of iterations for this node"""
-        super(IdealPointNode, self).update_v_means(max_iter=30)
 
     def var_update_from_item(self, item):
         """Compute the contribution of this item to the variance update
