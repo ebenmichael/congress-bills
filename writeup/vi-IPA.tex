@@ -232,5 +232,57 @@ These give the updates for a single document response pair. Having updated $\gam
 \beta^{new}_{k,w} &\propto \sum_{d=1}^D \sum_{n=1}^{N_d} 1\{(w_{dn} = w)\} \phi^k_{d,n}
 \end{align*}
 
+
+\subsection{For Ideal Point Model}
+We observe the votes matrix $V = (V_{ud})$ where $V_{ud}$ is the vote of congressperson $u$ on bill $d$. We have the ideal point for congressperson $u$, $x_u \in \R^s$, and the discrimination and difficulty for bill $d$, $a_d,b_d \in \R^s$. The variational distribution is the fully factorized family $\prod_{u=1}^U \prod_{d=1}^D q(x_u)q(a_D)q(b_d)$ where $q(x_u) \triangleq \text{Normal}(\hat{\tau}_u, \hat{\sigma}^2_\tau I_S)$, $q(x_u) \triangleq \text{Normal}(\hat{\kappa}_{au}, \hat{\sigma}^2_{\kappa_a} I_S)$, and $q(x_u) \triangleq \text{Normal}(\hat{\kappa}_{bu}, \hat{\sigma}^2_{\kappa_b} I_S)$
+\vskip 10pt
+\noindent{\textbf{Computing the ELBO.}} 
+We can write the ELBO as 
+\begin{align*}
+\cl(q) & = \EE_q\left[-\sum_{u=1}^U\log q(x_u) - \sum_{d=1}^D \log q(a_d) - \sum_{d=1}^D \log q(b_d)\right] + \EE_q\left[\sum_{u=1}^U \log p(X_{u}) +\sum_{d=1}^D \log p(a_d) + \sum_{d=1}^D \log p(b_d)\right]\\
+& \;\;\;\; + \EE_q[\log p(V|x,a,b)]\\
+& = H(q) +  \EE_q\left[\sum_{u=1}^U \log p(X_{u}) +\sum_{d=1}^D \log p(a_d) + \sum_{d=1}^D \log p(b_d)\right] + \EE_q[\log p(V|x,a,b)]\\
+\end{align*}
+
+We can break this up into 
+\begin{align*}
+H(q) & = U\frac{S}{2} \log 2\pi e\hat{\sigma}^2_\tau + D\frac{S}{2}\log 2\pi e\hat{\sigma}^2_{\kappa_a} + D\frac{S}{2}\log 2\pi e\hat{\sigma}^2_{\kappa_b}\\
+\EE_q\left[\sum_{u=1}^U \log p(X_{u})\right] & = \sum_{u=1}^U \EE_q\left[-\frac{S}{2} \log 2\pi \sigma^2_x - \frac{1}{2\sigma^2_x} \|x_u - \nu\|_2^2\right]\\
+& = -U\frac{S}{2} - \frac{1}{2\sigma^2_x} \sum_{u=1}^U \hat{\sigma}^2_\tau S + \|\hat{\tau}_u - \nu\|^2_2\\
+\EE_q\left[\sum_{d=1}^D \log p(a_d)\right] & = \sum_{d=1}^D \EE_q\left[-\frac{S}{2} \log 2\pi \sigma^2_a - \frac{1}{2\sigma^2_a} \|a_d - \eta_a\|_2^2\right]\\
+& = -D\frac{S}{2} - \frac{1}{2\sigma^2_a} \sum_{d=1}^D \hat{\sigma}^2_{\kappa_a} S + \|\hat{\kappa}_{ad} - \eta_a\|^2_2\\
+\EE_q\left[\sum_{d=1}^D \log p(b_d)\right] & = \sum_{d=1}^D \EE_q\left[-\frac{S}{2} \log 2\pi \sigma^2_b - \frac{1}{2\sigma^2_b} \|b_d - \eta_b\|_2^2\right]\\
+& = -D\frac{S}{2} - \frac{1}{2\sigma^2_b} \sum_{d=1}^D \hat{\sigma}^2_{\kappa_b} S + \|\hat{\kappa}_{bd} - \eta_b\|^2_2\\
+\end{align*}
+We can deal with the last expectation by using the 2nd order delta method (Braun McAullife 2008) which is the approximation
+\begin{align*}
+\EE[f(V)] \approx f(\EE[V]) + \frac{1}{2} \text{trace}\left(\nabla^2 \EE[V] \Cov(V)\right)
+\end{align*}
+Letting $u(i),d(i)$ be the users and documents for data point $i$, and applying this gives the approximation to the ELBO contribution from the likelihood
+\begin{align*}
+\EE_q[\log p(V|x,a,b)] & = \sum_{i=1}^n \EE_q[V_i(a_{d(i)} \cdot (X_{u(i)} - b_{d(i)}))] + \EE_q[\log (1-\sigma(a_{d(i)} \cdot (X_{u(i)} - b_{d(i)})))]\\
+& \approx \sum_{i=1}^nV_i (\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}) - \log (1 + \exp(\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)})\\
+& \;\;\;\; - \frac{1}{2} \sigma''(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)})(\hat{\sigma}^2_{\kappa_a} \|\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}\|_2^2 + (\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\|\hat{\kappa}_{ad(i)}\|^2)
+\end{align*}
+Where $\sigma(\cdot)$ is the sigmoid function.
+\vskip 10pt
+\noindent{\textbf{CAVI Updates.}} There are no closed form updates for $\hat{\tau}_u$, $\hat{\kappa}_{ad}$, and $\hat{\kappa}_{bd}$, so we have to maximize the ELBO with respect to these parameters numerically. Let $V(u)$ be the set of votes for user $u$, and similarly let $V(d)$ be the set of votes on bill $d$. Also let $\\rho_{ud} = \sigma(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)})$. The gradients are
+\begin{align*}
+\nabla_{\hat{\tau}_u} \cl & = \frac{1}{\sigma^2_x}(\hat{\tau}_u - \nu) + \sum_{i \in V(u)}(V_i - \rho_{ud(i)})\hat{\kappa}_{ad(i)}\\
+& \;\;\;\; - \frac{1}{2} \sigma''(\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u} - \hat{\kappa}_{bd(i)})(\hat{\sigma}^2_{\kappa_a} \|\hat{\tau}_{u} - \hat{\kappa}_{bd(i)}\|_2^2 + (\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\|\hat{\kappa}_{ad(i)}\|^2)\hat{\kappa}_{ad(i)}\\
+& \;\;\;\; - \sigma'(\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u} - \hat{\kappa}_{bd(i)}))\hat{\sigma}^2_{ka}(\hat{\tau}_u - \hat{\kappa}_{bd(i)})\\
+\nabla_{\hat{\kappa}_{ad}} \cl & = \frac{1}{\sigma^2_a}(\hat{\kappa}_{ad} - \eta_a) + \sum_{i \in V(d)}(V_i - \rho_{u(i)d})(\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})\\
+& \;\;\;\; - \frac{1}{2} \sigma''(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})(\hat{\sigma}^2_{\kappa_a} \|\hat{\tau}_{u(i)} - \hat{\kappa}_{bd}\|_2^2 + (\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\|\hat{\kappa}_{ad}\|^2)(\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})\\
+& \;\;\;\; - \sigma'(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})(\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\hat{\kappa}_{ad}\\
+\nabla_{\hat{\kappa}_{bd}} \cl & = \frac{1}{\sigma^2_b}(\hat{\kappa}_{bd} - \eta_b) - \sum_{i \in V(d)}(V_i - \rho_{u(i)d})\hat{\kappa}_{ad}\\
+& \;\;\;\; + \frac{1}{2} \sigma''(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})(\hat{\sigma}^2_{\kappa_a} \|\hat{\tau}_{u(i)} - \hat{\kappa}_{bd}\|_2^2 + (\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\|\hat{\kappa}_{ad}\|^2)\hat{\kappa}_{ad}\\
+& \;\;\;\; + \sigma'(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})\hat{\sigma}^2_{ka}(\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})
+\end{align*}
+For each parameter we solve this optimization problem using L-BFGS. Finally, there are closed form updates for the variational variance parameters by taking the derivative and setting to zero
+\begin{align*}
+\hat{\sigma}^2_\tau & = \frac{US}{\frac{US}{\sigma^2_x} + \sum_{i=1}^n \sigma'(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}))(S\hat{\sigma^2}_{\kappa_a} + \|\hat{\kappa}_{ad(i)}\|_2^2)}\\
+\hat{\sigma}^2_{\kappa_a} & = \frac{DS}{\frac{DS}{\sigma^2_a} + \sum_{i=1}^n \sigma'(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}))(S(\hat{\sigma^2}_{\tau} + \hat{\sigma}^2_{\kappa_b}) + \|\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}\|_2^2)}\\
+\hat{\sigma}^2_\tau & = \frac{DS}{\frac{DS}{\sigma^2_b} + \sum_{i=1}^n \sigma'(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}))(S\hat{\sigma^2}_{\kappa_a} + \|\hat{\kappa}_{ad(i)}\|_2^2)}
+\end{align*}
 \end{document}
 

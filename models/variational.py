@@ -39,7 +39,7 @@ class VBayes(object):
                 node.vi_update()
             elbo = model.compute_elbo()
             print("ELBO: " + str(elbo))
-            converged = np.abs(elbo - prev_elbo) < self.tol
+            converged = np.isclose(elbo, prev_elbo)
             elbos.append(elbo)
             prev_elbo = elbo
             iter_num += 1
