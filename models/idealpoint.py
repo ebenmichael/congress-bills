@@ -4,10 +4,10 @@ Author: Eli Ben-Michael
 """
 
 import numpy as np
-import math_utils
+from . import math_utils
 from collections import defaultdict
-from modelnodes import GaussianNode
-from abstractmodel import AbstractModel
+from .modelnodes import GaussianNode
+from .abstractmodel import AbstractModel
 
 
 class DiscNode(GaussianNode):
@@ -510,7 +510,7 @@ class IdealPointModel(AbstractModel):
         elbo = (s1 - s2).sum()
         return(elbo)
 
-    def predict_prob(self, interaction):
+    def predict_proba(self, interaction):
         """Predict the probability that a given user will vote for a bill
         Args:
             interaction: ndarray, length 2, bill, user or shape(n_data, 2) and
