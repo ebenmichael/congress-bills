@@ -1,15 +1,16 @@
 """
-Testing suite for different models. Tests IPM, LC-IPM, Logitic Regression, Random Forest
+Testing suite for different models. Tests IPM, LC-IPM, Logitic Regression,
+Random Forest
 Author: Eli Ben-Michael
 """
 import numpy as np
 from sklearn import model_selection
 from sklearn import preprocessing
-from models.idealpoint import IdealPointModel
+from ..models.idealpoint import IdealPointModel
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics
-from models.VB import VB
+from ..models.VB import VB
 
 
 def to_sparse_features(interactions):
