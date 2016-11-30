@@ -4,10 +4,36 @@ Collection of generic parameter node classes
 import numpy as np
 from scipy import optimize
 from functools import partial
-import joblib
 
 
-class GaussianNode(object):
+class AbstractNode(object):
+    """Abstract class for nodes"""
+
+    def __init__(self):
+        raise NotImplementedError
+
+    def assign_data(self):
+        """Give the node whatever data it needs"""
+        raise NotImplementedError
+
+    def get_v_params(self):
+        """Return the variational parameters"""
+        raise NotImplementedError
+
+    def init_v_params(self):
+        """Initialize the variational parameters"""
+        raise NotImplementedError
+
+    def vi_update(self):
+        """Update variational parameters"""
+        raise NotImplementedError
+
+    def calc_elbo(self):
+        """Compute the contribution to elbo from prior/entropy"""
+        raise NotImplementedError
+
+
+class GaussianNode(AbstractNode):
     """Abstract node class for a node with isotropic guassian variational
        distribution"""
 
@@ -78,7 +104,7 @@ class GaussianNode(object):
         # update the variational variance
         self.v_var = num / (s1 + s2)
 
-    def compute_elbo(self):
+    def calc_elbo(self):
         """Compute the ELBO from the node entropy and the prior"""
         entropy = self.n_items * self.dim / 2
         entropy *= np.log(2 * np.pi * np.exp(1) * self.v_var)

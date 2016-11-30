@@ -437,6 +437,9 @@ class IdealPointModel(AbstractModel):
         # keep track of user vs document parameters
         self.doc_nodes = ["discrimination", "difficulty"]
         self.user_nodes = ["ideal_point"]
+        self.local_parameters = ["ideal_point", "discrimination",
+                                 "difficulty"]
+        self.global_parameters = []
 
     def assign_data(self, data):
         """Give the model data
@@ -459,6 +462,10 @@ class IdealPointModel(AbstractModel):
             elif node in self.user_nodes:
                 self.nodes[node].assign_data(self.user_data)
 
+    def calc_SS(self):
+        """No suff stats to compute"""
+        return()
+
     def init_v_params(self):
         """Initialize variational parameters"""
         n_unique_items = len(np.unique(self.data[:, 0]))
@@ -468,28 +475,15 @@ class IdealPointModel(AbstractModel):
         self.diff_node.init_v_params(n_unique_items)
         self.ip_node.init_v_params(n_unique_users)
 
-    def get_nodes(self):
-        return([node for node in self.nodes.values()])
-
-    def compute_elbo(self):
-        """Compute the current ELBO"""
-        elbo = 0
-        # compute node elbos
-        for node in self.nodes.values():
-            elbo += node.compute_elbo()
-        # compute data elbo
-        elbo += self.compute_data_elbo()
-        return(elbo)
-
-    def compute_data_elbo(self):
+    def calc_data_elbo(self):
         """Compte the part of the EBLO that comes from the likelihood"""
         # iterate over bills
         elbo = 0
         for bill in self.bill_data.keys():
-            elbo += self.compute_bill_elbo(bill)
+            elbo += self.calc_bill_elbo(bill)
         return(elbo)
 
-    def compute_bill_elbo(self, bill):
+    def calc_bill_elbo(self, bill):
         """Compute the portion of the ELBO from the likelihood from a bill"""
         # compute elbo contribution from data
         # get bill parameters
