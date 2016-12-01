@@ -35,7 +35,7 @@ class DiscNode(GaussianNode):
         votes = votes.reshape(len(votes), 1)
         param_vals = np.dot(ip_v_means - diff_v_mean, v_mean.T)
         sig_prime = math_utils.sigmoid_prime(param_vals)
-        s1 = 0 # self.dim * (diff_v_var + ip_v_var)
+        s1 = self.dim * (self.diff_node.v_var + self.ip_node.v_var)  # HERE
         s2 = ((ip_v_means - diff_v_mean) ** 2).sum(1)
 
         return((sig_prime * (s1 + s2)).sum())
@@ -108,7 +108,7 @@ class DiscNode(GaussianNode):
 
         s1 = 0.5 * math_utils.sigmoid_double_prime(param_vals)
         s1 = s1.reshape(len(votes), 1) * diff_params
-        p1 = 0  # self.dim * disc_v_var * (ip_v_var + diff_v_var)
+        p1 = self.dim * disc_v_var * (ip_v_var + diff_v_var)  # HERE
         p1 += disc_v_var * np.sum(diff_params ** 2, axis=1)
         p1 += (ip_v_var + diff_v_var) * np.linalg.norm(v_mean) ** 2
         p1 = p1.reshape(len(votes), 1)
@@ -152,7 +152,7 @@ class DiscNode(GaussianNode):
         s1 = votes * param_vals - np.log1p(np.exp(param_vals))
 
         s2 = 0.5 * math_utils.sigmoid_prime(param_vals)
-        p1 = 0  # self.dim * disc_v_var * (ip_v_var + diff_v_var)
+        p1 = self.dim * disc_v_var * (ip_v_var + diff_v_var)  # HERE
         p1 += disc_v_var * np.sum(diff_params ** 2, axis=1)
         p1 += (ip_v_var + diff_v_var) * np.sum(value ** 2)
         s2 *= p1
@@ -186,7 +186,7 @@ class DiffNode(GaussianNode):
         votes = votes.reshape(len(votes), 1)
         param_vals = np.dot(ip_v_means - diff_v_mean, disc_v_mean.T)
         sig_prime = math_utils.sigmoid_prime(param_vals)
-        s1 = 0 # self.dim * (diff_v_var + ip_v_var)
+        s1 = self.dim * (self.v_var + self.ip_node.v_var)  # HERE
         s2 = np.sum((disc_v_mean) ** 2)
 
         return((sig_prime * (s1 + s2)).sum())
@@ -240,7 +240,7 @@ class DiffNode(GaussianNode):
 
         s1 = 0.5 * math_utils.sigmoid_double_prime(param_vals)
         s1 = s1.reshape(len(votes), 1) * disc_v_mean
-        p1 = 0  # self.dim * disc_v_var * (ip_v_var + diff_v_var)
+        p1 = self.dim * disc_v_var * (ip_v_var + diff_v_var)  # HERE
         p1 += disc_v_var * np.sum(diff_params ** 2, axis=1)
         p1 += (ip_v_var + diff_v_var) * np.linalg.norm(disc_v_mean) ** 2
         p1 = p1.reshape(len(votes), 1)
@@ -284,7 +284,7 @@ class DiffNode(GaussianNode):
         s1 = votes * param_vals - np.log1p(np.exp(param_vals))
 
         s2 = 0.5 * math_utils.sigmoid_prime(param_vals)
-        p1 = 0  # self.dim * disc_v_var * (ip_v_var + diff_v_var)
+        p1 = self.dim * disc_v_var * (ip_v_var + diff_v_var)  # HERE
         p1 += disc_v_var * np.sum(diff_params ** 2, axis=1)
         p1 += (ip_v_var + diff_v_var) * np.sum(disc_v_mean ** 2)
         s2 *= p1
@@ -317,7 +317,7 @@ class IdealPointNode(GaussianNode):
         # compute the errors
         param_vals = np.sum(disc_v_means * (ip_v_mean - diff_v_means), axis=1)
         sig_prime = math_utils.sigmoid_prime(param_vals)
-        s1 = 0 # self.dim * (diff_v_var + ip_v_var)
+        s1 = self.dim * (self.diff_node.v_var + self.v_var)  # HERE
         s2 = ((disc_v_means) ** 2).sum(1)
 
         return((sig_prime * (s1 + s2)).sum())
@@ -351,7 +351,7 @@ class IdealPointNode(GaussianNode):
 
         s1 = 0.5 * math_utils.sigmoid_double_prime(param_vals)
         s1 = s1.reshape(len(votes), 1) * disc_v_means
-        p1 = 0  # self.dim * disc_v_var * (ip_v_var + diff_v_var)
+        p1 = self.dim * disc_v_var * (ip_v_var + diff_v_var)  # HERE
         p1 += disc_v_var * np.sum(diff_params ** 2, axis=1)
         p1 += (ip_v_var + diff_v_var) * np.sum(disc_v_means ** 2, axis=1)
         p1 = p1.reshape(len(votes), 1)
@@ -395,7 +395,7 @@ class IdealPointNode(GaussianNode):
         s1 = votes * param_vals - np.log1p(np.exp(param_vals))
 
         s2 = 0.5 * math_utils.sigmoid_prime(param_vals)
-        p1 = 0  # self.dim * disc_v_var * (ip_v_var + diff_v_var)
+        p1 = self.dim * disc_v_var * (ip_v_var + diff_v_var)  # HERE
         p1 += disc_v_var * np.sum(diff_params ** 2, axis=1)
         p1 += (ip_v_var + diff_v_var) * np.sum(disc_v_means ** 2, axis=1)
         s2 *= p1

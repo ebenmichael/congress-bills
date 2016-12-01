@@ -45,6 +45,7 @@ class VB(object):
                         if lap >= self.maxLaps:
                                 converged = True
                                 self.isConverged = False
+                        print(lap, "ELBO", elbo)
                         lap += 1
                         prevELBO = elbo
                 return(self.ELBO, self.isConverged)

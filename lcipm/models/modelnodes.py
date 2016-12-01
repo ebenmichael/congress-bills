@@ -82,6 +82,11 @@ class GaussianNode(AbstractNode):
         """Update the means of the variational distribution"""
         for item in self.data.keys():
             self.update_v_mean(item)
+        """start = self.v_mean.reshape(self.n_items * self.dim)
+        out = optimize.minimize(self.objective, start,
+                                jac=self.gradient, method="L-BFGS-B",
+                                callback=print)
+        self.v_mean = out["x"].reshape(self.n_items, self.dim)"""
 
     def update_v_mean(self, item):
         """Update the mean of the variational distribution for bill"""
