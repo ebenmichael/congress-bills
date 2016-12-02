@@ -98,6 +98,8 @@ class GaussianNode(AbstractNode):
         output = optimize.minimize(objective, start, jac=grad,
                                    method="L-BFGS-B")
         self.v_mean[item, :] = output["x"]
+        if not output["success"]:
+            print(item, output)
 
     def update_v_var(self):
         """Update the variance of the variational distribution"""

@@ -392,7 +392,7 @@ class IdealPointNode(GaussianNode):
         diff_params = ip_v_mean - diff_v_means
         param_vals = np.sum(disc_v_means * (ip_v_mean - diff_v_means), axis=1)
 
-        s1 = votes * param_vals - np.log1p(np.exp(param_vals))
+        s1 = votes * param_vals - np.logaddexp(0, param_vals)
 
         s2 = 0.5 * math_utils.sigmoid_prime(param_vals)
         p1 = self.dim * disc_v_var * (ip_v_var + diff_v_var)  # HERE
@@ -468,8 +468,8 @@ class IdealPointModel(AbstractModel):
 
     def init_v_params(self):
         """Initialize variational parameters"""
-        n_unique_items = len(np.unique(self.data[:, 0]))
-        n_unique_users = len(np.unique(self.data[:, 1]))
+        n_unique_items = len(self.bill_data)
+        n_unique_users = len(self.user_data)
 
         self.disc_node.init_v_params(n_unique_items)
         self.diff_node.init_v_params(n_unique_items)
