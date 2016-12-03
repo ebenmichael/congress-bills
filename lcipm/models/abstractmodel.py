@@ -34,7 +34,7 @@ class AbstractModel(object):
 
     def calc_elbo(self):
         """Compute the current ELBO"""
-        elbo = 0
+        elbo = 0.
         # compute node elbos
         for node in self.nodes.values():
             elbo += node.calc_elbo()

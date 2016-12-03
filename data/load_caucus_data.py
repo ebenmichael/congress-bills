@@ -1,8 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import json
 import pandas as pd
 import numpy as np
 import sys
-
 
 def caucus_id_to_row(members, id_to_row, senator_metadata):
     """Get a mapping from caucus data id numbers to rows in our matrix"""

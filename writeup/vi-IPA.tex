@@ -24,17 +24,7 @@
 \label{model}
 
 
-\noindent Stochastic Block Model (SBM)
-\begin{itemize}
-\item Choose the community proportions $\pi \sim \text{Dir}(\gamma)$, where $\pi\in \R^C$ with $C$ latent communities
-\item For each representative $u$
-\begin{enumerate}
-\item Choose a community membership assignment $M_u\simiid \text{Cat}(\pi)$
-\end{enumerate}
-\item For each pair of communities $k< l\in\{1,\dots, C\}$, draw coexpression rate $P_{kl} \simiid \text{Gamma}(\lambda_0,\lambda_1)$%, for $k,l\in \{1,\dots, C\}$
-\item For each pair of representatives $u<v\in\{1,\dots, U\}$, draw $R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl})$
-\end{itemize}
-
+\subsection{Basic Constituents}
 
 \noindent Ideal Point Model (IPM)
 \begin{itemize}
@@ -50,7 +40,21 @@
 \item Draw representative $u$'s vote on document $d$ as $V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d)))$%, for $u\in\{1,\dots, U\}, d\in\{1,\dots,D\}$
 \end{itemize}
 
-\noindent Latent Dirichlet Allocation (LDA)
+
+\noindent Stochastic Block Model (SBM)
+\begin{itemize}
+\item Choose the community proportions $\pi \sim \text{Dir}(\gamma)$, where $\pi\in \R^C$ with $C$ latent communities
+\item For each representative $u$
+\begin{enumerate}
+\item Choose a community membership assignment $M_u\simiid \text{Cat}(\pi)$
+\end{enumerate}
+\item For each pair of communities $k< l\in\{1,\dots, C\}$, draw coexpression rate $P_{kl} \simiid \text{Gamma}(\lambda_0,\lambda_1)$%, for $k,l\in \{1,\dots, C\}$
+\item For each pair of representatives $u<v\in\{1,\dots, U\}$, draw $R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl})$
+\end{itemize}
+
+
+
+\noindent Latent Dirichlet Allocation (LDA) 
 \begin{itemize}
 \item Draw a topic $\varphi_k \simiid \text{Dir}(\beta), \varphi_k\in \R^V$ as a distribution over words, for each $k\in\{1,\dots,K\}$ 
 \item For each document, draw the topic proportions $\theta_d \simiid \text{Dir}(\alpha)$, where $\theta_d\in \R^K$ %, for $d\in\{1,\dots,D\}$
@@ -65,9 +69,9 @@
 \newpage
 
 
-\subsection{Frankenstein Model}
+\subsection{LC-IPM}
 
-The ideal point model (IPM) is useful to us as a baseline model for the roll call voting data $(V_{ud})$ for a couple of reasons. For one, using it alone we can attempt to predict missing votes, a problem of interest in political science. Another problem of more qualitative interest is analyzing and interpreting the factors $a_d, b_d$ specific to a document and those $x_u$ specific to the representative. All are assumed to reside in some latent space $\R^S$ and so depending on how we set up the model, we might be able to interpret quantities like $x_u$ as $u$'s {\sl political stance} or {\sl ideological position} or $x_u - b_d$ as representative $u$'s propensity for the bill/document $d$. There are a number of problems we cannot address in IPM. A major problem is predicting on heldout documents (the `cold start'), which is a potentially useful performance measure. Similarly if we have relatively junior representatives, they may not have had enough votes for the inferred $x_u$ to represent something (1) meaningful / interpretable or (2) reliable. We want to incorporate more information to inform the choices of $a_d, b_d$ and $x_u$. \\
+The ideal point model (IPM) is useful to us as a baseline model for the roll call voting data $(V_{ud})$ for a couple of reasons. For one, using it alone we can attempt to predict missing votes, a problem of interest in political science. Another problem of more qualitative interest is analyzing and interpreting the factors $a_d, b_d$ specific to a document and those $x_u$ specific to the representative. All are assumed to reside in some latent space $\R^S$ and so depending on how we set up the model, we might be able to interpret quantities like $x_u$ as $u$'s {\sl political stance} or {\sl ideological position} or $x_u - b_d$ as representative $u$'s propensity for the bill/document $d$. There are a number of problems we cannot address in IPM. A major problem is predicting on heldout documents (the `cold start'), which is a potentially useful performance measure. Similarly if we have relatively junior representatives, they may not have had enough votes for the inferred $x_u$ to represent something (1) meaningful / interpretable or (2) reliable. We want to incorporate more information to inform the choices of $a_d, b_d$ and $x_u$. We focus on the latter, with an interest in being able to better interpret the ideal points of the representatives. We use the stochastic block model to b\\
 
 
 \noindent Ideal Point Allocator (IPA)
