@@ -4,6 +4,7 @@ Collection of generic parameter node classes
 import numpy as np
 from scipy import optimize
 from functools import partial
+import warnings
 
 
 class AbstractNode(object):
@@ -84,8 +85,10 @@ class GaussianNode(AbstractNode):
             self.update_v_mean(item)
         """start = self.v_mean.reshape(self.n_items * self.dim)
         out = optimize.minimize(self.objective, start,
-                                jac=self.gradient, method="L-BFGS-B",
+                                jac=self.gradient, method="Newton-CG",
                                 callback=print)
+        if not out["success"]:
+            print(out)
         self.v_mean = out["x"].reshape(self.n_items, self.dim)"""
 
     def update_v_mean(self, item):
@@ -99,7 +102,8 @@ class GaussianNode(AbstractNode):
                                    method="L-BFGS-B")
         self.v_mean[item, :] = output["x"]
         if not output["success"]:
-            print(item, output)
+            warnings.warn("Node %i did not converge: " +
+                          str(output["message"]))
 
     def update_v_var(self):
         """Update the variance of the variational distribution"""

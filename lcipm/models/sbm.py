@@ -1,27 +1,27 @@
 """
 Implementation of a Bayesian Stochastic Block Model
-Author: Jake Soloff
+Author: Jake Soloff, edited by Eli Ben-Michael
 """
 
 import numpy as np
 from math import log
 from scipy.special import digamma
 from scipy.special import gammaln as loggamma
-from abstractmodel import AbstractModel
-from modelnodes import AbstractNode
-from ValBag import ValBag
+from .abstractmodel import AbstractModel
+from .modelnodes import AbstractNode
 from copy import deepcopy as copy
+from six.moves import xrange
 
-import json
 
 class StochasticBlockModel(AbstractModel):
 
-    def __init__(self, dim, lam_prior=None, gam_prior=None):
+    def __init__(self, u, c, lam_prior=(1.0, 1.0), gam_prior=1.0):
         """Constructor"""
-        self.dim = dim
-        self.resp_node = RespNode(dim)
-        self.rate_node = RateNode(dim, lam_prior)
-        self.prop_node = PropNode(dim, gam_prior)
+        self.U = u
+        self.C = c
+        self.resp_node = RespNode((u, c))
+        self.rate_node = RateNode((u, c), lam_prior)
+        self.prop_node = PropNode((u, c), gam_prior)
         
         # point the nodes to the other nodes
         self.resp_node.assign_params(self.rate_node, self.prop_node)
@@ -54,9 +54,11 @@ class StochasticBlockModel(AbstractModel):
         Nk  = np.sum(resp, axis=0)
         SS['N_k_full'] = Nk
 
+        C = self.C
+        U = self.U
         Nkl = np.outer(Nk,Nk) 
-        for k in range(C):
-            for l in range(C):
+        for k in range(self.C):
+            for l in range(self.C):
                 Nkl[k,l] -= np.dot(resp[:,k],resp[:,l]) 
         SS['N_kl_full'] = Nkl
 
@@ -87,16 +89,20 @@ class StochasticBlockModel(AbstractModel):
         elbo -= np.sum(self.SS['N_kl_full'] + lam_prior[1] - lam_post[1,:,:]* 
                     (lam_post[0,:,:] / lam_post[1,:,:]))
         """
-        _, C = self.dim
+        C = self.C
         elbo  = np.zeros((C,C))
         for k in xrange(C):
             for l in xrange(C):
-                elbo[k,l] += lam_prior[0]*log(lam_prior[1]) - lam_post[0,k,l]*log(lam_post[1,k,l]) \
-                                                 - loggamma(lam_prior[0]) + loggamma(lam_post[0,k,l])
-                elbo[k,l] += (self.SS['S_kl_full'][k,l] + lam_prior[0] - lam_post[0,k,l])* \
-                                                      (digamma(lam_post[0,k,l]) - log(lam_post[1,k,l]))
-                elbo[k,l] -= (self.SS['N_kl_full'][k,l] + lam_prior[1] - lam_post[1,k,l])* \
-                                                               (lam_post[0,k,l] / log(lam_post[1,k,l]))
+                elbo[k,l] += lam_prior[0]*log(lam_prior[1]) \
+                             - lam_post[0,k,l]*log(lam_post[1,k,l]) \
+                             - loggamma(lam_prior[0])  \
+                             + loggamma(lam_post[0,k,l])
+                elbo[k,l] += (self.SS['S_kl_full'][k,l] + lam_prior[0] \
+                              - lam_post[0,k,l])* \
+                              (digamma(lam_post[0,k,l]) - log(lam_post[1,k,l]))
+                elbo[k,l] -= (self.SS['N_kl_full'][k,l] + lam_prior[1] \
+                              - lam_post[1,k,l])* \
+                              (lam_post[0,k,l] / log(lam_post[1,k,l]))
         return np.sum(elbo)
 
     ## evaluate the evidence lower bound -- need to transfer this to nodes
@@ -107,11 +113,12 @@ class StochasticBlockModel(AbstractModel):
         Prior = self.Prior
         
         elbo += Prior.lambd[0]*log(Prior.lambd[1]) - Post.lam0*log(Post.lam1) \
-                                         - loggamma(Prior.lambd[0]) + loggamma(Post.lam0)
+                                         - loggamma(Prior.lambd[0]) \
+                                         + loggamma(Post.lam0)
         elbo += (SS.S_kl_full[k,l] + Prior.lambd[0] - Post.lam0[k,l])* \
-                                              (digamma(Post.lam0[k,l]) - log(Post.lam1[k,l]))
+                (digamma(Post.lam0[k,l]) - log(Post.lam1[k,l]))
         elbo -= (SS.N_kl_full[k,l] + Prior.lambd[1] - Post.lam1[k,l])* \
-                                                       (Post.lam0[k,l] / log(Post.lam1[k,l]))
+                (Post.lam0[k,l] / log(Post.lam1[k,l]))
         ElogPi = E_log_pi(Post.gamma) 
 
         # contributions to the ELBO in order: L_data, L_ent, L_local, L_global
@@ -119,12 +126,17 @@ class StochasticBlockModel(AbstractModel):
                 + SS.H \
                 + np.dot(ElogPi,SS.N_k_full) \
                 + loggamma(Prior.gamma*C) - C*loggamma(Prior.gamma) \
-                    + np.sum(loggamma(Post.gamma)) - loggamma(np.sum(Post.gamma)) - np.dot(ElogPi,Prior.gamma-Post.gamma)
+                + np.sum(loggamma(Post.gamma)) - loggamma(np.sum(Post.gamma)) \
+                - np.dot(ElogPi,Prior.gamma-Post.gamma)
+
 
 class RespNode(AbstractNode):
 
     def __init__(self, dim):
         self.dim = dim
+
+        # assume that the model type is StochasticBlockModel
+        self.model_type = "StochasticBlockModel"
 
     def assign_data(self, data):
         """Give the node whatever data it needs"""
@@ -134,6 +146,15 @@ class RespNode(AbstractNode):
         self.rate_node = rate_node
         self.prop_node = prop_node
 
+    def assign_lcipm_params(self, cmean_node, ip_node):
+        """Point the RespNode to the ideal points and community means"""
+        self.cmean_node = cmean_node
+        self.ip_node = ip_node
+
+    def set_model(self, model_type):
+        """Tell RespNode which model it's in so it does the right updates"""
+        self.model_type = model_type
+
     def get_v_params(self):
         """Return the variational parameters"""
         pass
@@ -141,20 +162,10 @@ class RespNode(AbstractNode):
     def init_v_params(self):
         """Initialize the variational parameters"""
         U, C = self.dim
-        #resp = np.random.random((U,C))
-        #for u in range(U):
-        #    resp[u,:] /= np.sum(resp[u,:])
-
-        with open('../../data/combined_data/pos_to_party.json') as f:
-            dct = json.load(f)
-
-        U = len(dct)
-        resp_ = np.zeros((U,2))
-        for u,p in dct.items():
-            resp_[u,int(p=='R')] = 1.0
-        print resp_
-
-        self.resp = resp_
+        resp = np.random.random((U,C))
+        for u in range(U):
+            resp[u,:] /= np.sum(resp[u,:])
+        self.resp = resp
 
     def vi_update(self):
         """Update variational parameters"""
@@ -166,8 +177,6 @@ class RespNode(AbstractNode):
         NN = 0
         while True:
             NN += 1
-            resp__= copy(resp_)
-            resp_ = copy(resp)
             resp  = self.updateResp()
             if NN > 2: # np.allclose(resp__, resp) or 
                 break
@@ -181,7 +190,8 @@ class RespNode(AbstractNode):
         resp_   = np.zeros((U,C))
         logresp_= np.zeros((U,C))
 
-        ElogP  = digamma(self.rate_node.post[0,:,:]) - np.log(self.rate_node.post[1,:,:])
+        ElogP  = digamma(self.rate_node.post[0,:,:])\
+                 - np.log(self.rate_node.post[1,:,:])
         EP     = self.rate_node.post[0,:,:] / self.rate_node.post[1,:,:]
         ElogPi = digamma(self.prop_node.post) - digamma(np.sum(self.prop_node.post))
 
@@ -190,7 +200,20 @@ class RespNode(AbstractNode):
                 for l in range(C):
                     for v in range(U):
                         if v != u:
-                            logresp_[u,k] += resp[v,l]*(Data[u,v]*ElogP[k,l] - EP[k,l])
+                            logresp_[u,k] += resp[v,l] * (Data[u,v] * ElogP[k,l] \
+                                                          - EP[k,l])
+                if self.model_type == "LCIPM":
+                    varx = self.ip_node.prior_var
+                    ip_dim = self.ip_node.dim
+                    ip_v_var = self.ip_node.v_var
+                    ip_v_mean = self.ip_node.v_mean[u, :]
+                    cmean_v_var = self.cmean_node.v_var
+                    cmean_v_mean = self.cmean_node.v_mean[k, :]
+                    p = -1 / (2 * varx)
+                    s = ip_dim * (ip_v_var + cmean_v_var)
+                    s -= np.sum((ip_v_mean - cmean_v_mean) ** 2)
+                    s2 = -np.log(2 * np.pi * varx) * ip_dim / 2
+                    logresp_[u, k] += s2 + p * s
             logresp_[u,:] += ElogPi
         for u in range(U):
             resp_[u,:]     = np.exp(logresp_[u,:] - np.max(logresp_[u,:]))
@@ -274,42 +297,3 @@ class PropNode(AbstractNode):
                     + np.sum(loggamma(self.post)) - loggamma(np.sum(self.post)) \
                     - np.dot(ElogPi,self.prior-self.post)
         return elbo
-
-from VB import VB
-
-import csv
-fn = '../../data/combined_data/membership.dat'
-Data = np.loadtxt(fn)[:,:]
-Data = np.dot(Data,Data.T)
-
-U = len(Data)
-C = 2
-
-"""
-U = 100
-C = 2
-Data = np.zeros((U,U))
-pi   = np.array([.5,.5])
-
-M    = np.random.choice(C,U,p=pi)
-P    = 2.*np.random.random((C,C)) + 2*np.eye(C) 
-for u in xrange(U):
-  for v in xrange(u):
-      Data[u,v] = np.random.poisson(P[M[u],M[v]])
-      Data[v,u] = Data[u,v]
-
-M_ = np.zeros((U,C))
-for u in range(len(M)):
-   M_[u,M[u]] = 1.
-#print M_
-"""
-
-SBM  = StochasticBlockModel((U, C), (1.,1.),1.)
-ELBO, converged = VB().run(SBM, Data)
-
-#np.savetxt('eli.dat', SBM.resp_node.resp)
-
-#print np.loadtxt('eli.dat').sum(0)
-
-print np.round(SBM.resp_node.resp,3)
-#print np.sum(SBM.resp_node.resp - M_,0)

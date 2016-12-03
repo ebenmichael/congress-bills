@@ -30,11 +30,11 @@ class VB(object):
         prevELBO = -float('Inf')
         lap = 0
         while not self.isConverged and lap < self.maxLaps:
-            #print("Computing Local Parameters")
+            print("Computing Local Parameters")
             # Local step (E - step)
             model.calc_LP()
 
-            #print("Computing Global Parameters")
+            print("Computing Global Parameters")
             # Global step (M - step)
             model.calc_GP()
 
@@ -45,5 +45,5 @@ class VB(object):
             self.isConverged = np.abs(prevELBO - elbo) < self.tol
             lap += 1
             prevELBO = elbo
-            print lap, elbo
+            print(lap, elbo)
         return(self.ELBO, self.isConverged)

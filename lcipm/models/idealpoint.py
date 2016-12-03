@@ -301,6 +301,15 @@ class IdealPointNode(GaussianNode):
         self.disc_node = disc_node
         self.diff_node = diff_node
 
+    def assign_lcipm_params(self, cmean_node, resp_node):
+        """Point to the responsibilities and community means"""
+        self.cmean_node = cmean_node
+        self.resp_node = resp_node
+
+    def set_model(self, model_type):
+        """Tell the node which model it's in so it can do the right updates"""
+        self.model_type = model_type
+
     def var_update_from_item(self, item):
         """Compute the contribution of this item to the variance update
         Args:
@@ -330,12 +339,25 @@ class IdealPointNode(GaussianNode):
         Returns:
             curr_grad: ndarray, length n_items * dim, updated gradient
         """
-        prior_deriv = value - self.prior_mean
+        # if in the idealpoint model penalize for being far from the prior
+        if self.model_type == "IdealPointModel":
+            prior_deriv = value - self.prior_mean
+        # if in the LCIPM penalize for being far on average from the prior mean
+        elif self.model_type == "LCIPM":
+            resps = self.resp_node.resp[user, :]
+            resps = resps.reshape(len(resps), 1)
+            cmean_v_mean = self.cmean_node.v_mean
+            diff = value - cmean_v_mean
+            prior_deriv = (resps * diff).sum(0)
+        else:
+            raise ValueError("Model type " + str(self.model_type)
+                             + " not supported")
         prior_deriv /= -self.prior_var
+
         # get bill parameters for each vote
         bills = self.data[user][:, 0]
         disc_v_means = self.disc_node.v_mean[bills, :]
-        disc_v_var = self.v_var
+        disc_v_var = self.disc_node.v_var
         diff_v_means = self.diff_node.v_mean[bills, :]
         diff_v_var = self.diff_node.v_var
         # get user parameters
@@ -365,7 +387,7 @@ class IdealPointNode(GaussianNode):
         return(-(prior_deriv + grad))
 
     def objective_for_item(self, user, value):
-        """Compute the portion of the ELBO which depends on the variational
+        """Compuxte the portion of the ELBO which depends on the variational
            mean for bill
         Args:
             user: int, bill to compute objective for
@@ -374,17 +396,27 @@ class IdealPointNode(GaussianNode):
             obj: float, the portion of the elbo which depends on the bill
         """
         # compute elbo contribution from parameters
-        mean_diff = value - self.prior_mean
-        elbo1 = -(np.sum(mean_diff ** 2))
-        elbo1 /= 2 * self.prior_var
-
+        if self.model_type == "IdealPointModel":
+            mean_diff = value - self.prior_mean
+            elbo1 = -(np.sum(mean_diff ** 2))
+            elbo1 /= 2 * self.prior_var
+        elif self.model_type == "LCIPM":
+            resps = self.resp_node.resp[user, :]
+            cmean_v_mean = self.cmean_node.v_mean
+            diff = value - cmean_v_mean
+            sqr_norm = np.sum(diff ** 2, axis=1)
+            elbo1 = -np.dot(resps, sqr_norm)
+            elbo1 /= 2 * self.prior_var
+        else:
+            raise ValueError("Model type " + str(self.model_type)
+                             + " not supported")
         # compute elbo contribution from data
         # get bill parameters for each vote
         bills = self.data[user][:, 0]
         disc_v_means = self.disc_node.v_mean[bills, :]
         disc_v_var = self.disc_node.v_var
         diff_v_means = self.diff_node.v_mean[bills, :]
-        diff_v_var = self.v_var
+        diff_v_var = self.diff_node.v_var
         # get user parameters
         ip_v_mean = value
         ip_v_var = self.v_var
@@ -402,6 +434,28 @@ class IdealPointNode(GaussianNode):
 
         elbo2 = (s1 - s2).sum()
         return(-(elbo1 + elbo2))
+
+    def calc_elbo(self):
+        """Compute the portion of the EBLO from the ideal point nodes"""
+        if self.model_type == "IdealPointModel":
+            return(GaussianNode.calc_elbo(self))
+        elif self.model_type == "LCIPM":
+            return(self.calc_lcipm_elbo())
+
+    def calc_lcipm_elbo(self):
+        """Compute the ELBO from the node entropy and the average prior"""
+        entropy = self.n_items * self.dim / 2
+        entropy *= np.log(2 * np.pi * np.exp(1) * self.v_var)
+
+        # repeat the ip v means
+        n_communities = self.cmean_node.n_communities
+        rep_v_mean = np.repeat(self.v_mean, n_communities, axis=0)
+        rep_c_mean = np.vstack([self.cmean_node.v_mean] * self.n_items)
+        rep_resps = self.resp_node.resp.reshape(self.n_items * n_communities)
+        diff = rep_v_mean - rep_c_mean
+        sqr_norm = np.sum(diff ** 2, axis=1)
+        s = np.dot(rep_resps, sqr_norm)
+        return(entropy + s)
 
 
 class IdealPointModel(AbstractModel):
@@ -430,6 +484,7 @@ class IdealPointModel(AbstractModel):
         self.disc_node.assign_params(self.diff_node, self.ip_node)
         self.diff_node.assign_params(self.disc_node, self.ip_node)
         self.ip_node.assign_params(self.disc_node, self.diff_node)
+        self.ip_node.set_model("IdealPointModel")
 
         self.nodes = {"ideal_point": self.ip_node,
                       "discrimination": self.disc_node,
