@@ -57,12 +57,12 @@ def eval_models(models, interactions, membership=None, n_folds=5):
             print("Fold: " + str(k) + " Model: " + str(type(model)))
             # treat IPM differently because it has a different api
             if type(model) == IdealPointModel:
-                vb = VB(maxLaps=50)
+                vb = VB(maxLaps=30)
                 # run variational inference
                 vb.run(model, interactions[train_idxs, :])
                 probs = model.predict_proba(interactions[test_idxs, :2])
             elif type(model) == LCIPM:
-                vb = VB(maxLaps=50)
+                vb = VB(maxLaps=30)
                 # run variational inference
                 vb.run(model, (interactions[train_idxs, :], membership))
                 probs = model.predict_proba(interactions[test_idxs, :2])
