@@ -60,12 +60,12 @@ def eval_models(models, interactions, membership=None, n_folds=5):
                 vb = VB(maxLaps=50)
                 # run variational inference
                 vb.run(model, interactions[train_idxs, :])
-                probs = model.predict_proba(interactions[test_idxs, :])
+                probs = model.predict_proba(interactions[test_idxs, :2])
             elif type(model) == LCIPM:
                 vb = VB(maxLaps=50)
                 # run variational inference
                 vb.run(model, (interactions[train_idxs, :], membership))
-                probs = model.predict_proba(interactions[test_idxs, :])
+                probs = model.predict_proba(interactions[test_idxs, :2])
             # if comparing to the all yes model predict 1 for everything
             elif model == "yes":
                 probs = np.ones(len(test_idxs))
