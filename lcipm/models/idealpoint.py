@@ -589,6 +589,8 @@ class IdealPointModel(AbstractModel):
             param_vals = np.sum(discs * (ips - diffs),
                                 axis=1)
             prob = math_utils.sigmoid(param_vals)
+        else:
+            raise ValueError("Input data not of the form (document, user)")
         return(prob)
 
     def predict(self, interaction, threshold=0.5):
@@ -601,5 +603,5 @@ class IdealPointModel(AbstractModel):
             vote: int or ndarray int, predicted vote(s)
         """
 
-        vote = (self.predict_prob(interaction) > threshold) * 1
+        vote = (self.predict_proba(interaction) > threshold) * 1
         return(vote)

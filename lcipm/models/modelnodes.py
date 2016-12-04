@@ -102,8 +102,7 @@ class GaussianNode(AbstractNode):
                                    method="L-BFGS-B")
         self.v_mean[item, :] = output["x"]
         if not output["success"]:
-            warnings.warn("Node %i did not converge: " +
-                          str(output["message"]))
+            warnings.warn("Node %i did not converge"%item)
 
     def update_v_var(self):
         """Update the variance of the variational distribution"""
