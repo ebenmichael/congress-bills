@@ -3,7 +3,8 @@ Testing suite for different models. Tests IPM, LC-IPM, Logitic Regression
 Author: Eli Ben-Michael
 """
 import numpy as np
-from sklearn import model_selection
+# from sklearn.model_selection import KFold
+from sklearn.cross_validation import KFold
 from sklearn import preprocessing
 from lcipm.models.idealpoint import IdealPointModel
 from sklearn.linear_model import LogisticRegression
@@ -50,8 +51,8 @@ def eval_models(models, interactions, membership=None, n_folds=5):
     test_acc = np.zeros((len(models), n_folds))
     test_auc = np.zeros((len(models), n_folds))
     # iterate over the models
-    kfold = model_selection.KFold(n_folds, shuffle=True)
-    for k, (train_idxs, test_idxs) in enumerate(kfold.split(interactions)):
+    kfold = KFold(interactions.shape[0], n_folds, shuffle=True)
+    for k, (train_idxs, test_idxs) in enumerate(kfold):
         for j, model in enumerate(models):
             print("Fold: " + str(k) + " Model: " + str(type(model)))
             # treat IPM differently because it has a different api
@@ -126,4 +127,5 @@ if __name__ == "__main__":
 
         for sigma in [0.01, 0.1, 1, 100]:
             models.append(LCIPM(448, 2, 2, ip_prior_var=sigma))
+
         eval_and_save(models, interactions, membership=caucus, outdir=outdir)
