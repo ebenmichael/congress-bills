@@ -2,6 +2,8 @@
 clear
 figure(1); clf
 
+cd('..\combined-data')
+
 % load data
 votes = load('votes.dat'); 
 senator_MD = loadjson('senator_metadata.json');
@@ -68,15 +70,15 @@ Caucus1 = Caucus1(keep);
 figure(1); clf
 [bills, senators] = nnmf(votes_Trim, 2);
 
-scatter(senators(1,Party=='D'), senators(2,Party=='D'), 'b'); 
+scatter(senators(1,Party=='D'), senators(2,Party=='D'), 'b.'); 
 hold on 
-scatter(senators(1,Party=='R'), senators(2,Party=='R'), 'r'); 
+scatter(senators(1,Party=='R'), senators(2,Party=='R'), 'r.'); 
 
-title('NNMF on roll call votes')
-xlabel('x1')
-ylabel('x2')
+title('NNMF on roll call votes', 'Fontsize', 16)
+xlabel('x1', 'Fontsize', 16)
+ylabel('x2', 'Fontsize', 16)
 hold off 
-legend('Dem', 'Rep')
+legend('Dem', 'Rep', 'Fontsize', 16)
 
 
 figure(3); clf
@@ -109,12 +111,12 @@ scatter(pca(1,Party=='D'), pca(2,Party=='D'), 'b');
 hold on 
 scatter(pca(1,Party=='R'), pca(2,Party=='R'), 'r'); 
 
-title('PCA on roll call votes')
-xlabel('PCA1')
-ylabel('PCA2')
+title('PCA on roll call votes', 'Fontsize', 16)
+xlabel('PCA1', 'Fontsize', 16)
+ylabel('PCA2', 'Fontsize', 16)
 hold off 
 
-legend('Dem', 'Rep')
+legend('Dem', 'Rep', 'Fontsize', 16)
 
 figure(4); clf
 scatter(pca(1,Caucus1 == 1),pca(2,Caucus1 == 1), 'yo', 'filled')
