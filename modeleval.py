@@ -118,7 +118,7 @@ if __name__ == "__main__":
               + "data/combined_data/membership.dat")
     else:
         outdir = sys.argv[1]
-        interactions = np.loadtxt(sys.argv[2])
+        interactions = np.loadtxt(sys.argv[2]).astype(int)
         caucus = np.loadtxt(sys.argv[3])
         caucus = np.dot(caucus, caucus.T)
         models = [LogisticRegression(C=1), LogisticRegression(C=0.1),
