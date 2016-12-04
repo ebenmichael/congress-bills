@@ -28,7 +28,8 @@
 
 \usepackage{subcaption}
 
-\title{Formatting instructions for NIPS 2016}
+\title{Detecting Latent Communities 
+for Predicting Legislative Roll Call Votes}
 
 % The \author macro works with any number of authors. There are two
 % commands used to separate the names and addresses of multiple
@@ -50,7 +51,7 @@
   Department of Statistics\\
   UC Berkeley
   %% \texttt{email} \\
-   \AND
+   \And
   Jake Soloff \\
   Department of Statistics\\
   UC Berkeley
@@ -72,6 +73,8 @@
 
 \maketitle
 
+\vspace{-1em}
+
 \begin{abstract}
   The abstract paragraph should be indented \nicefrac{1}{2}~inch
   (3~picas) on both the left- and right-hand margins. Use 10~point
@@ -82,12 +85,13 @@
 \end{abstract}
 
 \section{Introduction}
-
+\label{introduction}
 
 
 
 
 \subsection{Motivation} 
+
 Voting records of legislators are commonly used by political scientists to examine relationships between legislator policy preferences, institutional structures, and legislative outcomes (Clinton et al 2004). In fact, even simple dimensionality reduction techniques on roll call data are able to uncover the political characteristics of individual representatives. For example, in figure \ref{fig:NNMF}, we factored the $448\times1707$ matrix representing the 448 representatives and their votes on 1707 bills into two nonnegative matrices of dimensions $448\times 2$ and $2\times 1707$ . Plotting the  $448\times 2$ matrix where each row places a representative in a two dimensional space, we are able to clearly identify party affiliation. \par
 
 Another dimensionality technique we applied to visualize voting data was principle component analysis (figure \ref{fig:PCA}). We formed the principle components by computing the two largest eigenvalues and their respective eigenvectors on the $448\times 448$ covariance matrix of vote data, and each representative's voting profile was projected onto the space spanned by these principle components. Again, we clearly see differentiation along party lines. 
@@ -153,21 +157,45 @@ Moreover, figure \ref{fig:Nhood_Caucus} shows the relationship between represent
 \end{figure}
 
 
+\newpage
+~
+\newpage
+
+\section{Model}
+\label{model}
+
+\subsection{Ideal Point Models}
+
+\subsection{Stochastic Block Models}
+
+A
+
+\section{Inference}
+\label{inference}
+
+\subsection{Updates}
 
 
-\section{The model}
-We introduce models for both roll call votes and caucus memberships. 
 
-\subsection{Ideal point model}
+\subsection{Implementation}
 
-\subsection{Stochastic Block Model}
-
+\newpage
 
 \section{Results}
+\label{results}
 
 \section{Discussion}
+\label{discussion}
 
+\section{Contributions}
+\begin{itemize}
+\item Bryan: pca, nbhd regression, section \ref{introduction} of writeup.
+\item Jake: SBM, sections \ref{model}, \ref{inference}, \ref{discussion} and \ref{sbmvi} of writeup.
+\item Eli: dataset, IPM, experiments, sections \ref{results} and \ref{ipmvi} of writeup.
+\item Collectively: section \ref{lcipmvi} of writeup, poster
+\end{itemize}
 
+\newpage
 
 
 \section*{References}
@@ -180,6 +208,201 @@ We introduce models for both roll call votes and caucus memberships.
 
 \appendix
 
+\newpage
+
 \section{Variational updates}
+
+\subsection{For SBM}
+\label{sbmvi}
+
+After observing the symmetric matrix $R = (R_{uv})$, where $R_{uv}$ is the number of caucuses that representatives $u$ and $v$ have in common, we see to find a distribution $q$ over the latent community assignments $M = (M_u)$, the community coexpression rates $P = (P_{kl})$, and the community proportions $\pi = (\pi_k)$ which is close in relative entropy to the true posterior and lies in the factorized family $q(M)q(P)q(\pi)$. Each factor has free parameters described below and denoted with $\widehat{\text{hats}}$. The approximation $q$ is equivalently scored by the ELBO objective $\cl$, which we break down as:%arrange into component terms:
+\begin{equation}
+\begin{split}
+\cl(q)
+%&= \EE_q\left[\log\frac{p(R,M,P,\pi)}{q(M,P,\pi)}\right]  \\
+&= \underbrace{\EE_q\left[\log p(R\mid M,P)+ \log\frac{p(P)}{q(P)}\right]}_{\cl_{\text{data}}}
++ \underbrace{\EE_q\left[-\log q(M)\right]}_{\cl_{\text{ent}}}
++ \underbrace{\EE_q\left[\log p(M\mid \pi)\right]}_{\cl_{\text{local}}}
++ \underbrace{\EE_q\left[\log\frac{p(\pi)}{q(\pi)}\right]}_{\cl_{\text{global}}}
+\end{split}
+\end{equation}
+
+\noindent{\bf Variational Factors.} To each $u$ we associate variational parameters $\widehat r_u = \left(\widehat r_{uk}\right)_{k=1}^K$, so
+\begin{align}
+q(M) = \prod_{u=1}^U q(M_u\mid \widehat r_u) 
+= \prod_{u=1}^U \prod_{k=1}^K \widehat r_{uk}^{\delta_k(M_u)}.
+\end{align}
+We define $q(\pi) \triangleq \text{Dir}(\widehat \gamma_1, \dots, \widehat \gamma_K)$ and $q(P) = \prod_{kl}q(P_{kl}\mid \widehat \lambda_{kl})$ where $q(P_{kl}\mid \widehat \lambda_{kl})\triangleq \text{Gamma}(\widehat \lambda_{0kl},\widehat \lambda_{1kl})$. \\
+
+\noindent{\bf Computing the ELBO.} Now we can write out the component terms of the ELBO more explicitly:
+\begin{equation}
+\begin{split}
+\cl_{\text{data}}
+&= \EE_q\left[\log p(R\mid M,P)+ \log\frac{p(P)}{q(P)}\right]
+= \sum_{kl}\EE_q\left[\sum_{u,v}\delta_{k}(M_u)\delta_l(M_v)\log p(R_{uv}\mid P_{kl})+ \log\frac{p(P_{kl})}{q(P_{kl})}\right] \\
+&= -\sum_{u,v}\log R_{uv}! + \sum_{k,l} \left(\lambda_{0}\log\lambda_1-\widehat\lambda_{0kl}\log\widehat\lambda_{1kl} - \log\frac{\Gamma(\lambda_0)}{\Gamma(\widehat\lambda_{0kl})}\right) + \sum_{k,l} \cl_{kl}(R)
+~\\
+\cl_{\text{ent}}
+&= \EE_q\left[-\log q(M)\right]
+= -\sum_{u,k}\EE_q\left[\delta_{k}(M_u)\log \widehat r_{uk}\right]
+= -\sum_{u,k}\widehat r_{uk}\log \widehat r_{uk}
+~\\
+\cl_{\text{local}}
+&= \EE_q\left[\log p(M\mid \pi)\right]
+= \sum_{u,k}\EE_q\left[\delta_{k}(M_u)\log \pi_k\right]
+= \sum_{k}N_k\EE_q\left[\log \pi_k\right]
+~\\
+\cl_{\text{global}}
+&= \EE_q\left[\log\frac{p(\pi)}{q(\pi)}\right]
+= \log \Gamma(C\gamma) - C\log\Gamma(\gamma) -\log \Gamma\left(\sum_k\widehat\gamma_k\right) + \sum_k\left\{\log\Gamma(\widehat\gamma_k)+ (\gamma-\widehat\gamma_k)\EE_q\left[\log \pi_k\right]\right\}
+\end{split}
+\end{equation}
+where $N_k = \sum_{u}\widehat r_{uk}$, $N_{kl} = \sum_{uv}\widehat r_{uk}\widehat r_{vl}$, $S_{kl} = \sum_{uv}\widehat r_{uk}\widehat r_{vl} R_{uv}$, and 
+$$
+\cl_{kl}(R) 
+= (S_{kl} + \lambda_{0} - \widehat\lambda_{0kl}) \EE_q[\log P_{kl}]
+   -(N_{kl} + \lambda_{1} - \widehat\lambda_{1kl}) \EE_q[P_{kl}], 
+$$
+and the posterior expectations can also be computed explicitly as 
+$$
+\EE_q[P_{kl}] =  \frac{\widehat\lambda_{0kl}}{\widehat\lambda_{1kl}}, ~
+\EE_q[\log P_{kl}] = \psi(\widehat\lambda_{0kl}) - \log \widehat\lambda_{1kl}, ~
+\EE_q\left[\log \pi_k\right] = \psi\left(\widehat\gamma_k\right) - \psi\left(\sum_l\widehat\gamma_l\right)
+$$
+
+\noindent{\bf CAVI Updates.} The simplest approach to variational inference maximizes the ELBO $\cl$ via coordinate-ascent, i.e. choosing the best value of a variational parameter with all others fixed. Iteratively applying these updates, the variational approximation $q$ improves at every step toward some local optimum. Conditional conjugacy yields closed form updates for the global variational parameters. 
+
+\begin{itemize}
+\item {\bf Global Update to $q(\pi)$.} We have $\widehat \gamma_{k} = \gamma + N_k$.
+\item {\bf Global Update to $q(P)$.} We have $\widehat \lambda_{0kl} = \lambda_0 + S_{kl}$ and $\widehat \lambda_{1kl} = \lambda_1 + N_{kl}$.
+\item {\bf Local Update to $q(M)$.} Differentiating the ELBO with respect to $\widehat r_{uk}$,
+$$
+0 = \pderiv{\cl}{\widehat r_{uk}}= -\log \widehat r_{uk} -1 + \EE_q[\log \pi_k]
++ \sum_{v\neq u} \sum_l \widehat r_{vl}\left(R_{uv}\EE_q[\log P_{kl}] - \EE_q[P_{kl}]\right).
+$$
+Thus, we take 
+$$
+\widehat r_{uk} \propto_k \exp\left(\EE_q[\log \pi_k]
++ \sum_{v\neq u} \sum_l \widehat r_{vl}\left(R_{uv}\EE_q[\log P_{kl}] - \EE_q[P_{kl}]\right)\right).
+$$
+\end{itemize}
+
+
+\subsection{For IPM}
+\label{ipmvi}
+
+
+We observe the votes matrix $V = (V_{ud})$ where $V_{ud}$ is the vote of congressperson $u$ on bill $d$. We have the ideal point for congressperson $u$, $x_u \in \R^s$, and the discrimination and difficulty for bill $d$, $a_d,b_d \in \R^s$. The variational distribution is fully factorized $\prod_{u=1}^U \prod_{d=1}^D q(x_u)q(a_d)q(b_d)$ where $q(x_u) \triangleq \text{Normal}(\hat{\tau}_u, \hat{\sigma}^2_\tau I_S)$, $q(x_u) \triangleq \text{Normal}(\hat{\kappa}_{au}, \hat{\sigma}^2_{\kappa_a} I_S)$, and $q(x_u) \triangleq \text{Normal}(\hat{\kappa}_{bu}, \hat{\sigma}^2_{\kappa_b} I_S)$. \vspace{.5em}
+
+\noindent{\textbf{Computing the ELBO.}} 
+We can write the ELBO as \vspace{-1em}
+%$$
+%\cl(q) 
+%= H(q) +  \sum_{u} \EE_q\left[\log p(x_{u})\right] +\sum_{d} \EE_q\left[\log p(a_d)\right] + \sum_{d} %\EE_q\left[\log p(b_d)\right] + \EE_q[\log p(V|x,a,b)]~\vspace{-1.5em}
+%$$
+%We can break this up into %~\vspace{-1.3em} 
+
+\begin{equation*}
+\begin{split}
+\cl(q) 
+&= H(q) +  \sum_{u} \EE_q\left[\log p(x_{u})\right] +\sum_{d} \EE_q\left[\log p(a_d)\right] + \sum_{d} \EE_q\left[\log p(b_d)\right] + \EE_q[\log p(V|x,a,b)] \\
+H(q) 
+&= \left(US\log 2\pi e\hat{\sigma}^2_\tau + DS\log 2\pi e\hat{\sigma}^2_{\kappa_a} + DS\log 2\pi e\hat{\sigma}^2_{\kappa_b}\right)/2 \\
+\EE_q\left[\log p(x_{u})\right] 
+&= \EE_q\left[-\frac{S}{2} \log 2\pi \sigma^2_x - \frac{1}{2\sigma^2_x} \|x_u - \nu\|_2^2\right]
+= -\frac{S}{2} - \frac{1}{2\sigma^2_x} \hat{\sigma}^2_\tau S + \|\hat{\tau}_u - \nu\|^2_2\\
+\EE_q\left[\log p(a_d)\right] & = \EE_q\left[-\frac{S}{2} \log 2\pi \sigma^2_a - \frac{1}{2\sigma^2_a} \|a_d - \eta_a\|_2^2\right]
+= -\frac{S}{2} - \frac{1}{2\sigma^2_a}  \hat{\sigma}^2_{\kappa_a} S + \|\hat{\kappa}_{ad} - \eta_a\|^2_2\\
+\EE_q\left[\log p(b_d)\right] & = \EE_q\left[-\frac{S}{2} \log 2\pi \sigma^2_b - \frac{1}{2\sigma^2_b} \|b_d - \eta_b\|_2^2\right]
+= -\frac{S}{2} - \frac{1}{2\sigma^2_b} \hat{\sigma}^2_{\kappa_b} S + \|\hat{\kappa}_{bd} - \eta_b\|^2_2
+\end{split}
+\end{equation*}
+We can deal with the last expectation by using the 2nd order delta method (Braun McAullife 2008) which takes
+\begin{align*}
+\EE[f(V)] \approx f(\EE[V]) + \frac{1}{2} \text{trace}\left(\nabla^2 \EE[V] \Cov(V)\right).
+\end{align*}
+Letting $u(i),d(i)$ be the users and documents for data point $i$, and applying this gives the approximation to the ELBO contribution from the likelihood %\vspace{-.5em}
+\begin{align*}
+\EE_q[\log p(V|x,a,b)] & = \sum_{i=1}^n \EE_q[V_i(a_{d(i)} \cdot (X_{u(i)} - b_{d(i)}))] + \EE_q[\log (1-\sigma(a_{d(i)} \cdot (X_{u(i)} - b_{d(i)})))]\\
+& \approx \sum_{i=1}^nV_i (\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}) - \log (1 + \exp(\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)})\\
+& \;\;\;\; - \frac{1}{2} \sigma''(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)})(\hat{\sigma}^2_{\kappa_a} \|\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}\|_2^2 + (\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\|\hat{\kappa}_{ad(i)}\|^2)
+\end{align*}
+
+\noindent{\textbf{CAVI Updates.}} There are no closed form updates for $\hat{\tau}_u$, $\hat{\kappa}_{ad}$, and $\hat{\kappa}_{bd}$, so we maximize $\cl$ numerically when updating these parameters. Let $V(u)$ be the set of votes for user $u$, and similarly let $V(d)$ be the set of votes on bill $d$. Also let $\rho_{ud} = \sigma(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)})$. The gradients are
+\begin{align*}
+\nabla_{\hat{\tau}_u} \cl 
+& = -\frac{1}{\sigma^2_x}(\hat{\tau}_u - \nu) + \sum_{i \in V(u)}(V_i - \rho_{ud(i)})\hat{\kappa}_{ad(i)}
+- \sigma'(\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u} - \hat{\kappa}_{bd(i)}))\hat{\sigma}^2_{ka}(\hat{\tau}_u - \hat{\kappa}_{bd(i)}) \\
+& \;\;\;\; - \frac{1}{2} \sigma''(\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u} - \hat{\kappa}_{bd(i)})(\hat{\sigma}^2_{\kappa_a} \|\hat{\tau}_{u} - \hat{\kappa}_{bd(i)}\|_2^2 + (\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\|\hat{\kappa}_{ad(i)}\|^2)\hat{\kappa}_{ad(i)}\\
+%& \;\;\;\; - \sigma'(\hat{\kappa}_{ad(i)} \cdot (\hat{\tau}_{u} - \hat{\kappa}_{bd(i)}))\hat{\sigma}^2_{ka}(\hat{\tau}_u - \hat{\kappa}_{bd(i)})\\
+\nabla_{\hat{\kappa}_{ad}} \cl 
+& = -\frac{1}{\sigma^2_a}(\hat{\kappa}_{ad} - \eta_a) + \sum_{i \in V(d)}(V_i - \rho_{u(i)d})(\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})
+- \sigma'(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})(\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\hat{\kappa}_{ad}\\
+& \;\;\;\; - \frac{1}{2} \sigma''(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})(\hat{\sigma}^2_{\kappa_a} \|\hat{\tau}_{u(i)} - \hat{\kappa}_{bd}\|_2^2 + (\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\|\hat{\kappa}_{ad}\|^2)(\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})\\
+%& \;\;\;\; - \sigma'(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})(\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\hat{\kappa}_{ad}\\
+\nabla_{\hat{\kappa}_{bd}} \cl 
+& = \frac{1}{\sigma^2_b}(\hat{\kappa}_{bd} - \eta_b) - \sum_{i \in V(d)}(V_i - \rho_{u(i)d})\hat{\kappa}_{ad}
++ \sigma'(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})\hat{\sigma}^2_{ka}(\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})\\
+& \;\;\;\; + \frac{1}{2} \sigma''(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})(\hat{\sigma}^2_{\kappa_a} \|\hat{\tau}_{u(i)} - \hat{\kappa}_{bd}\|_2^2 + (\hat{\sigma}^2_{\tau} + \hat{\sigma}^2_{\kappa_b})\|\hat{\kappa}_{ad}\|^2)\hat{\kappa}_{ad}
+%& \;\;\;\; + \sigma'(\hat{\kappa}_{ad} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})\hat{\sigma}^2_{ka}(\hat{\tau}_{u(i)} - \hat{\kappa}_{bd})
+\end{align*}
+
+
+For each parameter we solve this optimization problem using L-BFGS. Finally, there are closed form updates for the variational variance parameters by taking the derivative and setting to zero
+\begin{align*}
+\hat{\sigma}^2_\tau & = \frac{US}{\frac{US}{\sigma^2_x} + \sum_{i=1}^n \sigma'(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}))(S\hat{\sigma^2}_{\kappa_a} + \|\hat{\kappa}_{ad(i)}\|_2^2)}\\
+\hat{\sigma}^2_{\kappa_a} & = \frac{DS}{\frac{DS}{\sigma^2_a} + \sum_{i=1}^n \sigma'(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}))(S(\hat{\sigma^2}_{\tau} + \hat{\sigma}^2_{\kappa_b}) + \|\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}\|_2^2)}\\
+\hat{\sigma}^2_\tau & = \frac{DS}{\frac{DS}{\sigma^2_b} + \sum_{i=1}^n \sigma'(\hat{\kappa_{ad(i)}} \cdot (\hat{\tau}_{u(i)} - \hat{\kappa}_{bd(i)}))(S\hat{\sigma^2}_{\kappa_a} + \|\hat{\kappa}_{ad(i)}\|_2^2)}
+\end{align*}
+
+
+\subsection{For LC-IPM}
+\label{lcipmvi}
+
+The factorization for $q$ is the same, with one more factor $q(\nu) = \prod_kq(\nu_k)$ where $q(\nu_k)\triangleq \cn(\widehat\mu_k,\widehat\sigma^2_\mu)$. Due to the factorization in the LC-IPM generative model, the only contribution to the ELBO from IPM which changes is that corresponding to $(x_u)$. This becomes%; similarly, from SBM, corresponding to $(M_u)$. The former is
+\begin{align*}
+\cl_x 
+&= \EE_q\left[\log \frac{p(x|\nu, M)}{q(x)}\right]
+= \EE_q\left[\log \prod_{uk}\phi(x_u|\nu_k)^{\delta_k(M_u)}\right] + H(q) \\
+&= \sum_{uk}\widehat r_{uk}\EE_q\left[\log \phi(x_u|\nu_k)\right] + H(q) 
+\end{align*}
+%forgetting constant terms, 
+%\begin{align*}
+%\cl_x 
+%&= \sum_{uk}\widehat r_{uk}\left(-\frac{1}{2\sigma^2_x}\left(S(\widehat\sigma^2_\tau + \widehat\sigma^2_\mu) - \|\widehat\tau_u - \widehat\mu_k\|^2\right)\right)
+%\end{align*}
+In particular, the gradient of the ELBO w.r.t. the responsibility $\widehat r_{uk}$ is
+\begin{align*}
+0 
+&= \pderiv{\cl_\text{SBM}}{\widehat r_{uk}} + \pderiv{\cl_x}{\widehat r_{uk}} \\
+&= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \sum_{l} S_{ul}\left(\EE_q[\log P_{kl}] + \EE_q[\log P_{lk}]\right) - N_l\left(\EE_q[P_{kl}] + \EE_q[P_{lk}]\right)\\
+&~~~+ \left(-\frac{1}{2\sigma^2_x}\left(S(\widehat\sigma^2_\tau + \widehat\sigma^2_\mu) - \|\widehat\tau_u - \widehat\mu_k\|^2\right)\right) + \EE_q\left[\log \phi(x_u|\nu_k)\right]
+\end{align*}
+so the update is
+$$
+\widehat r_{uk} \propto_k \exp\left(\EE_q[\log \pi_k]
++ \sum_{v\neq u} \sum_l \widehat r_{vl}\left(R_{uv}\EE_q[\log P_{kl}] - \EE_q[P_{kl}]\right)
++ \EE_q\left[\log \phi(x_u|\nu_k)\right]\right). 
+$$
+To determine the updates for the variational mean $\widehat \mu_k$ corresponding to $\nu_k$, we need the ELBO term
+$$
+\cl_\nu 
+= \EE_q\left[\log \frac{p(\nu)}{q(\nu)}\right]
+= \sum_k\EE_q\left[\log p(\nu_k)\right] + KH(q(\nu_1))
+= -\frac{1}{2\sigma_\nu^2}\sum_k\|\widehat\mu_k-\varpi\|^2 + \frac{KS}{2}\log\left(2\pi e\widehat\sigma^2_\mu\right) + \text{const.}
+$$
+Setting the gradient of the ELBO w.r.t. $\widehat\mu_k$ equal to zero, we obtain
+$$
+0
+= \pderiv{(\cl_\nu + \cl_x)}{\widehat\mu_k}
+= \frac{1}{\sigma_x^2}\sum_u\widehat r_{uk}(\widehat\tau_u -\widehat\mu_k)  - \frac{1}{\sigma_\nu^2}(\widehat \mu_k - \varpi)
+= \frac{1}{\sigma_x^2}\sum_u\widehat r_{uk}\widehat\tau_u -\left(\frac{N_k}{\sigma_x^2}+\frac{1}{\sigma_\nu^2}\right)\widehat\mu_k + \frac{1}{\sigma_\nu^2}\varpi
+$$
+and thus
+$$
+\widehat\mu_k= \left(\frac{\sum_u\widehat r_{uk}\widehat\tau_u}{\sigma_x^2} + \frac{\varpi}{\sigma_\nu^2}\right)\widehat\sigma^2_{\hat\mu_k}; \text{ where }
+\widehat\sigma^2_{\hat\mu_k} = \left(\frac{N_k}{\sigma_x^2}+\frac{1}{\sigma_\nu^2}\right)^{-1}.
+$$
+
 
 \end{document}
