@@ -121,10 +121,12 @@ if __name__ == "__main__":
         interactions = np.loadtxt(sys.argv[2]).astype(int)
         caucus = np.loadtxt(sys.argv[3])
         caucus = np.dot(caucus, caucus.T)
-"""        models = [LogisticRegression(C=1), LogisticRegression(C=0.1),
+        """
+        models = [LogisticRegression(C=1), LogisticRegression(C=0.1),
                   LogisticRegression(C=0.01), IdealPointModel(1),
                   IdealPointModel(2)]"""
-        """for k in [1, 2, 3, 4, 10]:
+        """
+        for k in [1, 2, 3, 4, 10]:
             for s in [1, 2]:
                 models.append(LCIPM(448, s, k))
 
