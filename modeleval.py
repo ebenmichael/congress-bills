@@ -62,9 +62,10 @@ def eval_models(models, interactions, membership=None, n_folds=5):
                 vb.run(model, interactions[train_idxs, :])
                 probs = model.predict_proba(interactions[test_idxs, :2])
             elif type(model) == LCIPM:
-                vb = VB(maxLaps=150, save=True, outdir="cv_estimates")
+                vb = VB(maxLaps=150)
                 # run variational inference
-                vb.run(model, (interactions[train_idxs, :], membership))
+                vb.run(model, (interactions[train_idxs, :], membership),
+                       save=True, outdir="cv_estimates")
                 probs = model.predict_proba(interactions[test_idxs, :2])
             # if comparing to the all yes model predict 1 for everything
             elif model == "yes":
