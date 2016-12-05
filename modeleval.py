@@ -133,5 +133,5 @@ if __name__ == "__main__":
 
         for sigma in [0.01, 0.1, 1, 100]:
             models.append(LCIPM(448, 2, 2, ip_prior_var=sigma))"""
-        models = [LCIPM(2, 2, ip_prior_var=0.1)]
+        models = ["yea", LCIPM(2, 10, ip_prior_var=0.1)]
         eval_and_save(models, interactions, membership=caucus, outdir=outdir)
