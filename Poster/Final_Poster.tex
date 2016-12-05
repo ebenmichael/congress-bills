@@ -1,0 +1,371 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jacobs Landscape Poster
+% LaTeX Template
+% Version 1.1 (14/06/14)
+%
+% Created by:
+% Computational Physics and Biophysics Group, Jacobs University
+% https://teamwork.jacobs-university.de:8443/confluence/display/CoPandBiG/LaTeX+Poster
+% 
+% Further modified by:
+% Nathaniel Johnston (nathaniel@njohnston.ca)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[final]{beamer}
+
+\usepackage[scale=1.24]{beamerposter} % Use the beamerposter package for laying out the poster
+
+\usetheme{confposter} % Use the confposter theme supplied with this template
+
+\setbeamercolor{block title}{fg=ngreen,bg=white} % Colors of the block titles
+\setbeamercolor{block body}{fg=black,bg=white} % Colors of the body of blocks
+\setbeamercolor{block alerted title}{fg=white,bg=dblue!70} % Colors of the highlighted block titles
+\setbeamercolor{block alerted body}{fg=black,bg=dblue!10} % Colors of the body of highlighted blocks
+% Many more colors are available for use in beamerthemeconfposter.sty
+
+%-----------------------------------------------------------
+% Define the column widths and overall poster size
+% To set effective sepwid, onecolwid and twocolwid values, first choose how many columns you want and how much separation you want between columns
+% In this template, the separation width chosen is 0.024 of the paper width and a 4-column layout
+% onecolwid should therefore be (1-(# of columns+1)*sepwid)/# of columns e.g. (1-(4+1)*0.024)/4 = 0.22
+% Set twocolwid to be (2*onecolwid)+sepwid = 0.464
+% Set threecolwid to be (3*onecolwid)+2*sepwid = 0.708
+
+\newlength{\sepwid}
+\newlength{\onecolwid}
+\newlength{\twocolwid}
+\newlength{\threecolwid}
+\setlength{\paperwidth}{48in} % A0 width: 46.8in
+\setlength{\paperheight}{36in} % A0 height: 33.1in
+\setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
+\setlength{\onecolwid}{0.22\paperwidth} % Width of one column
+\setlength{\twocolwid}{0.464\paperwidth} % Width of two columns
+\setlength{\threecolwid}{0.708\paperwidth} % Width of three columns
+\setlength{\topmargin}{-0.5in} % Reduce the top margin size
+%-----------------------------------------------------------
+
+\usepackage{graphicx}  % Required for including images
+\usepackage{subcaption}
+\usepackage{booktabs} % Top and bottom rules for tables
+
+\graphicspath{ {../figures/} }
+\input{stat-macros}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+
+\title{Latent Community Detection for Predicting Legislative Roll Call Votes} % Poster title
+
+\author{Elijahu Ben-Michael, Runjing Liu, Jake Soloff } % Author(s)
+
+\institute{Department of Statistics, UC Berkeley} % Institution(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
+\addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
+
+\setlength{\belowcaptionskip}{2ex} % White space under figures
+\setlength\belowdisplayshortskip{2ex} % White space under equations
+
+\begin{frame}[t] % The whole poster is enclosed in one beamer frame
+
+\begin{columns}[t] % The whole poster consists of three major columns, the second of which is split into two columns twice - the [t] option aligns each column's content to the top
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\onecolwid} % The first column
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVES
+%----------------------------------------------------------------------------------------
+
+\begin{alertblock}{Objectives}
+We analyze voting data in the House of Representatives in the 110th Congress (2007-2009). We extend a traditional ideal point model to incorporate caucus membership data via a stochastic block model. In doing so, we aim to 
+\begin{itemize}
+\item Use caucus membership data to infer latent communities among members
+\item Exploit this community structure to inform estimates for each representative's ideal point
+\item Predict a representative's voting behavior
+\end{itemize}
+
+\end{alertblock}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Motivation}
+%Simple dimensionality techniques on roll call votes enable visualization of the voting behavior among the representatives; these techniques are able to detect coarse patterns such as party affiliation. 
+%\begin{figure}[h]
+%  \centering
+%    \begin{subfigure}[b]{0.49\textwidth}
+%        \includegraphics[width=\textwidth]{NNMF_votes.jpg}
+%        \caption{}
+%        \label{fig:NNMF}
+%    \end{subfigure}
+%          \begin{subfigure}[b]{0.49\textwidth}
+%        \includegraphics[width=\textwidth]{PCA_votes}
+%        \caption{}
+%        \label{fig:PCA}
+%    \end{subfigure}
+%  \caption{(a) Nonnegative matrix factorization on the $448\times 1707$ matrix of roll call vote data (448 representatives, 1707 bills) (b) Principle component analysis on the roll call vote data}
+%\end{figure}
+We chose to model caucus membership because we found that caucus memberships influence legislative behavior. For example, the more caucuses two legislators share, the more likely they are to vote the same way on a bill. 
+
+\begin{figure}[h]
+  \centering
+        \includegraphics[width=\textwidth]{Caucus_vs_Votes.jpg}
+  %\caption{The distribution of agreement on bills as a function of the number of caucuses two representatives share. We see that the more caucuses people share, the more likely they are to agree on a bill. }
+         % \label{fig:VotesVsCaucus}
+\end{figure}
+
+
+Moreover, representing interactions among members of the House using an undirected graphical model, we found that subgraphs corresponding to caucuses were denser than the graph of the whole House. 
+
+
+\begin{figure}[h]
+  \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congressional_Black_Caucus.jpg}
+    \end{subfigure}
+          \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congr_Rural_Caucus.jpg}
+    \end{subfigure}
+        \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Rep_Study_Committee.jpg}
+    \end{subfigure}
+          \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congr_Prog_Caucus.jpg}
+    \end{subfigure}
+\caption{The connectivity is measured by the fraction of total edges present; connectivity of the whole House is 0.064}
+\end{figure}
+
+
+\end{block}
+
+%------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of the first column
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\twocolwid} % Begin a column which is two columns wide (column 2)
+
+\begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column
+
+\begin{column}{\onecolwid}\vspace{-.6in} % The first column within column 2 (column 2.1)
+
+%----------------------------------------------------------------------------------------
+%	THE MODEL
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Model}
+All ideal points $a_d,b_d,x_u$ live in $\R^S$, where $S$ is a free parameter and we assume $K$ latent communities
+\begin{itemize}
+\item Sample community proportions $\pi \sim \text{Dir}(\gamma 1_K)$ and each community's ideal point $\nu_k\sim \cn(\varpi, \sigma^2_\nu)$.
+\item Draw representative $u$'s community $M_u\simiid \text{Cat}(\pi)$ and ideal point $x_u\mid M_u = k, \nu \sim \cn(\nu_k,\sigma^2_x)$.
+\item Draw coexpression rates $P_{kl} \simiid \text{Gamma}(\lambda_0,\lambda_1)$.
+\item Observe the number of common caucuses $R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl})$.% shared by $u$ and $v$.
+\item Draw a discrimination $a_d \sim \cn(\eta_{a},\sigma^2_d)$ and a difficulty $b_d \sim \cn(\eta_{b},\sigma^2_d)$ for each bill $d$.
+\item Observe the votes $V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d)))$.
+\end{itemize}
+\end{block}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of column 2.1
+
+\begin{column}{\onecolwid}\vspace{-.6in} % The second column within column 2 (column 2.2)
+
+\begin{figure}
+\includegraphics[width=.8\linewidth]{lcipm2.png}
+\caption{Graphical model depiction of Latent Community Ideal Point Model (LC-IPM)}
+\end{figure}
+
+
+\end{column} % End of column 2.2
+
+\end{columns} % End of the split of column 2 - any content after this will now take up 2 columns width
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	RESULTS
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Results}
+
+
+\begin{table}
+\vspace{2ex}
+\begin{table}
+\begin{tabular}{c |c c |c |c}
+Model & $K$ & $S$ &  Acc & AUC\\ %$\sigma^2_x$&
+\hline
+\hline
+Logistic Reg & - & - & 78.340295 & 85.10542\\
+\hline
+IPM & - & 1  &  94.768623 & 98.418436\\
+IPM & - & 2  & 95.451139 & 98.997592\\
+\hline
+LC-IPM & 1 & 1 & 94.759033& 98.439207\\
+LC-IPM & 1 & 2  & 95.463571& 99.011618\\
+LC-IPM & 2 & 1  & 94.749798& 98.420599\\
+LC-IPM & 2 & 2  & 95.441016& 99.002679\\
+%LC-IPM & 3 & 1  & 94.713745& 98.400689\\
+%LC-IPM & 3 & 2  & 95.432136& 99.000409\\
+%LC-IPM & 4 & 1  & 94.806629& 98.454243\\
+%LC-IPM & 4 & 2  & 95.420414& 99.007798\\
+LC-IPM & 10 & 1  & 94.764538& 98.421727\\
+LC-IPM & 10 & 2  & 95.443324& 99.018565\\
+%\hline
+%LC-IPM & 2 & 2 & 0.01 & 95.265902& 98.957617\\
+%LC-IPM & 2 & 2 & 0.1 & 95.413843& 99.01655\\
+%LC-IPM & 2 & 2 & 100 & 95.426808& 98.99048\\
+\end{tabular}
+\end{table}
+
+\end{table}
+
+
+
+
+
+\begin{figure}[h]
+  \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Placeholder.jpg}
+        \caption{}
+        \label{fig:NNMF}
+    \end{subfigure}
+          \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Placeholder.jpg}
+        \caption{}
+        \label{fig:PCA}
+    \end{subfigure}
+  \caption{figure caption}
+\end{figure}
+
+Nunc tempus venenatis facilisis. Curabitur suscipit consequat eros non porttitor. Sed a massa dolor, id ornare enim:
+
+
+\end{block}
+
+
+\end{column} % End of the second column
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\onecolwid} % The third column
+
+%----------------------------------------------------------------------------------------
+%	Variational Inference
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Variational Inference}
+Upon observing vote behavior $V = (V_{ud})$ and caucuses $R = (R_{uv})$, computing the posterior distribution of the latent variables given the observations is intractable. We employ {\sl mean field variational inference}, finding the distribution $q$ which factorizes over the latent variables closest in KL divergence to the posterior. Since the graphical model for LC-IPM joins SBM and IPM via one edge, this composabiity and the mean field factorization implies that variational updates for $\pi, P, a_d$, and $b_d$ do not change from their respective updates in SBM and IPM, and we exploited this modularity in our implementation. 
+\end{block}
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Conclusion}
+
+Nunc tempus venenatis facilisis. \textbf{Curabitur suscipit} consequat eros non porttitor. Sed a massa dolor, id ornare enim. Fusce quis massa dictum tortor \textbf{tincidunt mattis}. Donec quam est, lobortis quis pretium at, laoreet scelerisque lacus. Nam quis odio enim, in molestie libero. Vivamus cursus mi at \textit{nulla elementum sollicitudin}.
+
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	Future Directions
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Future Directions}
+By incorporating caucus data, we were able to place more informative priors on the representatives ideal points. On the other hand, we may also wish to place similarly informed priors on a bill's difficulty and discrimination. Following the example of Gerrish and Blei 2011, one may apply {\itshape supervised topic modeling} and infer the latent topics in a bill from a bill's text; these latent topics then generate a bill's difficulty and discrimination. 
+
+
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\begin{block}{References}
+
+%\nocite{*} % Insert publications even if they are not cited in the poster
+%\small{\bibliographystyle{unsrt}
+%\bibliography{bibliography}\vspace{0.75in}}
+\small{
+
+\noindent[1] Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\itshape Foundations and Trends in Machine Learning}. \\
+
+\noindent[2] Gerrish, S. M. \& Blei, D. M. (2011). Predicting legislative roll calls from text. {\itshape Proceedings of the 28th International Conference on Machine Learning}. \\
+
+\noindent[3] Blei, D. M., Kucukelbir, A. and McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
+}
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+%\setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
+%
+%\begin{block}{Acknowledgements}
+%
+%\small{\rmfamily{Nam mollis tristique neque eu luctus. Suspendisse rutrum congue nisi sed convallis. Aenean id neque dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.}} \\
+%
+%\end{block}
+
+%----------------------------------------------------------------------------------------
+%	CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\setbeamercolor{block alerted title}{fg=black,bg=norange} % Change the alert block title colors
+%\setbeamercolor{block alerted body}{fg=black,bg=white} % Change the alert block body colors
+%
+%\begin{alertblock}{Contact Information}
+%
+%\begin{itemize}
+%\item Web: \href{http://www.university.edu/smithlab}{http://www.university.edu/smithlab}
+%\item Email: \href{mailto:john@smith.com}{john@smith.com}
+%\item Phone: +1 (000) 111 1111
+%\end{itemize}
+%
+%\end{alertblock}
+
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[width=.4\linewidth]{berkeleylogo.jpg} 
+\end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of the third column
+
+\end{columns} % End of all the columns in the poster
+
+\end{frame} % End of the enclosing frame
+
+\end{document}
