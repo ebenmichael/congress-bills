@@ -61,19 +61,19 @@ class StochasticBlockModel(AbstractModel):
         for k in range(self.C):
             for l in range(self.C):
                 Nkl[k,l] -= np.dot(resp[:,k],resp[:,l])
-        """for k in range(self.C):
-            Nkl[k, k] *= 2"""
         SS['N_kl_full'] = Nkl
 
         Skl = np.zeros((C,C))
         for k in xrange(C):
             for l in xrange(C):
+                """
                 for u in xrange(U):
                     for v in xrange(U):
                         if u != v:
                             Skl[k,l] += resp[u,k]*resp[v,l]*Data[u,v]
-        """for k in range(self.C):
-            Skl[k, k] *= 2"""
+                """
+                zz = np.outer(resp[:,k],resp[:,l]) * Data
+                Skl[k,l] = np.sum(zz) - np.sum(zz*np.eye(U))
         SS['S_kl_full'] = Skl
         self.SS = SS
 
@@ -163,8 +163,8 @@ class RespNode(AbstractNode):
         resp = np.random.random((U,C))
         for u in range(U):
             resp[u,:] /= np.sum(resp[u,:])
-        last_row = np.zeros(C)
-        last_row[0] = 1
+        #last_row = np.zeros(C)
+        #last_row[0] = 1
         #resp[-1,:] = last_row
         self.resp = resp
 
@@ -198,11 +198,19 @@ class RespNode(AbstractNode):
 
         for u in range(U):
             for k in range(C):
+                """
                 for l in range(C):
                     for v in range(U):
                         if v != u:
-                            logresp_[u,k] += resp[v,l] * (Data[u,v] * ElogP[k,l] \
-                                                          - EP[k,l])
+                            logresp_[u,k] += resp[v,l] * (Data[u,v] * ElogP[k,l] - EP[k,l])
+                """
+                # EP[k]     1xC
+                # ElogP[k]  1xC
+                # resp      UxC
+                # Data[u,:] 1xU
+                # zz        UxC (should be)
+                zz = resp * (np.outer(Data[u,:],ElogP[k,:]) - np.tile(EP[k,:,None],U).T) # kronecker product
+                logresp_[u,k] = np.sum(zz) - np.sum(zz[u]) 
                 if self.model_type == "LCIPM":
                     # check that the user is in the interaction data
                     # if it is then do the lcipm update
@@ -222,7 +230,6 @@ class RespNode(AbstractNode):
         for u in range(U):
             resp_[u,:]     = np.exp(logresp_[u,:] - np.max(logresp_[u,:]))
             resp_[u,:]    /= np.sum(resp_[u,:])
-        #resp_[-1, :] = resp[-1, :]
         return resp_
 
     def calc_elbo(self):
