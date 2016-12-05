@@ -374,9 +374,11 @@ The factorization for $q$ is the same, with one more factor $q(\nu) = \prod_kq(\
 In particular, the gradient of the ELBO w.r.t. the responsibility $\widehat r_{uk}$ is
 \begin{align*}
 0 
-&= \pderiv{\cl_\text{SBM}}{\widehat r_{uk}} + \pderiv{\cl_x}{\widehat r_{uk}} \\
-&= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \sum_{l} S_{ul}\left(\EE_q[\log P_{kl}] + \EE_q[\log P_{lk}]\right) - N_l\left(\EE_q[P_{kl}] + \EE_q[P_{lk}]\right)\\
-&~~~+ \left(-\frac{1}{2\sigma^2_x}\left(S(\widehat\sigma^2_\tau + \widehat\sigma^2_\mu) - \|\widehat\tau_u - \widehat\mu_k\|^2\right)\right) + \EE_q\left[\log \phi(x_u|\nu_k)\right]
+&= \pderiv{\cl_\text{SBM}}{\widehat r_{uk}} + \pderiv{\cl_x}{\widehat r_{uk}} 
+= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \EE_q\left[\log \phi(x_u|\nu_k)\right] \\
+&~~~+\sum_{v\neq u} \sum_l \widehat r_{vl}\left(R_{uv}\EE_q[\log P_{kl}] - \EE_q[P_{kl}]\right)
+%&~~~+ \sum_{l} S_{ul}\left(\EE_q[\log P_{kl}] + \EE_q[\log P_{lk}]\right) - N_l\left(\EE_q[P_{kl}] + \EE_q[P_{lk}]\right)
+%&~~~+ \left(-\frac{1}{2\sigma^2_x}\left(S(\widehat\sigma^2_\tau + \widehat\sigma^2_\mu) - \|\widehat\tau_u - \widehat\mu_k\|^2\right)\right) 
 \end{align*}
 so the update is
 $$
