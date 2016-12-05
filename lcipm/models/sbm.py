@@ -133,6 +133,7 @@ class RespNode(AbstractNode):
 
         # assume that the model type is StochasticBlockModel
         self.model_type = "StochasticBlockModel"
+        self.resp = None
 
     def assign_data(self, data):
         """Give the node whatever data it needs"""
@@ -169,7 +170,7 @@ class RespNode(AbstractNode):
 
     def vi_update(self):
         """Update variational parameters"""
-        if not(hasattr(self,'resp')):
+        if self.resp is None:
             self.init_v_params()
             return
         resp = self.resp

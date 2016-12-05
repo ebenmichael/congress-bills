@@ -53,4 +53,10 @@ class VB(object):
             if lap % save_every == 0 and save and outdir is not None:
                 print("Saving model")
                 model.save(outdir + "_lap_" + str(lap))
+            if np.isnan(elbo):
+                print("Got nans, restarting")
+                model.init_v_params()
+                model.resp_node.resp = None
+                outdir = outdir + "_afternan"
+                lap = 0
         return(self.ELBO, self.isConverged)
