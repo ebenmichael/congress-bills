@@ -60,7 +60,9 @@ class StochasticBlockModel(AbstractModel):
         Nkl = np.outer(Nk,Nk) 
         for k in range(self.C):
             for l in range(self.C):
-                Nkl[k,l] -= np.dot(resp[:,k],resp[:,l]) 
+                Nkl[k,l] -= np.dot(resp[:,k],resp[:,l])
+        """for k in range(self.C):
+            Nkl[k, k] *= 2"""
         SS['N_kl_full'] = Nkl
 
         Skl = np.zeros((C,C))
@@ -70,6 +72,8 @@ class StochasticBlockModel(AbstractModel):
                     for v in xrange(U):
                         if u != v:
                             Skl[k,l] += resp[u,k]*resp[v,l]*Data[u,v]
+        """for k in range(self.C):
+            Skl[k, k] *= 2"""
         SS['S_kl_full'] = Skl
         self.SS = SS
 
@@ -158,6 +162,9 @@ class RespNode(AbstractNode):
         resp = np.random.random((U,C))
         for u in range(U):
             resp[u,:] /= np.sum(resp[u,:])
+        last_row = np.zeros(C)
+        last_row[0] = 1
+        #resp[-1,:] = last_row
         self.resp = resp
 
     def vi_update(self):
@@ -214,6 +221,7 @@ class RespNode(AbstractNode):
         for u in range(U):
             resp_[u,:]     = np.exp(logresp_[u,:] - np.max(logresp_[u,:]))
             resp_[u,:]    /= np.sum(resp_[u,:])
+        #resp_[-1, :] = resp[-1, :]
         return resp_
 
     def calc_elbo(self):
