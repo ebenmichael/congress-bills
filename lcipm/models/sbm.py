@@ -207,7 +207,7 @@ class RespNode(AbstractNode):
                         cmean_v_mean = self.cmean_node.v_mean[k, :]
                         p = -1 / (2 * varx)
                         s = ip_dim * (ip_v_var + cmean_v_var)
-                        s -= np.sum((ip_v_mean - cmean_v_mean) ** 2)
+                        s += np.sum((ip_v_mean - cmean_v_mean) ** 2)
                         s2 = -np.log(2 * np.pi * varx) * ip_dim / 2
                         logresp_[u, k] += s2 + p * s
             logresp_[u,:] += ElogPi

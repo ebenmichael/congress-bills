@@ -28,7 +28,12 @@
 
 \usepackage{subcaption}
 
+<<<<<<< HEAD
 \title{Latent Community Detection for Predicting Legislative Roll Call Votes}
+=======
+\title{Latent Community Detection \\
+for Predicting Legislative Roll Call Votes}
+>>>>>>> 378c118293867be7036214b5f2f4d8cfe1272828
 
 % The \author macro works with any number of authors. There are two
 % commands used to separate the names and addresses of multiple
@@ -167,7 +172,18 @@ Moreover, figure \ref{fig:Nhood_Caucus} shows the relationship between represent
 
 \subsection{Stochastic Block Models}
 
-A
+
+
+\begin{figure}[h]
+  \centering
+        \includegraphics[width=15em]{lcipm2.png}
+  \caption{Graphical model for LC-IPM. Left: ideal point model. Right: stochastic block model.}
+      \label{fig:pgm}
+\end{figure}
+
+
+
+\newpage
 
 \section{Inference}
 \label{inference}
@@ -203,7 +219,14 @@ A
 
 \small
 
+
 [1] Gerrish, S.M.\ \& Blei, D.M. \ (2011) Predicting Legislative Roll Calls from Text. {\it Proceedings of the 28th International Conference on Machine Learning}
+\noindent[1] Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. \\
+
+\noindent[2] Gerrish, S. M. \& Blei, D. M.  (2011). Predicting legislative roll calls from text. {\it Proceedings of the 28th International Conference on Machine Learning}. \\
+
+\noindent[3] Blei, D. M., Kucukelbir, A. \& McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
+
 
 \appendix
 
@@ -373,9 +396,11 @@ The factorization for $q$ is the same, with one more factor $q(\nu) = \prod_kq(\
 In particular, the gradient of the ELBO w.r.t. the responsibility $\widehat r_{uk}$ is
 \begin{align*}
 0 
-&= \pderiv{\cl_\text{SBM}}{\widehat r_{uk}} + \pderiv{\cl_x}{\widehat r_{uk}} \\
-&= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \sum_{l} S_{ul}\left(\EE_q[\log P_{kl}] + \EE_q[\log P_{lk}]\right) - N_l\left(\EE_q[P_{kl}] + \EE_q[P_{lk}]\right)\\
-&~~~+ \left(-\frac{1}{2\sigma^2_x}\left(S(\widehat\sigma^2_\tau + \widehat\sigma^2_\mu) - \|\widehat\tau_u - \widehat\mu_k\|^2\right)\right) + \EE_q\left[\log \phi(x_u|\nu_k)\right]
+&= \pderiv{\cl_\text{SBM}}{\widehat r_{uk}} + \pderiv{\cl_x}{\widehat r_{uk}} 
+= -\log \widehat r_{uk} - 1 + \EE_q\left[\log \pi_k\right] + \EE_q\left[\log \phi(x_u|\nu_k)\right] \\
+&~~~+\sum_{v\neq u} \sum_l \widehat r_{vl}\left(R_{uv}\EE_q[\log P_{kl}] - \EE_q[P_{kl}]\right)
+%&~~~+ \sum_{l} S_{ul}\left(\EE_q[\log P_{kl}] + \EE_q[\log P_{lk}]\right) - N_l\left(\EE_q[P_{kl}] + \EE_q[P_{lk}]\right)
+%&~~~+ \left(-\frac{1}{2\sigma^2_x}\left(S(\widehat\sigma^2_\tau + \widehat\sigma^2_\mu) - \|\widehat\tau_u - \widehat\mu_k\|^2\right)\right) 
 \end{align*}
 so the update is
 $$

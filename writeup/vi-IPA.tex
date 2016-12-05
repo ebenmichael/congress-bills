@@ -371,5 +371,39 @@ These give the updates for a single document response pair. Having updated $\gam
 
 \subsection{Stochastic Block Models} 
 
+
+\newpage
+
+
+%\noindent Latent Community-Ideal Point Model
+
+\begin{itemize}
+\item Sample community proportions $\pi \sim \text{Dir}(\gamma 1_K)$ and each community's ideal point $\nu_k\sim \cn(\varpi, \sigma^2_\nu)$.
+\item Draw representative $u$'s community $M_u\simiid \text{Cat}(\pi)$ and ideal point $x_u\mid M_u = k, \nu \sim \cn(\nu_k,\sigma^2_x)$.
+\item Draw coexpression rates $P_{kl} \simiid \text{Gamma}(\lambda_0,\lambda_1)$.
+\item Observe the number of caucuses $R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl})$ shared by $u$ and $v$.
+\item Draw a discrimination $a_d \sim \cn(\eta_{a},\sigma^2_d)$ and a difficulty $b_d \sim \cn(\eta_{b},\sigma^2_d)$ for each bill $d$.
+\item Observe the votes $V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d)))$.
+\end{itemize}
+
+
+\section{Posterior Inference}
+
+Upon observing vote behavior $V = (V_{ud})$ and caucuses $R = (R_{uv})$, computing the posterior distribution of the latent variables given the observations is intractable. We employ {\sl mean field variational inference}, finding the distribution $q$ which factorizes over the latent variables closest in KL divergence to the posterior. 
+
+
+~\\~\\
+\noindent[1] Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. \\
+
+\noindent[2] Gerrish, S. M. \& Blei, D. M. (2011). Predicting legislative roll calls from text. {\it Proceedings of the 28th International Conference on Machine Learning}. \\
+
+\noindent[3] Blei, D. M., Kucukelbir, A. and McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
+
+
+
+
+
+
+
 \end{document}
 
