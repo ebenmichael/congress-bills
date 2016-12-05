@@ -22,8 +22,8 @@ def run_lcipm(interactions, caucus, dim, n_communities,
                      ip_prior_var=var_x)
     # fit with variational inference
     vb = VB.VB(maxLaps=30)
-    vb.run(lc, (interactions, caucus), save=True, outdir=outdir)
-    return(lc)
+    elbo, _ = vb.run(lc, (interactions, caucus), save=True, outdir=outdir)
+    return(lc, elbo)
 
 
 if __name__ == "__main__":
@@ -33,12 +33,16 @@ if __name__ == "__main__":
     else:
         interactions = np.loadtxt(sys.argv[1])
         caucus = np.loadtxt(sys.argv[2])
+        caucus = np.dot(caucus, caucus.T)
         dim = int(sys.argv[3])
         n_communities = int(sys.argv[4])
         var_x = float(sys.argv[5])
         outdir = sys.argv[6]
 
-        lc = run_lcipm(interactions, caucus, dim, n_communities, var_x, outdir)
+        lc, elbo = run_lcipm(interactions, caucus, dim, n_communities,
+                             var_x, outdir)
         # save lc
         lc.save(os.path.join(outdir, "lcipm_" + str(dim) + "_"
                              + str(n_communities) + "_" + str(var_x)))
+        # save elbo
+        np.savetxt(os.path.join(outdir, "elbo.dat"), np.array(elbo))
