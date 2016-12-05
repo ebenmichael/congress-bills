@@ -56,17 +56,15 @@ class GaussianNode(AbstractNode):
     def assign_data(self, data):
         """Give the node relevant data"""
         self.data = data
+        self.n_items = max(data) + 1
 
     def get_v_params(self):
         """Return the variational parameters"""
         return([self.v_mean, self.v_var])
 
-    def init_v_params(self, n_items):
-        """Initialize the naive mean field variational parameters
-        Args:
-            n_items: int, total number of items (bills/documents/users/etc.)
-        """
-        self.n_items = n_items
+    def init_v_params(self):
+        """Initialize the naive mean field variational parameters"""
+        n_items = self.n_items
         self.v_mean = np.random.randn(n_items, self.dim) / 10
         self.v_var = 1.0
 

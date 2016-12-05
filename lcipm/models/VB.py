@@ -15,11 +15,15 @@ class VB(object):
         self.tol = tol
         self.isConverged = False
 
-    def run(self, model, data):
+    def run(self, model, data, save=False, outdir=None, save_every=10):
         """Run variational inference. Updates model in place
         Args:
             model: AbstractModel, model to update in place
             data: ndarray, tuple of ndarrays, data to fit model on
+            save: bool, whether to save the models while running VB, 
+                  defaults to False
+            outdir: string, where to save model, defaults to None
+            save_every: int, number of laps to run before saving
         Returns:
             ELBO: list, trace of ELBO values
             isConverged: bool, whether the ELBO converged
@@ -46,4 +50,7 @@ class VB(object):
             lap += 1
             prevELBO = elbo
             print(lap, elbo)
+            if lap % save_every == 0 and save and outdir is not None:
+                print("Saving model")
+                model.save(outdir + "_lap_" + str(lap))
         return(self.ELBO, self.isConverged)

@@ -11,18 +11,18 @@ from .abstractmodel import AbstractModel
 from .modelnodes import AbstractNode
 from copy import deepcopy as copy
 from six.moves import xrange
+import os
 
 
 class StochasticBlockModel(AbstractModel):
 
-    def __init__(self, u, c, lam_prior=(1.0, 1.0), gam_prior=1.0):
+    def __init__(self, c, lam_prior=(1.0, 1.0), gam_prior=1.0):
         """Constructor"""
-        self.U = u
         self.C = c
-        self.resp_node = RespNode((u, c))
-        self.rate_node = RateNode((u, c), lam_prior)
-        self.prop_node = PropNode((u, c), gam_prior)
-        
+        self.resp_node = RespNode(c)
+        self.rate_node = RateNode(c, lam_prior)
+        self.prop_node = PropNode(c, gam_prior)
+
         # point the nodes to the other nodes
         self.resp_node.assign_params(self.rate_node, self.prop_node)
         self.rate_node.assign_params(self.resp_node)
@@ -40,6 +40,7 @@ class StochasticBlockModel(AbstractModel):
         self.data = data
         for node in self.local_parameters:
             self.nodes[node].assign_data(data)
+        self.U = data.shape[0]
 
     def init_v_params(self):
         """Initialize variational parameters"""
@@ -105,35 +106,26 @@ class StochasticBlockModel(AbstractModel):
                               (lam_post[0,k,l] / log(lam_post[1,k,l]))
         return np.sum(elbo)
 
-    ## evaluate the evidence lower bound -- need to transfer this to nodes
-    def calcELBO(self, Data, SS, LP):
-        C = self.C
-        elbo  = np.zeros((C,C))
-        Post  = self.Post
-        Prior = self.Prior
-        
-        elbo += Prior.lambd[0]*log(Prior.lambd[1]) - Post.lam0*log(Post.lam1) \
-                                         - loggamma(Prior.lambd[0]) \
-                                         + loggamma(Post.lam0)
-        elbo += (SS.S_kl_full[k,l] + Prior.lambd[0] - Post.lam0[k,l])* \
-                (digamma(Post.lam0[k,l]) - log(Post.lam1[k,l]))
-        elbo -= (SS.N_kl_full[k,l] + Prior.lambd[1] - Post.lam1[k,l])* \
-                (Post.lam0[k,l] / log(Post.lam1[k,l]))
-        ElogPi = E_log_pi(Post.gamma) 
-
-        # contributions to the ELBO in order: L_data, L_ent, L_local, L_global
-        return np.sum(elbo) \
-                + SS.H \
-                + np.dot(ElogPi,SS.N_k_full) \
-                + loggamma(Prior.gamma*C) - C*loggamma(Prior.gamma) \
-                + np.sum(loggamma(Post.gamma)) - loggamma(np.sum(Post.gamma)) \
-                - np.dot(ElogPi,Prior.gamma-Post.gamma)
+    def save(self, outdir):
+        """Save model parameters
+        Args:
+            outdir: string, outdir to write to
+        """
+        # responsibilities
+        np.savetxt(os.path.join(outdir, "responsibility.dat"),
+                   self.resp_node.resp)
+        # proportions
+        np.savetxt(os.path.join(outdir, "proportion.dat"),
+                   self.prop_node.post)
+        # rates
+        np.savetxt(os.path.join(outdir, "coexp_rate.dat"),
+                   self.rate_node.post.flatten())
 
 
 class RespNode(AbstractNode):
 
-    def __init__(self, dim):
-        self.dim = dim
+    def __init__(self, n_communities):
+        self.n_communities = n_communities
 
         # assume that the model type is StochasticBlockModel
         self.model_type = "StochasticBlockModel"
@@ -141,6 +133,7 @@ class RespNode(AbstractNode):
     def assign_data(self, data):
         """Give the node whatever data it needs"""
         self.data = data
+        self.n_users = data.shape[0]
 
     def assign_params(self, rate_node, prop_node):
         self.rate_node = rate_node
@@ -161,7 +154,7 @@ class RespNode(AbstractNode):
 
     def init_v_params(self):
         """Initialize the variational parameters"""
-        U, C = self.dim
+        U, C = self.n_users, self.n_communities
         resp = np.random.random((U,C))
         for u in range(U):
             resp[u,:] /= np.sum(resp[u,:])
@@ -183,7 +176,7 @@ class RespNode(AbstractNode):
         self.resp = resp
 
     def updateResp(self):
-        U,C  = self.dim
+        U,C  = self.n_users, self.n_communities
         Data = self.data
         resp = self.resp
 
@@ -203,17 +196,20 @@ class RespNode(AbstractNode):
                             logresp_[u,k] += resp[v,l] * (Data[u,v] * ElogP[k,l] \
                                                           - EP[k,l])
                 if self.model_type == "LCIPM":
-                    varx = self.ip_node.prior_var
-                    ip_dim = self.ip_node.dim
-                    ip_v_var = self.ip_node.v_var
-                    ip_v_mean = self.ip_node.v_mean[u, :]
-                    cmean_v_var = self.cmean_node.v_var
-                    cmean_v_mean = self.cmean_node.v_mean[k, :]
-                    p = -1 / (2 * varx)
-                    s = ip_dim * (ip_v_var + cmean_v_var)
-                    s -= np.sum((ip_v_mean - cmean_v_mean) ** 2)
-                    s2 = -np.log(2 * np.pi * varx) * ip_dim / 2
-                    logresp_[u, k] += s2 + p * s
+                    # check that the user is in the interaction data
+                    # if it is then do the lcipm update
+                    if u in self.ip_node.data:
+                        varx = self.ip_node.prior_var
+                        ip_dim = self.ip_node.dim
+                        ip_v_var = self.ip_node.v_var
+                        ip_v_mean = self.ip_node.v_mean[u, :]
+                        cmean_v_var = self.cmean_node.v_var
+                        cmean_v_mean = self.cmean_node.v_mean[k, :]
+                        p = -1 / (2 * varx)
+                        s = ip_dim * (ip_v_var + cmean_v_var)
+                        s -= np.sum((ip_v_mean - cmean_v_mean) ** 2)
+                        s2 = -np.log(2 * np.pi * varx) * ip_dim / 2
+                        logresp_[u, k] += s2 + p * s
             logresp_[u,:] += ElogPi
         for u in range(U):
             resp_[u,:]     = np.exp(logresp_[u,:] - np.max(logresp_[u,:]))
@@ -231,11 +227,12 @@ class RespNode(AbstractNode):
 
         return H + np.dot(ElogPi,Nk)
 
+
 class RateNode(AbstractNode):
 
-    def __init__(self, dim, lam_prior):
-        self.dim   = dim
+    def __init__(self, n_communities, lam_prior):
         self.prior = lam_prior
+        self.n_communities = n_communities
 
     def assign_data(self):
         """Give the node whatever data it needs"""
@@ -254,7 +251,7 @@ class RateNode(AbstractNode):
 
     def vi_update(self, SS):
         """Update variational parameters"""
-        C = self.dim[1]
+        C = self.n_communities
         self.post = np.zeros((2,C,C))
         self.post[0,:,:] = self.prior[0] + SS['S_kl_full']
         self.post[1,:,:] = self.prior[1] + SS['N_kl_full']
@@ -263,11 +260,12 @@ class RateNode(AbstractNode):
         """Compute the contribution to elbo from prior/entropy"""
         return 0.
 
+
 class PropNode(AbstractNode):
 
-    def __init__(self, dim, gam_prior):
-        self.dim   = dim
+    def __init__(self, n_communities, gam_prior):
         self.prior = gam_prior
+        self.n_communities = n_communities
 
     def assign_data(self):
         """Give the node whatever data it needs"""
@@ -290,7 +288,7 @@ class PropNode(AbstractNode):
 
     def calc_elbo(self):
         """Compute the contribution to elbo from prior/entropy"""
-        _, C = self.dim
+        C = self.n_communities
         ElogPi = digamma(self.post) - digamma(np.sum(self.post))
         elbo = 0.
         elbo += loggamma(self.prior*C) - C*loggamma(self.prior) \

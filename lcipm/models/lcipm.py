@@ -8,6 +8,7 @@ from .idealpoint import IdealPointModel
 from .sbm import StochasticBlockModel
 from .modelnodes import AbstractNode
 from collections import defaultdict
+import os
 
 
 class CommunityMeanNode(AbstractNode):
@@ -93,12 +94,11 @@ class CommunityMeanNode(AbstractNode):
 class LCIPM(IdealPointModel, StochasticBlockModel):
     """Latent Community Ideal Point Model"""
 
-    def __init__(self, n_users, dim, n_communities, **kwargs):
+    def __init__(self, dim, n_communities, **kwargs):
         """Constructor. Calls initializations from IdealPointModel and
            StochasticBlockModel and changes IdealPointNode and
            ResponsibilityNode.
         Args:
-            n_users: int, number of users
             dim: int, dimension of ideal points
             n_communities: int, number of communities in model
             **kwargs: key word arguments for IdealPointModel specifying
@@ -111,7 +111,7 @@ class LCIPM(IdealPointModel, StochasticBlockModel):
         # initialize Ideal Point Model
         IdealPointModel.__init__(self, dim, **kwargs)
         # initialize stochastic block model
-        StochasticBlockModel.__init__(self, n_users, n_communities)
+        StochasticBlockModel.__init__(self, n_communities)
 
         # point ip_node and resp_node to the community means
         self.ip_node.assign_lcipm_params(self.cmean_node, self.resp_node)
@@ -165,6 +165,7 @@ class LCIPM(IdealPointModel, StochasticBlockModel):
         # assign data for stochastic block model
         self.data = data[1]
         self.resp_node.assign_data(self.data)
+        self.U = data[1].shape[0]
 
     def init_v_params(self):
         """Initialize variational parameters"""
@@ -183,3 +184,18 @@ class LCIPM(IdealPointModel, StochasticBlockModel):
     def calc_SS(self):
         """Compute the sufficient statistics"""
         return(StochasticBlockModel.calc_SS(self))
+
+    def save(self, outdir):
+        """Save model parameters
+        Args:
+            outdir: string, outdir to write to
+        """
+        if not os.path.exists(outdir):
+            os.makedirs(outdir)
+        IdealPointModel.save(self, outdir)
+        StochasticBlockModel.save(self, outdir)
+        # community means
+        np.savetxt(os.path.join(outdir, "community_mean.dat"),
+                   self.cmean_node.v_mean)
+        np.savetxt(os.path.join(outdir, "community_var.dat"),
+                   np.array([self.cmean_node.v_var]))

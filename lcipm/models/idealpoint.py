@@ -8,6 +8,7 @@ from . import math_utils
 from collections import defaultdict
 from .modelnodes import GaussianNode
 from .abstractmodel import AbstractModel
+import os
 
 
 class DiscNode(GaussianNode):
@@ -523,12 +524,10 @@ class IdealPointModel(AbstractModel):
 
     def init_v_params(self):
         """Initialize variational parameters"""
-        n_unique_items = len(self.bill_data)
-        n_unique_users = len(self.user_data)
 
-        self.disc_node.init_v_params(n_unique_items)
-        self.diff_node.init_v_params(n_unique_items)
-        self.ip_node.init_v_params(n_unique_users)
+        self.disc_node.init_v_params()
+        self.diff_node.init_v_params()
+        self.ip_node.init_v_params()
 
     def calc_data_elbo(self):
         """Compte the part of the EBLO that comes from the likelihood"""
@@ -605,3 +604,24 @@ class IdealPointModel(AbstractModel):
 
         vote = (self.predict_proba(interaction) > threshold) * 1
         return(vote)
+
+    def save(self, outdir):
+        """Save model parameters
+        Args:
+            outdir: string, outdir to write to
+        """
+        # ideal points
+        np.savetxt(os.path.join(outdir, "ideal_point_mean.dat"),
+                   self.ip_node.v_mean)
+        np.savetxt(os.path.join(outdir, "ideal_point_var.dat"),
+                   np.array([self.ip_node.v_var]))
+        # discriminations
+        np.savetxt(os.path.join(outdir, "disc_mean.dat"),
+                   self.disc_node.v_mean)
+        np.savetxt(os.path.join(outdir, "disc_var.dat"),
+                   np.array([self.disc_node.v_var]))
+        # difficulties
+        np.savetxt(os.path.join(outdir, "diff_mean.dat"),
+                   self.diff_node.v_mean)
+        np.savetxt(os.path.join(outdir, "diff_var.dat"),
+                   np.array([self.diff_node.v_var]))
