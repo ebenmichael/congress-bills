@@ -10,7 +10,7 @@
 % \usepackage{nips_2016}
 
 % to compile a camera-ready version, add the [final] option, e.g.:
-\usepackage[final]{nips_2016}
+\usepackage[final,nonatbib]{nips_2016}
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
@@ -89,6 +89,7 @@
 
 \section{Introduction}
 \label{introduction}
+\cite{GerrishBlei2011}
 Voting records of legislators are commonly analyzed by political scientists to examine relationships between legislator political leanings, institutional structures, and legislative outcomes (Clinton et al 2004). For example, even simple dimensionality reduction techniques on voting data are able to uncover the political characteristics of individual legislators  such as party affiliation (Figure \ref{fig:NNMF}). \par
 
 
@@ -226,20 +227,29 @@ Therefore, this strongly motivates taking into account interactions among the re
 \newpage
 
 
-\section*{References}
 
-\medskip
+%[1] Gerrish, S.M.\ \& Blei, D.M. \ (2011) Predicting Legislative Roll Calls from Text. {\it Proceedings of the 28th International Conference on Machine Learning}
+%\noindent[1] Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. \\
+%
+%\noindent[2] Gerrish, S. M. \& Blei, D. M.  (2011). Predicting legislative roll calls from text. {\it Proceedings of the 28th International Conference on Machine Learning}. \\
+%
+%\noindent[3] Blei, D. M., Kucukelbir, A. \& McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
 
-\small
+\begin{thebibliography}{10}
 
+\bibitem{Blei2016} Blei, D. M., Kucukelbir, A. \& McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
 
-[1] Gerrish, S.M.\ \& Blei, D.M. \ (2011) Predicting Legislative Roll Calls from Text. {\it Proceedings of the 28th International Conference on Machine Learning}
-\noindent[1] Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. \\
+\bibitem{Braun2010} Braun, M. \& McAuliffe, J. (2010). Variational inference for large-scale models of discrete choice. {\itshape Journal of the American Statistical Association}. 105(489): 324-334. 
 
-\noindent[2] Gerrish, S. M. \& Blei, D. M.  (2011). Predicting legislative roll calls from text. {\it Proceedings of the 28th International Conference on Machine Learning}. \\
+\bibitem{Clinton2004} Clinton, J., Jackman, S. \& Rivers D. (2004). The statistical analysis of roll call data. {\itshape American Political Science Review}. 98(2): 353-370. 
 
-\noindent[3] Blei, D. M., Kucukelbir, A. \& McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
+\bibitem{Gerrish2011} Gerrish, S.M. \& Blei, D.M. (2011) Predicting legislative roll calls from text. {\it Proceedings of the 28th International Conference on Machine Learning}.
 
+\bibitem{Hastie2015} Hastie, T. J., Tibshirani, R. \& Wainwright, M. J. (2015). Statistical learning with sparsity: the Lasso and generalizations. {\itshape CRC Press}. 
+
+\bibitem{Wainwright2008} Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. 
+
+\end{thebibliography}
 
 \appendix
 
