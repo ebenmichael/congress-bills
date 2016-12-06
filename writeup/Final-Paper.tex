@@ -45,7 +45,7 @@
 % author name.
 
 \author{
-  Elijahu Ben-Michael \\
+  Eli Ben-Michael \\
   Department of Statistics\\
   UC Berkeley
   %% examples of more authors
@@ -218,8 +218,97 @@ We relate the ideal points $x_u$ of IPM to the relational data $(R_{uv})$ using 
 
 \newpage
 
-\section{Results}
+\section{Empirical Results}
 \label{results}
+To evaluate the performance of LC-IPM we attempted to recover known model parameters from simulated data; we also evaluated the model's predictive performance on data from the 110\textsuperscript{th} congress. For the following results we implemented CAVI for LC-IPM in Python \footnote{Implementation can be found at \url{www.github.com/ebenmichael/congress-bills}}
+\subsection{Simulated Data}
+\begin{figure}[h]
+  \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{toy_elbos.png}
+        \caption{}
+    \end{subfigure}
+          \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{toy_ip_mse.png}
+        \caption{}
+    \end{subfigure}
+        \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{toy_resp_mse.png}
+        \caption{}
+    \end{subfigure}
+  \caption{(a) ELBO (b) MSE between posterior mean ideal points and true ideal points and (c) Brier score between posterior mean community assignments and true assignments vs number of CAVI iterations on simulated data for 5 random data sets generated from the model}
+      \label{fig:toy_results}
+\end{figure}
+
+To ensure that CAVI produces reasonable posterior inferences, we sampled vote interactions and caucus co-membership counts from the generative model and compared the true model parameters to the naive mean field approximation. We generated 50 representatives, 500 documents, and two communities, using one dimensional ideal points and ran the CAVI routine for 35 iterations. To evaluate convergence we output the ELBO at each iteration. To evaluate the approximate posterior means we compared the variational ideal point mean $\hat{\tau}_u$ to the true ideal point $x_u$ for each representative and the posterior responsibility of the first community $\hat{r}_{u1}$ to the true community assignment $M_u$ with the Mean Square Error (MSE) and Brier Score (Brier):
+\begin{align*}
+ \text{MSE}(x, \hat{t}) = \frac{1}{U} \sum_{u=1}^U (x_u - \hat{\tau}_u) ^2  \;\; & \;\; \text{Brier}(\hat{r}_1, M) = \frac{1}{U} \sum_{u=1}^U (M_u - \hat{r}_u)^2
+\end{align*}
+Because the model is invariant to permutations of the communities and reflections of the ideal points, we chose the permutation and reflection which minimized the scores. We ran this analysis on 5 different data sets generated according to the model; the results of this experiment are in Figure \ref{fig:toy_results}. We see that CAVI very quickly converges to the correct ideal points while taking longer to converge to the correct community assignments. Overall the mean square error is close to zero and the naive mean field approximation recovers the correct parameters.
+\subsection{110\textsuperscript{th} Congress}
+\subsubsection{Data}
+We obtained roll call vote records for the House of Representatives of the 110\textsuperscript{th} Congress from \href{www.govtrack.us}{GovTrack.us}, an independent open government data website which publishes and stores data related to the United States Congress. Our data set contains 1707 documents (those categorized as bills, amendments, and motions) and 448 representatives. We only consider those roll call votes where a representative voted \texttt{yea} or \texttt{nay}; there were 703,830 such interactions. We gathered caucus membership data from \cite{Victor2013}.
+\subsubsection{Evaluation} 
+To evaluate our model we assess predictive accuracy. We compared a $K=2$ community and $K=10$ community LC-IPM with dimension $S=2$ with predicting \texttt{yea} each time (Yea), $L^2$ regularized Logistic Regression, and the standard Ideal Point Model with dimension $S=1$ and $S=2$. We first chose the regularization parameter for Logistic Regression using a 5 fold cross validation procedure. We performed another 5 fold cross validation procedure where we trained each model on 4 folds, tested on the 5\textsuperscript{th} validation fold, and averaged the results; Table \ref{table:results_table} has these results. We found that LC-IPM and IPM both perform very well and roughly the same.
+
+\vspace{2ex}
+\begin{table}
+\begin{center}
+\begin{tabular}{c | c |c}
+Model &  Accuracy & AUC\\ %$\sigma^2_x$&
+\hline
+\hline
+Yea & 67.123 & 50.000\\
+Logistic Regression & 78.340 & 85.105\\
+\hline
+IPM ($S= 1$)  &  94.769 & 98.418\\
+IPM ($S= 2$)  & 95.451 & 98.998\\
+\hline
+LC-IPM ($S=2, K=2$)  & 95.405 & 99.013\\
+LC-IPM ($S=2, K=10$)  & 95.415 & 99.015
+\end{tabular}
+\end{center}
+\caption{Averaged held out test set prediction metrics}
+\label{table:results_table}
+\end{table} 
+
+\subsubsection{Inferred Ideal Points and Communities}
+In this section we examine inferred ideal points and communities from the House of Representatives in the 110\textsuperscript{th} Congress.
+
+
+\begin{figure}[h]
+  \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{2_communities.png}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{10_communities.png}
+        \caption{}
+    \end{subfigure}
+
+  \caption{Caucus co-membership counts grouped by inferred community for (a) 2 and (b) 10 communities. Each entry denotes the number of caucuses shared by a pair of representatives. Red denotes many (up to thirty) common caucuses; yellow denotes close to no common caucuses. The 10 community model captures finer block structure.}
+      \label{fig:2_comm_lcipm}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+          \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{ideal_points_congress_2.png}
+        \caption{}
+    \end{subfigure}
+          \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{ideal_points_congress_10.png}
+        \caption{}
+    \end{subfigure}
+
+  \caption{Inferred 2 dimensional ideal points for an LC-IPM model with (a) 2 and (b) 10 communities. Shape denotes party affiliation; color denotes community; stars in (b) indicate inferred community means. Both models separate Republicans and Democrats with noted centrists in between.}
+      \label{fig:2_comm_lcipm}
+\end{figure}
+
+We first ran CAVI on an LC-IPM model with dimension $S=2$ and $K=2$ communities. With this configuration the ideal points are well separated by party (Figure \ref{fig:2_comm_lcipm} b) but the inferred communities straddle party lines. We sorted the raw caucus co-membership counts by inferred community and found that there is one community where members share a large number of caucuses, and another where the members do not share very many caucuses (Figure \ref{fig:2_comm_lcipm} a). Running CAVI on an LC-IPM model with dimension $S=2$ and $K=10$ communities retains the clean separation by party and overall shape of the ideal points (noting that the model is invariant to rotations). However, the community structure is markedly different. The inferred communities simultaneously capture fine block structure in the caucus co-membership counts and inter and intra party spatial structure of the ideal points. 
+
+The concurrent relational and spatial models allow for interesting conclusions. For instance, we can see that the 9\textsuperscript{th} community has a high rate of caucusing together and is comprised of Democrats with ideal points far from Republicans and centrists, leading to an interpretation that the 9\textsuperscript{th} community is a strongly interconnected group of staunch liberals. The four depicted members of this community (Rush Holt, Keith Ellison, John Lewis, and Barbara Lee) are regarded as very liberal representatives. We can also see representatives such as centrist Wayne Gilchrest, who broke ranks with the Republican party more often than any other representative in 2007, libertarian Ron Paul, who challenges Republican social policy, who are in communities which nonetheless are deeply conservative.
 
 \section{Conclusions and future directions} 
 While LC-IPM offers similar predictive performance to the standard ideal point model, we gain the ability to detect more subtle clusters within and between the two large party clusters. This ability to analyze the social network among members of Congress is of particular interest to political scientists. \par
