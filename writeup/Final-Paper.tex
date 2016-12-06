@@ -164,34 +164,42 @@ Therefore, this strongly motivates taking into account interactions among the re
 \newpage
 
 
-
 \section{Model}
 \label{model}
 
 \subsection{Ideal Point Model} 
-The {\sl ideal point model} (IPM) {\color{red} [CITATION HERE]} is a standard model for analyzing legislative behavior with roll call voting data $(V_{ud})$ for a group of representatives $u$ voting on a collection of bills $d$. It assumes that each representative has a latent location $x_u\in\R^S$ called an {\sl ideal point}, and similarly that each bill has two vectors $a_d,b_d\in\R^S$, called the {\sl discrimination} and {\sl difficulty}, respectively. In quantitative political science, the ideal point $x_u$ is often treated as a proxy for one's ideological stance or preference. When $S=1$, the latent space may be considered a political spectrum. The discrimination $a_d$ quantifies how well votes on this bill separate liberals from conservatives: a bill $d$ is not discriminative if everyone is for or against it. For discriminative bills, those representatives closest to the difficulty $b_d$ are likely to support it. A reasonable likelihood given these quantities is 
+The {\sl ideal point model} (IPM) \cite{Clinton2004} is a basic model for analyzing legislative behavior and revealed preferences with roll call voting data $(V_{ud})$ for a group of representatives $u$ voting on a collection of bills $d$. It assumes that each representative has a latent location $x_u\in\R^S$ called an {\sl ideal point}, and similarly that each bill has two vectors $a_d,b_d\in\R^S$, called the {\sl discrimination} and {\sl difficulty}, respectively. In quantitative political science, the ideal point $x_u$ is often treated as a proxy for one's ideological stance or preference. When $S=1$, the latent space may be considered a political spectrum. The discrimination $a_d$ quantifies how well votes on this bill separate liberals from conservatives: a bill $d$ is not discriminative $(a_d\approx 0)$ if representatives are largely indifferent to it. For discriminative bills, those representatives closest to the difficulty $b_d$ are likely to support it. A reasonable likelihood given these quantities is thus
 \begin{equation}
 V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d))).
 \end{equation}
-We place Gaussian priors over each of these quantities:
+We place Gaussian priors over each of the latent variables:
 \begin{equation}
-a_d \sim \cn(\eta_{a},\sigma^2_d), ~~
-b_d \sim \cn(\eta_{b},\sigma^2_d), ~~
+a_d \sim \cn(\eta_{a},\sigma^2_{a}), ~~
+b_d \sim \cn(\eta_{b},\sigma^2_{b}), ~~
 x_u\sim \cn(\nu,\sigma^2_x),
 \end{equation}
-where the quantities $\eta_{a},\sigma^2_d,\eta_{b},\sigma^2_d,\nu,\sigma^2_x$ are fixed hyperparameters.
+where the quantities $\eta_{a},\sigma^2_{a},\eta_{b},\sigma^2_{b},\nu,\sigma^2_x$ are fixed hyperparameters.
 
 %For one, using it alone we can attempt to predict missing votes, a problem of interest in political science. Another problem of more qualitative interest is analyzing and interpreting the factors $a_d, b_d$ specific to a document and those $x_u$ specific to the representative. All are assumed to reside in some latent space $\R^S$ and so depending on how we set up the model, we might be able to interpret quantities like $x_u$ as $u$'s {\sl political stance} or {\sl ideological position} or $x_u - b_d$ as representative $u$'s propensity for the bill/document $d$. There are a number of problems we cannot address in IPM. A major problem is predicting on heldout documents (the `cold start'), which is a potentially useful performance measure. Similarly if we have relatively junior representatives, they may not have had enough votes for the inferred $x_u$ to represent something (1) meaningful / interpretable or (2) reliable. We want to incorporate more information to inform the choices of $a_d, b_d$ and $x_u$. We focus on the latter, with an interest in being able to better interpret the ideal points of the representatives. We use the stochastic block model to model the assumption that representatives `vote in groups' in the sense that they belong to various communities which tend to have the similar positions.
 
 
 \subsection{Stochastic Block Model}
 
-The {\sl stochastic block model} (SBM) {\color{red} [CITATION HERE]} is a well-studied
+{\sl Stochastic block models} (SBM) \cite{Snijders1997} in general seek to model a graph---in our case, over $U$ representatives. Similar to the IPM, the SBM frames our understanding of the structure of our observations using latent variables. The latent variable $M_u\in\{1,\dots,K\}$ associated to representative $u$ designates to which of $K$ communities she belongs. The structure of the underlying graph specifies the probability of an interaction $R_{uv}$ between representatives $u$ and $v$. We assume $(R_{uv})$ contains counts for the number of interactions between $u$ and $v$ (commonly binary data is used instead). Our version of the SBM assumes the community assignments are i.i.d. draws from a pmf $\pi = (\pi_k)$ on $\{1,\dots,K\}$, and that each pair of communities $k,l\in\{1,\dots, K\}$ has co-expression rate $P_{kl}$. Our likelihood is
+\begin{equation}
+R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl}).
+\end{equation}
+To achieve conditional conjugacy, we assume $\pi \sim \text{Dir}(\gamma1_K)$ and $P_{kl} \simiid \text{Gamma}(\lambda_0,\lambda_1)$.
+
+
+\subsection{Latent Community Ideal Point Model}
+
+We relate the ideal points $x_u$ of IPM to the relational data $(R_{uv})$ using a stitching together of the two models described above, which we call the {\sl latent community ideal point model} (LC-IPM). We introduce $K$ community ideal points $\nu_k\simiid\cn(\varpi,\sigma^2_\nu)$. The ideal point $x_u$ now follows a normal distribution centered around its community mean $\nu_{M_u}$. LC-IPM simultaneously models for the voting data $(V_{ud})$ and the relational data $(R_{ud})$. The graphical model is provided below.
 
 
 \begin{figure}[h]
   \centering
-        \includegraphics[width=15em]{lcipm2.png}
+        \includegraphics[width=12em]{lcipm2.png}
   \caption{Graphical model for LC-IPM. Left: ideal point model. Right: stochastic block model.}
       \label{fig:pgm}
 \end{figure}
@@ -248,6 +256,8 @@ The {\sl stochastic block model} (SBM) {\color{red} [CITATION HERE]} is a well-s
 \bibitem{Gerrish2011} Gerrish, S.M. \& Blei, D.M. (2011) Predicting legislative roll calls from text. {\it Proceedings of the 28th International Conference on Machine Learning}.
 
 \bibitem{Hastie2015} Hastie, T. J., Tibshirani, R. \& Wainwright, M. J. (2015). Statistical learning with sparsity: the Lasso and generalizations. {\itshape CRC Press}. 
+
+\bibitem{Snijders1997} Snijders, T. A. B. \& Nowicki, K. (1997). Estimation and prediction for stochastic blockmodels for graphs with latent block structure. {\itshape Journal of Classification}.
 
 \bibitem{Wainwright2008} Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. 
 
