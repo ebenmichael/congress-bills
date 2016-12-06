@@ -204,17 +204,26 @@ We relate the ideal points $x_u$ of IPM to the relational data $(R_{uv})$ using 
       \label{fig:pgm}
 \end{figure}
 
+\subsection{Related Work}
 
-\newpage
+Bayesian methods for ideal point modeling have become an important tool in analyzing revealed preferences in government \cite{Clinton2004}. Previously these methods have been extended to consider the discrimination $a_d$ and difficulty $b_d$ as response variables with covariates related to the topical content of the bill using {\sl supervised latent Dirichlet allocation} \cite{Gerrish2011}. Relating the posterior of $a_d$ and $b_d$ to the text of the bill (in addition to the votes) addresses the {\sl cold start problem}, i.e. the ability to predict votes on new bills. We adopt a similar approach, where the ideal points $x_u$ for representatives with limited voting data can lean on the community mean $\nu_{M_u}$. Both methods are more broadly applicable to collaborative filtering for behavior data when related data sources are present. Previous analyses have performed SVD on roll call voting data to reveal correlations in political structure and latent community structure \cite{Porter2007}.
 
-\section{Inference}
+\section{Posterior Inference}
 \label{inference}
 
-\subsection{Updates}
+Upon observing votes $V = (V_{ud})$ and caucus co-membership counts $R = (R_{uv})$, computing the posterior distribution of the latent variables given the observations
+$$
+p(x, a, b, \pi, P, M \mid V, R)
+$$
+ is intractable. We employ {\sl na\"ive mean field variational inference}, finding the distribution $q$ closest in KL divergence to the posterior among all fully factorized distributions. Minimizing the KL divergence is equivalent to maximizing the evidence lower bound (ELBO):
+\begin{align*}
+\cl(q)
+&= \EE_q\left[\log \frac{p(\nu, x, a, b, \pi, P, M, V, R)}{q(\nu, x, a, b, \pi, P, M)}\right] \\
+&= \EE_q\left[\log \frac{p(a, b, V)p(x\mid M, \nu)p(\nu)}{q(\nu)q(x)q(a)q(b)}\right]
++ \EE_q\left[\log \frac{p(\pi, P, M, R)}{q(\pi)q(P)q(M)}\right].
+\end{align*}
+Each factor of $q$ follows a simple parametric form, described in appendix \ref{vi}. The simplest approach to variational inference maximizes the ELBO $\cl(q)$ via coordinate-ascent, choosing the best value of a variational parameter with all others fixed. Iteratively applying these updates, the variational approximation $q$ improves at every step toward some local optimum. Conditional conjugacy yields closed form updates for the variational parameters corresponding to $\pi$ and $P$ \cite{Blei2016}. Furthermore, due to the decomposition of the ELBO $\cl(q)$ above, the mean field factorization yields the same variational updates for $\pi, P, a_d$, and $b_d$ as in SBM and IPM, and we exploited this modularity. We devised our implementation of coordinate-ascent variational inference (CAVI) for IPM, SBM, and LC-IPM to have as little repeat code as possible by defining LC-IPM as a class which extends from both of its component parts. 
 
-
-
-\subsection{Implementation}
 
 \newpage
 
@@ -351,6 +360,8 @@ Overall, LC-IPM connects voting data to caucus memberships, and enables us to an
 \bibitem{Gerrish2011} Gerrish, S.M. \& Blei, D.M. (2011) Predicting legislative roll calls from text. {\it Proceedings of the 28th International Conference on Machine Learning}.
 
 \bibitem{Hastie2015} Hastie, T. J., Tibshirani, R. \& Wainwright, M. J. (2015). Statistical learning with sparsity: the Lasso and generalizations. {\itshape CRC Press}. 
+
+\bibitem{Porter2007} Porter, M. A., Mucha, P. J., Newman, M. E. J. \& Friend, A. J. (2007). Community structure in the United States House of Representatives. {\it Physica A}.
 
 \bibitem{Quinn2006} Quinn, K M., Monroe, B L., Colaresi, M., Crespin, M H. \& Radev, D R. (2006). An automated method of topic-coding legislative
 speech over time with application to the 105th-
