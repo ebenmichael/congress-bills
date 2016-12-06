@@ -31,8 +31,8 @@
 \usepackage{subcaption}
 
 
-
-\title{Latent Community Detection for Predicting Legislative Roll Call Votes}
+\title{Latent Community Detection for Modeling Legislative Roll Call Votes}
+%\title{Latent Community Detection for Predicting Legislative Roll Call Votes}
 
 % The \author macro works with any number of authors. There are two
 % commands used to separate the names and addresses of multiple
@@ -79,19 +79,13 @@
 \vspace{-1em}
 
 \begin{abstract}
-  The abstract paragraph should be indented \nicefrac{1}{2}~inch
-  (3~picas) on both the left- and right-hand margins. Use 10~point
-  type, with a vertical spacing (leading) of 11~points.  The word
-  \textbf{Abstract} must be centered, bold, and in point size 12. Two
-  line spaces precede the abstract. The abstract must be limited to
-  one paragraph.
+{\color{red} TO DO: write an abstract}
 \end{abstract}
 
 \section{Introduction}
 \label{introduction}
 \cite{GerrishBlei2011}
 Voting records of legislators are commonly analyzed by political scientists to examine relationships between legislator political leanings, institutional structures, and legislative outcomes (Clinton et al 2004). For example, even simple dimensionality reduction techniques on voting data are able to uncover the political characteristics of individual legislators  such as party affiliation (Figure \ref{fig:NNMF}). \par
-
 
 To capture further patterns, voting records are often used estimate legislator ``ideal points.'' In ideal point modeling, each legislator and a given bill is presumed to lie in a latent `'ideological space,'' where the probability of a ``yea'' or ``nay'' response is a function of the bill's position and the congressman's position. The congressman's position is known as an `'ideal point'' because his or her utility decreases as a bill's position deviates from this point. \par
 
@@ -174,18 +168,34 @@ Therefore, this strongly motivates taking into account interactions among the re
       \label{fig:Nhood_Caucus}
 \end{figure}
 
+~~~
 
 \newpage
-~
-\newpage
+
+
 
 \section{Model}
 \label{model}
 
-\subsection{Ideal Point Models}
+\subsection{Ideal Point Model} 
+The {\sl ideal point model} (IPM) {\color{red} [CITATION HERE]} is a standard model for analyzing legislative behavior with roll call voting data $(V_{ud})$ for a group of representatives $u$ voting on a collection of bills $d$. It assumes that each representative has a latent location $x_u\in\R^S$ called an {\sl ideal point}, and similarly that each bill has two vectors $a_d,b_d\in\R^S$, called the {\sl discrimination} and {\sl difficulty}, respectively. In quantitative political science, the ideal point $x_u$ is often treated as a proxy for one's ideological stance or preference. When $S=1$, the latent space may be considered a political spectrum. The discrimination $a_d$ quantifies how well votes on this bill separate liberals from conservatives: a bill $d$ is not discriminative if everyone is for or against it. For discriminative bills, those representatives closest to the difficulty $b_d$ are likely to support it. A reasonable likelihood given these quantities is 
+\begin{equation}
+V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d))).
+\end{equation}
+We place Gaussian priors over each of these quantities:
+\begin{equation}
+a_d \sim \cn(\eta_{a},\sigma^2_d), ~~
+b_d \sim \cn(\eta_{b},\sigma^2_d), ~~
+x_u\sim \cn(\nu,\sigma^2_x),
+\end{equation}
+where the quantities $\eta_{a},\sigma^2_d,\eta_{b},\sigma^2_d,\nu,\sigma^2_x$ are fixed hyperparameters.
 
-\subsection{Stochastic Block Models}
+%For one, using it alone we can attempt to predict missing votes, a problem of interest in political science. Another problem of more qualitative interest is analyzing and interpreting the factors $a_d, b_d$ specific to a document and those $x_u$ specific to the representative. All are assumed to reside in some latent space $\R^S$ and so depending on how we set up the model, we might be able to interpret quantities like $x_u$ as $u$'s {\sl political stance} or {\sl ideological position} or $x_u - b_d$ as representative $u$'s propensity for the bill/document $d$. There are a number of problems we cannot address in IPM. A major problem is predicting on heldout documents (the `cold start'), which is a potentially useful performance measure. Similarly if we have relatively junior representatives, they may not have had enough votes for the inferred $x_u$ to represent something (1) meaningful / interpretable or (2) reliable. We want to incorporate more information to inform the choices of $a_d, b_d$ and $x_u$. We focus on the latter, with an interest in being able to better interpret the ideal points of the representatives. We use the stochastic block model to model the assumption that representatives `vote in groups' in the sense that they belong to various communities which tend to have the similar positions.
 
+
+\subsection{Stochastic Block Model}
+
+The {\sl stochastic block model} (SBM) {\color{red} [CITATION HERE]} is a well-studied
 
 
 \begin{figure}[h]
@@ -194,7 +204,6 @@ Therefore, this strongly motivates taking into account interactions among the re
   \caption{Graphical model for LC-IPM. Left: ideal point model. Right: stochastic block model.}
       \label{fig:pgm}
 \end{figure}
-
 
 
 \newpage
@@ -216,6 +225,7 @@ Therefore, this strongly motivates taking into account interactions among the re
 \section{Discussion}
 \label{discussion}
 
+\iffalse
 \section{Contributions}
 \begin{itemize}
 \item Bryan: pca, nbhd regression, section \ref{introduction} of writeup.
@@ -223,6 +233,7 @@ Therefore, this strongly motivates taking into account interactions among the re
 \item Eli: dataset, IPM, experiments, sections \ref{results} and \ref{ipmvi} of writeup.
 \item Collectively: section \ref{lcipmvi} of writeup, poster
 \end{itemize}
+\fi
 
 \newpage
 
@@ -257,7 +268,7 @@ Therefore, this strongly motivates taking into account interactions among the re
 
 \section{Variational updates}
 
-\subsection{For SBM}
+\subsection{Stochastic Block Model (SBM)}
 \label{sbmvi}
 
 After observing the symmetric matrix $R = (R_{uv})$, where $R_{uv}$ is the number of caucuses that representatives $u$ and $v$ have in common, we see to find a distribution $q$ over the latent community assignments $M = (M_u)$, the community coexpression rates $P = (P_{kl})$, and the community proportions $\pi = (\pi_k)$ which is close in relative entropy to the true posterior and lies in the factorized family $q(M)q(P)q(\pi)$. Each factor has free parameters described below and denoted with $\widehat{\text{hats}}$. The approximation $q$ is equivalently scored by the ELBO objective $\cl$, which we break down as:%arrange into component terms:
@@ -333,7 +344,7 @@ $$
 \end{itemize}
 
 
-\subsection{For IPM}
+\subsection{Ideal Point Model (IPM)}
 \label{ipmvi}
 
 
@@ -401,7 +412,7 @@ For each parameter we solve this optimization problem using L-BFGS. Finally, the
 \end{align*}
 
 
-\subsection{For LC-IPM}
+\subsection{Latent Community Ideal Point Model (LC-IPM)}
 \label{lcipmvi}
 
 The factorization for $q$ is the same, with one more factor $q(\nu) = \prod_kq(\nu_k)$ where $q(\nu_k)\triangleq \cn(\widehat\mu_k,\widehat\sigma^2_\mu)$. Due to the factorization in the LC-IPM generative model, the only contribution to the ELBO from IPM which changes is that corresponding to $(x_u)$. This becomes%; similarly, from SBM, corresponding to $(M_u)$. The former is
