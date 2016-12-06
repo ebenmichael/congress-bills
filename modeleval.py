@@ -62,9 +62,10 @@ def eval_models(models, interactions, membership=None, n_folds=5):
                 vb.run(model, interactions[train_idxs, :])
                 probs = model.predict_proba(interactions[test_idxs, :2])
             elif type(model) == LCIPM:
-                vb = VB(maxLaps=30)
+                vb = VB(maxLaps=150)
                 # run variational inference
-                vb.run(model, (interactions[train_idxs, :], membership))
+                vb.run(model, (interactions[train_idxs, :], membership),
+                       save=True, outdir="cv_estimates")
                 probs = model.predict_proba(interactions[test_idxs, :2])
             # if comparing to the all yes model predict 1 for everything
             elif model == "yes":
@@ -121,13 +122,16 @@ if __name__ == "__main__":
         interactions = np.loadtxt(sys.argv[2]).astype(int)
         caucus = np.loadtxt(sys.argv[3])
         caucus = np.dot(caucus, caucus.T)
+        """
         models = [LogisticRegression(C=1), LogisticRegression(C=0.1),
                   LogisticRegression(C=0.01), IdealPointModel(1),
-                  IdealPointModel(2)]
+                  IdealPointModel(2)]"""
+        """
         for k in [1, 2, 3, 4, 10]:
             for s in [1, 2]:
                 models.append(LCIPM(448, s, k))
 
         for sigma in [0.01, 0.1, 1, 100]:
-            models.append(LCIPM(448, 2, 2, ip_prior_var=sigma))
+            models.append(LCIPM(448, 2, 2, ip_prior_var=sigma))"""
+        models = ["yes", LCIPM(2, 10, ip_prior_var=0.1)]
         eval_and_save(models, interactions, membership=caucus, outdir=outdir)
