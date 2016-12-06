@@ -223,6 +223,11 @@ We relate the ideal points $x_u$ of IPM to the relational data $(R_{uv})$ using 
 
 \section{Discussion}
 \label{discussion}
+\subsection{Conclusions}
+
+
+\subsection{Future Directions}
+By incorporating caucus data, we were able to inform better estimates for legislator ideal points. On the other hand, we may also wish to incorporate data on bills to better estimate their difficulty and discrimination. For example, we may follow the example in \cite{Gerrish2011} to combine LC-IPM with supervised topic modeling and infer the latent topics in a bill from a bill's text; these latent topics then determine a bill's difficulty and discrimination. On the other hand, we may also explore incorporating legislators' speech transcripts in deliberating the bill (\cite{Quinn2006}, \cite{Thomas2006}). Our model could also be augmented by incorporating bill metadata (like sponsorships), or legislator metadata (like ethnicity or state). The advantage to our generative probabilistic model is its modularity, and we would be interested in the composability of hierarchical models for these multiple data sources. 
 
 \iffalse
 \section{Contributions}
@@ -257,7 +262,17 @@ We relate the ideal points $x_u$ of IPM to the relational data $(R_{uv})$ using 
 
 \bibitem{Hastie2015} Hastie, T. J., Tibshirani, R. \& Wainwright, M. J. (2015). Statistical learning with sparsity: the Lasso and generalizations. {\itshape CRC Press}. 
 
+\bibitem{Quinn2006} Quinn, K M., Monroe, B L., Colaresi, M., Crespin, M H. \& Radev, D R. (2006). An automated method of topic-coding legislative
+speech over time with application to the 105th-
+108th u.s. senate. {\itshape In In Midwest Political Science
+Association Meeting}
+
 \bibitem{Snijders1997} Snijders, T. A. B. \& Nowicki, K. (1997). Estimation and prediction for stochastic blockmodels for graphs with latent block structure. {\itshape Journal of Classification}.
+
+\bibitem{Thomas2006} Thomas, M., Pang, B. \& Lee, L. (2006). Get out
+the vote: Determining support or opposition from
+congressional floor-debate transcripts. {\itshape Proceedings
+of EMNLP}. 327–335.
 
 \bibitem{Wainwright2008} Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. 
 
