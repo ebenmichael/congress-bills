@@ -84,18 +84,17 @@
 
 \section{Introduction}
 \label{introduction}
-\cite{GerrishBlei2011}
-Voting records of legislators are commonly analyzed by political scientists to examine relationships between legislator political leanings, institutional structures, and legislative outcomes (Clinton et al 2004). For example, even simple dimensionality reduction techniques on voting data are able to uncover the political characteristics of individual legislators  such as party affiliation (Figure \ref{fig:NNMF}). \par
+Voting records of legislators are commonly analyzed by political scientists to examine relationships between legislator political leanings, institutional structures, and legislative outcomes (\cite{Clinton2004}). For example, even simple dimensionality reduction techniques on voting data in the US House of Representatives were able to uncover the political characteristics of individual legislators such as party affiliation (Figure \ref{fig:DimRedux}). \par
 
-To capture further patterns, voting records are often used estimate legislator ``ideal points.'' In ideal point modeling, each legislator and a given bill is presumed to lie in a latent `'ideological space,'' where the probability of a ``yea'' or ``nay'' response is a function of the bill's position and the congressman's position. The congressman's position is known as an `'ideal point'' because his or her utility decreases as a bill's position deviates from this point. \par
+To capture further patterns, voting records are often used estimate legislator ``ideal points.'' In ideal point modeling, each legislator and a given bill is presumed to lie in a latent `'ideological space,'' where the probability of a ``yea'' or ``nay'' response is a function of the bill's position and the legislator's position. The legislator's position is called an `'ideal point'' because his or her utility decreases as a bill's position deviates from this point. \par
 
-These ideal points enable us to quantitatively characterize legislators and legislatures. The distribution of ideal points may reveal clusters of legislators corresponding for example to party lines, region, or caucus membership; furthermore, the distance between two ideal points or two clusters of ideal points can be used as  a measure of political division. By visualizing policy preferences along a spectrum, interest groups are able to produce ``ratings'' of legislators according their leanings on a certain policy (Clinton et al 2004). \par
+These ideal points enable us to quantitatively characterize legislators and legislatures. The distribution of ideal points may reveal clusters of legislators corresponding for example to party lines, region, or caucus membership; furthermore, the distance between two ideal points or two clusters of ideal points can be used as  a measure of political division. By visualizing policy preferences along a spectrum, interest groups are able to produce ``ratings'' of legislators according their leanings on a certain policy (\cite{Clinton2004}). \par
 
 In this paper, we use roll call vote data from House of Representatives in the 110th Congress (2007-2009) to estimate ideal points and predict voting behavior for those representatives. In particular, we modify the Bayesian ideal point model proposed in Gerrish and Blei 2011; in their model, ideal points for each representative was drawn independently and identically distributed from a zero mean normal distribution. However, we propose that members of Congress should not be modeled as having independent ideal points but rather, a model should exploit the interactions among members of Congress. \par
 
-To take into account these interactions, we posit that representatives in Congress belong to latent communities, and that these latent communities are manifested in two ways in our model: members of the same community tend to share similar caucuses, and members of the same community have similar ideal points. This connection between ideal points and caucus membership is made explicitly using a {\itshape stochastic block model} (see section \ref{model}.2 below). \par
+To take into account these interactions, we posit that representatives in Congress belong to latent communities, and that these latent communities are manifested in two ways in our model: members of the same community tend to share similar caucuses, and members of the same community tend to have similar ideal points. This connection between ideal points and caucus membership is made explicitly using a {\itshape stochastic block model} (see section \ref{model}.2 below). \par
 
-By incorporating caucus membership data and connecting them to ideal points via latent communities, we hope to place more informed priors on the ideal points. Moreover, including more data will allow us to extend the one dimensional ideological space in Gerrish and Blei 2011 to higher dimensions. In doing so, we aim to produce more accurate prediction of legislative votes. 
+By incorporating caucus membership data and connecting them to ideal points via latent communities, we hope to better inform estimates of the ideal points. { \color{red} In particular, incorporating caucus membership data may potentially alleviate the ``cold start'' problem that arises in ideal point modeling alone; in our model, ideal points for junior representatives who have not cast many votes may potentially still be reasonably estimated from their caucus memberships.} In addition, including more data will allow us to extend the one dimensional ideological space in Gerrish and Blei 2011 to higher dimensions. {\color{red} In doing so, we aim to produce more accurate predictions of legislative votes. }
 
 
 \begin{figure}[b]
@@ -110,8 +109,8 @@ By incorporating caucus membership data and connecting them to ideal points via 
         \caption{}
         \label{fig:PCA}
     \end{subfigure}
-  \caption{(a) Nonnegative matrix factorization on the $448\times 1707$ matrix (448 representatives, 1707 bills) of roll call votes into two matrices of dimensions $448\times 2$ and $2\times 1707$. The rows of the $448\times 2$ matrices were plotted to visualize the distribution of representatives in a 2D space, and we clearly see division along party lines. (b) Principle component analysis on the roll call vote data. The eigenvalues and eigenvectors of the $448\times 448$ covariance matrix of representative voting data were computed, and each representative's voting profile was projected onto the space of the two eigenvectors with the two largest eigenvalues.}
-  
+  \caption{Dimensionality reduction on the roll call votes in the House of Representatives in the 110th Congres. (a) Nonnegative matrix factorization on the $448\times 1707$ matrix (448 representatives, 1707 bills) of roll call votes into two matrices of dimensions $448\times 2$ and $2\times 1707$. The rows of the $448\times 2$ matrices were plotted to visualize the distribution of representatives in a 2D space, and we clearly see division along party lines. (b) Principle component analysis on the roll call vote data. The eigenvalues and eigenvectors of the $448\times 448$ covariance matrix of representative voting data were computed, and each representative's voting profile was projected onto the space of the two eigenvectors with the two largest eigenvalues.}
+  \label{fig:DimRedux}
 \end{figure}
 
 \subsection{Motivation} 
@@ -169,6 +168,8 @@ Therefore, this strongly motivates taking into account interactions among the re
 \end{figure}
 
 ~~~
+
+
 
 \newpage
 
