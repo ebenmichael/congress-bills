@@ -7,7 +7,7 @@
 % to avoid loading the natbib package, add option nonatbib:
 % \usepackage[nonatbib]{nips_2016}
 
-%\usepackage{nips_2016}
+% \usepackage{nips_2016}
 
 % to compile a camera-ready version, add the [final] option, e.g.:
 \usepackage[final]{nips_2016}
@@ -22,18 +22,17 @@
 \usepackage{microtype}      % microtypography
 \usepackage{color}
 \usepackage{graphicx}
-\usepackage{amssymb,amsfonts,amsmath,graphicx}      
+\usepackage{amssymb,amsfonts,amsmath,graphicx}    
+
+  
 \graphicspath{ {../figures/} }
 \input{stat-macros}
 
 \usepackage{subcaption}
 
-<<<<<<< HEAD
+
+
 \title{Latent Community Detection for Predicting Legislative Roll Call Votes}
-=======
-\title{Latent Community Detection \\
-for Predicting Legislative Roll Call Votes}
->>>>>>> 378c118293867be7036214b5f2f4d8cfe1272828
 
 % The \author macro works with any number of authors. There are two
 % commands used to separate the names and addresses of multiple
@@ -90,19 +89,21 @@ for Predicting Legislative Roll Call Votes}
 
 \section{Introduction}
 \label{introduction}
+Voting records of legislators are commonly analyzed by political scientists to examine relationships between legislator political leanings, institutional structures, and legislative outcomes (Clinton et al 2004). For example, even simple dimensionality reduction techniques on voting data are able to uncover the political characteristics of individual legislators  such as party affiliation (Figure \ref{fig:NNMF}). \par
 
 
+To capture further patterns, voting records are often used estimate legislator ``ideal points.'' In ideal point modeling, each legislator and a given bill is presumed to lie in a latent `'ideological space,'' where the probability of a ``yea'' or ``nay'' response is a function of the bill's position and the congressman's position. The congressman's position is known as an `'ideal point'' because his or her utility decreases as a bill's position deviates from this point. \par
+
+These ideal points enable us to quantitatively characterize legislators and legislatures. The distribution of ideal points may reveal clusters of legislators corresponding for example to party lines, region, or caucus membership; furthermore, the distance between two ideal points or two clusters of ideal points can be used as  a measure of political division. By visualizing policy preferences along a spectrum, interest groups are able to produce ``ratings'' of legislators according their leanings on a certain policy (Clinton et al 2004). \par
+
+In this paper, we use roll call vote data from House of Representatives in the 110th Congress (2007-2009) to estimate ideal points and predict voting behavior for those representatives. In particular, we modify the Bayesian ideal point model proposed in Gerrish and Blei 2011; in their model, ideal points for each representative was drawn independently and identically distributed from a zero mean normal distribution. However, we propose that members of Congress should not be modeled as having independent ideal points but rather, a model should exploit the interactions among members of Congress. \par
+
+To take into account these interactions, we posit that representatives in Congress belong to latent communities, and that these latent communities are manifested in two ways in our model: members of the same community tend to share similar caucuses, and members of the same community have similar ideal points. This connection between ideal points and caucus membership is made explicitly using a {\itshape stochastic block model} (see section \ref{model}.2 below). \par
+
+By incorporating caucus membership data and connecting them to ideal points via latent communities, we hope to place more informed priors on the ideal points. Moreover, including more data will allow us to extend the one dimensional ideological space in Gerrish and Blei 2011 to higher dimensions. In doing so, we aim to produce more accurate prediction of legislative votes. 
 
 
-\subsection{Motivation} 
-
-Voting records of legislators are commonly used by political scientists to examine relationships between legislator policy preferences, institutional structures, and legislative outcomes (Clinton et al 2004). In fact, even simple dimensionality reduction techniques on roll call data are able to uncover the political characteristics of individual representatives. For example, in figure \ref{fig:NNMF}, we factored the $448\times1707$ matrix representing the 448 representatives and their votes on 1707 bills into two nonnegative matrices of dimensions $448\times 2$ and $2\times 1707$ . Plotting the  $448\times 2$ matrix where each row places a representative in a two dimensional space, we are able to clearly identify party affiliation. \par
-
-Another dimensionality technique we applied to visualize voting data was principle component analysis (figure \ref{fig:PCA}). We formed the principle components by computing the two largest eigenvalues and their respective eigenvectors on the $448\times 448$ covariance matrix of vote data, and each representative's voting profile was projected onto the space spanned by these principle components. Again, we clearly see differentiation along party lines. 
-
-
-
-\begin{figure}[h]
+\begin{figure}[b]
   \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{NNMF_votes.jpg}
@@ -114,21 +115,33 @@ Another dimensionality technique we applied to visualize voting data was princip
         \caption{}
         \label{fig:PCA}
     \end{subfigure}
-  \caption{(a) Nonnegative matrix factorization on the $448\times 1707$ matrix (448 representatives, 1707 bills) of roll call votes into two matrices of dimensions $448\times 2$ and $2\times 1707$. The rows of the $448\times 2$ matrices were plotted to visualize the distribution of representatives. (b) Principle component analysis on the roll call vote data. The eigenvalues and eigenvectors of the $448\times 448$ covariance matrix of representative voting data were computed, and each representative's voting profile was projected onto the space of the two eigenvectors with the two largest eigenvalues.}
+  \caption{(a) Nonnegative matrix factorization on the $448\times 1707$ matrix (448 representatives, 1707 bills) of roll call votes into two matrices of dimensions $448\times 2$ and $2\times 1707$. The rows of the $448\times 2$ matrices were plotted to visualize the distribution of representatives in a 2D space, and we clearly see division along party lines. (b) Principle component analysis on the roll call vote data. The eigenvalues and eigenvectors of the $448\times 448$ covariance matrix of representative voting data were computed, and each representative's voting profile was projected onto the space of the two eigenvectors with the two largest eigenvalues.}
+  
 \end{figure}
 
-Another common analysis of roll call votes that may potentially yield more subtle structures in legislative preferences is to conduct {\itshape ideal point modeling}. {\color{red} maybe the next sentences goes in the introduction \{} Here, a congressman and a bill is presumed to lie in a latent `'ideological space,'' where the probability of a ``yay'' or ``nay'' response is a function of the bill's position and the congressman's position. The congressman's position is known as an `'ideal point'' because his or her utility decreases as a bill's position deviates from this point. {\color{red} \}}
+\subsection{Motivation} 
 
-In Gerrish and Blei 2011, ideal points of each representative was drawn from a zero mean Gaussian prior. In this paper, we aim to obtain better estimates of the representatives' ideal points, and to do so, we incorporate data from caucus memberships using a stochastic block model (see models below) because we hypothesize that sharing caucuses with other representatives influences a representative's voting behavior. Figure \ref{fig:VotesVsCaucus} plots the number of shared caucuses between two representatives against the proportion of bills on which they voted the same way, and we see that the more caucuses two members share, the more likely they are to vote the same way. 
+%In fact, even simple dimensionality reduction techniques on roll call data are able to uncover the political characteristics of individual representatives. For example, in figure \ref{fig:NNMF}, we factored the $448\times1707$ matrix representing the 448 representatives and their votes on 1707 bills into two nonnegative matrices of dimensions $448\times 2$ and $2\times 1707$ . Plotting the $448\times 2$ matrix where each row places a representative in a two dimensional space, we are able to clearly identify party affiliation. \par
+%
+%Another dimensionality technique we applied to visualize voting data was principle component analysis (figure \ref{fig:PCA}). We formed the principle components by computing the two largest eigenvalues and their respective eigenvectors on the $448\times 448$ covariance matrix of vote data, and each representative's voting profile was projected onto the space spanned by these principle components. Again, we clearly see differentiation along party lines. 
 
-\begin{figure}[h]
+
+%Another common analysis of roll call votes that may potentially yield more subtle structures in legislative preferences is to conduct {\itshape ideal point modeling}. {\color{red} maybe the next sentences goes in the introduction \{} Here, a congressman and a bill is presumed to lie in a latent `'ideological space,'' where the probability of a ``yay'' or ``nay'' response is a function of the bill's position and the congressman's position. The congressman's position is known as an `'ideal point'' because his or her utility decreases as a bill's position deviates from this point. {\color{red} \}}
+% In Gerrish and Blei 2011, ideal points of each representative was drawn from a zero mean Gaussian prior. In this paper, we aim to obtain better estimates of the representatives' ideal points, and to do so, we incorporate data from caucus memberships using a stochastic block model (see models below) because we hypothesize that sharing caucuses with other representatives influences a representative's voting behavior. 
+
+We chose to model caucus memberships because initial exploratory data analysis suggested that caucus memberships are related to a legislator's voting behavior. Figure \ref{fig:VotesVsCaucus} plots the number of shared caucuses between two representatives against the proportion of bills on which they voted the same way, and we see that the more caucuses two members share, the more likely they are to vote the same way. 
+
+\begin{figure}[tb]
   \centering
         \includegraphics[width=\textwidth]{Caucus_vs_Votes.jpg}
   \caption{The distribution of agreement on bills as a function of the number of caucuses two representatives share. We see that the more caucuses people share, the more likely they are to agree on a bill. }
           \label{fig:VotesVsCaucus}
 \end{figure}
 
-Moreover, figure \ref{fig:Nhood_Caucus} shows the relationship between representatives within several caucuses in an undirected graphical model. We first used roll call vote data to infer the graph structure among the representatives in the entire House; we assumed pairwise interactions described via an Ising model in which each node denotes a binary variable of a representative voting either yes or no. The edges were inferred using neighborhood selection, and the graphs shown in figure \ref{fig:Nhood_Caucus} are subsets of this full graph corresponding to members of a caucus. The connectivity ( \#edges /\#nodes(\#nodes-1) ) of the full graph with 448 representatives is 0.064, while the connectivity within the caucus subgraphs was much higher. This suggests that a representative more likely to be influenced by a member of his caucus than another  random representative in the House. Therefore, by relating these interactions among representatives to their ideal points using a stochastic block model, we hope to be able to capture more subtle patterns in estimating ideal points. In particular, we aim to extend the one dimensional ideological space in Gerrish and Blei to higher dimensions. In doing so, we hypothesize that more accurate predictions of roll call votes can be explained. 
+
+Figure \ref{fig:Nhood_Caucus} shows the relationship between representatives within several caucuses in an undirected graphical model. We first used roll call vote data to infer the graph structure among the representatives in the entire House; we assumed pairwise interactions described via an Ising model in which each node denotes a binary variable of a representative voting either yes or no. The edges were inferred using neighborhood selection, and the graphs shown in figure \ref{fig:Nhood_Caucus} are subsets of this full graph corresponding to members of a caucus. The connectivity ( \#edges /\#nodes(\#nodes-1) ) of the full graph with 448 representatives is 0.064, while the connectivity within the caucus subgraphs was much higher. This suggests that a representative more likely to be influenced by a member of his caucus than another random representative in the House.\par
+
+Therefore, this strongly motivates taking into account interactions among the representatives in Congress. In particular, this analysis suggests that caucus memberships may at least partly explain whether two representatives will vote in a similar fashion. Therefore, we proceed in this project by utilizing caucus membership data and connecting them to ideal points using a stochastic block model; specifically, we hope that caucus memberships will inform a latent community structure among the representatives, and exploiting these interactions, we obtain better predictions of ideal points and hence better predictions of roll call votes. 
 
 
 % The connection between caucus memberships and ideal points are described by a {\itshape stochastic block model} (see below). 
@@ -138,7 +151,7 @@ Moreover, figure \ref{fig:Nhood_Caucus} shows the relationship between represent
 
 
 
-\begin{figure}[h]
+\begin{figure}[tb]
   \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congressional_Black_Caucus.jpg}

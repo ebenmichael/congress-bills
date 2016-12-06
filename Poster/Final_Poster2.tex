@@ -48,16 +48,17 @@
 \newlength{\threecolwid}
 \setlength{\paperwidth}{48in} % A0 width: 46.8in
 \setlength{\paperheight}{36in} % A0 height: 33.1in
-\setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
+\setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns % 0.024 
 \setlength{\onecolwid}{0.22\paperwidth} % Width of one column
 \setlength{\twocolwid}{0.464\paperwidth} % Width of two columns
 \setlength{\threecolwid}{0.708\paperwidth} % Width of three columns
-\setlength{\topmargin}{-0.5in} % Reduce the top margin size
+\setlength{\topmargin}{-1in} % Reduce the top margin size -.5
 %-----------------------------------------------------------
 
 \usepackage{graphicx}  % Required for including images
 \usepackage{booktabs} % Top and bottom rules for tables
-\usepackage{subfig}
+\usepackage[font=scriptsize, labelfont=bf]{caption}
+\usepackage{subcaption}
 
 \graphicspath{ {../figures/} }
 \input{stat-macros}
@@ -65,7 +66,7 @@
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 
-\title{Latent Community Detection for Predicting Legislative Roll Call Votes} % Poster title
+\title{Latent Community Detection for Modeling Legislative Roll Call Votes} % Poster title
 
 \author{Elijahu Ben-Michael, Runjing Liu, Jake Soloff } % Author(s)
 
@@ -104,11 +105,11 @@
 
 
 \begin{alertblock}{Objectives}
-We analyze voting data in the 110th Congress (2007-2009) House of Representatives. The ideal point model was extended to incorporate caucus membership data via a stochastic block model. In doing so, we aim to 
+We analyze voting data in the House of Representatives during the 110th Congress (2007-2008). We extend an ideal point model to incorporate caucus membership data via a stochastic block model. In doing so, we aim to 
 \begin{itemize}
-\item Use caucus membership data to infer latent communities among members
-\item Exploit this community structure to inform estimates for each representative's ideal point
-\item Predict a representative's voting behavior
+\item Use caucus membership data to infer latent communities among representatives.
+\item Exploit this community structure to inform an estimate for each representative's ideal point.
+\item Model a representative's voting behavior.
 \end{itemize}
 
 \end{alertblock}
@@ -133,7 +134,7 @@ We analyze voting data in the 110th Congress (2007-2009) House of Representative
 %    \end{subfigure}
 %  \caption{(a) Nonnegative matrix factorization on the $448\times 1707$ matrix of roll call vote data (448 representatives, 1707 bills) (b) Principle component analysis on the roll call vote data}
 %\end{figure}
-We chose to model caucus membership because we found that caucus memberships influence legislative behavior. For example, the more caucuses two legislators share, the more likely they are to vote the same way on a bill. 
+We model caucus membership because we found that caucus memberships influence legislative behavior. For example, the more caucuses two legislators share, the more likely they are to vote the same way on a bill. 
 
 \begin{figure}[h]
   \centering
@@ -143,26 +144,27 @@ We chose to model caucus membership because we found that caucus memberships inf
 \end{figure}
 
 
-Moreover, representing interactions among members of the House using an undirected graphical model, we found that subgraphs corresponding to caucuses were denser than the graph of the whole House. 
+We used neighborhood selection on roll call vote data to represent interactions among members of the House as an undirected graphical model; we found that subgraphs corresponding to caucuses were denser than the graph of the whole House. 
 
 
 
-%\begin{figure}[h]
-%  \centering
-%    \begin{subfigure}[b]{0.49\textwidth}
-%        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congressional_Black_Caucus.jpg}
-%    \end{subfigure}
-%          \begin{subfigure}[b]{0.49\textwidth}
-%        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congr_Rural_Caucus.jpg}
-%    \end{subfigure}
-%        \begin{subfigure}[b]{0.49\textwidth}
-%        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Rep_Study_Committee.jpg}
-%    \end{subfigure}
-%          \begin{subfigure}[b]{0.49\textwidth}
-%        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congr_Prog_Caucus.jpg}
-%    \end{subfigure}
-%\caption{The connectivity is measured by the fraction of total edges present; connectivity of the whole House is 0.064}
-%\end{figure}
+\begin{figure}[h]
+  \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congressional_Black_Caucus.jpg}
+    \end{subfigure}
+          \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congr_Rural_Caucus.jpg}
+    \end{subfigure}
+        \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Rep_Study_Committee.jpg}
+    \end{subfigure}
+          \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congr_Prog_Caucus.jpg}
+    \end{subfigure}
+\caption{{\fontfamily{rm}\selectfont 
+The connectivity is measured by the fraction of total edges present; connectivity of the whole House is 0.064}}
+\end{figure}
 
 %\begin{figure}[h]
 %  \centering
@@ -199,14 +201,14 @@ Moreover, representing interactions among members of the House using an undirect
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Model}
-Our model assumes each bill $d$ and representative $u$ has a hidden ideal point $a_d,b_d,x_u\in\R^S$, where $S$ is a free parameter. We also assume the representatives belong to $K$ latent communities.
+Our model assumes each representative $u$ has an ideal point $x_u\in\R^S$, where $S$ is a free parameter. It also assumes each representative belongs to one of $K$ latent communities. The generative process is:
 \begin{itemize}
-\item Sample community proportions $\pi \sim \text{Dir}(\gamma 1_K)$ and each community's ideal point $\nu_k\sim \cn(\varpi, \sigma^2_\nu)$.
-\item Draw representative $u$'s community $M_u\simiid \text{Cat}(\pi)$ and ideal point $x_u\mid M_u = k, \nu \sim \cn(\nu_k,\sigma^2_x)$.
-\item Draw coexpression rates $P_{kl} \simiid \text{Gamma}(\lambda_0,\lambda_1)$.
-\item Observe the number of common caucuses $R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl})$.% shared by $u$ and $v$.
-\item Draw a discrimination $a_d \sim \cn(\eta_{a},\sigma^2_d)$ and a difficulty $b_d \sim \cn(\eta_{b},\sigma^2_d)$ for each bill $d$.
-\item Observe the votes $V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d)))$.
+\item Sample community proportions $\pi \sim \text{Dir}(\gamma 1_K)$ and each community ideal point $\nu_k\sim \cn_S(\varpi, \sigma^2_\nu)$
+\item Draw representative $u$'s community $M_u\simiid \text{Cat}(\pi)$ and ideal point $x_u\mid M_u = k, \nu \sim \cn_S(\nu_k,\sigma^2_x)$
+\item Draw coexpression rates $P_{kl} \simiid \text{Gamma}(\lambda_0,\lambda_1)$
+\item Observe the number of common caucuses $R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl})$ % shared by $u$ and $v$.
+\item Draw a discrimination $a_d \sim \cn_S(\eta_{a},\sigma^2_{ad})$ and a difficulty $b_d \sim \cn_S(\eta_{b},\sigma^2_{bd})$ for each bill $d$
+\item Observe the votes $V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d)))$
 \end{itemize}
 \end{block}
 
@@ -219,7 +221,7 @@ Our model assumes each bill $d$ and representative $u$ has a hidden ideal point 
 
 \begin{figure}
 \includegraphics[width=.9\linewidth]{lcipm2.png}
-\caption{{\fontfamily{rm}\selectfont model depiction of Latent Community Ideal Point Model (LC-IPM)}}
+\caption{{\fontfamily{rm}\selectfont Latent Community Ideal Point Model (LC-IPM)}}
 \end{figure}
 
 
@@ -234,6 +236,26 @@ Our model assumes each bill $d$ and representative $u$ has a hidden ideal point 
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Results}
+
+\begin{figure}[h]
+  \centering
+    \begin{subfigure}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Results1.png}
+        \subcaption{{\fontfamily{rm}\selectfont With $K=2$ latent communities, the inferred ideal points are well-separated by party affiliation. Shape denotes party affiliation; color denotes community.}}
+    \end{subfigure}
+          \begin{subfigure}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Results2.png}
+        \subcaption{{\fontfamily{rm}\selectfont With $K=10$ latent communities, the inferred ideal points cluster by community, but are still well-separated by party affiliation. Shape denotes party affiliation; color denotes community.}}
+    \end{subfigure}\\
+        \begin{subfigure}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Results3.png}
+        \subcaption{{\fontfamily{rm}\selectfont On toy data generated according to the graphical model, we accurately infer both the true ideal points and the community memberships. Shape denotes true community; color denotes inferred community.}}
+    \end{subfigure}
+          \begin{subfigure}[t]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{Results4.png}
+        \subcaption{{\fontfamily{rm}\selectfont Each entry denotes the number of caucuses shared by a pair of representatives. Red denotes many (up to thirty) common caucuses; yellow denotes close to no common caucuses}}
+    \end{subfigure}
+\end{figure}
 
 
 %\begin{figure}[h]
@@ -267,7 +289,7 @@ Our model assumes each bill $d$ and representative $u$ has a hidden ideal point 
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Variational Inference}
-Upon observing vote behavior $V = (V_{ud})$ and caucuses $R = (R_{uv})$, computing the posterior distribution of the latent variables given the observations is intractable. We employ {\sl mean field variational inference}, finding the distribution $q$ which factorizes over the latent variables closest in KL divergence to the posterior. Since the graphical model for LC-IPM joins SBM and IPM via one edge, this composabiity and the mean field factorization implies that variational updates for $\pi, P, a_d$, and $b_d$ do not change from their respective updates in SBM and IPM, and we exploited this modularity in our implementation. 
+Upon observing votes $V = (V_{ud})$ and caucus co-memembership counts $R = (R_{uv})$, computing the posterior distribution of the latent variables given the observations is intractable. We employ {\sl mean field variational inference}, finding the distribution $q$ closest in KL divergence to the posterior among all fully factorized distributions. Since the graphical model for LC-IPM joins SBM and IPM via only one edge, the mean field factorization yields the same variational updates for $\pi, P, a_d$, and $b_d$ as in SBM and IPM, and we exploited this modularity.% in our implementation. 
 
 \end{block}
 
@@ -280,7 +302,7 @@ Upon observing vote behavior $V = (V_{ud})$ and caucuses $R = (R_{uv})$, computi
 
 \begin{block}{Conclusion}
 
-Nunc tempus venenatis facilisis. \textbf{Curabitur suscipit} consequat eros non porttitor. Sed a massa dolor, id ornare enim. Fusce quis massa dictum tortor \textbf{tincidunt mattis}. Donec quam est, lobortis quis pretium at, laoreet scelerisque lacus. Nam quis odio enim, in molestie libero. Vivamus cursus mi at \textit{nulla elementum sollicitudin}.
+LC-IPM offers similar predictive performance to the standard ideal point model, but we gain interpretability and can make predictions for junior representatives. Our model also applies to more general collaborative filtering settings with relational data.
 
 \begin{table}
 \vspace{2ex}
@@ -289,15 +311,17 @@ Nunc tempus venenatis facilisis. \textbf{Curabitur suscipit} consequat eros non 
 Model &  Acc & AUC\\ %$\sigma^2_x$&
 \hline
 \hline
-Logistic Reg & 78.340295 & 85.10542\\
+Yea & 67.123 & 50.000\\
+Logistic Reg & 78.340 & 85.105\\
 \hline
-IPM ($S= 1$)  &  94.768623 & 98.418436\\
-IPM ($S= 2$)  & 95.451139 & 98.997592\\
+IPM ($S= 1$)  &  94.769 & 98.418\\
+IPM ($S= 2$)  & 95.451 & 98.998\\
 \hline
 %LC-IPM & 1 & 1 & 94.759033& 98.439207\\
 %LC-IPM & 1 & 2  & 95.463571& 99.011618\\
 %LC-IPM & 2 & 1  & 94.749798& 98.420599\\
-LC-IPM ($S=2, K=2$)  & 95.40514 & 99.013
+LC-IPM ($S=2, K=2$)  & 95.405 & 99.013\\
+LC-IPM ($S=2, K=10$)  & 95.415 & 99.015
 %LC-IPM & 3 & 1  & 94.713745& 98.400689\\
 %LC-IPM & 3 & 2  & 95.432136& 99.000409\\
 %LC-IPM & 4 & 1  & 94.806629& 98.454243\\
@@ -320,7 +344,9 @@ LC-IPM ($S=2, K=2$)  & 95.40514 & 99.013
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Future Directions}
-By incorporating caucus data, we were able to place more informative priors on the representatives ideal points. On the other hand, we may also wish to place similarly informed priors on a bill's difficulty and discrimination. Following the example of Gerrish and Blei 2011, one may apply {\itshape supervised topic modeling} and infer the latent topics in a bill from a bill's text; these latent topics then generate a bill's difficulty and discrimination. 
+%By incorporating caucus data, we were able to place more informative priors on the representatives ideal points. On the other hand, we may also wish to place similarly informed priors on a bill's difficulty and discrimination. 
+Following the example of [2], we hope to combine LC-IPM with {\itshape supervised topic modeling} to incorporate text data such as bill text and speeches. We are also interested in the composability of hierarchical models for multiple data sources. 
+%and infer the latent topics in a bill from a bill's text; these latent topics then generate a bill's difficulty and discrimination. 
 
 
 \end{block}
@@ -334,13 +360,15 @@ By incorporating caucus data, we were able to place more informative priors on t
 %\nocite{*} % Insert publications even if they are not cited in the poster
 %\small{\bibliographystyle{unsrt}
 %\bibliography{bibliography}\vspace{0.75in}}
-\small{
+\tiny{
 
 \noindent[1] Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\itshape Foundations and Trends in Machine Learning}. \\
 
 \noindent[2] Gerrish, S. M. \& Blei, D. M. (2011). Predicting legislative roll calls from text. {\itshape Proceedings of the 28th International Conference on Machine Learning}. \\
 
-\noindent[3] Blei, D. M., Kucukelbir, A. and McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
+\noindent[3] Blei, D. M., Kucukelbir, A. \& McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\itshape arXiv:1601.00670}.
+
+\noindent[4] Hasite, T. J., Tibshirani, R. \& Wainwright, M. J. (2015). Statistical learning with sparsity: the Lasso and generalizations. {\itshape CRC Press}. 
 }
 \end{block}
 
