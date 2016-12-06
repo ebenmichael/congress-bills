@@ -97,7 +97,7 @@ To take into account these interactions, we posit that representatives in Congre
 By incorporating caucus membership data and connecting them to ideal points via latent communities, we hope to better inform estimates of the ideal points. { \color{red} In particular, incorporating caucus membership data may potentially alleviate the ``cold start'' problem that arises in ideal point modeling alone; in our model, ideal points for junior representatives who have not cast many votes may potentially still be reasonably estimated from their caucus memberships.} In addition, including more data will allow us to extend the one dimensional ideological space in Gerrish and Blei 2011 to higher dimensions. {\color{red} In doing so, we aim to produce more accurate predictions of legislative votes. }
 
 
-\begin{figure}[b]
+\begin{figure}[!h]
   \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{NNMF_votes.jpg}
@@ -273,7 +273,7 @@ The {\sl stochastic block model} (SBM) {\color{red} [CITATION HERE]} is a well-s
 \label{sbmvi}
 
 After observing the symmetric matrix $R = (R_{uv})$, where $R_{uv}$ is the number of caucuses that representatives $u$ and $v$ have in common, we see to find a distribution $q$ over the latent community assignments $M = (M_u)$, the community coexpression rates $P = (P_{kl})$, and the community proportions $\pi = (\pi_k)$ which is close in relative entropy to the true posterior and lies in the factorized family $q(M)q(P)q(\pi)$. Each factor has free parameters described below and denoted with $\widehat{\text{hats}}$. The approximation $q$ is equivalently scored by the ELBO objective $\cl$, which we break down as:%arrange into component terms:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 \cl(q)
 %&= \EE_q\left[\log\frac{p(R,M,P,\pi)}{q(M,P,\pi)}\right]  \\
@@ -282,17 +282,19 @@ After observing the symmetric matrix $R = (R_{uv})$, where $R_{uv}$ is the numbe
 + \underbrace{\EE_q\left[\log p(M\mid \pi)\right]}_{\cl_{\text{local}}}
 + \underbrace{\EE_q\left[\log\frac{p(\pi)}{q(\pi)}\right]}_{\cl_{\text{global}}}
 \end{split}
-\end{equation}
+\end{equation*}
+~\vspace{-1em}
 
 \noindent{\bf Variational Factors.} To each $u$ we associate variational parameters $\widehat r_u = \left(\widehat r_{uk}\right)_{k=1}^K$, so
 \begin{align}
 q(M) = \prod_{u=1}^U q(M_u\mid \widehat r_u) 
 = \prod_{u=1}^U \prod_{k=1}^K \widehat r_{uk}^{\delta_k(M_u)}.
 \end{align}
-We define $q(\pi) \triangleq \text{Dir}(\widehat \gamma_1, \dots, \widehat \gamma_K)$ and $q(P) = \prod_{kl}q(P_{kl}\mid \widehat \lambda_{kl})$ where $q(P_{kl}\mid \widehat \lambda_{kl})\triangleq \text{Gamma}(\widehat \lambda_{0kl},\widehat \lambda_{1kl})$. \\
+We define 
+$q(\pi) \triangleq \text{Dir}(\widehat \gamma_1, \dots, \widehat \gamma_K)$ and $q(P) \triangleq \prod_{kl}\text{Gamma}(\widehat \lambda_{0kl},\widehat \lambda_{1kl})$. %where $q(P_{kl}\mid \widehat \lambda_{kl})\triangleq \text{Gamma}(\widehat \lambda_{kl})$. \\
 
 \noindent{\bf Computing the ELBO.} Now we can write out the component terms of the ELBO more explicitly:
-\begin{equation}
+\begin{equation*}
 \begin{split}
 \cl_{\text{data}}
 &= \EE_q\left[\log p(R\mid M,P)+ \log\frac{p(P)}{q(P)}\right]
@@ -313,7 +315,7 @@ We define $q(\pi) \triangleq \text{Dir}(\widehat \gamma_1, \dots, \widehat \gamm
 &= \EE_q\left[\log\frac{p(\pi)}{q(\pi)}\right]
 = \log \Gamma(C\gamma) - C\log\Gamma(\gamma) -\log \Gamma\left(\sum_k\widehat\gamma_k\right) + \sum_k\left\{\log\Gamma(\widehat\gamma_k)+ (\gamma-\widehat\gamma_k)\EE_q\left[\log \pi_k\right]\right\}
 \end{split}
-\end{equation}
+\end{equation*}
 where $N_k = \sum_{u}\widehat r_{uk}$, $N_{kl} = \sum_{uv}\widehat r_{uk}\widehat r_{vl}$, $S_{kl} = \sum_{uv}\widehat r_{uk}\widehat r_{vl} R_{uv}$, and 
 $$
 \cl_{kl}(R) 
@@ -327,7 +329,7 @@ $$
 \EE_q\left[\log \pi_k\right] = \psi\left(\widehat\gamma_k\right) - \psi\left(\sum_l\widehat\gamma_l\right)
 $$
 
-\noindent{\bf CAVI Updates.} The simplest approach to variational inference maximizes the ELBO $\cl$ via coordinate-ascent, i.e. choosing the best value of a variational parameter with all others fixed. Iteratively applying these updates, the variational approximation $q$ improves at every step toward some local optimum. Conditional conjugacy yields closed form updates for the global variational parameters. 
+\noindent{\bf CAVI Updates.} The simplest approach to variational inference maximizes the ELBO $\cl$ via coordinate-ascent, i.e. choosing the best value of a variational parameter with all others fixed. Iteratively applying these updates, the variational approximation $q$ improves at every step toward some local optimum. Conditional conjugacy yields closed form updates for $\widehat\gamma_k$ and $\widehat\lambda_{kl}$:
 
 \begin{itemize}
 \item {\bf Global Update to $q(\pi)$.} We have $\widehat \gamma_{k} = \gamma + N_k$.
