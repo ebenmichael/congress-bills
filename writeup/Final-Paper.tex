@@ -45,19 +45,10 @@
 % author name.
 
 \author{
-  Eli Ben-Michael \\
-  Department of Statistics\\
-  UC Berkeley
+  Eli Ben-Michael, Runjing Liu, Jake Soloff \\
+  Department of Statistics, UC Berkeley\\
+  \texttt{\{ebenmichael,runjing\_liu,jake\_soloff\}@berkeley.edu}
   %% examples of more authors
-   \And
-  Runjing Liu \\
-  Department of Statistics\\
-  UC Berkeley
-  %% \texttt{email} \\
-   \And
-  Jake Soloff \\
-  Department of Statistics\\
-  UC Berkeley
   %% \texttt{email} \\
   %% \And
   %% Coauthor \\
@@ -79,37 +70,39 @@
 \vspace{-1em}
 
 \begin{abstract}
-{\color{red} TO DO: write an abstract}
+We consider the problem of predicting and modeling legislative roll call votes. Quantitative political scientists have traditionally used ideal point models for this analysis. Based on empirical evidence suggesting the importance of caucus membership in voting behavior, we develop the latent community ideal point model (LC-IPM). This hierarchical Bayesian model extends the ideal point model to incorporate latent community structure. We derive an approximate posterior inference algorithm using variational methods and apply our inference procedure to roll call votes and caucus co-membership data from the U.S. House of Representatives of the 110\textsuperscript{th} Congress. We demonstrate that LC-IPM simultaneously captures community structure and revealed preferences.
 \end{abstract}
 
 \section{Introduction}
 \label{introduction}
-Voting records of legislators are commonly analyzed by political scientists to examine relationships between legislator political leanings, institutional structures, and legislative outcomes (\cite{Clinton2004}). For example, even simple dimensionality reduction techniques on voting data in the US House of Representatives were able to uncover the political characteristics of individual legislators such as party affiliation (Figure \ref{fig:DimRedux}). \par
+Voting records of legislators are commonly analyzed by political scientists to examine relationships between legislator political leanings, institutional structures, and legislative outcomes \cite{Clinton2004}. For example, even simple dimensionality reduction techniques on voting data in the US House of Representatives uncover the political characteristics of individual legislators such as party affiliation (Figure \ref{fig:DimRedux}). \par
 
-To capture further patterns, voting records are often used estimate legislator ``ideal points.'' In ideal point modeling, each legislator and a given bill is presumed to lie in a latent `'ideological space,'' where the probability of a ``yea'' or ``nay'' response is a function of the bill's position and the legislator's position. The legislator's position is called an `'ideal point'' because his or her utility decreases as a bill's position deviates from this point. \par
+To capture further patterns, quantitative social scientists often use \textit{ideal point models}. In ideal point models, legislators and bills are presumed to lie in a latent `'ideological space,'' where the probability of a ``yea'' or ``nay'' response is a function of the bill's position and the legislator's position. The legislator's position is called an ``ideal point'' because his or her utility decreases as a bill's position deviates from this point. \par
 
-These ideal points enable us to quantitatively characterize legislators and legislatures. The distribution of ideal points may reveal clusters of legislators corresponding for example to party lines, region, or caucus membership; furthermore, the distance between two ideal points or two clusters of ideal points can be used as  a measure of political division. By visualizing policy preferences along a spectrum, interest groups are able to produce ``ratings'' of legislators according their leanings on a certain policy (\cite{Clinton2004}). \par
+These ideal points enable us to characterize legislators quantitatively. The distribution of ideal points reveals clusters of legislators corresponding, for example, to party lines, region, or caucus membership; furthermore, the distance between two ideal points or two clusters of ideal points can be used as  a measure of political division. By visualizing policy preferences along a spectrum, interest groups are able to produce ``ratings'' of legislators according their leanings on a certain policy \cite{Clinton2004}. Ideal point models are also applied to the U.S. Supreme Court to create such ratings \cite{Martin2002}. \par
 
-In this paper, we use roll call vote data from House of Representatives in the 110th Congress (2007-2009) to estimate ideal points and predict voting behavior for those representatives. In particular, we modify the Bayesian ideal point model proposed in Gerrish and Blei 2011; in their model, ideal points for each representative was drawn independently and identically distributed from a zero mean normal distribution. However, we propose that members of Congress should not be modeled as having independent ideal points but rather, a model should exploit the interactions among members of Congress. \par
+In this paper, we use roll call vote data from the House of Representatives of the 110\textsuperscript{th} Congress (2007-2008) to estimate ideal points and predict voting behavior. In particular, we modify the Bayesian ideal point model proposed in \cite{Clinton2004}. In the Bayesian ideal point model, the ideal points are assumed to be independent; however, we propose to exploit the interactions among representatives rather than model ideal points as independent. \par
 
-To take into account these interactions, we posit that representatives in Congress belong to latent communities, and that these latent communities are manifested in two ways in our model: members of the same community tend to share similar caucuses, and members of the same community tend to have similar ideal points. This connection between ideal points and caucus membership is made explicitly using a {\itshape stochastic block model} (see section \ref{model}.2 below). \par
+To take into account these interactions, we posit that representatives in Congress belong to latent communities, and that these latent communities are manifested in two ways: members of the same community tend to share similar caucuses, and members of the same community tend to have similar ideal points. This connection between ideal points and caucus membership is made explicit using a {\itshape stochastic block model}. \par
 
-By incorporating caucus membership data and connecting them to ideal points via latent communities, we hope to better inform estimates of the ideal points. { \color{red} In particular, incorporating caucus membership data may potentially alleviate the ``cold start'' problem that arises in ideal point modeling alone; in our model, ideal points for junior representatives who have not cast many votes may potentially still be reasonably estimated from their caucus memberships.} In addition, including more data will allow us to extend the one dimensional ideological space in Gerrish and Blei 2011 to higher dimensions. {\color{red} In doing so, we aim to produce more accurate predictions of legislative votes. }
+By incorporating caucus membership data and connecting it to ideal points via latent communities, we hope to improve estimates of the ideal points. In particular, this  may result in better estimates of ideal points for junior representatives who have short voting histories. Our approach of incorporating social network or relational data can be applied to broader collaborative filtering problems.
 
 
 \begin{figure}[!h]
   \centering
-    \begin{subfigure}[b]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{NNMF_votes.jpg}
-        \caption{}
-        \label{fig:NNMF}
-    \end{subfigure}
-          \begin{subfigure}[b]{0.4\textwidth}
+    %\begin{subfigure}[b]{0.4\textwidth}
+    %    \includegraphics[width=\textwidth]{NNMF_votes.jpg}
+    %    \caption{}
+    %    \label{fig:NNMF}
+    %\end{subfigure}
+          \begin{subfigure}[b]{0.5\textwidth}
         \includegraphics[width=\textwidth]{PCA_votes}
-        \caption{}
-        \label{fig:PCA}
+        %\caption{}
+        %\label{fig:PCA}
     \end{subfigure}
-  \caption{Dimensionality reduction on roll call vote data in the House of Representatives in the 110th Congres. (a) Nonnegative matrix factorization on the $448\times 1707$ matrix (448 representatives, 1707 bills) of roll call votes into two matrices of dimensions $448\times 2$ and $2\times 1707$. The rows of the $448\times 2$ matrices were plotted to visualize the distribution of representatives in a 2D space, and we clearly see division along party lines. (b) Principle component analysis on the roll call vote data. The eigenvalues and eigenvectors of the $448\times 448$ covariance matrix of representative voting data were computed, and each representative's voting profile was projected onto the space of the two eigenvectors with the two largest eigenvalues.}
+  \caption{Principal component analysis on roll call vote data in the House of Representatives of the 110th Congress. We computed the eigenvalues and eigenvectors of the $U\times U$ covariance matrix of the $U\times D$ roll call vote matrix ($U = 448$ representatives, $D = 1707$ bills), and projected each representative's voting profile onto the space of the two principal eigenvectors.}
+%(a) Nonnegative matrix factorization on the $448\times 1707$ matrix (448 representatives, 1707 bills) of roll call votes into two matrices of dimensions $448\times 2$ and $2\times 1707$. The rows of the $448\times 2$ matrices were plotted to visualize the distribution of representatives in a 2D space, and we clearly see division along party lines. 
+
   \label{fig:DimRedux}
 \end{figure}
 
@@ -123,19 +116,19 @@ By incorporating caucus membership data and connecting them to ideal points via 
 %Another common analysis of roll call votes that may potentially yield more subtle structures in legislative preferences is to conduct {\itshape ideal point modeling}. {\color{red} maybe the next sentences goes in the introduction \{} Here, a congressman and a bill is presumed to lie in a latent `'ideological space,'' where the probability of a ``yay'' or ``nay'' response is a function of the bill's position and the congressman's position. The congressman's position is known as an `'ideal point'' because his or her utility decreases as a bill's position deviates from this point. {\color{red} \}}
 % In Gerrish and Blei 2011, ideal points of each representative was drawn from a zero mean Gaussian prior. In this paper, we aim to obtain better estimates of the representatives' ideal points, and to do so, we incorporate data from caucus memberships using a stochastic block model (see models below) because we hypothesize that sharing caucuses with other representatives influences a representative's voting behavior. 
 
-We chose to model caucus memberships because initial exploratory data analysis suggested that caucus memberships are related to a legislator's voting behavior. Figure \ref{fig:VotesVsCaucus} plots the number of shared caucuses between two representatives against the proportion of bills on which they voted the same way, and we see that the more caucuses two members share, the more likely they are to vote the same way. 
+We chose to model caucus memberships because initial exploratory data analysis suggested that they are related to a legislator's voting behavior. Figure \ref{fig:VotesVsCaucus} plots the number of shared caucuses between two representatives against the proportion of bills on which they voted the same way. We see that the more caucuses two members share, the more likely they are to vote the same way. 
 
 \begin{figure}[h]
   \centering
         \includegraphics[width=\textwidth]{Caucus_vs_Votes.jpg}
-  \caption{The distribution of agreement on bills as a function of the number of caucuses two representatives share. We see that the more caucuses people share, the more likely they are to agree on a bill. }
+  \caption{The empirical distribution of agreement on bills versus the number of caucuses two representatives share.}% We see that the more caucuses people share, the more likely they are to agree on a bill. }
           \label{fig:VotesVsCaucus}
 \end{figure}
 
 
-Figure \ref{fig:Nhood_Caucus} shows the relationship between representatives within several caucuses in an undirected graphical model. We first used roll call vote data to infer the graph structure among the representatives in the entire House; we assumed pairwise interactions described via an Ising model in which each node denotes a binary variable of a representative voting either yes or no. The edges were inferred using neighborhood selection \cite{Hastie2015}, and the graphs shown in figure \ref{fig:Nhood_Caucus} are subsets of this full graph corresponding to members of a caucus. The connectivity (measured by the fraction of total edges present) of the full graph with 448 representatives is 0.064, while the connectivity within the caucus subgraphs was much higher. This suggests that a representative is more likely to be influenced by a member of his or her caucus than another random representative in the House.\par
+Next we examined the relationship between representatives within several caucuses. We used roll call vote data to infer the graph structure among the representatives in the entire House, assuming pairwise interactions described via an Ising model in which each node denotes a binary variable of a representative voting either yes or no. The edges were inferred using neighborhood selection \cite{Hastie2015}, and in Figure \ref{fig:Nhood_Caucus} we plot the subgraphs induced by various caucuses. The connectivity (measured by the fraction of total edges present) of the full graph with 448 representatives is 0.064, while the connectivity within the caucus subgraphs is much higher. This suggests that a representative is more likely to be influenced by a member of his or her caucus than another random representative in the House.\par
 
-Therefore, this strongly motivates taking into account interactions among the representatives in Congress. In particular, this analysis suggests that caucus memberships may at least partly explain whether two representatives will vote in a similar fashion. Therefore, we proceed in this project by utilizing caucus membership data and connecting them to ideal points using a stochastic block model; specifically, we hope that caucus memberships will inform a latent community structure among the representatives, and exploiting these interactions, we obtain better predictions of ideal points and hence better predictions of roll call votes. 
+This analysis suggests that caucus memberships may at least partly explain whether two representatives will vote in a similar fashion. Therefore, we proceed in this project by utilizing caucus membership data and connecting them to ideal points using a stochastic block model; specifically, we hope that caucus memberships will inform a latent community structure among the representatives. By exploiting these interactions, we hope to obtain better estimates of ideal points and hence better predictions of roll call votes. 
 
 \begin{figure}[h]
   \centering
@@ -155,20 +148,17 @@ Therefore, this strongly motivates taking into account interactions among the re
         \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congr_Prog_Caucus.jpg}
         \caption{}
     \end{subfigure}
-  \caption{Neighborhood regression on roll call vote data was used to infer an undirected graphical model capturing relationships among all members of the House of Representatives. Each node represents a random variable corresponding to a legislator voting ``yea'' or ``nay'' on a bill, and we assumed pairwise interactions using an Ising model. Shown here are subgraphs with representatives taken from a given caucus. The caucuses are their connectivities shown here are (a) the Congressional Black Caucus, connectivity 0.137; (b) the Congressional Rural Caucus, connectivity 0.104; (c) the Republican Study Committee, connectivity 0.136; and (d) the Congressional Progressive Caucus, connectivity 0.131. In each case, the connectivity within the caucuses was higher than the connectivity of the full House (0.064).}
+  \caption{Neighborhood regression on roll call vote data was used to infer an undirected graphical model  among all members of the House of Representatives. Shown here are subgraphs induced by various caucuses. The connectivity (fraction of edges present) in the entire House is 0.064}
+%Each node represents a random variable corresponding to a legislator voting ``yea'' or ``nay'' on a bill, and we assumed pairwise interactions using an Ising model. Shown here are subgraphs with representatives taken from a given caucus. The caucuses are their connectivities shown here are (a) the Congressional Black Caucus, connectivity 0.137; (b) the Congressional Rural Caucus, connectivity 0.104; (c) the Republican Study Committee, connectivity 0.136; and (d) the Congressional Progressive Caucus, connectivity 0.131. In each case, the connectivity within the caucuses was higher than the connectivity of the full House (0.064).}
       \label{fig:Nhood_Caucus}
 \end{figure}
-
-
-
-\newpage
 
 
 \section{Model}
 \label{model}
 
 \subsection{Ideal Point Model} 
-The {\sl ideal point model} (IPM) \cite{Clinton2004} is a basic model for analyzing legislative behavior and revealed preferences with roll call voting data $(V_{ud})$ for a group of representatives $u$ voting on a collection of bills $d$. It assumes that each representative has a latent location $x_u\in\R^S$ called an {\sl ideal point}, and similarly that each bill has two vectors $a_d,b_d\in\R^S$, called the {\sl discrimination} and {\sl difficulty}, respectively. In quantitative political science, the ideal point $x_u$ is often treated as a proxy for one's ideological stance or preference. When $S=1$, the latent space may be considered a political spectrum. The discrimination $a_d$ quantifies how well votes on this bill separate liberals from conservatives: a bill $d$ is not discriminative $(a_d\approx 0)$ if representatives are largely indifferent to it. For discriminative bills, those representatives closest to the difficulty $b_d$ are likely to support it. A reasonable likelihood given these quantities is thus
+The Bayesian {\sl ideal point model} (IPM) \cite{Clinton2004} is a basic model for analyzing legislative behavior and revealed preferences with roll call vote data $(V_{ud})$ for a group of representatives $u \in \{1,\ldots, U\}$ voting on a collection of bills $d \in \{1,\ldots,D\}$. It assumes that each representative has a latent location $x_u\in\R^S$ called an {\sl ideal point}, and similarly that each bill has two vectors $a_d,b_d\in\R^S$, called the {\sl discrimination} and {\sl difficulty}, respectively. In quantitative political science, the ideal point $x_u$ is often treated as a proxy for one's ideological stance or preference. When $S=1$, the latent space may be considered a political spectrum \cite{Martin2002}. The discrimination $a_d$ quantifies how well votes on this bill separate liberals from conservatives: a bill $d$ is not discriminative $(a_d\approx 0)$ if representatives are largely indifferent to it. For positively discriminative bills $a_d > 0$, representatives $u$ such that $x_u > b_d$ are likely to support it. A reasonable likelihood given these quantities is thus
 \begin{equation}
 V_{ud} \mid x_u, a_d, b_d \sim \text{Bern}(\sigma(a_d\cdot(x_u-b_d))).
 \end{equation}
@@ -185,7 +175,7 @@ where the quantities $\eta_{a},\sigma^2_{a},\eta_{b},\sigma^2_{b},\nu,\sigma^2_x
 
 \subsection{Stochastic Block Model}
 
-{\sl Stochastic block models} (SBM) \cite{Snijders1997} in general seek to model a graph---in our case, over $U$ representatives. Similar to the IPM, the SBM frames our understanding of the structure of our observations using latent variables. The latent variable $M_u\in\{1,\dots,K\}$ associated to representative $u$ designates to which of $K$ communities she belongs. The structure of the underlying graph specifies the probability of an interaction $R_{uv}$ between representatives $u$ and $v$. We assume $(R_{uv})$ contains counts for the number of interactions between $u$ and $v$ (commonly binary data is used instead). Our version of the SBM assumes the community assignments are i.i.d. draws from a pmf $\pi = (\pi_k)$ on $\{1,\dots,K\}$, and that each pair of communities $k,l\in\{1,\dots, K\}$ has co-expression rate $P_{kl}$. Our likelihood is
+{\sl Stochastic block models} (SBM) \cite{Snijders1997} in general seek to model a graph---in our case, over $U$ representatives. Similar to the IPM, the SBM frames our understanding of the structure of our observations using latent variables. The latent variable $M_u\in\{1,\dots,K\}$ associated to representative $u$ designates to which of $K$ communities he or she belongs. The structure of the underlying graph specifies the probability of an interaction $R_{uv}$ between representatives $u$ and $v$. We assume $(R_{uv})$ contains counts for the number of interactions between $u$ and $v$ (binary data is typically used). Our version of the SBM assumes the community assignments are i.i.d. draws from a pmf $\pi = (\pi_k)$ on $\{1,\dots,K\}$, and that each pair of communities $k,l\in\{1,\dots, K\}$ has co-expression rate $P_{kl}$. Our likelihood is
 \begin{equation}
 R_{uv} \mid P, M_u=k, M_v=l\sim \text{Poisson}(P_{kl}).
 \end{equation}
@@ -194,19 +184,19 @@ To achieve conditional conjugacy, we assume $\pi \sim \text{Dir}(\gamma1_K)$ and
 
 \subsection{Latent Community Ideal Point Model}
 
-We relate the ideal points $x_u$ of IPM to the relational data $(R_{uv})$ using a stitching together of the two models described above, which we call the {\sl latent community ideal point model} (LC-IPM). We introduce $K$ community ideal points $\nu_k\simiid\cn(\varpi,\sigma^2_\nu)$. The ideal point $x_u$ now follows a normal distribution centered around its community mean $\nu_{M_u}$. LC-IPM simultaneously models for the voting data $(V_{ud})$ and the relational data $(R_{ud})$. The graphical model is provided below.
+We relate the ideal points $x_u$ of IPM to the relational data $(R_{uv})$ by stitching together the two models described above. We call this the {\sl latent community ideal point model} (LC-IPM). We introduce $K$ community ideal points $\nu_k\simiid\cn(\varpi,\sigma^2_\nu)$. The ideal point $x_u$ now follows a normal distribution centered around its community mean $\nu_{M_u}$. LC-IPM simultaneously models the voting data $(V_{ud})$ and the relational data $(R_{ud})$ in a hierarchical manner, which has the advantage of being able to model ideal points for representatives with little voting information. The graphical model is provided below.
 
 
 \begin{figure}[h]
   \centering
-        \includegraphics[width=12em]{lcipm2.png}
+        \includegraphics[width=15em]{lcipm2.png}
   \caption{Graphical model for LC-IPM. Left: ideal point model. Right: stochastic block model.}
       \label{fig:pgm}
 \end{figure}
 
 \subsection{Related Work}
 
-Bayesian methods for ideal point modeling have become an important tool in analyzing revealed preferences in government \cite{Clinton2004}. Previously these methods have been extended to consider the discrimination $a_d$ and difficulty $b_d$ as response variables with covariates related to the topical content of the bill using {\sl supervised latent Dirichlet allocation} \cite{Gerrish2011}. Relating the posterior of $a_d$ and $b_d$ to the text of the bill (in addition to the votes) addresses the {\sl cold start problem}, i.e. the ability to predict votes on new bills. We adopt a similar approach, where the ideal points $x_u$ for representatives with limited voting data can lean on the community mean $\nu_{M_u}$. Both methods are more broadly applicable to collaborative filtering for behavior data when related data sources are present. Previous analyses have performed SVD on roll call voting data to reveal correlations in political structure and latent community structure \cite{Porter2007}.
+Bayesian methods for ideal point modeling have become an important tool in analyzing revealed preferences in government \cite{Clinton2004}. Previously these methods have been extended to consider the discrimination $a_d$ and difficulty $b_d$ as response variables with covariates related to the topical content of the bill using {\sl supervised latent Dirichlet allocation} \cite{Gerrish2011}. Relating the posterior of $a_d$ and $b_d$ to the text of the bill (in addition to the votes) addresses the {\sl cold start problem}, i.e. the ability to predict votes on new bills. We adopt a similar approach where the ideal points $x_u$ for representatives with limited voting data can lean on the community mean $\nu_{M_u}$. Both methods are more broadly applicable to collaborative filtering for behavior data when related data sources are present. Previous analyses have performed SVD on roll call voting data to reveal correlations in political structure and latent community structure \cite{Porter2007}.
 
 \section{Posterior Inference}
 \label{inference}
@@ -219,18 +209,21 @@ $$
 \begin{align*}
 \cl(q)
 &= \EE_q\left[\log \frac{p(\nu, x, a, b, \pi, P, M, V, R)}{q(\nu, x, a, b, \pi, P, M)}\right] \\
-&= \EE_q\left[\log \frac{p(a, b, V)p(x\mid M, \nu)p(\nu)}{q(\nu)q(x)q(a)q(b)}\right]
+&= \EE_q\left[\log \frac{p(a, b)p(V\mid a,b,x)p(x\mid M, \nu)p(\nu)}{q(\nu)q(x)q(a)q(b)}\right]
 + \EE_q\left[\log \frac{p(\pi, P, M, R)}{q(\pi)q(P)q(M)}\right].
 \end{align*}
-Each factor of $q$ follows a simple parametric form, described in appendix \ref{vi}. The simplest approach to variational inference maximizes the ELBO $\cl(q)$ via coordinate-ascent, choosing the best value of a variational parameter with all others fixed. Iteratively applying these updates, the variational approximation $q$ improves at every step toward some local optimum. Conditional conjugacy yields closed form updates for the variational parameters corresponding to $\pi$ and $P$ \cite{Blei2016}. Furthermore, due to the decomposition of the ELBO $\cl(q)$ above, the mean field factorization yields the same variational updates for $\pi, P, a_d$, and $b_d$ as in SBM and IPM, and we exploited this modularity. We devised our implementation of coordinate-ascent variational inference (CAVI) for IPM, SBM, and LC-IPM to have as little repeat code as possible by defining LC-IPM as a class which extends from both of its component parts. 
-
-
-\newpage
+Each factor of $q$ follows a simple parametric form, described in appendix \ref{vi}. The simplest approach to variational inference maximizes the ELBO $\cl(q)$ via coordinate-ascent, choosing the best value of a variational parameter with all others fixed. Iteratively applying these updates, the variational approximation $q$ improves at every step toward some local optimum. Conditional conjugacy yields closed form updates for the variational parameters corresponding to $\pi$ and $P$ \cite{Blei2016}. Furthermore, due to the decomposition of the ELBO $\cl(q)$ above, the mean field factorization yields the same variational updates for $\pi, P, a_d$, and $b_d$ as in SBM and IPM, and we exploited this modularity. We devised our implementation of coordinate-ascent variational inference (CAVI) for IPM, SBM, and LC-IPM to have as little repeat code as possible by defining LC-IPM as a class which extends from both of its component models. 
 
 \section{Empirical Results}
 \label{results}
-To evaluate the performance of LC-IPM we attempted to recover known model parameters from simulated data; we also evaluated the model's predictive performance on data from the 110\textsuperscript{th} congress. For the following results we implemented CAVI for LC-IPM in Python \footnote{Implementation can be found at \url{www.github.com/ebenmichael/congress-bills}}
+To evaluate the performance of LC-IPM we attempted to recover known model parameters from simulated data; we also evaluated the model's predictive performance on data from the 110\textsuperscript{th} congress. For the following results we implemented CAVI for LC-IPM in Python \footnote{Implementation and experiments can be found at \url{www.github.com/ebenmichael/congress-bills}}
 \subsection{Simulated Data}
+
+To ensure that CAVI produces reasonable posterior inferences, we sampled vote interactions and caucus co-membership counts from the generative model and compared the true model parameters to the na\"ive mean field approximation. We generated 50 representatives, 500 documents, and two communities, using one dimensional ideal points and ran the CAVI routine for 35 iterations. To evaluate convergence we output the ELBO at each iteration. To evaluate the approximate posterior means we compared the variational ideal point mean $\hat{\tau}_u = \EE_q[x_u]$ and the posterior responsibility of the first community $\hat{r}_{u1} = \EE_q[1_{M_u = 1}]$ (See \ref{sbmvi} and \ref{ipmvi} for notation) to the true ideal point $\widetilde{x}_u$ and the true community assignment $\widetilde{M}_u$ for each representative. We score according to Mean Square Error (MSE) and Brier Score (Brier), given by:
+\begin{align*}
+ \text{MSE}(\widetilde{x}, \hat{\tau}) = \frac{1}{U} \sum_{u=1}^U (\widetilde{x}_u - \hat{\tau}_u) ^2  \;\; & \;\; \text{Brier}(\hat{r}_1, \widetilde{M}) = \frac{1}{U} \sum_{u=1}^U (\widetilde{M}_u - \hat{r}_{u1})^2
+\end{align*}
+Because the model is invariant to permutations of the communities and reflections of the ideal points, we chose the permutation and reflection which minimized the scores. We ran this analysis on 5 different data sets generated according to the model; the results of this experiment are in Figure \ref{fig:toy_results}. We see that CAVI very quickly converges to the correct ideal points while taking longer to converge to the correct community assignments. Overall the mean square error is close to zero, and the na\"ive mean field approximation recovers the correct parameters.
 \begin{figure}[h]
   \centering
     \begin{subfigure}[b]{0.3\textwidth}
@@ -245,29 +238,23 @@ To evaluate the performance of LC-IPM we attempted to recover known model parame
         \includegraphics[width=\textwidth]{toy_resp_mse.png}
         \caption{}
     \end{subfigure}
-  \caption{(a) ELBO (b) MSE between posterior mean ideal points and true ideal points and (c) Brier score between posterior mean community assignments and true assignments vs number of CAVI iterations on simulated data for 5 random data sets generated from the model}
+  \caption{(a) ELBO (b) MSE between variational ideal point means and true ideal points and (c) Brier score between posterior responsibility of the first community and true assignments vs number of CAVI iterations on simulated data for 5 random data sets generated from the model.}
       \label{fig:toy_results}
 \end{figure}
-
-To ensure that CAVI produces reasonable posterior inferences, we sampled vote interactions and caucus co-membership counts from the generative model and compared the true model parameters to the naive mean field approximation. We generated 50 representatives, 500 documents, and two communities, using one dimensional ideal points and ran the CAVI routine for 35 iterations. To evaluate convergence we output the ELBO at each iteration. To evaluate the approximate posterior means we compared the variational ideal point mean $\hat{\tau}_u$ to the true ideal point $x_u$ for each representative and the posterior responsibility of the first community $\hat{r}_{u1}$ to the true community assignment $M_u$ with the Mean Square Error (MSE) and Brier Score (Brier):
-\begin{align*}
- \text{MSE}(x, \hat{t}) = \frac{1}{U} \sum_{u=1}^U (x_u - \hat{\tau}_u) ^2  \;\; & \;\; \text{Brier}(\hat{r}_1, M) = \frac{1}{U} \sum_{u=1}^U (M_u - \hat{r}_u)^2
-\end{align*}
-Because the model is invariant to permutations of the communities and reflections of the ideal points, we chose the permutation and reflection which minimized the scores. We ran this analysis on 5 different data sets generated according to the model; the results of this experiment are in Figure \ref{fig:toy_results}. We see that CAVI very quickly converges to the correct ideal points while taking longer to converge to the correct community assignments. Overall the mean square error is close to zero and the naive mean field approximation recovers the correct parameters.
-\subsection{110\textsuperscript{th} Congress}
+\subsection{The 110\textsuperscript{th} Congress}
 \subsubsection{Data}
-We obtained roll call vote records for the House of Representatives of the 110\textsuperscript{th} Congress from \href{www.govtrack.us}{GovTrack.us}, an independent open government data website which publishes and stores data related to the United States Congress. Our data set contains 1707 documents (those categorized as bills, amendments, and motions) and 448 representatives. We only consider those roll call votes where a representative voted \texttt{yea} or \texttt{nay}; there were 703,830 such interactions. We gathered caucus membership data from \cite{Victor2013}.
+We obtained roll call vote records for the House of Representatives of the 110\textsuperscript{th} Congress from \href{www.govtrack.us}{GovTrack.us}, an independent open government data website which publishes and stores data related to the United States Congress. Our data set contains $D=1707$ documents (those categorized as bills, amendments, and motions) and $U=448$ representatives. We only consider those roll call votes where a representative voted \texttt{yea} or \texttt{nay}; there are 703,830 such interactions. We gathered caucus membership data from \cite{Victor2013}.
 \subsubsection{Evaluation} 
-To evaluate our model we assess predictive accuracy. We compared a $K=2$ community and $K=10$ community LC-IPM with dimension $S=2$ with predicting \texttt{yea} each time (Yea), $L^2$ regularized Logistic Regression, and the standard Ideal Point Model with dimension $S=1$ and $S=2$. We first chose the regularization parameter for Logistic Regression using a 5 fold cross validation procedure. We performed another 5 fold cross validation procedure where we trained each model on 4 folds, tested on the 5\textsuperscript{th} validation fold, and averaged the results; Table \ref{table:results_table} has these results. We found that LC-IPM and IPM both perform very well and roughly the same.
+To evaluate our model we assess predictive accuracy. We compared a $K=2$ community and $K=10$ community LC-IPM with dimension $S=2$ to (a) predicting \texttt{yea} each time, (b) $L^2$ regularized Logistic Regression, and (c) the standard Ideal Point Model with dimension $S=1$ and $S=2$. We first chose the regularization parameter for Logistic Regression using a 5 fold cross validation procedure. We performed another 5 fold cross validation procedure where we trained each model on 4 folds, tested on the 5\textsuperscript{th} validation fold, and averaged the results (Table \ref{table:results_table}). We found that LC-IPM and IPM both perform very well and similarly.
 
 \vspace{2ex}
-\begin{table}
+\begin{table}[h]
 \begin{center}
 \begin{tabular}{c | c |c}
 Model &  Accuracy & AUC\\ %$\sigma^2_x$&
 \hline
 \hline
-Yea & 67.123 & 50.000\\
+\texttt{yea} & 67.123 & 50.000\\
 Logistic Regression & 78.340 & 85.105\\
 \hline
 IPM ($S= 1$)  &  94.769 & 98.418\\
@@ -282,74 +269,58 @@ LC-IPM ($S=2, K=10$)  & 95.415 & 99.015
 \end{table} 
 
 \subsubsection{Inferred Ideal Points and Communities}
-In this section we examine inferred ideal points and communities from the House of Representatives in the 110\textsuperscript{th} Congress.
+In this section we examine inferred ideal points and communities from the House of Representatives of the 110\textsuperscript{th} Congress.
 
 
-\begin{figure}[h]
-  \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{2_communities.png}
-        \caption{}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{10_communities.png}
-        \caption{}
-    \end{subfigure}
-
-  \caption{Caucus co-membership counts grouped by inferred community for (a) 2 and (b) 10 communities. Each entry denotes the number of caucuses shared by a pair of representatives. Red denotes many (up to thirty) common caucuses; yellow denotes close to no common caucuses. The 10 community model captures finer block structure.}
-      \label{fig:2_comm_lcipm}
-\end{figure}
 
 \begin{figure}[h]
   \centering
           \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{ideal_points_congress_2.png}
         \caption{}
+        \label{ip_cong_2}
     \end{subfigure}
           \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{ideal_points_congress_10.png}
         \caption{}
+        \label{ip_cong_10}
     \end{subfigure}
 
   \caption{Inferred 2 dimensional ideal points for an LC-IPM model with (a) 2 and (b) 10 communities. Shape denotes party affiliation; color denotes community; stars in (b) indicate inferred community means. Both models separate Republicans and Democrats with noted centrists in between.}
-      \label{fig:2_comm_lcipm}
+      \label{fig:lcipm_ip}
 \end{figure}
 
-We first ran CAVI on an LC-IPM model with dimension $S=2$ and $K=2$ communities. With this configuration the ideal points are well separated by party (Figure \ref{fig:2_comm_lcipm} b) but the inferred communities straddle party lines. We sorted the raw caucus co-membership counts by inferred community and found that there is one community where members share a large number of caucuses, and another where the members do not share very many caucuses (Figure \ref{fig:2_comm_lcipm} a). Running CAVI on an LC-IPM model with dimension $S=2$ and $K=10$ communities retains the clean separation by party and overall shape of the ideal points (noting that the model is invariant to rotations). However, the community structure is markedly different. The inferred communities simultaneously capture fine block structure in the caucus co-membership counts and inter and intra party spatial structure of the ideal points. 
+\begin{figure}[h]
+  \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{2_communities.png}
+        \caption{}
+        \label{2_comm}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{10_communities.png}
+        \caption{}
+        \label{10_comm}
+    \end{subfigure}
 
-The concurrent relational and spatial models allow for interesting conclusions. For instance, we can see that the 9\textsuperscript{th} community has a high rate of caucusing together and is comprised of Democrats with ideal points far from Republicans and centrists, leading to an interpretation that the 9\textsuperscript{th} community is a strongly interconnected group of staunch liberals. The four depicted members of this community (Rush Holt, Keith Ellison, John Lewis, and Barbara Lee) are regarded as very liberal representatives. We can also see representatives such as centrist Wayne Gilchrest, who broke ranks with the Republican party more often than any other representative in 2007, libertarian Ron Paul, who challenges Republican social policy, who are in communities which nonetheless are deeply conservative.
+  \caption{Caucus co-membership counts grouped by inferred community for (a) 2 and (b) 10 communities. Each entry denotes the number of caucuses shared by a pair of representatives. Red denotes many (up to thirty) common caucuses; yellow denotes close to no common caucuses. The 10 community model captures finer block structure.}
+      \label{fig:lcipm_comm}
+\end{figure}
+
+We first ran CAVI on an LC-IPM with dimension $S=2$ and $K=2$ communities. With this configuration the ideal points are well separated by party (Figure \ref{ip_cong_2} ) but the inferred communities straddle party lines. We sorted the caucus co-membership counts by inferred community and found that there is one community where members share a large number of caucuses, and another where the members do not share very many caucuses (Figure \ref{2_comm}). Running CAVI on an LC-IPM model with dimension $S=2$ and $K=10$ communities retains the clean separation by party and overall shape of the ideal points up to rotation (Figure \ref{ip_cong_10}). However, the community structure is markedly different (Figure \ref{10_comm}). The inferred communities simultaneously capture fine block structure in the caucus co-membership counts and inter/intra-party spatial structure of the ideal points. 
+
+The concurrent relational and spatial models allow for interesting conclusions. For instance, we can see that the 9\textsuperscript{th} community has a high rate of caucusing together and is comprised of Democrats with ideal points far from Republicans and centrists, leading to an interpretation that the 9\textsuperscript{th} community is a strongly interconnected group of staunch liberals. The four depicted members of this community (Rush Holt, Keith Ellison, John Lewis, and Barbara Lee) are regarded as true-blue liberal representatives. Interestingly, Chris Shays---criticized by hard-line conservatives as a RINO (Republican in name only) and the only Republican representative from New England---is also in this community. We can also see representatives such as centrist Wayne Gilchrest, who broke ranks with the Republican party more often than any other representative in 2007, and libertarian Ron Paul, who challenges Republican orthodoxy, both of whom are in communities which nonetheless are deeply conservative.
 
 \section{Conclusions and future directions} 
-While LC-IPM offers similar predictive performance to the standard ideal point model, we gain the ability to detect more subtle clusters within and between the two large party clusters. This ability to analyze the social network among members of Congress is of particular interest to political scientists. \par
+While LC-IPM offers similar predictive performance to the standard ideal point model, we gain the ability to detect more subtle clusters within and between parties. This ability to simultaneously analyze the social network and voting behavior of Congress is of particular interest to social scientists. Our approach applies to any collaborative filtering problem where there is associated relational data. For instance, recommendation systems could benefit from modeling social network information. In future work we hope to expand the relational component of our model using Bayesian non-parametric methods and mixed membership models \cite{Airoldi2008}.
 
-Moreover, by taking into account caucus data, we can still make reasonable predictions for junior representatives for whom we do not have extensive vote data.  {\color{red} Eli will add to this}  \par
+Finally, a key advantage to our generative model is its modularity, and we are interested in generalizing this notion of composability of hierarchical models for multiple data sources. While this project incorporated caucus data to better inform estimates for the representatives' ideal points, another direction to explore would be to utilize data on bills to better estimate their difficulty and discrimination. Following the example of \cite{Gerrish2011}, we can combine LC-IPM with supervised topic modeling and infer the latent topics in a bill from a bill's text; these latent topics then inform a bill's difficulty and discrimination. On the other hand, we may also explore incorporating legislators' speech transcripts in deliberating the bill \cite{Quinn2006,Thomas2006}. \par
 
-Finally, a key advantage to our generative model is its modularity, and in future work we would be interested in the composability of hierarchical models from multiple data sources. While this project incorporated caucus data to better inform estimates for the representatives' ideal points, another direction to explore would be to utilize data on bills to better estimate their difficulty and discrimination. For example, we may follow the example in \cite{Gerrish2011} to combine LC-IPM with supervised topic modeling and infer the latent topics in a bill from a bill's text; these latent topics then inform a bill's difficulty and discrimination. On the other hand, we may also explore incorporating legislators' speech transcripts in deliberating the bill (\cite{Quinn2006}, \cite{Thomas2006}). Our model could also be augmented by incorporating bill metadata (like sponsorships), or legislator metadata (like ethnicity or state). \par
-
-Overall, LC-IPM connects voting data to caucus memberships, and enables us to analyze how a social network influence legislative results. While we were motivated by congressional data, our model also applies to more general collaborative filtering settings with relational data.
-
-\iffalse
-\section{Contributions}
-\begin{itemize}
-\item Bryan: pca, nbhd regression, section \ref{introduction} of writeup.
-\item Jake: SBM, sections \ref{model}, \ref{inference}, \ref{discussion} and \ref{sbmvi} of writeup.
-\item Eli: dataset, IPM, experiments, sections \ref{results} and \ref{ipmvi} of writeup.
-\item Collectively: section \ref{lcipmvi} of writeup, poster
-\end{itemize}
-\fi
-
-\newpage
-
-
-
-%[1] Gerrish, S.M.\ \& Blei, D.M. \ (2011) Predicting Legislative Roll Calls from Text. {\it Proceedings of the 28th International Conference on Machine Learning}
-%\noindent[1] Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. \\
-%
-%\noindent[2] Gerrish, S. M. \& Blei, D. M.  (2011). Predicting legislative roll calls from text. {\it Proceedings of the 28th International Conference on Machine Learning}. \\
-%
-%\noindent[3] Blei, D. M., Kucukelbir, A. \& McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
-
+\section*{Acknowledgments}
+We would like to thank Professor Wainwright, Arturo, Jeffrey, and Peter for their dedication to teaching an excellent course. %Also thanks to the stat department lounge for housing us since Thanksgiving.
 \begin{thebibliography}{10}
+
+\bibitem{Airoldi2008} Airoldi, E. M., Blei, D. M., Fienberg, S. E. \& Xing, E. P. (2008). Mixed membership stochastic blockmodels. \textit{Journal of Machine Learning Research}.
 
 \bibitem{Blei2016} Blei, D. M., Kucukelbir, A. \& McAuliffe, J. D. (2016). Variational inference: a review for statisticians. {\sl arXiv:1601.00670}.
 
@@ -361,7 +332,10 @@ Overall, LC-IPM connects voting data to caucus memberships, and enables us to an
 
 \bibitem{Hastie2015} Hastie, T. J., Tibshirani, R. \& Wainwright, M. J. (2015). Statistical learning with sparsity: the Lasso and generalizations. {\itshape CRC Press}. 
 
+\bibitem{Martin2002} Martin, A. D. \& Quinn, K. M. (2002). Dynamic ideal point estimation via Markov chain monte carlo for the U.S. Supreme Court, 1953-1999. \textit{Political Analysis}. 10: 134-153. 
+
 \bibitem{Porter2007} Porter, M. A., Mucha, P. J., Newman, M. E. J. \& Friend, A. J. (2007). Community structure in the United States House of Representatives. {\it Physica A}.
+
 
 \bibitem{Quinn2006} Quinn, K M., Monroe, B L., Colaresi, M., Crespin, M H. \& Radev, D R. (2006). An automated method of topic-coding legislative
 speech over time with application to the 105th-
@@ -375,6 +349,8 @@ the vote: Determining support or opposition from
 congressional floor-debate transcripts. {\itshape Proceedings
 of EMNLP}. 327–335.
 
+\bibitem{Victor2013} Victor, J. N.  (2013). ``membership\_110.csv.'' and ``membership\_111.csv.'' Data available for scholarly use from \url{http://mason.gmu.edu/~jvictor3/Data/} 11/15/2016.
+
 \bibitem{Wainwright2008} Wainwright, M. J. \& Jordan, M. I. (2008). Graphical models, exponential families, and variational inference. {\sl Foundations and Trends in Machine Learning}. 
 
 \end{thebibliography}
@@ -384,7 +360,7 @@ of EMNLP}. 327–335.
 \newpage
 
 \section{Variational updates}
-
+\label{vi}
 \subsection{Stochastic Block Model (SBM)}
 \label{sbmvi}
 
