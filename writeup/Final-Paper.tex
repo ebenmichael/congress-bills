@@ -205,7 +205,7 @@ Upon observing votes $V = (V_{ud})$ and caucus co-membership counts $R = (R_{uv}
 $$
 p(x, a, b, \pi, P, M \mid V, R)
 $$
- is intractable. We employ {\sl na\"ive mean field variational inference}, finding the distribution $q$ closest in KL divergence to the posterior among all fully factorized distributions. Minimizing the KL divergence is equivalent to maximizing the evidence lower bound (ELBO):
+ is intractable. We employ {\sl na\"ive mean field variational inference}, finding the distribution $q$ closest in KL divergence to the posterior among all fully factorized distributions. Minimizing the KL divergence is equivalent to maximizing the evidence lower bound (ELBO) \cite{Blei2016}:
 \begin{align*}
 \cl(q)
 &= \EE_q\left[\log \frac{p(\nu, x, a, b, \pi, P, M, V, R)}{q(\nu, x, a, b, \pi, P, M)}\right] \\
