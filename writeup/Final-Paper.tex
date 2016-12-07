@@ -77,9 +77,9 @@ We consider the problem of predicting and modeling legislative roll call votes. 
 \label{introduction}
 Voting records of legislators are commonly analyzed by political scientists to examine relationships between legislator political leanings, institutional structures, and legislative outcomes \cite{Clinton2004}. For example, even simple dimensionality reduction techniques on voting data in the US House of Representatives uncover the political characteristics of individual legislators such as party affiliation (Figure \ref{fig:DimRedux}). \par
 
-To capture further patterns, quantitative social scientists often use \textit{ideal point models}. In ideal point models, legislators and bills are presumed to lie in a latent `'ideological space,'' where the probability of a ``yea'' or ``nay'' response is a function of the bill's position and the legislator's position. The legislator's position is called an ``ideal point'' because his or her utility decreases as a bill's position deviates from this point. \par
+To capture further patterns, quantitative social scientists often use \textit{ideal point models}. In ideal point models, legislators and bills are presumed to lie in a latent ``ideological space,'' where the probability of a ``yea'' or ``nay'' response is a function of the bill's position and the legislator's position. The legislator's position is called an ``ideal point'' because his or her utility decreases as a bill's position deviates from this point. \par
 
-These ideal points enable us to characterize legislators quantitatively. The distribution of ideal points reveals clusters of legislators corresponding, for example, to party lines, region, or caucus membership; furthermore, the distance between two ideal points or two clusters of ideal points can be used as  a measure of political division. By visualizing policy preferences along a spectrum, interest groups are able to produce ``ratings'' of legislators according their leanings on a certain policy \cite{Clinton2004}. Ideal point models are also applied to the U.S. Supreme Court to create such ratings \cite{Martin2002}. \par
+These ideal points enable us to characterize legislators quantitatively. The distribution of ideal points reveals clusters of legislators corresponding, for example, to party lines, region, or caucus membership; furthermore, the distance between two ideal points or two clusters of ideal points can be used as  a measure of political division. By visualizing policy preferences along a spectrum, interest groups are able to produce ratings of legislators according to their leanings on a certain policy \cite{Clinton2004}. Ideal point models are also applied to the U.S. Supreme Court to create such ratings \cite{Martin2002}. \par
 
 In this paper, we use roll call vote data from the House of Representatives of the 110\textsuperscript{th} Congress (2007-2008) to estimate ideal points and predict voting behavior. In particular, we modify the Bayesian ideal point model proposed in \cite{Clinton2004}. In the Bayesian ideal point model, the ideal points are assumed to be independent; however, we propose to exploit the interactions among representatives rather than model ideal points as independent. \par
 
@@ -148,7 +148,7 @@ This analysis suggests that caucus memberships may at least partly explain wheth
         \includegraphics[width=\textwidth]{/Neighborhood_Regression/Congr_Prog_Caucus.jpg}
         \caption{}
     \end{subfigure}
-  \caption{Neighborhood regression on roll call vote data was used to infer an undirected graphical model  among all members of the House of Representatives. Shown here are subgraphs induced by various caucuses. The connectivity (fraction of edges present) in the entire House is 0.064}
+  \caption{Neighborhood selection on roll call vote data was used to infer an undirected graphical model  among all members of the House of Representatives. Shown here are subgraphs induced by various caucuses. The connectivity (fraction of edges present) in the entire House is 0.064}
 %Each node represents a random variable corresponding to a legislator voting ``yea'' or ``nay'' on a bill, and we assumed pairwise interactions using an Ising model. Shown here are subgraphs with representatives taken from a given caucus. The caucuses are their connectivities shown here are (a) the Congressional Black Caucus, connectivity 0.137; (b) the Congressional Rural Caucus, connectivity 0.104; (c) the Republican Study Committee, connectivity 0.136; and (d) the Congressional Progressive Caucus, connectivity 0.131. In each case, the connectivity within the caucuses was higher than the connectivity of the full House (0.064).}
       \label{fig:Nhood_Caucus}
 \end{figure}
@@ -556,6 +556,19 @@ $$
 \widehat\mu_k= \left(\frac{\sum_u\widehat r_{uk}\widehat\tau_u}{\sigma_x^2} + \frac{\varpi}{\sigma_\nu^2}\right)\widehat\sigma^2_{\hat\mu_k}; \text{ where }
 \widehat\sigma^2_{\hat\mu_k} = \left(\frac{N_k}{\sigma_x^2}+\frac{1}{\sigma_\nu^2}\right)^{-1}.
 $$
+
+\newpage 
+
+\section{Attribution}
+\begin{itemize} 
+\item Eli Ben-Michael: data collection; implemented IPM, LC-IPM; derived variational updates; results section of paper
+\item Runjing Liu: Exploratory data analysis, neighborhood selection; derived variational updates; introduction \& conclusion of paper; poster
+\item Jake Soloff: implemented SBM, LC-IPM; derived variational updates; model and posterior inference section of paper
+\end{itemize}
+
+
+
+
 
 
 \end{document}
